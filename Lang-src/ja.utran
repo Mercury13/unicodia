@@ -4564,7 +4564,8 @@
    </group>
    <group id="1AFF0">
     <text id="Text">
-     <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
+     <orig>Writing of the Taiwanese dialect of the Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
+     <known-orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</known-orig>
      <transl>閩南語の台湾方言を仮名で表記したもの。第二次世界大戦前に日本の言語学者によって発明された。</transl>
     </text>
    </group>
@@ -4580,7 +4581,8 @@
    </group>
    <group id="1B100">
     <text id="Text">
-     <orig>31 characters of [[ps:Hent|Hentaigana]] (old [[ps:Hira|Hiragana]]), and 4 characters of [[ps:Kana|Katakana]] and Hiragana.</orig>
+     <orig>31 characters of [[ps:Hent|Hentaigana]] (old [[ps:Hira|Hiragana]]), and 4 characters of [[ps:Kana|Katakana]] and Hiragana (as of Unicode{{_}}14).</orig>
+     <known-orig>31 characters of [[ps:Hent|Hentaigana]] (old [[ps:Hira|Hiragana]]), and 4 characters of [[ps:Kana|Katakana]] and Hiragana.</known-orig>
      <transl>[[ps:Hent|変体仮名]] (旧 [[ps:Hira|ひらがな]]) 31 文字、[[ps:Kana|カタカナ]] とひらがな 4 文字。</transl>
     </text>
    </group>
@@ -4590,7 +4592,8 @@
      <transl>小仮名 拡張</transl>
     </text>
     <text id="Text">
-     <orig>Small [[ps:Kana|Katakana]] characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also, corresponding characters of [[ps:Hira|Hiragana]] are added.</orig>
+     <orig>Small [[ps:Kana|Katakana]] characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also, corresponding [[ps:Hira|Hiragana]] characters are added.</orig>
+     <known-orig>Small [[ps:Kana|Katakana]] characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also, corresponding characters of [[ps:Hira|Hiragana]] are added.</known-orig>
      <transl>小文字の[[ps:Kana|カタカナ]]は日本語に欠けている音素を表します。例えば、小文字の{{sm|ケヰ}}は唇音化された{{t|kʷi}}を表します。また、対応する[[ps:Hira|ひらがな]]の文字が追加されます。</transl>
     </text>
    </group>
@@ -4612,7 +4615,8 @@
      <transl>速記書式制御記号</transl>
     </text>
     <text id="Text">
-     <orig>[[pt:ignorable|Invisible]] characters used for Romanian and Chinook ''(Natives Americans, North-West USA)'' shorthand.</orig>
+     <orig>[[pt:ignorable|Invisible]] characters used for Romanian and Chinook ''(Native Americans, North-West USA)'' shorthand.</orig>
+     <known-orig>[[pt:ignorable|Invisible]] characters used for Romanian and Chinook ''(Natives Americans, North-West USA)'' shorthand.</known-orig>
      <transl>[[pt:ignorable|非表示]] 文字は、ルーマニア語とチヌーク語 (アメリカ北西部のネイティブアメリカン) の略語として使用されます。</transl>
     </text>
    </group>
@@ -4623,7 +4627,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
+      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There will probably be no more major additions to such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
       <p />
       <p>Unicode{{_}}17 [[pt:unification|disunified]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
@@ -4646,11 +4650,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Asteroid signs are from astronomy of the 19th century, when people started to discover them. Modern astronomers do not use these signs.</p>
+      <p>Asteroid signs date back to 19th-century astronomy, when people began discovering them. Modern astronomers do not use these signs.</p>
       <p />
       <p>Arabic geomancy (actually divination using random numbers, like [[pk:4DC0|Yijing]]) involved drawing random figures on the sand.</p>
       <p />
-      <p>Circle with a bar (in superscripted form) in modern chemistry means “standard” (convenient for calculations) state of mixture when its composition depends on temperature and pressure.</p>
+      <p>Circle with a bar (in superscripted form) in modern chemistry denotes the “standard” (convenient for calculations) state of a mixture, whose composition depends on temperature and pressure.</p>
      </orig>
     </text>
    </group>
@@ -4661,6 +4665,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Znamenny chant (banner chant) or Kryuk chant (hook chant) is monophonic (the entire choir sings in unison) Orthodox chant. Named after ''banners''{{-}}musical signs accompanied with ''priznaks'' (marks). Initially, marks were written in red; Alexander Mezenets (17th century) invented a system of marks that did{{_}}not{{_}}need cinnabar. Unlike European notes, which are encoded mainly to simplify programmers’ life and convey only rhythm in [[pt:plaintext|plain text]], Znamenny encoding is fully functional.</p>
+      <p />
+      <p>Banners convey a figure that is sung (up to 10 notes), and the pitch is specified with marks.</p>
+      <p />
+      <p>The earliest Znamenny scores date to the 11th century. During the church reform (“schism”) of the 17th century, banners were replaced with Kyivan/Kievan notation (“axes”). Until the 19th century, it was gradually supplanted by polyphonic chant, which is present in churches nowadays. And Znamenny chant and monophony became a feature of Old Believers.</p>
+      <p />
+      <p>There are several types of chant: Kondak (a type of church song), Stolp (pole), Put (way), and Demestvo (origin unclear, maybe from Latin ''domesticus''). The last one features elements of polyphony.</p>
+      <p />
+      <p>There are modern attempts to revive the Znamenny chant. Dvoyeznamenniki (double-banners), scores written with both banners and notes, gave the key to understanding Znamenny notation. It was brought to Unicode by the Ponomar project, which draws fonts, builds Church Slavonic spelling and recognition dictionaries, and digitizes books.</p>
+     </orig>
+     <au-cmt>
+      <p>Priznaks = Russian “признáк=priznak” conveyed in your alphabet + ending of plural</p>
+      <p>As a fail-safe, use “priznaki”.</p>
+     </au-cmt>
+     <known-orig>
       <p>Znamenny chant (banner chant) or Kryuk chant (hook chant) is monophonic (the entire choir sings in unison) Orthodox chant. Named after ''banners''{{-}}musical signs accompanied with ''priznaks'' (marks). Initially, marks were written in red; Alexander Mezenets (17th century) invented a system of marks that does{{_}}not{{_}}need cinnabar. Unlike European notes that are encoded first of all to simplify programmers’ life and convey just rhythm in [[pt:plaintext|plain text]], Znamenny encoding is completely functional.</p>
       <p />
       <p>Banners convey a figure that is sung (up to 10 notes), and the pitch is specified with marks.</p>
@@ -4670,11 +4689,7 @@
       <p>There are several types of chant: Kondak (type of church song), Stolp (pole), Put (way), and Demestvo (origin unclear, maybe from Latin ''domesticus''). The last one features elements of polyphony.</p>
       <p />
       <p>There are modern attempts to revive the Znamenny chant. Dvoyeznamenniki (double-banners), scores written with both banners and notes, gave the key to understanding Znamenny notation. It was brought to Unicode by the Ponomar project that draws fonts, builds Church Slavonic spelling and recognition dictionaries, and digitizes books.</p>
-     </orig>
-     <au-cmt>
-      <p>Priznaks = Russian “признáк=priznak” conveyed in your alphabet + ending of plural</p>
-      <p>As a fail-safe, use “priznaki”.</p>
-     </au-cmt>
+     </known-orig>
      <transl>
       <p>ズナメニ聖歌（旗聖歌）またはクリュク聖歌（フック聖歌）は、単旋律（合唱団全員が一斉に歌う）の正教会の聖歌です。名前は、''旗''{{-}}音楽記号に ''プリズナク''（マーク）を添えたものに由来しています。当初、マークは赤で書かれていましたが、アレクサンダー・メゼネツ（17 世紀）は、朱砂を必要としないマークのシステムを発明しました。ヨーロッパの音符は、プログラマーの作業を簡素化し、リズムだけを [[pt:plaintext|プレーンテキスト]] で伝えるために最初にエンコードされましたが、ズナメニ聖歌のエンコードは完全に機能的です。</p>
       <p />
@@ -4705,11 +4720,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Notes looking like modern appeared in the 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By the 13th century length marks were invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today special fountain pens for musicians are produced.</p>
+      <p>Notes resembling modern appeared in the 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By the 13th century, length marks had been invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today, special fountain pens for musicians are produced.</p>
       <p />
-      <p>Notes evolved to their current form in the 17th century with equal temperament which made possible porting music to other instruments, playing in orchestras.</p>
+      <p>Notes evolved to their current form in the 17th century with equal temperament, which made it possible to port music to other instruments and to play in orchestras.</p>
       <p />
-      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
+      <p>Music is [[pt:universality|non-text]] information and thus is outside the scope of Unicode. But it’s tempting to use existing typography engines to store and their parts in fonts, thereby simplifying music software and shortening sheet PDFs. In this light, the purpose of the eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013, the open standard SMuFL ''(Standard Music Font Layout)'' came out, extending the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
       <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 added another notation ([[pc:1D1EB|half-sharp]], [[pc:1D1ED|half-flat]]) widely used by musical software.</p>
       <p />
@@ -4746,10 +4761,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Little is known about ancient Greeks. Initially they had five notes per octave, compensating such a shortage with various methods of instrument tuning, but later they got to halftones, sometimes even using quarter-tones. The main instruments were aulos (two pipes played simultaneously) and lyre.</p>
+      <p>Little is known about ancient Greeks. Initially, they had five notes per octave, compensating such a shortage with various methods of instrument tuning, but later they got to halftones, sometimes even using quarter-tones. The main instruments were aulos (two pipes played simultaneously) and lyre.</p>
       <p />
       <p>There were different notations for musicians and singers, it allowed parallel writing of lyrics, music and hints for singers. Notes were written with letters, and characters that differ from normal Greek letters are gathered in this block without any system.</p>
      </orig>
+     <known-orig>
+      <p>Little is known about ancient Greeks. Initially they had five notes per octave, compensating such a shortage with various methods of instrument tuning, but later they got to halftones, sometimes even using quarter-tones. The main instruments were aulos (two pipes played simultaneously) and lyre.</p>
+      <p />
+      <p>There were different notations for musicians and singers, it allowed parallel writing of lyrics, music and hints for singers. Notes were written with letters, and characters that differ from normal Greek letters are gathered in this block without any system.</p>
+     </known-orig>
      <transl>
       <p>古代ギリシャ人についてはほとんど知られていない。当初は1オクターブあたり5音で、楽器の調律をさまざまな方法で補っていたが、後に半音になり、時には4分の1音も使われるようになった。主な楽器はアウロス（2本のパイプを同時に演奏する）とリラだった。</p>
       <p />
@@ -4772,12 +4792,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Positional base-20 numerals invented in the 1980s by Inuit (Eskimo) schoolchildren from the town of Kaktovik, Alaska. Inuits count in twenties &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt;, and before the introduction of this system, they were among the worst in mathematics across the USA, after that{{-}}a little above average, like bilingual people are often better in linguistics.</p>
+      <p />
+      <p>A base-20 abacus was designed. It looks like a Japanese ''soroban'', but there are three “heavenly” beads. As in Japan, the bead is “off” if it’s near the edge, and “on” if near the middle wall. There are simple algorithms for conversion from base-20 to decimal.</p>
+      <p />
+      <p>There is no special character for the fractional part (“vigesimal point”). Sometimes a middle dot is used.</p>
+     </orig>
+     <known-orig>
       <p>Positional base-20 numerals invented in 1980s by Inuit (Eskimo) schoolchildren from town of Kaktovik, Alaska. Inuits count in twenties &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt;, and before the introduction of this system, they were among the worst in mathematics across all USA, after{{-}}a little above average, like bilingual people are often better in linguistics.</p>
       <p />
       <p>A base-20 abacus was designed. It looks like Japanese ''soroban'', but there are three “heavenly” beads. As in Japan, the bead is “off” if it’s near the edge, and “on” if near the middle wall. There are simple algorithms for conversion from base-20 to decimal.</p>
       <p />
       <p>There is no special character for fractional part (“vigesimal point”). Sometimes middle dot is used.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>1980 年代にアラスカ州カクトビックの町のイヌイット (エスキモー) の学童によって発明された、20 進法の位置付けの数字。イヌイットは 20 進法で数えます (74 = 3×20 + 15 − 1)。このシステムが導入される前は、全米で数学の成績が最悪で、バイリンガルの人が言語学で優れていることが多いのと同じように、{{-}} より少し上でした。</p>
       <p />
@@ -4794,10 +4821,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Maya used a base-20 positional numeral system. Digits were written top-down. Sometimes the face of the corresponding god was drawn instead of a digit. By common opinion, positional counting and zero were invented before Maya (maybe by Olmecs) before the common era. Shells, rods and dots tell that such numerals originate from counting boards.</p>
+      <p />
+      <p>Some sources state that Maya used simpler non-positional numerals in everyday life.</p>
+     </orig>
+     <known-orig>
       <p>Maya used a base-20 positional numeral system. Digits were written top-down. Sometimes face of the corresponding god was drawn instead of a digit. By common opinion, positional counting and zero were invented before Maya (maybe by Olmecs) before the common era. Shells, rods and dots tell that such numerals originate from counting boards.</p>
       <p />
       <p>Some sources state that in everyday life Maya used simpler non-positional numerals.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>マヤ族は 20 進法の位取り記数法を使用していました。数字は上から下に書かれていました。時には、数字の代わりに対応する神の顔が描かれていました。一般的な見解では、位取り記数法とゼロは西暦紀元前にマヤ族 (おそらくオルメカ人) より前に発明されました。貝殻、棒、点から、このような数字は数え板に由来していることがわかります。</p>
       <p />
@@ -4812,12 +4844,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Tài Xuán Jīng (the Canon of Supreme Mystery) is a Chinese divination book dating to 2{{_}}CE, inspired by the [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (天 tiān = heaven), broken once (地 dì = earth) and broken twice (人 rén = human). One should randomly choose a number four times, get a tetragram and read its meaning in the book.</p>
+      <p />
+      <p>The Unicode Consortium confused earth and human. With [[pt:stability|stability]] guarantees, the only thing remaining is to explain this evil mistake in the comments.</p>
+      <p />
+      <p>Some monograms and digrams are already present in the Base Plane.</p>
+     </orig>
+     <known-orig>
       <p>Tài Xuán Jīng (Canon of Supreme Mystery) is a Chinese divination book of 2{{_}}CE inspired with [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (天 tiān = heaven), broken once (地 dì = earth) and broken twice (人 rén = human). One should random a number four times, get a tetragram and read its meaning in the book.</p>
       <p />
       <p>Unicode Consortium confused earth and human. With [[pt:stability|stability]] guarantees the only thing remaining is to explain this evil mistake in comments.</p>
       <p />
       <p>Some monograms and digrams are already present in Base Plane.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>太玄経は、[[pk:4DC0|易経]] にヒントを得た 2{{_}} 世紀の中国の占いの本です。この本には 81 の四字熟語が使われています。各行には、実線 (天 tiān = 天)、一字切れ (地 dì = 地球)、二字切れ (人 rén = 人間) の 3 つのスタイルがあります。数字を 4 回ランダムに選択して四字熟語を取得し、本でその意味を読みます。</p>
       <p />
@@ -4834,12 +4873,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Counting rods are an excellent tool for teaching counting to children. The old Chinese used a true positional system made of rods laid on a counting board, starting from the Warring States (5th century{{_}}BC) until the 16th century. There was a notation for fractions and even for negative numbers (with rods of another colour).</p>
+      <p />
+      <p>Vertical rods mean units, hundreds, tens of thousands…, horizontal{{-}}tens, thousands, hundreds of thousands… Sometimes vice versa{{-}}in this form, the rods came into Unicode. Symbols of counting rods are sometimes written on paper.</p>
+      <p />
+      <p>If you need to count something and memorize the number, you can use tally marks. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens in both America and the former USSR (as noted in a book by Ya.I.{{_}}Perelman), but this method has{{_}}not{{_}}been adopted by Unicode.</p>
+     </orig>
+     <known-orig>
       <p>Counting rods are an excellent tool for teaching counting to children. Old Chinese used a true positional system made of rods laid on a counting board, starting from the Warring States (5th century{{_}}BC) until the 16th century. There was a notation for fractions and even for negative numbers (with rods of another colour).</p>
       <p />
       <p>Vertical rods mean units, hundreds, tens of thousands…, horizontal{{-}}tens, thousands, hundreds of thousands… Sometimes vice-versa{{-}}in such a form the rods came into Unicode. Symbols of counting rods are sometimes written on paper.</p>
       <p />
       <p>If you need to count something and memorize the number, tally marks are used. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens, both in America and in the former USSR (seen in a book by Ya.I.{{_}}Perelman), but this method did{{_}}not{{_}}enter Unicode.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>数え棒は、子供に数を数えることを教えるのに優れたツールです。古代中国では、戦国時代（紀元前 5 世紀）から 16 世紀まで、数え板の上に棒を並べた真の位取りシステムを使用していました。分数や負の数（別の色の棒を使用）の表記もありました。</p>
       <p />
@@ -4865,12 +4911,28 @@
       <p>* functions{{-}}in different fonts: expected value {{sm|𝖤ξ}} is often sans-serif;</p>
       <p>* constants{{-}}in bold or double-struck: limits of lattice {{sm|𝟘}} and {{sm|𝟙}}, imaginary units {{sm|𝕚𝕛𝕜}}…</p>
       <p />
+      <p>The double-struck font {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. It spread widely with the textbook on complex analysis by Gunning and Rossi (1965).</p>
+      <p />
+      <p>The most widespread of such notations are already in the [[pt:bmp|Basic Plane]], in the block of [[pk:2100|letterlike symbols]]. With the extension of Unicode beyond the Basic Plane, the complete Latin alphabet and digits in various fonts were added.</p>
+      <p />
+      <p>Some Fraktur letters are barely recognizable. Both Unicode charts and most fonts, including those used in Windows and TᴇX, are designed this way, though some mathematicians, especially in non-[[ps:Latn|Latin]] countries, use simpler fonts.</p>
+     </orig>
+     <known-orig>
+      <p>Mathematicians mark various objects with different fonts:</p>
+      <p>* vectors in bold, scalars in italic: {{sm|𝐅=𝑚𝐚}};</p>
+      <p>* special sets{{-}}in bold or double-struck: {{sm|ℕ}} for the set of natural numbers 1, 2, 3…;</p>
+      <p>* spaces{{-}}in handwritten: {{sm|𝒰}} for universal set;</p>
+      <p>* set cardinalities{{-}}in Fraktur: {{sm|𝔠}} for continuum;</p>
+      <p>* different definitions of the same object{{-}}in handwritten or Fraktur: Heine limit {{sm|ℋlim}} and Cauchy limit {{sm|𝒞lim}};</p>
+      <p>* functions{{-}}in different fonts: expected value {{sm|𝖤ξ}} is often sans-serif;</p>
+      <p>* constants{{-}}in bold or double-struck: limits of lattice {{sm|𝟘}} and {{sm|𝟙}}, imaginary units {{sm|𝕚𝕛𝕜}}…</p>
+      <p />
       <p>Double-struck font {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. It spread widely with the textbook on complex analysis by Gunning and Rossi (1965).</p>
       <p />
       <p>The most widespread of such notations are already in the [[pt:bmp|Base Plane]], in the block of [[pk:2100|letterlike symbols]]. With the extension of Unicode beyond Base Plane, the complete Latin alphabet and digits written with various fonts were added.</p>
       <p />
       <p>Some Fraktur letters are barely recognizable. Both Unicode charts and most fonts, including Windows and TᴇX, are designed this way, though some mathematicians, especially in non-[[ps:Latn|Latin]] countries, use simpler fonts.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>数学者はさまざまなオブジェクトを異なるフォントでマークします:</p>
       <p>* ベクトルは太字、スカラーは斜体: {{sm|𝐅=𝑚𝐚}};</p>
@@ -4930,7 +4992,8 @@
    </group>
    <group id="1E030">
     <text id="Text">
-     <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</orig>
+     <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across the former USSR.</orig>
+     <known-orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</known-orig>
      <transl>キリル文字で書き写しを書くための修飾文字。このような表記法は、旧ソ連全域の学校や教育機関で広く使用されています。</transl>
     </text>
    </group>
@@ -4978,7 +5041,8 @@
      <transl>エチオピア文字 拡張B</transl>
     </text>
     <text id="Text">
-     <orig>New orthography of Gurage languages (Ethio-Semitic group, up to 5M) that was devised in 2013 and made written the entire family, not{{_}}just Sebat Bet encoded in 2005 {{nspk|sgw}}. Some old letters are now [[pt:obsolete|obsolete]].</orig>
+     <orig>The new orthography of the Gurage languages (Ethio-Semitic group, up to 5M) was devised in 2013 and made written the entire family, not{{_}}just Sebat Bet encoded in 2005 {{nspk|sgw}}. Some old letters are now [[pt:obsolete|obsolete]].</orig>
+     <known-orig>New orthography of Gurage languages (Ethio-Semitic group, up to 5M) that was devised in 2013 and made written the entire family, not{{_}}just Sebat Bet encoded in 2005 {{nspk|sgw}}. Some old letters are now [[pt:obsolete|obsolete]].</known-orig>
      <transl>2013 年に考案され、2005 年にエンコードされたセバト ベット文字だけでなく、グラゲ語族全体 {{nspk|sgw}} が表記されるようになったグラゲ語 (エチオピア・セム語族、最大 500 万文字) の新しい正書法。一部の古い文字は現在 [[pt:obsolete|廃止]] されています。</transl>
     </text>
    </group>
@@ -5001,10 +5065,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Arabic non-positional numbers used in India since the 17th century (under the Mughal rule) up to the mid-20th century. Arabic ''siyaq'' means “order”. Also known as ''raqm'', Arabic “account”.</p>
+      <p />
+      <p>Numbers up to {{n|90000}} are [[pt:acrophonic|acrophonic]], of Arabic origin; from {{n|100000}} onwards are Indian words. Written right to left, the order is complex: 515 is written as 500, 5 (''prefixed'' variation), 10.</p>
+     </orig>
+     <known-orig>
       <p>Arabic non-positional numbers used in India since the 17th century (back under Mogul rule) up to mid 20th century. Arabic ''siyaq'' means “order”. Also known as ''raqm'', Arabic “account”.</p>
       <p />
       <p>Numbers up to {{n|90000}} are [[pt:acrophonic|acrophonic]], from Arabic, starting from {{n|100000}} are Indian words. Written right to left, the order is complex: 515 is written as 500, 5 (''prefixed'' variation), 10.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>インドでは、17 世紀 (ムガル帝国時代) から 20 世紀半ばまでアラビア語で非位置番号の数字が使われていました。アラビア語の「siyaq」は「順序」を意味します。また、「raqm」(アラビア語で「アカウント」) としても知られています。</p>
       <p />
@@ -5021,8 +5090,13 @@
      <orig>
       <p>Arabic non-positional [[pt:acrophonic|acrophonic]] numerals used in late-medieval Turkey, also “rakkamları” (Arabic ''raqm'' “account”). Arabic ''siyaq'' means “order”.</p>
       <p />
-      <p>Written right-to-left, the order is complex: 123 is written as 100, 3, 20. ''Marratan'' symbol is written with thousands to denote millions.</p>
+      <p>Written right-to-left, the order is complex: 123 is written as 100, 3, 20. The ''marratan'' symbol is written with thousands to denote millions.</p>
      </orig>
+     <known-orig>
+      <p>Arabic non-positional [[pt:acrophonic|acrophonic]] numerals used in late-medieval Turkey, also “rakkamları” (Arabic ''raqm'' “account”). Arabic ''siyaq'' means “order”.</p>
+      <p />
+      <p>Written right-to-left, the order is complex: 123 is written as 100, 3, 20. ''Marratan'' symbol is written with thousands to denote millions.</p>
+     </known-orig>
      <transl>
       <p>中世後期のトルコで使われたアラビア語の非位取り数字 [[pt:acrophonic|acrophonic]] で、「rakkamları」（アラビア語で「raqm」「アカウント」）とも呼ばれる。アラビア語の「siyaq」は「順序」を意味する。</p>
       <p />
@@ -5037,10 +5111,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Arabs have their own mathematical notation. They use their [[ps:Arab|own]] letters written right-to-left. As Westerns have Roman, bold, italic, and others, Arabs have isolated, initial, tailed, stretched, looped, and double-struck letters. Signs are international mirrored, but own exist too{{-}}for example, sum. Even signs “for all” and “exists” are mirrored.</p>
+      <p />
+      <p>This set was first implemented in the mathematical typesetting system TᴇX (pronounced “tech”), and in 2012, after seven years of agreement, these characters were adopted by Unicode.</p>
+     </orig>
+     <known-orig>
       <p>Arabs have their own mathematical notation. They use [[ps:Arab|own]] letters written right-to-left. Like Westerns have Roman, bold, italic and others, Arabs have isolated, initial, tailed, stretched, looped and double-struck letters. Signs are international mirrored, but own exist too{{-}}for example, sum. Even signs “for all” and “exists” are mirrored.</p>
       <p />
       <p>First this set was implemented in system of mathematical text TᴇX (pronounced “tech”), and in 2012, after seven years of agreeing on, these works were moved to Unicode.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>アラブ人は独自の数学表記法を持っています。彼らは右から左に書かれた [[ps:Arab|独自の]] 文字を使用します。西洋人がローマン、太字、イタリック体などを持っているように、アラブ人は孤立文字、頭文字、末尾付き文字、引き伸ばし文字、ループ文字、二重打ち文字を持っています。記号は国際的にミラーリングされていますが、独自の存在も{{-}}たとえば、合計です。「すべての」や「存在する」記号もミラーリングされています。</p>
       <p />
@@ -5055,6 +5134,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The gambling game májiàng (often Romanized as ''mahjong'') was invented in the late 19th century; the first surviving set dates to 1870. The game itself is little known to the Western world, but the solitaire is widespread: remove identical tiles from the sides of the figure.</p>
+      <p />
+      <p>The solitaire was invented by student Brodie Lockard in 1981{{-}}he fell from a trampoline and was completely paralyzed. For the time of rehab, he convinced the CDC company to install a terminal, and he programmed it by holding a stick with teeth. The solitaire was a mixture of two Chinese games: mahjong and “demolish the turtle”, played with dominoes. A terminal of the PLATO system was monochrome with 512×512 resolution{{-}}this was enough for such a complex game.</p>
+      <p />
+      <p>Mahjong suits come from one coin (rings), a bundle of 100 coins (bamboos) and {{n|10000}} coins (the ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
+      <p />
+      <p>…Lockard remained wheelchair-bound, but gained fame as a developer of games and assistive software, and is alive as of {{ylockard}}.</p>
+     </orig>
+     <au-cmt>
+      <p>{{ylockard}} = 2025 at the time of writing</p>
+      <p>May increase when I find some evidence of being alive, or disappear when he’s dead</p>
+     </au-cmt>
+     <known-orig>
       <p>The gambling game májiàng (often named ''mahjong'' through Romanization) was invented late 19th century, the first surviving set dates to 1870. The game itself is little known to the Western world, but solitaire is widespread: remove identical tiles from the sides of the figure.</p>
       <p />
       <p>The solitaire was invented by student Brodie Lockard in 1981{{-}}he fell from a trampoline and was completely paralyzed. For the time of rehab, he convinced the CDC company to install a terminal, and he programmed on it holding a stick with teeth. The solitaire was a mixture of two Chinese games, mahjong and “demolish the turtle” played with dominoes. A terminal of the PLATO system was monochrome with 512×512 resolution{{-}}this was enough for such a complex game.</p>
@@ -5062,11 +5154,7 @@
       <p>Mahjong suits come from one coin (rings), a bundle of 100 coins (bamboos) and {{n|10000}} coins (the ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
       <p />
       <p>…Lockard remained wheelchair-bound, but got fame as a developer of games and assistive software, and alive as of {{ylockard}}.</p>
-     </orig>
-     <au-cmt>
-      <p>{{ylockard}} = 2025 at the time of writing</p>
-      <p>May increase when I find some evidence of being alive, or disappear when he’s dead</p>
-     </au-cmt>
+     </known-orig>
      <transl>
       <p>ギャンブルゲームである麻雀（ローマ字表記では「麻雀」と呼ばれることが多い）は 19 世紀後半に発明され、現存する最初のセットは 1870 年のものです。ゲーム自体は西洋ではあまり知られていませんが、ソリティアは広く普及しています。ソリティアは、図形の側面から同じ牌を取り除くゲームです。</p>
       <p />
@@ -5085,12 +5173,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Chinese invented dominoes around the 13th century. In the 18th century, the game got to Italy.</p>
+      <p />
+      <p>There are three versions of name etymology. By the first one, the winner became the lord, the ''domino''. By the second one, the game was permitted in monasteries, and monks started every job from prayer to the Lord, Italian ''Domino''. By the third version, in honour of the black-and-white carnival suit ''domino'' portraying a monk.</p>
+      <p />
+      <p>After rethinking the word ''domino'', in mathematics ''trimino'', ''tetramino'', etc. appeared{{-}}figures of 3, 4, etc. squares.</p>
+     </orig>
+     <known-orig>
       <p>Dominoes were invented by the Chinese about 13th century. In 18th century the game got to Italy.</p>
       <p />
       <p>There are three versions of name etymology. By the first one, the winner became the lord, ''domino''. By the second one, the game was permitted in monasteries, and monks started every job from prayer to Lord, italian ''Domino''. By the third version, in the honour of black-and-white carnival suit ''domino'' portraying monk.</p>
       <p />
       <p>After rethinking the word ''domino'', in mathematics ''trimino'', ''tetramino'' etc appeared{{-}}figures of 3, 4 etc squares.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>ドミノは13世紀頃に中国で発明されました。18世紀にこのゲームはイタリアに伝わりました。</p>
       <p />
@@ -5107,6 +5202,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The block unites standard cards and the Tarot deck.</p>
+      <p />
+      <p>The game of cards was invented about the 12th century in East Asia. In Europe, cards were first mentioned in the 14th century. Though Muslims deny that they transferred cards to the West, it turned out that Mamluks had their own deck resembling Tarot.</p>
+      <p />
+      <p>Joker has no relation to Tarot trumps{{-}}it was added in the 19th century.</p>
+      <p />
+      <p>Unicode names of trumps correspond to the French Tarot deck (divination is usually done with an Italian deck). Exactly: 0){{_}}fool, 1){{_}}individual, 2){{_}}childhood, 3){{_}}youth, 4){{_}}maturity, 5){{_}}old age, 6){{_}}morning, 7){{_}}afternoon, 8){{_}}evening, 9){{_}}night, 10){{_}}earth and air, 11){{_}}water and fire, 12){{_}}dance, 13){{_}}shopping, 14){{_}}open air leisure, 15){{_}}arts, 16){{_}}spring, 17){{_}}summer, 18){{_}}autumn, 19){{_}}winter, 20){{_}}game, 21){{_}}collective.</p>
+      <p />
+      <p>The block has one [[pt:emoji|emoji]], a black joker.</p>
+     </orig>
+     <known-orig>
       <p>The block unites standard cards and Tarot deck.</p>
       <p />
       <p>The game of cards was invented about 12th century in East Asia. In Europe, cards were first mentioned in 14th century. Though Muslims deny that they transferred cards to the West, it turned out that Mamluks had their own deck looking like Tarot.</p>
@@ -5116,7 +5222,7 @@
       <p>Unicode names of trumps correspond to the French Tarot deck (divination is usually done with an Italian deck). Exactly: 0){{_}}fool, 1){{_}}individual, 2){{_}}childhood, 3){{_}}youth, 4){{_}}maturity, 5){{_}}old age, 6){{_}}morning, 7){{_}}afternoon, 8){{_}}evening, 9){{_}}night, 10){{_}}earth and air, 11){{_}}water and fire, 12){{_}}dance, 13){{_}}shopping, 14){{_}}open air leisure, 15){{_}}arts, 16){{_}}spring, 17){{_}}summer, 18){{_}}autumn, 19){{_}}winter, 20){{_}}game, 21){{_}}collective.</p>
       <p />
       <p>The block has one [[pt:emoji|emoji]], black joker.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>このブロックは、標準カードとタロット デッキを統合します。</p>
       <p />
@@ -5137,11 +5243,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Japanese television characters, characters from ''Webdings'' font, characters of intellectual property…</p>
+      <p>Japanese television characters, characters from the ''Webdings'' font, characters of intellectual property…</p>
       <p />
-      <p>Blood groups, parking sign and some other characters are [[pt:emoji|emoji]].</p>
+      <p>Blood groups, the parking sign and some other characters are [[pt:emoji|emojis]].</p>
       <p />
-      <p>[[pt:country|Flag]] emoji are assembled from regional indicators: if you write “GB” emoji, you’ll get flag of Great Britain.</p>
+      <p>[[pt:country|Flag]] emojis are assembled from regional indicators: if you write “GB” emoji, you’ll get the flag of Great Britain.</p>
      </orig>
      <known-orig>
       <p>Japanese television characters, characters from ''Webdings'' font, characters of intellectual property…</p>
@@ -5166,12 +5272,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Ideographs in brackets, squares, and circles used in Japanese placards and on television.</p>
+      <p />
+      <p>[[pc:1F227]]…[[pc:1F231]], [[pc:1F240]]…[[pc:1F248]] are signs from Japanese baseball reports: pitcher, catcher, 1st base… This sport is popular in Japan: at the Tokyo 2021 Olympics, they won gold in baseball and softball! [[pc:1F214]] has a dual purpose: two-language broadcasting and 2nd-base player.</p>
+      <p />
+      <p>[[pc:1F260]]…[[pc:1F265]] are six characters from Chinese folk beliefs: luck, prosperity, longevity, happiness, love, and plenty.</p>
+     </orig>
+     <known-orig>
       <p>Ideographs in brackets, squares, circles used in Japanese placards and television.</p>
       <p />
       <p>1F227…1F231, 1F240…1F248 are signs from Japanese baseball reports: pitcher, catcher, 1st base… This sport is popular in Japan, in Tokyo Olympics 2021 they got gold in baseball and softball! 1F214 has double purpose: two-language broadcasting and 2nd base player.</p>
       <p />
       <p>1F260…1F265 are six characters from Chinese folk beliefs: luck, prosperity, longevity, happiness, love, plenty.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>日本のプラカードやテレビで使われる括弧、四角、丸で囲まれた表意文字。</p>
       <p />
@@ -5190,8 +5303,13 @@
      <orig>
       <p>This block contains [[pt:emoji|emoji]] (both Japanese and international), dingbats and characters from user interfaces.</p>
       <p />
-      <p>Destiny of pistol {{em|🔫}} is remarkable: starting from Apple, vendors settled on toy to diminish Internet threatenings.</p>
+      <p>The destiny of the pistol {{em|🔫}} is remarkable: starting with Apple, vendors settled on a toy to discourage people from threatening one another online.</p>
      </orig>
+     <known-orig>
+      <p>This block contains [[pt:emoji|emoji]] (both Japanese and international), dingbats and characters from user interfaces.</p>
+      <p />
+      <p>Destiny of pistol {{em|🔫}} is remarkable: starting from Apple, vendors settled on toy to diminish Internet threatenings.</p>
+     </known-orig>
      <transl>
       <p>このブロックには、[[pt:emoji|絵文字]] (日本語と国際語の両方)、絵文字、ユーザーインターフェイスの文字が含まれています。</p>
       <p />
@@ -5205,7 +5323,8 @@
      <transl>顔文字</transl>
     </text>
     <text id="Text">
-     <orig>Emoticons or smilies are characters and pictograms that display emotions. By the moment of proposal (2008) emoticons had been circulating in Japanese cellular networks for about 9 years. According to Consortium’s study (2019), six of the ten most used [[pt:emoji|emoji]] are smilies.</orig>
+     <orig>Emoticons or smilies are characters and pictograms that display emotions. By the time of the proposal (2008), emoticons had been circulating in Japanese cellular networks for about 9 years. According to the Consortium’s study (2019), six of the ten most used [[pt:emoji|emojis]] are smilies.</orig>
+     <known-orig>Emoticons or smilies are characters and pictograms that display emotions. By the moment of proposal (2008) emoticons had been circulating in Japanese cellular networks for about 9 years. According to Consortium’s study (2019), six of the ten most used [[pt:emoji|emoji]] are smilies.</known-orig>
      <transl>顔文字またはスマイリーは、感情を表す文字や絵文字です。提案された時点（2008年）までに、顔文字は日本の携帯電話ネットワークで約9年間流通していました。コンソーシアムの調査（2019年）によると、最も使用されている10の[[pt:emoji|絵文字]]のうち6つはスマイリーです。</transl>
     </text>
    </group>
@@ -5236,10 +5355,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Antoine Lavoisier (the late 18th century) is often considered the founder of chemistry. He closed down, for example, the phlogiston theory. And before him, different theories of why substances react existed, sometimes weird. Some alchemists even speculated that science could make gold or create artificial life. Their signs for various substances and methods of processing them were systemless but understandable for anyone who knows Latin and ancient doctrines.</p>
+      <p />
+      <p>In Unicode{{_}}15.0, eight characters from astronomy and astrology were added.</p>
+     </orig>
+     <known-orig>
       <p>Antoine Lavoisier (end of 18th century) is often considered the founder of chemistry. He closed down, for example, the phlogiston theory. And before him, different theories of why substances react existed, sometimes weird. Some alchemists even speculated that science could make gold or create artificial life. Their signs for various substances and methods of processing them were systemless but understandable for anyone who knows Latin and ancient doctrines.</p>
       <p />
       <p>In Unicode{{_}}15.0 eight characters from astronomy and astrology are added.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>アントワーヌ・ラボアジエ (18 世紀末) は化学の創始者とみなされることが多い。彼は、たとえばフロギストン説を否定した。そして、彼以前にも、物質がなぜ反応するのかについてのさまざまな理論が存在し、時には奇妙なものもあった。錬金術師の中には、科学によって金を作ったり人工生命を作ったりできると推測した者もいた。さまざまな物質やその処理方法を表す記号は体系化されていないが、ラテン語や古代の教義を知っている人なら誰でも理解できるものだった。</p>
       <p />
@@ -5256,8 +5380,13 @@
      <orig>
       <p>This block was introduced in an attempt to encode dingbat fonts ''Wingdings'' and ''Webdings''. It also allowed putting an arrow or cross exactly as thick as needed.</p>
       <p />
-      <p>Characters for the game of Go and colour icons were added later{{-}}even if there’s no [[pt:ligature|ligature]] of yellow ribbon, pair {{em|🎀🟨}} will be understandable.</p>
+      <p>Characters for the game of Go and colour icons were added later{{-}}even if there’s no [[pt:ligature|ligature]] of a yellow ribbon, pair {{em|🎀🟨}} will be understandable.</p>
      </orig>
+     <known-orig>
+      <p>This block was introduced in an attempt to encode dingbat fonts ''Wingdings'' and ''Webdings''. It also allowed putting an arrow or cross exactly as thick as needed.</p>
+      <p />
+      <p>Characters for the game of Go and colour icons were added later{{-}}even if there’s no [[pt:ligature|ligature]] of yellow ribbon, pair {{em|🎀🟨}} will be understandable.</p>
+     </known-orig>
      <transl>
       <p>このブロックは、dingbat フォント「Wingdings」と「Webdings」をエンコードする目的で導入されました。矢印や十字を必要な太さで正確に配置することもできます。</p>
       <p />
@@ -5268,9 +5397,9 @@
    <group id="1F800">
     <text id="Text" force-attention="true">
      <orig>
-      <p>148 arrows from ''Wingdings'' and ''Webdings'' fonts. Also arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>
+      <p>148 arrows from the ''Wingdings'' and ''Webdings'' fonts. Also, arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>
       <p />
-      <p>Arrows 1F8B8…BB are very thick on [[po:Ohio]], but Consortium decided to draw them in normal thickness.</p>
+      <p>Arrows 1F8B8…BB are very thick on [[po:Ohio]], but the Consortium decided to draw them in normal thickness.</p>
      </orig>
      <known-orig>
       <p>As of Unicode{{_}}16, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</p>
@@ -5290,7 +5419,8 @@
      <transl>補助記号及び絵記号</transl>
     </text>
     <text id="Text">
-     <orig>Introduced in 2015 and contains characters of various use, mainly [[pt:emoji|emoji]]. Also several characters from Typicon, a standard statute of Orthodox worship codified about 1100, last major edits 1695.</orig>
+     <orig>Introduced in 2015, it contains characters of various uses, mainly [[pt:emoji|emojis]]. Also, several characters from Typicon, the standard statute of Orthodox worship codified about 1100, with the last major edits in 1695.</orig>
+     <known-orig>Introduced in 2015 and contains characters of various use, mainly [[pt:emoji|emoji]]. Also several characters from Typicon, a standard statute of Orthodox worship codified about 1100, last major edits 1695.</known-orig>
      <transl>2015 年に導入され、主に [[pt:emoji|絵文字]] などのさまざまな用途の文字が含まれています。また、1100 年頃に成文化され、1695 年に最後に大きく編集された正教会の礼拝の標準法典 Typicon からの文字もいくつか含まれています。</transl>
     </text>
    </group>
@@ -5301,17 +5431,17 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In movable-type printing turned pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces (except weakened and borrowed from other games) are:</p>
+      <p>In movable-type printing, turned pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces (except weakened and borrowed from other games) are:</p>
       <p>* neutral piece: both players may move it;</p>
       <p>* knight-queen{{-}}also superqueen, omnipotent queen, maharajah, amazon, dragon, terror;</p>
       <p>* knight-bishop{{-}}also archbishop, cardinal, princess, centaur;</p>
-      <p>* knight-rook{{-}}also empress, marshal, chancelor;</p>
-      <p>* grasshopper{{-}}queen that must jump over a piece (own or opponent’s) to do a move, drawn as inverted queen;</p>
-      <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, no need to protect), drawn as inverted king;</p>
+      <p>* knight-rook{{-}}also empress, marshal, chancellor;</p>
+      <p>* grasshopper{{-}}queen that must jump over a piece (own or opponent’s) to do a move, drawn as an inverted queen;</p>
+      <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, no need to protect), drawn as an inverted king;</p>
       <p>* berolina, Berlin pawn, antipawn{{-}}moves one square diagonally forward and takes one square forward, in contrast to ordinary pawn, drawn as an inverted or slanted pawn;</p>
       <p>* nightrider, knightrider, knightmare, unicorn{{-}}does several knight’s leaps in a single direction, blocked with own pieces and takes opponent’s in landing points, drawn as inverted or altered knight;</p>
       <p>* other knights (3-2, 4-1, combined with pawn…) are rare but exist;</p>
-      <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except the springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
+      <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on the other side. If it leaps in eight cardinal directions, all squares from start to end except the springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
       <p />
       <p>Two pieces from proto-chess:</p>
       <p>* alfil (elephant){{-}}ancestor of bishop, moves two squares diagonally, jumping over pieces;</p>
@@ -5380,7 +5510,7 @@
       <p />
       <p>'''Did not''' advance to the standard:</p>
       <p>* characters in intellectual property, like the Apple logo;</p>
-      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
+      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In the right fonts, old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
       <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </orig>
@@ -5410,13 +5540,15 @@
    </group>
    <group id="20000">
     <text id="Text">
-     <orig>Rare and historical [[ps:Hani|CJK ideographs]]. These ideographs were packed into the standard font “SimSun-ExtB” for Windows. Later many mistakes in the block were found, and even eight erroneously duplicated ideographs.</orig>
+     <orig>Rare and historical [[ps:Hani|CJK ideographs]]. These ideographs were packed into the standard Windows font “SimSun-ExtB”. Later, many mistakes in the block were found, and even eight erroneously duplicated ideographs.</orig>
+     <known-orig>Rare and historical [[ps:Hani|CJK ideographs]]. These ideographs were packed into the standard font “SimSun-ExtB” for Windows. Later many mistakes in the block were found, and even eight erroneously duplicated ideographs.</known-orig>
      <transl>希少で歴史的な [[ps:Hani|CJK 表意文字]]。これらの表意文字は、Windows の標準フォント「SimSun-ExtB」にパックされました。後に、ブロック内に多くの誤りが見つかり、誤って重複した表意文字が 8 つも見つかりました。</transl>
     </text>
    </group>
    <group id="2A700">
     <text id="Text">
-     <orig>{{n|4149}} rare and old ideographs added in 2009. In 2021 4 more were added.</orig>
+     <orig>{{n|4149}} rare and old ideographs added in 2009. In 2021, 4 more were added.</orig>
+     <known-orig>{{n|4149}} rare and old ideographs added in 2009. In 2021 4 more were added.</known-orig>
      <transl>2009 年に {{n|4149}} 個の珍しい古い表意文字が追加されました。2021 年にはさらに 4 個が追加されました。</transl>
     </text>
    </group>
@@ -5434,7 +5566,8 @@
    </group>
    <group id="2CEB0">
     <text id="Text">
-     <orig>{{n|7473}} ideographs added in 2017, including rare, old and more than {{n|1000}} from Zhuang language.</orig>
+     <orig>{{n|7473}} ideographs added in 2017, including rare, old and more than {{n|1000}} from the Zhuang language.</orig>
+     <known-orig>{{n|7473}} ideographs added in 2017, including rare, old and more than {{n|1000}} from Zhuang language.</known-orig>
      <transl>2017年に{{n|7473}}の表意文字が追加されました。これには、珍しい文字、古い文字、チワン語の文字が{{n|1000}}以上含まれています。</transl>
     </text>
    </group>
@@ -5443,10 +5576,17 @@
      <orig>
       <p>In late 2022, mainland China attempted to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
       <p />
-      <p>Character repertoire is usually frozen long before the beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
+      <p>Character repertoire is usually frozen long before the beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time, characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
       <p />
       <p>All other ideographs were postponed for the sake of this urgent job. Only half a year left since fixing characters (August 2023) to the next beta (spring 2024), and Unicode{{_}}16 added no new ideographs.</p>
      </orig>
+     <known-orig>
+      <p>In late 2022, mainland China attempted to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
+      <p />
+      <p>Character repertoire is usually frozen long before the beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
+      <p />
+      <p>All other ideographs were postponed for the sake of this urgent job. Only half a year left since fixing characters (August 2023) to the next beta (spring 2024), and Unicode{{_}}16 added no new ideographs.</p>
+     </known-orig>
      <transl>
       <p>2022年後半、中国本土は、中国語の名前に見られる897の表意文字を未割り当てのプレーン0Aにマッピングすることで、Unicodeをフォークしようとしました。これを防ぐために、表意文字は専門家によって迅速に精査され、そのうち622がエンコード可能と特定されました。</p>
       <p />
@@ -5469,10 +5609,15 @@
    <group id="30000">
     <text id="Text">
      <orig>
-      <p>In 2020 Unicode stepped into [[pt:plane|plane]] number 3, and allocated {{n|4939}} old and rare characters there. This block contains two record-beating ideographs:</p>
+      <p>In 2020, Unicode stepped into [[pt:plane|plane]] number 3 and allocated {{n|4939}} old and rare characters there. This block contains two record-breaking ideographs:</p>
       <p>* ''biang''{{-}}written twice in Chinese noodle ''biangbiang'': [[pu:30EDD]] simplified 42 strokes, [[pu:30EDE]] traditional 58 strokes;</p>
       <p>* ''daito'' or ''otodo''{{-}}84-stroke ideograph of Japanese invention meaning ''appearance of a dragon in flight'', [[pu:3106C]].</p>
      </orig>
+     <known-orig>
+      <p>In 2020 Unicode stepped into [[pt:plane|plane]] number 3, and allocated {{n|4939}} old and rare characters there. This block contains two record-beating ideographs:</p>
+      <p>* ''biang''{{-}}written twice in Chinese noodle ''biangbiang'': [[pu:30EDD]] simplified 42 strokes, [[pu:30EDE]] traditional 58 strokes;</p>
+      <p>* ''daito'' or ''otodo''{{-}}84-stroke ideograph of Japanese invention meaning ''appearance of a dragon in flight'', [[pu:3106C]].</p>
+     </known-orig>
      <transl>
       <p>2020年、Unicodeは[[pt:plane|plane]]番号3に踏み込み、そこに{{n|4939}}個の古くて珍しい文字を割り当てました。このブロックには、記録を破った2つの表意文字が含まれています。</p>
       <p>* 中国の麺類「ビアンビアン」で2回書かれた「ビアン」{{-}}：[[pu:30EDD]]簡体字42画、[[pu:30EDE]]繁体字58画。</p>
@@ -5492,7 +5637,7 @@
      <orig>
       <p>Ideographs from various sources: Chinese names, Korean history site, newspaper archives, Taiwanese encoding…</p>
       <p />
-      <p>[[pk:2EBF0|2022 China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of {{n|4000}}{{_}}ideographs made it to Unicode{{_}}17 only.</p>
+      <p>[[pk:2EBF0|China’s 2022 attempt]] to fork Unicode postponed everything else, leaving little time before Unicode{{_}}16{{_}}beta. So a new bunch of {{n|4000}}{{_}}ideographs made it to Unicode{{_}}17 only.</p>
      </orig>
     </text>
    </group>
@@ -5507,7 +5652,8 @@
      <transl>タグ</transl>
     </text>
     <text id="Text">
-     <orig>This block mirrors [[pt:ascii|ASCII]]. Initially (Unicode{{_}}3.1, 2001) tags were used to specify language by agreement between sender and receiver. This use was completely [[pt:deprecated|deprecated]], but in Unicode{{_}}9.0 (2017) tags were returned as [[pt:emoji|emoji]] modifiers. Now they are used only for regional flags, three regions are defined: England, Wales, and Scotland.</orig>
+     <orig>This block mirrors [[pt:ascii|ASCII]]. Initially (Unicode{{_}}3.1, 2001), tags were used to specify language by agreement between the sender and the receiver. This use was completely [[pt:deprecated|deprecated]], but in Unicode{{_}}9.0 (2017), tags were returned as [[pt:emoji|emoji]] modifiers. Now they are used only for regional flags, three regions are defined: England, Wales, and Scotland.</orig>
+     <known-orig>This block mirrors [[pt:ascii|ASCII]]. Initially (Unicode{{_}}3.1, 2001) tags were used to specify language by agreement between sender and receiver. This use was completely [[pt:deprecated|deprecated]], but in Unicode{{_}}9.0 (2017) tags were returned as [[pt:emoji|emoji]] modifiers. Now they are used only for regional flags, three regions are defined: England, Wales, and Scotland.</known-orig>
      <transl>このブロックは [[pt:ascii|ASCII]] を反映しています。当初 (Unicode{{_}}3.1、2001) は、タグは送信者と受信者の合意により言語を指定するために使用されていました。この使用は完全に [[pt:deprecated|非推奨]] でしたが、Unicode{{_}}9.0 (2017) ではタグは [[pt:emoji|絵文字]] 修飾子として返されました。現在、これらは地域の旗にのみ使用され、イングランド、ウェールズ、スコットランドの 3 つの地域が定義されています。</transl>
     </text>
    </group>
@@ -5517,7 +5663,8 @@
      <transl>字形選択子 補足</transl>
     </text>
     <text id="Text">
-     <orig>Supplemental variation selectors are used with [[ps:Hani|CJK ideographs]] only to set specific regional variation. But nothing prevents from using them with other characters by discretion of font designer.</orig>
+     <orig>Supplemental variation selectors are only used with [[ps:Hani|CJK ideographs]] to set a specific regional variation. But nothing prevents us from using them with other characters at the font designer’s discretion.</orig>
+     <known-orig>Supplemental variation selectors are used with [[ps:Hani|CJK ideographs]] only to set specific regional variation. But nothing prevents from using them with other characters by discretion of font designer.</known-orig>
      <transl>補助異体字セレクタは、特定の地域異体字を設定するために [[ps:Hani|CJK 表意文字]] でのみ使用されます。ただし、フォント デザイナーの裁量により、他の文字で使用することを妨げるものはありません。</transl>
     </text>
    </group>
@@ -5552,15 +5699,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Fula, Fulani, or Fulbe are nomadic herders, anthropologically the closest to Europeans in Sub-Saharan Africa and the most avid advocates of Islam in West Africa.</p>
+      <p>Fula, Fulani, or Fulbe are nomadic herders, the most anthropologically similar to Europeans in Sub-Saharan Africa and the most avid advocates of Islam in West Africa.</p>
       <p />
-      <p>The alphabet was invented by brothers Ibrahima and Abdoulaye Barry, who were teenagers, to convey Fula languages better than Latin or Arabic. The new script caught on, and it is taught in schools if Guinea, Liberia and other countries, Android is localized.</p>
+      <p>The alphabet was invented by brothers Ibrahima and Abdoulaye Barry, who were teenagers, to convey the Fula languages better than Latin or Arabic. The new script caught on and is taught in schools in Guinea, Liberia, and other countries; Android is localized.</p>
       <p />
-      <p>Alphabet is named after four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects peoples from vanishing”.</p>
+      <p>The alphabet is named after four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects the peoples from vanishing”.</p>
       <p />
       <p>Letters are joined, though many modern publications do not join.</p>
       <p />
-      <p>Before that there were two attempts to make the Fula alphabet, both are absent in Unicode: Dita script (≈1958, inspired with pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}greatly modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
+      <p>Before that, there were two attempts to make the Fula alphabet, both absent from Unicode: Dita script (≈1958, inspired by pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}a greatly modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
      </orig>
      <known-orig>
       <p>Fula, Fulani or Fulbe are nomadic herders, anthropologically the closest to Europeans in Sub-Saharan Africa, and the most avid advocates of Islam in West Africa.</p>
@@ -6601,11 +6748,18 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The shorthand system invented by French priest Émile Duployé. Classified as geometric (characters are made from dots, lines, circles), alphabetic (pays equal attention to consonants and vowels).</p>
+      <p />
+      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses the old ''Noto Sans Duployan{{_}}2'' font for clarity, it just assigns some glyphs to Unicode characters. In 2023, Noto{{_}}3 came out, which actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in the Perrault system for English (K+A+TS, [[pc:1BC05]]+[[pc:1BC41]]+[[pc:1BC36]]) looks like</p>
+      <p>:{{DuplCats}}</p>
+     </orig>
+     <au-cmt>Of course, you must write CATS as is. Maybe, explaining in your lang (not necessary).</au-cmt>
+     <known-orig>
       <p>Shorthand system invented by French priest Émile Duployé. Classified as geometric (characters are made from dots, lines, circles), alphabetic (pays equal attention to consonants and vowels).</p>
       <p />
       <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, [[pc:1BC05]]+[[pc:1BC41]]+[[pc:1BC36]]) looks like</p>
       <p>:{{DuplCats}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>フランスの司祭エミール・デュプロイエが考案した速記システム。幾何学的（文字は点、線、円で構成されている）、アルファベット（子音と母音に同等の注意を払っている）に分類されます。</p>
       <p />
@@ -7598,9 +7752,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Jurchens (ancestors of Manchu) rebelled against [[ps:Kits|Khitans]] in 1115, and soon created their own script.</p>
+      <p>The Jurchens (ancestors of the Manchu) rebelled against the [[ps:Kits|Khitans]] in 1115 and soon created their own script.</p>
       <p />
-      <p>In 1234, Jurchens were conquered by Mongols. China overthrew Mongols in 1368, and communicated with the still-conquered northern neighbour in the Jurchen script. In 1599, the Manchu converted to the [[ps:Mong|Mongolian]] script.</p>
+      <p>In 1234, the Jurchens were conquered by the Mongols. China overthrew the Mongols in 1368 and communicated with the still-conquered northern neighbour in the Jurchen script. In 1599, the Manchu converted to the [[ps:Mong|Mongolian]] script.</p>
       <p />
       <p>Almost all available sources are monuments and household items. Only a few papers survived.</p>
      </orig>
@@ -8463,10 +8617,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script was invented by Islamic preacher Mohamed Turay. The initial script of 42 characters was an [[pt:abugida|abugida]], but with additions made by his pupils, it lost consistency. Named after the first three syllables. Also, a non-positional numeral system came into script.</p>
+      <p />
+      <p>It was widely used in the early 20th century, but later, Mende adopted [[ps:Latn|Latin]]. There are several hundred modern (2010s) people literate in Kikakui.</p>
+     </orig>
+     <known-orig>
       <p>The script was invented by Islamic preacher Mohamed Turay. Initial script of 42 characters was an [[pt:abugida|abugida]], but with additions made by his pupils it lost consistency. Named after first three syllables. Also a non-positional numeral system came into script.</p>
       <p />
       <p>Was widely used in early 20th century, but later Mende adopted [[ps:Latn|Latin]]. There are several hundreds of modern (2010s) people literate in Kikakui.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>この文字はイスラムの説教師モハメド・トゥレイによって発明されました。当初の 42 文字の文字は [[pt:abugida|アブギダ]] でしたが、彼の弟子による追加により一貫性が失われました。最初の 3 音節にちなんで名付けられました。また、位置を問わない数字体系も文字に取り入れられました。</p>
       <p />
@@ -8803,12 +8962,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Non-written Austro-Asian (not Indo-European) language. According to the 2011 census, 1.1{{_}}million people in India speak Mundari, and 500{{_}}thousand more speak some ''Munda''{{-}}it’s unknown whether it is the same language.</p>
+      <p />
+      <p>Writing systems are [[ps:Orya|Odia]], [[ps:Deva|Devanagari]], [[ps:Beng|Bengali]], and [[ps:Latn|Latin]]{{-}}but phonemes are exotic for Latin, and abugidas badly suit Austro-Asian languages. No wonder Rohidas Singh Nag invented a new alphabet in 1949, and it even took root. Around 1982, he shortened the alphabet to 27 characters and showed it to local authorities, and reformed it in 2008.</p>
+      <p />
+      <p>Digits are own. Punctuation is European.</p>
+     </orig>
+     <known-orig>
       <p>Non-written Austro-Asian (not Indo-European) language. According to 2011 census, 1.1{{_}}million people in India speak Mundari and 500{{_}}thousand more speak some ''Munda''{{-}}it’s unknown whether it is the same language.</p>
       <p />
       <p>Writing systems are [[ps:Orya|Odia]], [[ps:Deva|Devanagari]], [[ps:Beng|Bengali]], [[ps:Latn|Latin]]{{-}}but phonemes are exotic for Latin, and abugidas badly suit Austro-Asian languages. No wonder Rohidas Singh Nag invented a new alphabet in 1949, and it even took root. About 1982 he shortened the alphabet to 27 characters and showed to local authorities, and reformed in 2008.</p>
       <p />
       <p>Digits are own. Punctuation is European.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>非筆記のオーストロアジア語（インドヨーロッパ語ではない）。2011年の国勢調査によると、インドでは110万人がムンダリ語を話し、さらに50万人が「ムンダ語」を話します。同じ言語かどうかは不明です。</p>
       <p />
@@ -8970,6 +9136,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Nüshu existed for centuries and was used as a women’s script: men were trained in [[ps:Hani|literacy]], while women used a simpler syllabic script. Unlike sweeping ideographs, Nüshu was written with a thin sliver. Many Nüshu specimens are ''third-day missives'': a girl departs for another village to marry, and her sisters and female friends embroider wishes for her, often in poetry.</p>
+      <p />
+      <p>Despite the common misconception, Nüshu was not{{_}}a{{_}}cypher; men just considered it “low” script. The first known specimen was made in the early 20th century, but the shape of the characters states that Nüshu existed in 1300.</p>
+      <p />
+      <p>Unlike the Japanese [[ps:Hira|Hiragana]], which is used for similar purposes, Nüshu remained an unofficial script. Campaigns against illiteracy and the spread of sewing machines in the 20th century put Nüshu into decline. Japanese invaders banned Nüshu, seeing a cypher in it, and the Red Guards during the Cultural Revolution destroyed antiques, including embroideries.</p>
+      <p />
+      <p>Nüshu was discovered again in the 1980s. Yang Huanyi, the last woman proficient in Nüshu, died in 2004 at the age of 98{{-}}after her death, Nüshu was known only to scholars. Embroideries featuring Nüshu have become a popular tourist souvenir; there are concerns that tourism will distort an ancient script.</p>
+      <p />
+      <p>About 1800 characters are known, but most mean the same syllable.</p>
+      <p />
+      <p>''Unicodia'' uses the ''Noto Sans Nushu'' font. The main typographer is a lady{{-}}Lisa Huang, a Frenchwoman of Chinese origin.</p>
+     </orig>
+     <known-orig>
       <p>Nüshu existed for centuries and was used as women’s script: men were trained in [[ps:Hani|literacy]], and women used simpler syllabic script. Unlike sweeping ideographs, Nüshu was written with a thin sliver. Many of Nüshu specimen are ''third day missives'': a girl departs to another village to marry, and her sisters and friend girls embroid wishes to her, often in poetry.</p>
       <p />
       <p>Despite common misconception, Nüshu was not{{_}}a{{_}}cipher; men just considered it “low” script. The first known specimen was made in early 20th century, but shape of characters states that Nüshu existed in 1300.</p>
@@ -8981,7 +9160,7 @@
       <p>About 1800 characters are known, but most mean the same syllable.</p>
       <p />
       <p>''Unicodia'' uses ''Noto Sans Nushu'' font. The main typographer is a lady{{-}}Lisa Huang, a Frenchwoman of Chinese origin.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>女書は何世紀にもわたって存在し、女性の文字として使われてきました。男性は [[ps:Hani|読み書き]] の訓練を受け、女性はより簡単な音節文字を使用しました。幅の広い表意文字とは異なり、女書は細い線で書かれました。女書の見本の多くは「3日目の手紙」です。つまり、ある少女が別の村に嫁ぐために出発し、その姉妹や友人の少女たちが彼女に願いを込め、多くの場合詩を書きます。</p>
       <p />
@@ -9063,12 +9242,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>A small Austroasiatic language from the Munda group, a relative of [[ps:Nagm|Mundari]] and [[ps:Olck|Santali]].</p>
+      <p />
+      <p>The script was invented by Mahendra Nath Sardar. In 1992, the Bhumij community held a contest for a new script, and it was already done, winning the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</p>
+      <p />
+      <p>Punctuation marks are [[pt:ascii|ASCII]], plus the ''danda'' bar from [[ps:Deva|Devanagari]]. Double danda is not attested.</p>
+     </orig>
+     <known-orig>
       <p>Small Austroasiatic language from Munda group, relative of [[ps:Nagm|Mundari]] and [[ps:Olck|Santali]].</p>
       <p />
       <p>The script was invented by Mahendra Nath Sardar. In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</p>
       <p />
       <p>Punctuation marks are [[pt:ascii|ASCII]], plus ''danda'' bar from [[ps:Deva|Devanagari]]. Double danda is not attested.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>ムンダ語群の小オーストロアジア語。[[ps:Nagm|ムンダリ]] および [[ps:Olck|サンタリ]] の親戚。</p>
       <p />
@@ -9742,6 +9928,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The system was created in 1974 by dancer Valerie Sutton. It was based on DanceWriting, which she created two years earlier. Later, she devised systems for writing pantomime, other sports (figure skating, karate…), physical exercises, and the body language of people and animals, but they weren’t so successful.</p>
+      <p />
+      <p>It is not{{_}}stated whose side the gestures are written from, the performer or the spectator. Most publications are performer-oriented. There are lots of characters that convey finger movements, arms and shoulder movements, sight, touch, and facial expressions. For hands, there are fist (square), loose fist (circle), open palm (pentagon), sharp of hand (rectangle) and others. The same gesture may be written differently.</p>
+      <p />
+      <p>Though the system isn’t strictly [[pt:universality|textual]]{{-}}position on page ''matters''{{-}}it was added to Unicode in 2015. Only characters were added, without any formatting. But many programs can fix X/Y coordinates on a sheet{{-}}for example, vector graphics editors.</p>
+      <p />
+      <p>Gestures with the other hand, to the other side, turned sideways are made with combining characters: any of Fill{{_}}2…6, and any of Rotation{{_}}2…16. For example, to write “gouge the blinkers out”, {{sm|𝠎𝪟𝦆}}, one should write 1D80E+Fill6+1D986.</p>
+     </orig>
+     <known-orig>
       <p>The system was created in 1974 by dancer Valerie Sutton. It was based on DanceWriting created by her two years before. Later she made systems for writing pantomime, other sports (figure skating, karate…), physical excercises, body language of people and animals, but they weren’t so successful.</p>
       <p />
       <p>It is not{{_}}stated whose side the gestures are written from, performer or spectator. Most publications are performer-oriented. There are lots of character, they convey motions of fingers, arms, shoulders, sight, also touches and face expressions. For hands there are fist (square), loose fist (circle), open palm (pentagon), sharp of hand (rectangle) and others. The same gesture may be written differently.</p>
@@ -9749,7 +9944,7 @@
       <p>Though the system isn’t strictly [[pt:universality|textual]]{{-}}position on page ''matters''{{-}}it was added to Unicode in 2015. Only characters were added, without any formatting. But many programs exist that can fix X/Y coordinates on a sheet{{-}}for example, vector graphic editors.</p>
       <p />
       <p>Gestures with other hand, to other side, turned sideways are made with combining characters: any of Fill{{_}}2…6, and any of Rotation{{_}}2…16. For example, to write “gouge blinkers out”, {{sm|𝠎𝪟𝦆}}, one should write 1D80E+Fill6+1D986.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>このシステムは、ダンサーのヴァレリー・サットンによって 1974 年に作成されました。これは、彼女が 2 年前に作成した DanceWriting に基づいています。その後、彼女はパントマイム、その他のスポーツ (フィギュア スケート、空手など)、身体運動、人や動物のボディ ランゲージの記述システムを作成しましたが、それほど成功しませんでした。</p>
       <p />
@@ -9770,7 +9965,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces. About 300{{_}}BC, they were replaced with almost modern ink-and-brush style.</p>
+      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces. Around 300{{_}}BC, they were replaced by an almost modern ink-and-brush style.</p>
       <p />
       <p>Those ideographs were revived and standardized under the reign of Qin Shi (221‒210{{_}}BC) as a formal script, similar to blackletter in [[ps:Latn|Latin]] and uncial in [[ps:Cyrl|Cyrillic]]. That’s the seal script in a narrower sense.</p>
       <p />
@@ -10507,9 +10702,9 @@
      <orig>
       <p>Abugida of [[ps:Khmr|Khmer]] origin, with two unique twists:</p>
       <p>* It’s written right-to-left in columns, clearly influenced by [[ps:Hani|Chinese]]. If it’s impossible, the entire text is rotated, like in [[ps:Mong|Mongolian]].</p>
-      <p>* All vowel marks are written below or on the right. There’re no preceding or enclosing vowel marks.</p>
+      <p>* All vowel marks are written below or on the right. There are no preceding or enclosing vowel marks.</p>
       <p />
-      <p>Inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese [[pu:3001]] and [[pc:3002|02]] are used. Sometimes syllables are separated with a small space. Numbers are spelled out in all sources. Modern texts use [[pk:FF00|fullwidth]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
+      <p>The inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese [[pu:3001]] and [[pc:3002|02]] are used. Sometimes syllables are separated with a small space. Numbers are spelt out in all sources. Modern texts use [[pk:FF00|full-width]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
       <p />
       <p>The language still exists, and is written in [[ps:Latn|Latin]] or [[ps:Thai|Thai]].</p>
      </orig>
@@ -10835,7 +11030,8 @@
      <transl>トト語</transl>
     </text>
     <text id="Text">
-     <orig>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>
+     <orig>A small Sino-Tibetan language used in the village of Totopara by the Toto tribe. The status is critically endangered: language transfer is already broken. About ⅓ are literate. The writing system is [[ps:Beng|Bengali]] or the own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>
+     <known-orig>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</known-orig>
      <transl>トトパラ村のトト族が使用する小さなシナ・チベット語。言語の継承はすでに途絶えており、状況は極めて危機的である。約 1/3 が読み書きができる。表記は [[ps:Beng|ベンガル語]] または 2015 年に部族の長老であるダニラム・トトが考案した独自の文字である。</transl>
     </text>
    </group>
@@ -10983,7 +11179,8 @@
      <transl>ワンチョ語</transl>
     </text>
     <text id="Text">
-     <orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012 a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</orig>
+     <orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012, a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</orig>
+     <known-orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012 a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</known-orig>
      <transl>ワンチョは小さなシナ・チベット語族の言語で、通常は [[ps:Deva|デーバナーガリー文字]] または [[ps:Latn|ラテン文字]] で表記されます。2001 年から 2012 年にかけて、バンワン・ロシュという教師が新しいアルファベットを考案しました。4 つの声調は発音区別符号で表記されます。句読点はヨーロッパの通常のものです。</transl>
     </text>
    </group>
@@ -11838,7 +12035,7 @@
      <orig>Alt codes</orig>
      <transl>Alt コード</transl>
     </text>
-    <text id="Text">
+    <text id="Text" force-attention="true">
      <orig>
       <p>Method of character entry by its code introduced in the BIOS (firmware) of the [[po:Ibm|IBM PC]]. The NT family of Windows has three types of codes.</p>
       <p />
@@ -11852,7 +12049,7 @@
       <p />
       <p>Holding {{kb|Alt}}, type on the numeric keypad {{k|'''0'''}}, then '''decimal''' character code 32 to 255. {{k|Alt|0240}} makes the letter ð.</p>
       <p />
-      <p>The encoding is Windows-1252 regardless of Windows settings. Code 127 does{{_}}not{{_}}work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
+      <p>The encoding depends on the current keyboard layout, which is counterintuitive but convenient. The Western European one is called Windows-1252: identical to [[pt:latin1|Latin-1]], but codes 128 to 159 are miscellaneous typography characters.</p>
       <p />
       <p>'''Unicode codes'''</p>
       <p />
@@ -11898,7 +12095,7 @@
       <p />
       <p>{{kb|Alt}} を押しながら、テンキーの {{k|'''0'''}} を入力してから、'''10 進''' 文字コード 32 から 255 を入力します。{{k|Alt|0240}} は文字 ð になります。</p>
       <p />
-      <p>エンコードは、Windows の設定に関係なく Windows-1252 です。コード 127 は機能しません。コード 128 から 159 は、その他のタイポグラフィ文字です。残りは [[pt:latin1|ラテン-1]] と同じです。</p>
+      <p>エンコーディングは現在のキーボードレイアウトに依存しており、直感に反するものの便利な仕組みとなっている。西ヨーロッパのキーボードレイアウトはWindows-1252と呼ばれ、[[pt:latin1|Latin-1]]と同一だが、コード128～159はその他の活字文字である。</p>
       <p />
       <p>'''Unicode コード'''</p>
       <p />

@@ -12164,7 +12164,7 @@
      <orig>Alt codes</orig>
      <transl>Alt 码（Alt codes）</transl>
     </text>
-    <text id="Text">
+    <text id="Text" force-attention="true">
      <orig>
       <p>Method of character entry by its code introduced in the BIOS (firmware) of the [[po:Ibm|IBM PC]]. The NT family of Windows has three types of codes.</p>
       <p />
@@ -12178,7 +12178,7 @@
       <p />
       <p>Holding {{kb|Alt}}, type on the numeric keypad {{k|'''0'''}}, then '''decimal''' character code 32 to 255. {{k|Alt|0240}} makes the letter ð.</p>
       <p />
-      <p>The encoding is Windows-1252 regardless of Windows settings. Code 127 does{{_}}not{{_}}work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
+      <p>The encoding depends on the current keyboard layout, which is counterintuitive but convenient. The Western European one is called Windows-1252: identical to [[pt:latin1|Latin-1]], but codes 128 to 159 are miscellaneous typography characters.</p>
       <p />
       <p>'''Unicode codes'''</p>
       <p />
@@ -12224,7 +12224,7 @@
       <p />
       <p>按住 {{kb|Alt}}，在数字小键盘上输入 {{k|'''0'''}}, 然后输入 32 到 255 的 '''十进制''' 字符代码。{{k|Alt|0240}} 打出字母 ð。</p>
       <p />
-      <p>无论 Windows 设置如何，编码均为 Windows-1252。代码 127 不起作用。代码 128 到 159 是各种排版字符。其余与 [[pt:latin1|Latin-1]] 相同。</p>
+      <p>编码取决于当前的键盘布局，这虽然违反直觉，但却很方便。西欧的编码称为 Windows-1252：它与 [[pt:latin1|Latin-1]] 相同，但代码 128 到 159 是杂项印刷字符。</p>
       <p />
       <p>'''Unicode 码'''</p>
       <p />

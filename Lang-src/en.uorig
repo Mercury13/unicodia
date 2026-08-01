@@ -7287,7 +7287,7 @@
       <p />
       <p>Holding {{kb|Alt}}, type on the numeric keypad {{k|'''0'''}}, then '''decimal''' character code 32 to 255. {{k|Alt|0240}} makes the letter ð.</p>
       <p />
-      <p>The encoding is Windows-1252 regardless of Windows settings. Code 127 does{{_}}not{{_}}work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
+      <p>The encoding depends on the current keyboard layout, which is counterintuitive but convenient. The Western European one is called Windows-1252: identical to [[pt:latin1|Latin-1]], but codes 128 to 159 are miscellaneous typography characters.</p>
       <p />
       <p>'''Unicode codes'''</p>
       <p />

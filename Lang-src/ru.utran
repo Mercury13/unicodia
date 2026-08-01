@@ -10321,7 +10321,7 @@
       <p />
       <p>Holding {{kb|Alt}}, type on the numeric keypad {{k|'''0'''}}, then '''decimal''' character code 32 to 255. {{k|Alt|0240}} makes the letter ð.</p>
       <p />
-      <p>The encoding is Windows-1252 regardless of Windows settings. Code 127 does{{_}}not{{_}}work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
+      <p>The encoding depends on the current keyboard layout, which is counterintuitive but convenient. The Western European one is called Windows-1252: identical to [[pt:latin1|Latin-1]], but codes 128 to 159 are miscellaneous typography characters.</p>
       <p />
       <p>'''Unicode codes'''</p>
       <p />
@@ -10344,7 +10344,7 @@
       <p />
       <p>Удерживая {{kb|Alt}}, набрать на цифровой клавиатуре {{kb|0}}, затем '''десятичный''' код символа от 32 до 255. {{k|Alt|0240}} даст букву ð.</p>
       <p />
-      <p>Кодировка Windows-1252 независимо от настроек Windows. Код 127 не{{_}}работает. Коды 128…159{{-}}разные типографские символы. Остальные совпадают с [[pt:latin1|латиницей-1]].</p>
+      <p>Кодировка зависит от текущей раскладки клавиатуры, что неинтеитивно, но удобно. Западноевропейская зовётся Windows-1252: совпадает с [[pt:latin1|латиницей-1]], но коды 128…159{{-}}разные типографские символы.</p>
       <p />
       <p>'''Коды Юникода'''</p>
       <p />
