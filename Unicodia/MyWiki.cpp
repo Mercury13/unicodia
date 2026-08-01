@@ -3296,39 +3296,45 @@ namespace {
                             needLocale = true;
                         }
                     }
-                    if (im.alt.win) {
+                    if (im.alt.winCommon) {
                         sp2.sep();
                         str::append(text, "0");
-                        str::append(text, static_cast<int>(im.alt.win));
+                        str::append(text, static_cast<int>(im.alt.winCommon));
                     }
                     if (needLocale) {
-                        if (auto code = im.alt.locDos.singleCode(); code > CMAP_LAST_TECH) {
-                            sp2.sep();
-                            str::append(text, static_cast<int>(code));
-                            text += " (";
-                            str::QSep sp3(text, "/");
-                            auto addLang = [&sp3, commonCode = im.alt.dosCommon]
-                                           (unsigned char code, std::string_view lang) {
-                                if (code != 0 && code != commonCode) {
-                                    sp3.sep();
-                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(lang));
-                                }
-                            };
-                            im.alt.locDos.run(addLang);
-                            text += ")";
-                        } else {
-                            auto addCode = [&sp2](unsigned char code, std::string_view lang) {
-                                if (code > CMAP_LAST_TECH) {
-                                    sp2.sep();
-                                    auto& text = sp2.target();
-                                    str::append(text, static_cast<int>(code));
-                                    text += " (";
-                                    str::append(text, loc::currLang->renameAltCodeSv(lang));
-                                    text += ")";
-                                }
-                            };
-                            im.alt.locDos.run(addCode);
-                        }
+                        auto runEncoding = [&](auto loc, char prefix) {
+                            if (auto code = loc.weakSingleCode(); code > CMAP_LAST_TECH) {
+                                sp2.sep();
+                                if (prefix != 0)
+                                    text += prefix;
+                                str::append(text, static_cast<int>(code));
+                                text += " (";
+                                str::QSep sp3(text, "/");
+                                auto addLang = [&sp3, commonCode = im.alt.dosCommon]
+                                    (unsigned char code, std::string_view lang) {
+                                        if (code != 0 && code != commonCode) {
+                                            sp3.sep();
+                                            str::append(sp3.target(), loc::currLang->renameAltCodeSv(lang));
+                                        }
+                                    };
+                                loc.run(addLang);
+                                text += ")";
+                            } else {
+                                auto addCode = [&sp2](unsigned char code, std::string_view lang) {
+                                    if (code > CMAP_LAST_TECH) {
+                                        sp2.sep();
+                                        auto& text = sp2.target();
+                                        str::append(text, static_cast<int>(code));
+                                        text += " (";
+                                        str::append(text, loc::currLang->renameAltCodeSv(lang));
+                                        text += ")";
+                                    }
+                                };
+                                loc.run(addCode);
+                            }
+                        };
+                        runEncoding(im.alt.locDos, 0);
+                        runEncoding(im.alt.locWin, '0');
                         if (im.alt.unicode) {
                             sp2.sep();
                             str::append(text, "+");

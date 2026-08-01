@@ -24,35 +24,6 @@ template class DoubleCmap<char16_t, 128>;
 
 constexpr unsigned short operator ""_mb (unsigned long long x) { return x * 1024; }
 
-unsigned char uc::AltCode::LocSet::singleCode() const noexcept
-{
-    unsigned char r = 0;
-    for (auto x : *this) {
-        // x/r
-        // 0/0 do nothing
-        // 0/* do nothing
-        // */0 assign
-        // */* check
-        if (x != 0) {
-            if (r == 0) { r = x; }          // */0
-            else if (r != x) { return 0; }  // */*
-        }
-    }
-    return r;
-}
-
-
-bool uc::AltCode::LocSet::hasOtherThan(unsigned char x) const noexcept
-{
-    for (auto c : *this) {
-        // x is never CMAP_NO_COMMON, so OK
-        if (c != 0 && c != x)
-            return true;
-    }
-    return false;
-}
-
-
 ///
 /// @warning
 ///   skip completely because of strange purpose those characters:
@@ -612,10 +583,16 @@ static_assert((1 << I_LAST_CHAR_TYPE) == static_cast<int>(uc::old::CharType::LAS
 
 namespace {
 
+    #define REV_2(x, y) {(x),(y)}, {(x)+1,(y)+1}
     #define REV_4(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}, {(x)+3,(y)+3}
     #define REV_8(x, y)  REV_4(x, y), REV_4((x)+4, (y)+4)
+    #define REV_12(x, y) REV_8(x, y), REV_4((x)+8, (y)+8)
     #define REV_16(x, y) REV_8(x, y), REV_8((x)+8, (y)+8)
+    #define REV_18(x, y) REV_16(x, y), REV_2((x)+16, (y)+16)
     #define REV_32(x, y) REV_16(x, y), REV_16((x)+16, (y)+16)
+    #define REV_44(x, y) REV_32(x, y), REV_12((x)+32, (y)+32)
+    #define REV_64(x, y) REV_32(x, y), REV_32((x)+32, (y)+32)
+    #define REV_96(x, y) REV_64(x, y), REV_32((x)+64, (y)+64)
 
     constinit const CommonMap rmDosCommon {{
         { u'☺',  1 }, { u'☻',  2 }, { u'♥',  3 },  { u'♦',  4 },
@@ -718,7 +695,10 @@ namespace {
             { u'³', 0xFC }, { u'²', 0xFD }
     }};
 
-    constinit const CommonMap rmWin {{
+    // unchanged
+    consteval ReverseMap::value_type unc(unsigned x)  { return { x, x}; }
+
+    constinit const ReverseMap rmWinEn {{  // Win-1252
         { u'€', 128 }, { u'‚', 130 }, { u'ƒ', 131 }, { u'„', 132 },
         { u'…', 133 }, { u'†', 134 }, { u'‡', 135 }, { u'ˆ', 136 },
         { u'‰', 137 }, { u'Š', 138 }, { u'‹', 139 }, { u'Œ', 140 },
@@ -726,12 +706,9 @@ namespace {
         { u'”', 148 }, { u'•', 149 }, { u'–', 150 }, { u'—', 151 },
         { u'˜', 152 }, { u'™', 153 }, { u'š', 154 }, { u'›', 155 },
         { u'œ', 156 }, { u'ž', 158 }, { u'Ÿ', 159 },
+        REV_96(0xA0, 0xA0),
     }};
-
-    // unchanged
-    consteval ReverseMap::value_type unc(unsigned x)  { return { x, x}; }
-
-    constinit const ReverseMap rmWinRu {{
+    constinit const ReverseMap rmWinRu {{  // Win-1251
         { u'Ђ', 0x80 }, { u'Ѓ', 0x81 },	{ u'‚', 0x82 }, { u'ѓ', 0x83 },
         { u'„', 0x84 }, { u'…', 0x85 }, { u'†', 0x86 }, { u'‡', 0x87 },
         { u'€', 0x88 }, { u'‰', 0x89 }, { u'Љ', 0x8A }, { u'‹', 0x8B },
@@ -744,6 +721,30 @@ namespace {
         { u'¤', 0xA4 }, { u'Ґ', 0xA5 }, { u'¦', 0xA6 }, { u'§', 0xA7 },
         { u'Ё', 0xA8 }, { u'©', 0xA9 }, { u'Є', 0xAA }, { u'«', 0xAB },
         { u'¬', 0xAC }, unc(0xAD)     , { u'®', 0xAE }, { u'Ї', 0xAF },
+        { u'°', 0xB0 }, { u'±', 0xB1 }, { u'І', 0xB2 }, { u'і', 0xB3 },
+        { u'ґ', 0xB4 }, { u'µ', 0xB5 }, { u'¶', 0xB6 }, { u'·', 0xB7 },
+        { u'ё', 0xB8 }, { u'№', 0xB9 }, { u'є', 0xBA }, { u'»', 0xBB },
+        { u'ј', 0xBC }, { u'Ѕ', 0xBD }, { u'ѕ', 0xBE }, { u'ї', 0xBF },
+        REV_32(u'А', 0xC0),      // Cyrillic A
+        REV_32(u'а', 0xE0),      // Cyrillic a
+    }};
+    constinit const ReverseMap rmWinEl {{ // Win-1253
+        { u'€', 0x80 },                 { u'‚', 0x82 }, { u'ƒ', 0x83 },
+        { u'„', 0x84 }, { u'…', 0x85 }, { u'†', 0x86 }, { u'‡', 0x87 },
+                        { u'‰', 0x89 },                 { u'‹', 0x8B },
+                        { u'‘', 0x91 }, { u'’', 0x92 }, { u'“', 0x93 },
+        { u'”', 0x94 }, { u'•', 0x95 }, { u'–', 0x96 }, { u'—', 0x97 },
+                        { u'™', 0x99 },                 { u'›', 0x9B },
+        unc(0xA0),      { u'΅', 0xA1 }, { u'Ά', 0xA2 }, { u'£', 0xA3 },
+        { u'¤', 0xA4 }, { u'¥', 0xA5 }, { u'¦', 0xA6 }, { u'§', 0xA7 },
+        { u'¨', 0xA8 }, { u'©', 0xA9 },                 { u'«', 0xAB },
+        { u'¬', 0xAC }, unc(0xAD)     , { u'®', 0xAE }, { u'―', 0xAF },
+        { u'°', 0xB0 }, { u'±', 0xB1 }, { u'²', 0xB2 }, { u'³', 0xB3 },
+        { u'΄', 0xB4 }, { u'µ', 0xB5 }, { u'¶', 0xB6 }, { u'·', 0xB7 },
+        { u'Έ', 0xB8 }, { u'Ή', 0xB9 }, { u'Ί', 0xBA }, { u'»', 0xBB },
+        { u'Ό', 0xBC }, { u'½', 0xBD }, { u'Ύ', 0xBE }, { u'Ώ', 0xBF },
+        REV_18(u'ΐ', 0xC0 ),
+        REV_44(u'Σ', 0xD3 )
     }};
 
     using AltgrPair = std::pair<char16_t, uc::AltgrKey>;
@@ -1030,17 +1031,21 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         default:;
         }
     } else if (cp >= 0xA0 && cp < 0x10000) {  // Rest of BMP
+        // DOS encoding
         rmDosCommon.query(cp, r.alt.dosCommon);
         /// @todo [future] Is it possible to use loop
         rmDosEn.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::EN]);
         rmDosRu.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::RU]);
         rmDosEl.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::EL]);
         rmDosTr.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::TR]);
-        if (cp <= 0xFF) {     // ISO1
-            r.alt.win = cp;
-        } else {
-            rmWin.query(cp, r.alt.win);
-        }
+        // Windows encoding
+        rmWinEn.query(cp, 0, r.alt.locWin[WinLang::EN]);
+        rmWinRu.query(cp, 0, r.alt.locWin[WinLang::RU]);
+        rmWinEl.query(cp, 0, r.alt.locWin[WinLang::EL]);
+        r.alt.winCommon = r.alt.locWin.strongSingleCode();
+        if (r.alt.winCommon != 0)
+            r.alt.locWin.clear();
+        // The rest
         r.alt.unicode = cp;
         kmBirman.query(cp, r.birman);
     }

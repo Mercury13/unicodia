@@ -158,21 +158,33 @@ namespace uc {
 
     Flags<OldComp> cpOldComps(char32_t cp);
 
+    template <class K>
+    struct LocBase : public ec::Array<unsigned char, K> {
+    private:
+        using Super = ec::Array<unsigned char, K>;
+    public:
+        constexpr LocBase() noexcept { clear(); }
+        constexpr void clear() noexcept { std::ranges::fill(*this, 0); }
+        /// @return [+] character maps to the same byte in all encodings that KNOW it
+        ///             (and, of course, is known somewhere)
+        unsigned char weakSingleCode() const noexcept;
+        /// @return [+] character is known as the same byte in ALL encodings
+        unsigned char strongSingleCode() const noexcept;
+
+        constexpr bool operator == (const LocBase& x) const noexcept = default;
+
+        bool hasOtherThan(unsigned char x) const noexcept;
+    };
+
     DEFINE_ENUM_TYPE_IN_NS(uc, DosLang, unsigned char,
-        EN, RU, EL, TR);
+        EN, RU, EL, TR );
+
+    DEFINE_ENUM_TYPE_IN_NS(uc, WinLang, unsigned char,
+        EN, RU, EL );
 
     struct AltCode {
-        unsigned char dosCommon = 0, win = 0;
-        struct LocSet : public ec::Array<unsigned char, DosLang> {
-        private:
-            using Super = ec::Array<unsigned char, DosLang>;
-            static constexpr unsigned char C0 = 0;
-        public:
-            constexpr LocSet() { std::ranges::fill(*this, 0); }
-            /// @return [+] code is present and has the same in all known encodings
-            unsigned char singleCode() const noexcept;
-            constexpr bool operator == (const LocSet& x) const noexcept = default;
-
+        unsigned char dosCommon = 0, winCommon = 0;
+        struct DosSet : public LocBase<DosLang> {
             template <class Body>
             void run(const Body& body) const
             {
@@ -182,12 +194,21 @@ namespace uc {
                 body(operator[](DosLang::EL), "el");
                 body(operator[](DosLang::TR), "tr");
             }
-
-            bool hasOtherThan(unsigned char x) const noexcept;
         } locDos;
+
+        struct WinSet : public LocBase<WinLang> {
+            template <class Body>
+            void run(const Body& body) const
+            {
+                /// @todo [future] Traverse using loop
+                body(operator[](WinLang::EN), "en");
+                body(operator[](WinLang::RU), "ru");
+                body(operator[](WinLang::EL), "el");
+            }
+        } locWin;
         unsigned short unicode = 0;
         bool hasLocaleIndependent() const
-            { return (dosCommon != 0 || win != 0); }
+            { return (dosCommon != 0 || winCommon != 0); }
         constexpr bool operator == (const AltCode& x) const noexcept = default;
     };
 
@@ -209,4 +230,50 @@ namespace uc {
     };
 
     InputMethods cpInputMethods(char32_t cp);
+
+}   // namespace uc
+
+
+template <class K>
+unsigned char uc::LocBase<K>::weakSingleCode() const noexcept
+{
+    unsigned char r = 0;
+    for (auto x : *this) {
+        // x/r
+        // 0/0 do nothing
+        // 0/* do nothing
+        // */0 assign
+        // */* check
+        if (x != 0) {
+            if (r == 0) { r = x; }          // */0
+            else if (r != x) { return 0; }  // */*
+        }
+    }
+    return r;
+}
+
+
+template <class K>
+unsigned char uc::LocBase<K>::strongSingleCode() const noexcept
+{
+    unsigned char r = this->inOrder(0);
+    if (r == 0)
+        return 0;
+    for (auto x : *this) {
+        if (x != r)
+            return 0;
+    }
+    return r;
+}
+
+
+template <class K>
+bool uc::LocBase<K>::hasOtherThan(unsigned char x) const noexcept
+{
+    for (auto c : *this) {
+        // x is never CMAP_NO_COMMON, so OK
+        if (c != 0 && c != x)
+            return true;
+    }
+    return false;
 }

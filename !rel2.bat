@@ -73,8 +73,9 @@
 @copy %MINGW%\libgcc_s_seh-1.dll %DEPLOY%
 @copy "%MINGW%\libstdc++-6.dll" %DEPLOY%
 @copy %MINGW%\libwinpthread-1.dll %DEPLOY%
-@copy %MINGW%\libcrypto-3-x64.dll %DEPLOY%
-@copy %MINGW%\libssl-3-x64.dll %DEPLOY%
+@copy %MINGW%\libmbedcrypto-16.dll %DEPLOY%
+@copy %MINGW%\libmbedtls-21.dll %DEPLOY%
+@copy %MINGW%\libmbedx509-7.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Core.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Gui.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Widgets.dll %DEPLOY%
