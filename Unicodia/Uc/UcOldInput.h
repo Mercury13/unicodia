@@ -180,7 +180,7 @@ namespace uc {
         EN, RU, EL, TR );
 
     DEFINE_ENUM_TYPE_IN_NS(uc, WinLang, unsigned char,
-        EN, RU, EL );
+        EN, CE, RU, EL );
 
     struct AltCode {
         unsigned char dosCommon = 0, winCommon = 0;
@@ -202,6 +202,7 @@ namespace uc {
             {
                 /// @todo [future] Traverse using loop
                 body(operator[](WinLang::EN), "en");
+                body(operator[](WinLang::CE), "ce");
                 body(operator[](WinLang::RU), "ru");
                 body(operator[](WinLang::EL), "el");
             }

@@ -593,6 +593,11 @@ namespace {
     #define REV_44(x, y) REV_32(x, y), REV_12((x)+32, (y)+32)
     #define REV_64(x, y) REV_32(x, y), REV_32((x)+32, (y)+32)
     #define REV_96(x, y) REV_64(x, y), REV_32((x)+64, (y)+64)
+    #define FOUR_C(code, c0, c1, c2, c3) \
+            { c0, code }, { c1, (code)+1 }, { c2, (code)+2 }, { c3, (code)+3 }
+    #define EIGHT_C(code, c0, c1, c2, c3, c4, c5, c6, c7) \
+            { c0, code }    , { c1, (code)+1 }, { c2, (code)+2 }, { c3, (code)+3 }, \
+            { c4, (code)+4 }, { c5, (code)+5 }, { c6, (code)+6 }, { c7, (code)+7 }
 
     constinit const CommonMap rmDosCommon {{
         { u'☺',  1 }, { u'☻',  2 }, { u'♥',  3 },  { u'♦',  4 },
@@ -707,6 +712,30 @@ namespace {
         { u'˜', 152 }, { u'™', 153 }, { u'š', 154 }, { u'›', 155 },
         { u'œ', 156 }, { u'ž', 158 }, { u'Ÿ', 159 },
         REV_96(0xA0, 0xA0),
+    }};
+    constinit const ReverseMap rmWinCe {{  // Win-1250
+        { u'€', 0x80 },                 { u'‚', 0x82 },
+        { u'„', 0x84 }, { u'…', 0x85 }, { u'†', 0x86 }, { u'‡', 0x87 },
+                        { u'‰', 0x89 }, { u'Š', 0x8A }, { u'‹', 0x8B },
+        { u'Ś', 0x8C }, { u'Ť', 0x8D }, { u'Ž', 0x8E }, { u'Ź', 0x8F },
+                        { u'‘', 0x91 }, { u'’', 0x92 }, { u'“', 0x93 },
+        { u'”', 0x94 }, { u'•', 0x95 }, { u'–', 0x96 }, { u'—', 0x97 },
+                        { u'™', 0x99 }, { u'š', 0x9A }, { u'›', 0x9B },
+        { u'ś', 0x9C }, { u'ť', 0x9D }, { u'ž', 0x9E }, { u'ź', 0x9F },
+        unc(0xA0)     , { u'ˇ', 0xA1 }, { u'˘', 0xA2 }, { u'Ł', 0xA3 },
+        { u'¤', 0xA4 }, { u'Ą', 0xA5 }, { u'¦', 0xA6 }, { u'§', 0xA7 },
+        { u'¨', 0xA8 }, { u'©', 0xA9 }, { u'Ş', 0xAA }, { u'«', 0xAB },
+        { u'¬', 0xAC }, unc(0xAD),      { u'®', 0xAE }, { u'Ż', 0xAF },
+        EIGHT_C(0xB0, u'°', u'±', u'˛', u'ł',    u'´', u'µ', u'¶', u'·' ),
+        EIGHT_C(0xB8, u'¸', u'ą', u'ş', u'»',    u'Ľ', u'˝', u'ľ', u'ż' ),
+        EIGHT_C(0xC0, u'Ŕ', u'Á', u'Â', u'Ă',    u'Ä', u'Ĺ', u'Ć', u'Ç' ),
+        EIGHT_C(0xC8, u'Č', u'É', u'Ę', u'Ë',    u'Ě', u'Í', u'Î', u'Ď' ),
+        EIGHT_C(0xD0, u'Đ', u'Ń', u'Ň', u'Ó',    u'Ô', u'Ő', u'Ö', u'×' ),
+        EIGHT_C(0xD8, u'Ř', u'Ů', u'Ú', u'Ű',    u'Ü', u'Ý', u'Ţ', u'ß' ),
+        EIGHT_C(0xE0, u'ŕ', u'á', u'â', u'ă',    u'ä', u'ĺ', u'ć', u'ç' ),
+        EIGHT_C(0xE8, u'č', u'é', u'ę', u'ë',    u'ě', u'í', u'î', u'ď' ),
+        EIGHT_C(0xF0, u'đ', u'ń', u'ň', u'ó',    u'ô', u'ő', u'ö', u'÷' ),
+        EIGHT_C(0xF8, u'ř', u'ů', u'ú', u'ű',    u'ü', u'ý', u'ţ', u'˙' ),
     }};
     constinit const ReverseMap rmWinRu {{  // Win-1251
         { u'Ђ', 0x80 }, { u'Ѓ', 0x81 },	{ u'‚', 0x82 }, { u'ѓ', 0x83 },
@@ -1040,6 +1069,7 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         rmDosTr.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::TR]);
         // Windows encoding
         rmWinEn.oldQuery(cp, r.alt.locWin[WinLang::EN]);
+        rmWinCe.oldQuery(cp, r.alt.locWin[WinLang::CE]);
         rmWinRu.oldQuery(cp, r.alt.locWin[WinLang::RU]);
         rmWinEl.oldQuery(cp, r.alt.locWin[WinLang::EL]);
         r.alt.winCommon = r.alt.locWin.strongSingleCode();
