@@ -591,6 +591,7 @@ namespace {
     #define REV_18(x, y) REV_16(x, y), REV_2((x)+16, (y)+16)
     #define REV_32(x, y) REV_16(x, y), REV_16((x)+16, (y)+16)
     #define REV_44(x, y) REV_32(x, y), REV_12((x)+32, (y)+32)
+    #define REV_48(x, y) REV_32(x, y), REV_16((x)+32, (y)+32)
     #define REV_64(x, y) REV_32(x, y), REV_32((x)+32, (y)+32)
     #define REV_96(x, y) REV_64(x, y), REV_32((x)+64, (y)+64)
     #define FOUR_C(code, c0, c1, c2, c3) \
@@ -774,6 +775,19 @@ namespace {
         { u'Ό', 0xBC }, { u'½', 0xBD }, { u'Ύ', 0xBE }, { u'Ώ', 0xBF },
         REV_18(u'ΐ', 0xC0 ),
         REV_44(u'Σ', 0xD3 )
+    }};
+    constinit const ReverseMap rmWinTr {{ // Win-1254
+        { u'€', 0x80 },                 { u'‚', 0x82 }, { u'ƒ', 0x83 },
+        EIGHT_C(0x84, u'„', u'…', u'†', u'‡', u'ˆ', u'‰', u'Š', u'‹'),
+        { u'Œ', 0x8C }, { u'‘', 0x91 }, { u'’', 0x92 }, { u'“', 0x93 },
+        EIGHT_C(0x94, u'”', u'•', u'–', u'—', u'˜', u'™', u'š', u'›'),
+        { u'œ', 0x9C },                                 { u'Ÿ', 0x9F },
+        REV_48(0xA0, 0xA0),
+        { u'Ğ', 0xD0 }, REV_12(u'Ñ', 0xD1),
+                        { u'İ', 0xDD }, { u'Ş', 0xDE }, { u'ß', 0xDF },
+        REV_16(u'à', 0xE0),
+        { u'ğ', 0xF0 }, REV_12(u'ñ', 0xF1),
+                        { u'ı', 0xFD }, { u'ş', 0xFE }, { u'ÿ', 0xFF },
     }};
 
     using AltgrPair = std::pair<char16_t, uc::AltgrKey>;
@@ -1072,6 +1086,7 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         rmWinCe.oldQuery(cp, r.alt.locWin[WinLang::CE]);
         rmWinRu.oldQuery(cp, r.alt.locWin[WinLang::RU]);
         rmWinEl.oldQuery(cp, r.alt.locWin[WinLang::EL]);
+        rmWinTr.oldQuery(cp, r.alt.locWin[WinLang::TR]);
         r.alt.winCommon = r.alt.locWin.strongSingleCode();
         if (r.alt.winCommon != 0)
             r.alt.locWin.clear();

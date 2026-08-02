@@ -180,7 +180,7 @@ namespace uc {
         EN, RU, EL, TR );
 
     DEFINE_ENUM_TYPE_IN_NS(uc, WinLang, unsigned char,
-        EN, CE, RU, EL );
+        EN, CE, RU, EL, TR );
 
     struct AltCode {
         unsigned char dosCommon = 0, winCommon = 0;
@@ -205,6 +205,7 @@ namespace uc {
                 body(operator[](WinLang::CE), "ce");
                 body(operator[](WinLang::RU), "ru");
                 body(operator[](WinLang::EL), "el");
+                body(operator[](WinLang::TR), "tr");
             }
         } locWin;
         unsigned short unicode = 0;
