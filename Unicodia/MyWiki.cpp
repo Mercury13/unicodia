@@ -383,6 +383,31 @@ namespace {
     using CharRequestLink = RequestLink<uc::CharFields, uc::CharFieldRequest>;
     using EmojiRequestLink = RequestLink<uc::EmojiFields, uc::EmojiFieldRequest>;
 
+    class PopInputLink : public mywiki::HistoryLink
+    {
+    public:
+        const uc::Cp& cp;
+        PopInputLink(const uc::Cp& x) : cp(x) {}
+        mywiki::HistoryObj obj() const noexcept override { return &cp; }
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+            const mywiki::PLink& that, mywiki::Gui& gui) const override;
+        std::u8string header() const override;
+    };
+
+    void PopInputLink::go(QWidget* widget, TinyOpt<QRect> rect,
+        const mywiki::PLink& that, mywiki::Gui& gui) const
+    {
+        auto html = mywiki::buildInputHtml(cp);
+        gui.popupAtRelMaybe(widget, rect, that, html);
+    }
+
+    std::u8string PopInputLink::header() const
+    {
+        /// @todo [urgent] PopInputLink::input
+        char buf[10];
+        uc::sprint(buf, cp.subj);
+        return loc::get("Input.Head").arg(str::toU8sv(buf));
+    }
 }   // anon namespace
 
 
@@ -407,6 +432,19 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopScriptLink(std::string_view target
     if (auto* script = uc::findScript(target))
         return mu(*script);
     return {};
+}
+
+
+std::unique_ptr<mywiki::Link> mywiki::parsePopInputLink(std::string_view target)
+{
+    unsigned code = 0;
+    str::fromChars(target, code, 16);
+    if (code >= uc::CAPACITY)
+        return {};
+    auto cp = uc::cpsByCode[code];
+    if (!cp)
+        return {};
+    return std::make_unique<PopInputLink>(*cp);
 }
 
 std::unique_ptr<mywiki::Link> mywiki::parsePopTermLink(std::string_view target)
@@ -711,6 +749,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parseHistoryLink(target);
     } else if (scheme == "pca"sv) {
         return parsePopCatLink(target);
+    } else if (scheme == "pin"sv) {
+        return parsePopInputLink(target);
     } else if (scheme == "ps"sv) {
         return parsePopScriptLink(target);
     } else if (scheme == "pk"sv) {
@@ -3282,7 +3322,11 @@ namespace {
             auto im = uc::cpInputMethods(cp.subj);
             if (im.hasSmth()) {
                 sp.sep();
-                appendNonBullet(text, "Prop.Input.Bullet");
+                char bufLink[40];
+                snprintf(bufLink, std::size(bufLink),
+                        "<a href='pin:%X' class='popup'>",
+                        cp.subj.uval());
+                appendNonBullet(text, "Prop.Input.Bullet", bufLink, "</a>");
                 str::QSep sp1(text, ";&nbsp; ");
                 if (!im.sometimesKey.empty()) {
                     sp1.sep();
@@ -4424,4 +4468,125 @@ void mywiki::appendHistoryLink(QString& html, const mywiki::HistoryPlace& place)
         str::append(html, place.thing->header());
         html += "</small></a>";
     }
+}
+
+
+QString mywiki::buildInputHtml(const uc::Cp& cp)
+{
+    QString text;
+    appendStylesheet(text);
+
+    text += "<p><b>";
+    char buf[10];
+    uc::sprint(buf, cp.subj);
+    std::u8string q = loc::get("Input.Head").arg(str::toU8sv(buf));
+    str::append(text, q);
+    text += "</b>";
+
+    auto im = uc::cpInputMethods(cp.subj);
+    if (!im.sometimesKey.empty()) {
+        text += "<p>";
+        mywiki::appendNoFont(
+            text, loc::get("Input.Somet")
+                .arg(im.sometimesKey),
+            wiki::Mode::SPAN);
+    }
+    /// @todo [urgent] Should write in broader manner
+    if (im.hasAltCode()) {
+        text += "<p>";
+        str::QSep sp2(text, EURO_COMMA);    // alt codes
+        bool needLocale = !im.alt.hasLocaleIndependent();
+        if (im.alt.dosCommon) {
+            sp2.sep();
+            startAltCode(text);
+            str::append(text, static_cast<int>(im.alt.dosCommon));
+            endAltCode(text);
+            if (im.alt.locDos.hasOtherThan(im.alt.dosCommon)) {
+                text += " (";
+                str::QSep sp3(text, "/");
+                auto addLang = [&sp3, commonCode = im.alt.dosCommon]
+                    (unsigned char code, const uc::OneByteInfo& page) {
+                        // commonCode is never CMAP_NO_COMMON, so OK
+                        if (code == 0 || code == commonCode) {
+                            sp3.sep();
+                            str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.lang));
+                        }
+                    };
+                im.alt.locDos.run(addLang);
+                text += ")";
+                // Need locale, but only when Windows' common locale is absent
+                if (im.alt.winCommon == 0)
+                    needLocale = true;
+            }
+        }
+        if (im.alt.winCommon) {
+            sp2.sep();
+            str::append(text, "0");
+            str::append(text, static_cast<int>(im.alt.winCommon));
+        }
+        if (needLocale) {
+            auto runEncoding = [&sp2]
+                (auto& loc, char prefix, char commonCode) {
+                    auto& text = sp2.target();
+                    if (auto code = loc.weakSingleCode(); code > CMAP_LAST_TECH) {
+                        sp2.sep();
+                        startAltCode(text);
+                        if (prefix != 0)
+                            text += prefix;
+                        str::append(text, static_cast<int>(code));
+                        endAltCode(text);
+                        text += " (";
+                        str::QSep sp3(text, "/");
+                        auto addLang = [&sp3, commonCode]
+                            (unsigned char code, const uc::OneByteInfo& page) {
+                                if (code != 0 && code != commonCode) {
+                                    sp3.sep();
+                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.lang));
+                                }
+                            };
+                        loc.run(addLang);
+                        text += ")";
+                    } else {
+                        auto addCode = [&sp2, prefix](unsigned char code, const uc::OneByteInfo& page) {
+                            if (code > CMAP_LAST_TECH) {
+                                sp2.sep();
+                                auto& text = sp2.target();
+                                startAltCode(text);
+                                if (prefix != 0)
+                                    text += prefix;
+                                str::append(text, static_cast<int>(code));
+                                endAltCode(text);
+                                text += " (";
+                                str::append(text, loc::currLang->renameAltCodeSv(page.lang));
+                                text += ")";
+                            }
+                        };
+                        loc.run(addCode);
+                    }
+                };
+            runEncoding(im.alt.locDos, 0, im.alt.dosCommon);
+            runEncoding(im.alt.locWin, '0', 0);
+        }
+    }
+    // Birman test
+    if (im.hasBirman()) {
+        text += "<p>";
+        text += "<a href='pt:birman' class='popup'>";
+        str::append(text, loc::get("Prop.Input.Birman"));
+        text += "</a> ";
+        std::u8string sKey;
+        appendKey(sKey, u8"AltGr", im.birman.key);
+        if (im.birman.letter != 0) {
+            sKey += u8"&nbsp; ";
+            appendKey(sKey, {}, im.birman.letter);
+        }
+        if (im.birman.isTwice) {
+            str::append(text, loc::get("Prop.Input.Twice")
+                    .arg(sKey));
+        } else {
+            str::append(text, sKey);
+        }
+    }
+
+    return text;
 }

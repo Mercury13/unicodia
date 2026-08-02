@@ -11194,6 +11194,9 @@
    <text id="Head">
     <orig>input: U+{1}</orig>
    </text>
+   <text id="Somet">
+    <orig>Key: sometimes {1}</orig>
+   </text>
    <text id="Dos">
     <orig>DOS [[pt:altcode|Alt code]]: {1}</orig>
    </text>

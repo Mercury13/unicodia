@@ -228,6 +228,7 @@ namespace mywiki {
     std::unique_ptr<Link> parsePopVersionLink(std::string_view target);
     std::unique_ptr<Link> parsePopOldCompLink(std::string_view target);
     std::unique_ptr<Link> parsePopGlyphStyleLink(std::string_view target);
+    std::unique_ptr<Link> parsePopInputLink(std::string_view target);
     std::unique_ptr<Link> parseGotoCpLink(std::string_view target);
     std::unique_ptr<Link> parseGotoLibCpLink(std::string_view target);
     std::unique_ptr<Link> parseGotoInterfaceLink(std::string_view target);
@@ -255,6 +256,7 @@ namespace mywiki {
     QString buildHtml(const uc::GlyphStyleChannel& channel);
     QString buildHtml(const uc::old::Info& info);
     QString buildEmptyFavsHtml();
+    QString buildInputHtml(const uc::Cp& cp);
     void appendStylesheet(QString& text, Flags<Stylefg> flags = NO_FLAGS);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyTag(QString& text, const QString& x, std::string_view clazz="copy");

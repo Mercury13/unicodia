@@ -15817,5 +15817,81 @@
     <transl>Писемності</transl>
    </text>
   </group>
+  <group id="Input">
+   <group id="L">
+    <au-cmt>Treat them as languages: English (language)</au-cmt>
+    <text id="En">
+     <orig>Western European: English, French…</orig>
+     <au-cmt>
+      <p>Both L10n and layout.</p>
+      <p>You can add your own language if it's served with BOTH Win-1252 and IBM-437</p>
+     </au-cmt>
+     <transl>Західноєвропейські: англійська, французька…</transl>
+    </text>
+    <text id="DosRu">
+     <orig>Russian, Ukrainian, Belorussian, Bulgarian</orig>
+     <au-cmt>The exhaustive list served with AltGOST-866, Microsoft's dialect.</au-cmt>
+     <transl>Російська, українська, білоруська, болгарська</transl>
+    </text>
+    <text id="El">
+     <orig>Greek</orig>
+     <transl>Грецька</transl>
+    </text>
+    <text id="Tr">
+     <orig>Turkish</orig>
+     <transl>Турецька</transl>
+    </text>
+    <text id="WinCe">
+     <orig>Central European: Czech, Polish, Hungarian…</orig>
+     <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>
+     <transl>Центральноєвропейські: чеська, польська, угорська…</transl>
+    </text>
+    <text id="He">
+     <orig>Hebrew</orig>
+     <transl>Іврит</transl>
+    </text>
+    <text id="WinRu">
+     <orig>Most Cyrillic languages: Russian, Bulgarian, Serbian…</orig>
+     <au-cmt>You can add your own language if it's served with Win-1251</au-cmt>
+     <transl>Більшість кирилічних мов: українська, болгарська, сербська…</transl>
+    </text>
+   </group>
+   <text id="Head">
+    <orig>input: U+{1}</orig>
+    <transl>введення: U+{1}</transl>
+   </text>
+   <text id="Somet">
+    <orig>Key: sometimes {1}</orig>
+    <transl>Клавіша: іноді {1}</transl>
+   </text>
+   <text id="Dos">
+    <orig>DOS [[pt:altcode|Alt code]]: {1}</orig>
+    <transl>[[pt:altcode|Alt-код]] DOS: {1}</transl>
+   </text>
+   <text id="Most">
+    <orig>Works on most Windows computers</orig>
+    <transl>Працює на більшості Windows-комп’ютерів</transl>
+   </text>
+   <text id="Loc">
+    <orig>Works on Windows computers with the following localizations:</orig>
+    <transl>Працює на Windows-комп’ютерах з локалізаціями:</transl>
+   </text>
+   <text id="Win">
+    <orig>Windows [[pt:altcodeAlt code]]: {1]</orig>
+    <transl>[[pt:altcode|Alt-код]] Windows: {1}</transl>
+   </text>
+   <text id="Lay">
+    <orig>Works on Windows when the following keyboard layouts are active:</orig>
+    <transl>Працює на Windows, коли активні розкладки клавиатури:</transl>
+   </text>
+   <text id="Word">
+    <orig>Word and LibreOffice: type {1}, then press {{k|Alt|X}}.</orig>
+    <transl>Word та LibreOffice: наберіть {1}, потім натисніть {{k|Alt|X}}.</transl>
+   </text>
+   <text id="Birman">
+    <orig>[[pt:birman|Birman’s layout]]: {1}</orig>
+    <transl>[[pt:birman|Розкладка Бірмана]]: {1}</transl>
+   </text>
+  </group>
  </file>
 </ut>
