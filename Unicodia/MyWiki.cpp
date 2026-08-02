@@ -1548,8 +1548,10 @@ namespace {
 
     // Key: start/end
     constinit const std::u8string_view KEY_START =
-            u8"<span style='background-color:palette(midlight);'>\u00A0";
-    constinit const std::u8string_view KEY_END = u8"\u00A0</span>";
+            u8"<span style='background-color:palette(midlight);'>"
+               "<span style='font-size:4pt'>\u00A0</span>";
+    constinit const std::u8string_view KEY_END =
+            u8"<span style='font-size:4pt'>\u00A0</span></span>";
 
     void appendPercentSpace(QString& s)
     {
@@ -2759,8 +2761,13 @@ namespace {
 
     void appendKey(std::u8string& text, std::u8string_view header, char main)
     {
+        if (!header.empty()) {
+            text += KEY_START;
+            text += header;
+            text += KEY_END;
+            text += '+';
+        }
         text += KEY_START;
-        text += header;
         if (main) {
             switch (main) {
             case ' ':
@@ -3136,6 +3143,20 @@ namespace {
         mywiki::append(text, value, DEFAULT_CONTEXT, wiki::Mode::SPAN);
     }
 
+    void startAltCode(QString& text)
+    {
+        str::append(text, KEY_START);
+        text += "<a href='pt:altcode' class='popkey'>Alt</a>";
+        str::append(text, KEY_END);
+        text += "+";
+        str::append(text, KEY_START);
+    }
+
+    void endAltCode(QString& text)
+    {
+        str::append(text, KEY_END);
+    }
+
     /// @param [in] serializations  [+] write UTF-8, HTML etc
     ///
     void appendCpBullets(QString& text, const uc::Cp& cp,
@@ -3272,14 +3293,13 @@ namespace {
                 }
                 if (im.hasAltCode()) {
                     sp1.sep();
-                    text += "<a href='pt:altcode' class='popup'>";
-                    str::append(text, loc::get("Prop.Input.AltCode"));
-                    text += "</a> ";
                     str::QSep sp2(text, EURO_COMMA);    // alt codes
                     bool needLocale = !im.alt.hasLocaleIndependent();
                     if (im.alt.dosCommon) {
                         sp2.sep();
+                        startAltCode(text);
                         str::append(text, static_cast<int>(im.alt.dosCommon));
+                        endAltCode(text);
                         if (im.alt.locDos.hasOtherThan(im.alt.dosCommon)) {
                             text += " (";
                             str::QSep sp3(text, "/");
@@ -3304,15 +3324,19 @@ namespace {
                         str::append(text, static_cast<int>(im.alt.winCommon));
                     }
                     if (needLocale) {
-                        auto runEncoding = [&](auto loc, char prefix) {
+                        auto runEncoding = [&sp2]
+                                    (auto& loc, char prefix, char commonCode) {
+                            auto& text = sp2.target();
                             if (auto code = loc.weakSingleCode(); code > CMAP_LAST_TECH) {
                                 sp2.sep();
+                                startAltCode(text);
                                 if (prefix != 0)
                                     text += prefix;
                                 str::append(text, static_cast<int>(code));
+                                endAltCode(text);
                                 text += " (";
                                 str::QSep sp3(text, "/");
-                                auto addLang = [&sp3, commonCode = im.alt.dosCommon]
+                                auto addLang = [&sp3, commonCode]
                                     (unsigned char code, const uc::OneByteInfo& page) {
                                         if (code != 0 && code != commonCode) {
                                             sp3.sep();
@@ -3322,11 +3346,15 @@ namespace {
                                 loc.run(addLang);
                                 text += ")";
                             } else {
-                                auto addCode = [&sp2](unsigned char code, const uc::OneByteInfo& page) {
+                                auto addCode = [&sp2, prefix](unsigned char code, const uc::OneByteInfo& page) {
                                     if (code > CMAP_LAST_TECH) {
                                         sp2.sep();
                                         auto& text = sp2.target();
+                                        startAltCode(text);
+                                        if (prefix != 0)
+                                            text += prefix;
                                         str::append(text, static_cast<int>(code));
+                                        endAltCode(text);
                                         text += " (";
                                         str::append(text, loc::currLang->renameAltCodeSv(page.lang));
                                         text += ")";
@@ -3335,13 +3363,8 @@ namespace {
                                 loc.run(addCode);
                             }
                         };
-                        runEncoding(im.alt.locDos, 0);
-                        runEncoding(im.alt.locWin, '0');
-                        if (im.alt.unicode) {
-                            sp2.sep();
-                            str::append(text, "+");
-                            str::appendHex(text, im.alt.unicode);
-                        }
+                        runEncoding(im.alt.locDos, 0, im.alt.dosCommon);
+                        runEncoding(im.alt.locWin, '0', 0);
                     }
                 }
                 // Birman test
@@ -3351,9 +3374,9 @@ namespace {
                     str::append(text, loc::get("Prop.Input.Birman"));
                     text += "</a> ";
                     std::u8string sKey;
-                        appendKey(sKey, u8"AltGr+", im.birman.key);
+                        appendKey(sKey, u8"AltGr", im.birman.key);
                         if (im.birman.letter != 0) {
-                            sKey += ' ';
+                            sKey += u8"&nbsp; ";
                             appendKey(sKey, {}, im.birman.letter);
                         }
                     if (im.birman.isTwice) {

@@ -39,11 +39,13 @@
 #define STYLE_BIGINET_DARK  STYLE_LINK2(CNAME_LINK_OUTSIDE_DARK,  CNAME_U_BIGOUTSIDE, "0.05")
 #define STYLE_QUERY_LIGHT   "color:" CNAME_LINK_OUTSIDE_LIGHT "; text-decoration:none;"
 #define STYLE_QUERY_DARK    "color:" CNAME_LINK_OUTSIDE_DARK  "; text-decoration:none;"
+#define STYLE_POPKEY_LIGHT   "color:" CNAME_LINK_POPUP_LO_LIGHT "; text-decoration:none;"
+#define STYLE_POPKEY_DARK    "color:" CNAME_LINK_POPUP_LO_DARK  "; text-decoration:none;"
 
 
 // Missing is a technical style, let it be this way
 #define STYLES_WIKI_OF(popup, deprRed, deprGray, altname, \
-        popupLo, inet, query) \
+        popupLo, inet, query, popupKey) \
     ".copy { " STYLE_COPY " } "                               \
     ".altname { " altname " } "                               \
     ".bigcopy { " STYLE_BIGCOPY " } "                         \
@@ -54,17 +56,18 @@
     ".missing { color: " CNAME_LINK_DEPRECATED_DARK "; } "    \
     ".tr { color: " CNAME_TRANSCRIPTION "; }"                 \
     ".query { " query " } "                                   \
-    ".popdark { " popupLo " }"
+    ".popdark { " popupLo " } "                               \
+    ".popkey { " popupKey " } "
 
 constexpr const char* STYLES_WIKI_LIGHT = STYLES_WIKI_OF(
     STYLE_POPUP_LIGHT, STYLE_DEPREC_LIGHT, CNAME_ALTNAME_LIGHT,
     STYLE_ALTNAME_LIGHT, STYLE_POPUP_LO_LIGHT, STYLE_INET_LIGHT,
-    STYLE_QUERY_LIGHT);
+    STYLE_QUERY_LIGHT, STYLE_POPKEY_LIGHT);
 
 constexpr const char* STYLES_WIKI_DARK = STYLES_WIKI_OF(
     STYLE_POPUP_DARK, STYLE_DEPREC_DARK, CNAME_ALTNAME_DARK,
     STYLE_ALTNAME_DARK, STYLE_POPUP_LO_DARK, STYLE_INET_DARK,
-    STYLE_QUERY_DARK);
+    STYLE_QUERY_DARK, STYLE_POPKEY_DARK);
 
 constexpr QColor CLA_MESSAGE_LIGHT { 0, 0, 0, 180 };
 constexpr QColor CLA_MESSAGE_DARK { 70, 130, 180, 220 };  // SteelBlue

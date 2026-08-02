@@ -163,6 +163,7 @@ namespace uc {
     struct OneByteInfo {
         std::string_view lang;
         const ReverseMap& map;
+        std::string_view trueName;
     };
 
     template <class K>
@@ -205,7 +206,7 @@ namespace uc {
         EN, RU, EL, TR );
 
     DEFINE_ENUM_TYPE_IN_NS(uc, WinLang, unsigned char,
-        EN, CE, RU, EL, TR );
+        EN, CE, RU, EL, TR, HE );
 
     const OneByteInfo& oneByteInfo(DosLang lang);
     const OneByteInfo& oneByteInfo(WinLang lang);
@@ -214,7 +215,7 @@ namespace uc {
         unsigned char dosCommon = 0, winCommon = 0;
         LocBase<DosLang> locDos;
         LocBase<WinLang> locWin;
-        unsigned short unicode = 0;
+        //unsigned short unicode = 0;
         bool hasLocaleIndependent() const
             { return (dosCommon != 0 || winCommon != 0); }
         constexpr bool operator == (const AltCode& x) const noexcept = default;

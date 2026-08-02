@@ -587,11 +587,17 @@ static_assert((1 << I_LAST_CHAR_TYPE) == static_cast<int>(uc::old::CharType::LAS
 namespace {
 
     #define REV_2(x, y) {(x),(y)}, {(x)+1,(y)+1}
+    #define REV_3(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}
     #define REV_4(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}, {(x)+3,(y)+3}
+    #define REV_5(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}, {(x)+3,(y)+3}, {(x)+4,(y)+4}
     #define REV_8(x, y)  REV_4(x, y), REV_4((x)+4, (y)+4)
     #define REV_12(x, y) REV_8(x, y), REV_4((x)+8, (y)+8)
     #define REV_16(x, y) REV_8(x, y), REV_8((x)+8, (y)+8)
     #define REV_18(x, y) REV_16(x, y), REV_2((x)+16, (y)+16)
+    #define REV_20(x, y) REV_16(x, y), REV_4((x)+16, (y)+16)
+    #define REV_24(x, y) REV_16(x, y), REV_8((x)+16, (y)+16)
+    #define REV_26(x, y) REV_24(x, y), REV_2((x)+24, (y)+24)
+    #define REV_27(x, y) REV_24(x, y), REV_3((x)+24, (y)+24)
     #define REV_32(x, y) REV_16(x, y), REV_16((x)+16, (y)+16)
     #define REV_44(x, y) REV_32(x, y), REV_12((x)+32, (y)+32)
     #define REV_48(x, y) REV_32(x, y), REV_16((x)+32, (y)+32)
@@ -800,13 +806,28 @@ namespace {
         { u'ğ', 0xF0 }, REV_12(u'ñ', 0xF1),
                         { u'ı', 0xFD }, { u'ş', 0xFE }, { u'ÿ', 0xFF },
     }};
-
+    constinit const ReverseMap rmWinHe {{ // Win-1255
+        { u'€', 0x80 },                 { u'‚', 0x82 }, { u'ƒ', 0x83 },
+        { u'„', 0x84 }, { u'…', 0x85 }, { u'†', 0x86 }, { u'‡', 0x87 },
+        { u'ˆ', 0x88 }, { u'‰', 0x89 },                 { u'‹', 0x8B },
+                        { u'‘', 0x91 }, { u'’', 0x92 }, { u'“', 0x93 },
+        { u'”', 0x94 }, { u'•', 0x95 }, { u'–', 0x96 }, { u'—', 0x97 },
+        { u'˜', 0x98 },                 { u'™', 0x9A }, { u'›', 0x9B },
+        unc(0xA0),      { u'¡', 0xA1 }, { u'¢', 0xA2 }, { u'£', 0xA3 },
+        { u'₪', 0xA4 }, REV_26(0xA5, 0xA5),             { u'¿', 0xBF },
+        REV_20( u'\u05B0', 0xC0 ),
+        REV_5 ( u'\u05F0', 0xD4 ),
+        REV_27( u'\u05D0', 0xE0 ),
+            { u'\u200E', 0xED }, // LRM
+            { u'\u200F', 0xEE }, // RLM
+    }};
     constinit const uc::OneByteInfo winInfo[] {
         { .lang = "en", .map = rmWinEn },
         { .lang = "ce", .map = rmWinCe },
         { .lang = "ru", .map = rmWinRu },
         { .lang = "el", .map = rmWinEl },
         { .lang = "tr", .map = rmWinTr },
+        { .lang = "he", .map = rmWinHe },
     };
     static_assert(std::size(winInfo) == ec::size<uc::WinLang>());
 
@@ -1107,7 +1128,7 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         if (r.alt.winCommon != 0)
             r.alt.locWin.clear();
         // The rest
-        r.alt.unicode = cp;
+        //r.alt.unicode = cp;
         kmBirman.query(cp, r.birman);
     }
     return r;
