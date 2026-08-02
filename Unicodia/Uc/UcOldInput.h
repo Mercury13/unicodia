@@ -18,6 +18,8 @@
 ///
 void banBreaking(std::u8string& s);
 
+class ReverseMap;
+
 namespace uc {
 
     namespace old {
@@ -158,6 +160,11 @@ namespace uc {
 
     Flags<OldComp> cpOldComps(char32_t cp);
 
+    struct OneByteInfo {
+        std::string_view name;
+        const ReverseMap& map;
+    };
+
     template <class K>
     struct LocBase : public ec::Array<unsigned char, K> {
     private:
@@ -174,6 +181,24 @@ namespace uc {
         constexpr bool operator == (const LocBase& x) const noexcept = default;
 
         bool hasOtherThan(unsigned char x) const noexcept;
+
+        template <class Body>
+        void run(const Body& body) const
+        {
+            for (unsigned i = 0; i < Super::Size; ++i) {
+                auto k = static_cast<K>(i);
+                body(Super::operator[](k), oneByteInfo(k));
+            }
+        }
+
+        template <class Body>
+        void run(const Body& body)
+        {
+            for (unsigned i = 0; i < Super::Size; ++i) {
+                auto k = static_cast<K>(i);
+                body(Super::operator[](k), oneByteInfo(k));
+            }
+        }
     };
 
     DEFINE_ENUM_TYPE_IN_NS(uc, DosLang, unsigned char,
@@ -182,32 +207,13 @@ namespace uc {
     DEFINE_ENUM_TYPE_IN_NS(uc, WinLang, unsigned char,
         EN, CE, RU, EL, TR );
 
+    const OneByteInfo& oneByteInfo(DosLang lang);
+    const OneByteInfo& oneByteInfo(WinLang lang);
+
     struct AltCode {
         unsigned char dosCommon = 0, winCommon = 0;
-        struct DosSet : public LocBase<DosLang> {
-            template <class Body>
-            void run(const Body& body) const
-            {
-                /// @todo [future] Traverse using loop
-                body(operator[](DosLang::EN), "en");
-                body(operator[](DosLang::RU), "ru");
-                body(operator[](DosLang::EL), "el");
-                body(operator[](DosLang::TR), "tr");
-            }
-        } locDos;
-
-        struct WinSet : public LocBase<WinLang> {
-            template <class Body>
-            void run(const Body& body) const
-            {
-                /// @todo [future] Traverse using loop
-                body(operator[](WinLang::EN), "en");
-                body(operator[](WinLang::CE), "ce");
-                body(operator[](WinLang::RU), "ru");
-                body(operator[](WinLang::EL), "el");
-                body(operator[](WinLang::TR), "tr");
-            }
-        } locWin;
+        LocBase<DosLang> locDos;
+        LocBase<WinLang> locWin;
         unsigned short unicode = 0;
         bool hasLocaleIndependent() const
             { return (dosCommon != 0 || winCommon != 0); }

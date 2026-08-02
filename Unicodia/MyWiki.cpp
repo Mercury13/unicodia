@@ -3284,11 +3284,11 @@ namespace {
                             text += " (";
                             str::QSep sp3(text, "/");
                             auto addLang = [&sp3, commonCode = im.alt.dosCommon]
-                                        (unsigned char code, std::string_view lang) {
+                                        (unsigned char code, const uc::OneByteInfo& page) {
                                 // commonCode is never CMAP_NO_COMMON, so OK
                                 if (code == 0 || code == commonCode) {
                                     sp3.sep();
-                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(lang));
+                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.name));
                                 }
                             };
                             im.alt.locDos.run(addLang);
@@ -3313,22 +3313,22 @@ namespace {
                                 text += " (";
                                 str::QSep sp3(text, "/");
                                 auto addLang = [&sp3, commonCode = im.alt.dosCommon]
-                                    (unsigned char code, std::string_view lang) {
+                                    (unsigned char code, const uc::OneByteInfo& page) {
                                         if (code != 0 && code != commonCode) {
                                             sp3.sep();
-                                            str::append(sp3.target(), loc::currLang->renameAltCodeSv(lang));
+                                            str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.name));
                                         }
                                     };
                                 loc.run(addLang);
                                 text += ")";
                             } else {
-                                auto addCode = [&sp2](unsigned char code, std::string_view lang) {
+                                auto addCode = [&sp2](unsigned char code, const uc::OneByteInfo& page) {
                                     if (code > CMAP_LAST_TECH) {
                                         sp2.sep();
                                         auto& text = sp2.target();
                                         str::append(text, static_cast<int>(code));
                                         text += " (";
-                                        str::append(text, loc::currLang->renameAltCodeSv(lang));
+                                        str::append(text, loc::currLang->renameAltCodeSv(page.name));
                                         text += ")";
                                     }
                                 };

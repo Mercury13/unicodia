@@ -19,8 +19,11 @@ constinit const uc::InputMethods uc::InputMethods::NONE {};
 using CommonMap = Cmap<char16_t, unsigned char, 128>;
 template class Cmap<char16_t, unsigned char, 128>;
 
-using ReverseMap = DoubleCmap<char16_t, 128>;
 template class DoubleCmap<char16_t, 128>;
+class ReverseMap : public DoubleCmap<char16_t, 128> {
+public:
+    using DoubleCmap::DoubleCmap;
+};
 
 constexpr unsigned short operator ""_mb (unsigned long long x) { return x * 1024; }
 
@@ -701,6 +704,14 @@ namespace {
             { u'³', 0xFC }, { u'²', 0xFD }
     }};
 
+    constinit const uc::OneByteInfo dosInfo[] {
+        { .name = "en", .map = rmDosEn },
+        { .name = "ru", .map = rmDosRu },
+        { .name = "el", .map = rmDosEl },
+        { .name = "tr", .map = rmDosTr },
+    };
+    static_assert(std::size(dosInfo) == ec::size<uc::DosLang>());
+
     // unchanged
     consteval ReverseMap::value_type unc(unsigned x)  { return { x, x}; }
 
@@ -789,6 +800,15 @@ namespace {
         { u'ğ', 0xF0 }, REV_12(u'ñ', 0xF1),
                         { u'ı', 0xFD }, { u'ş', 0xFE }, { u'ÿ', 0xFF },
     }};
+
+    constinit const uc::OneByteInfo winInfo[] {
+        { .name = "en", .map = rmWinEn },
+        { .name = "ce", .map = rmWinCe },
+        { .name = "ru", .map = rmWinRu },
+        { .name = "el", .map = rmWinEl },
+        { .name = "tr", .map = rmWinTr },
+    };
+    static_assert(std::size(winInfo) == ec::size<uc::WinLang>());
 
     using AltgrPair = std::pair<char16_t, uc::AltgrKey>;
 
@@ -1076,17 +1096,13 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
     } else if (cp >= 0xA0 && cp < 0x10000) {  // Rest of BMP
         // DOS encoding
         rmDosCommon.query(cp, r.alt.dosCommon);
-        /// @todo [future] Is it possible to use loop
-        rmDosEn.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::EN]);
-        rmDosRu.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::RU]);
-        rmDosEl.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::EL]);
-        rmDosTr.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::TR]);
+        r.alt.locDos.run([cp, &r](unsigned char& code, const uc::OneByteInfo& page) {
+                page.map.query(cp, r.alt.dosCommon, code);
+            });
         // Windows encoding
-        rmWinEn.oldQuery(cp, r.alt.locWin[WinLang::EN]);
-        rmWinCe.oldQuery(cp, r.alt.locWin[WinLang::CE]);
-        rmWinRu.oldQuery(cp, r.alt.locWin[WinLang::RU]);
-        rmWinEl.oldQuery(cp, r.alt.locWin[WinLang::EL]);
-        rmWinTr.oldQuery(cp, r.alt.locWin[WinLang::TR]);
+        r.alt.locWin.run([cp](unsigned char& code, const uc::OneByteInfo& page) {
+                page.map.oldQuery(cp, code);
+            });
         r.alt.winCommon = r.alt.locWin.strongSingleCode();
         if (r.alt.winCommon != 0)
             r.alt.locWin.clear();
@@ -1111,3 +1127,9 @@ Flags<uc::OldComp> uc::cpOldComps(char32_t cp)
         return it->span[cp];
     return {};
 }
+
+const uc::OneByteInfo& uc::oneByteInfo(DosLang lang)
+    { return dosInfo[static_cast<unsigned>(lang)]; }
+
+const uc::OneByteInfo& uc::oneByteInfo(WinLang lang)
+    { return winInfo[static_cast<unsigned>(lang)]; }
