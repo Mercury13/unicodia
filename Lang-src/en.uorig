@@ -11159,5 +11159,62 @@
     <au-cmt>Scripts: Alpha, Bravo…</au-cmt>
    </text>
   </group>
+  <group id="Input">
+   <group id="L">
+    <au-cmt>Treat them as languages: English (language)</au-cmt>
+    <text id="En">
+     <orig>Western European: English, French…</orig>
+     <au-cmt>
+      <p>Both L10n and layout.</p>
+      <p>You can add your own language if it's served with BOTH Win-1252 and IBM-437</p>
+     </au-cmt>
+    </text>
+    <text id="DosRu">
+     <orig>Russian, Ukrainian, Belorussian, Bulgarian</orig>
+     <au-cmt>The exhaustive list served with AltGOST-866, Microsoft's dialect.</au-cmt>
+    </text>
+    <text id="El">
+     <orig>Greek</orig>
+    </text>
+    <text id="Tr">
+     <orig>Turkish</orig>
+    </text>
+    <text id="WinCe">
+     <orig>Central European: Czech, Polish, Hungarian…</orig>
+     <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>
+    </text>
+    <text id="He">
+     <orig>Hebrew</orig>
+    </text>
+    <text id="WinRu">
+     <orig>Most Cyrillic languages: Russian, Bulgarian, Serbian…</orig>
+     <au-cmt>You can add your own language if it's served with Win-1251</au-cmt>
+    </text>
+   </group>
+   <text id="Head">
+    <orig>input: U+{1}</orig>
+   </text>
+   <text id="Dos">
+    <orig>DOS [[pt:altcode|Alt code]]: {1}</orig>
+   </text>
+   <text id="Most">
+    <orig>Works on most Windows computers</orig>
+   </text>
+   <text id="Loc">
+    <orig>Works on Windows computers with the following localizations:</orig>
+   </text>
+   <text id="Win">
+    <orig>Windows [[pt:altcodeAlt code]]: {1]</orig>
+   </text>
+   <text id="Lay">
+    <orig>Works on Windows when the following keyboard layouts are active:</orig>
+   </text>
+   <text id="Word">
+    <orig>Word and LibreOffice: type {1}, then press {{k|Alt|X}}.</orig>
+   </text>
+   <text id="Birman">
+    <orig>[[pt:birman|Birman’s layout]]: {1}</orig>
+   </text>
+  </group>
  </file>
 </ut>
