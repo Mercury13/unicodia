@@ -18,6 +18,16 @@ Link text: unrestricted
 Default caption: just URL
 Ordinary HTTPS link
 
+pb:AL :: Bidirectional class
+Type: pop-up
+Link text: bidirectional codes
+Differences from Unicode:
+  DIR is FSI+LRI+LRE…
+  ON is ON && !Bidi_M
+  NM is ON && Bidi_M
+Default caption: none
+Shows a pop-up window of bidi class
+
 pc:89AB :: Character
 Type: pop-up
 Link text: hex number, or uppercase abbreviation:
