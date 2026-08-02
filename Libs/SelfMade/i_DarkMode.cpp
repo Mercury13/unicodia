@@ -111,14 +111,14 @@ namespace {
     QPalette getDarkPalette()
     {
         QPalette pal;
-        pal.setColor(QPalette::Window, QColor(53, 53, 53));
+        pal.setColor(QPalette::Window, QColor(35, 35, 35));
         pal.setColor(QPalette::WindowText, Qt::white);
-        pal.setColor(QPalette::Base, QColor(35, 35, 35));
-        pal.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
-        pal.setColor(QPalette::ToolTipBase, QColor(25, 25, 25));
+        pal.setColor(QPalette::Base, Qt::black);
+        pal.setColor(QPalette::AlternateBase, QColor(35, 35, 35));
+        pal.setColor(QPalette::ToolTipBase, Qt::black);
         pal.setColor(QPalette::ToolTipText, Qt::white);
         pal.setColor(QPalette::Text, Qt::white);
-        pal.setColor(QPalette::Button, QColor(53, 53, 53));
+        pal.setColor(QPalette::Button, QColor(35, 35, 35));
         pal.setColor(QPalette::ButtonText, Qt::white);
         pal.setColor(QPalette::BrightText, Qt::red);
         pal.setColor(QPalette::Link, QColor(42, 130, 218));
@@ -127,11 +127,11 @@ namespace {
         pal.setColor(QPalette::Midlight, QColor(99, 99, 99));
         pal.setColor(QPalette::Highlight, QColor(42, 130, 218));
         pal.setColor(QPalette::HighlightedText, Qt::white);
-        pal.setColor(QPalette::Active, QPalette::Button, QColor(53, 53, 53));
+        pal.setColor(QPalette::Active, QPalette::Button, QColor(35, 35, 35));
         pal.setColor(QPalette::Disabled, QPalette::ButtonText, Qt::darkGray);
         pal.setColor(QPalette::Disabled, QPalette::WindowText, Qt::darkGray);
         pal.setColor(QPalette::Disabled, QPalette::Text, Qt::darkGray);
-        pal.setColor(QPalette::Disabled, QPalette::Light, QColor(53, 53, 53));
+        pal.setColor(QPalette::Disabled, QPalette::Light, QColor(35, 35, 35));
         return pal;
     }
 
