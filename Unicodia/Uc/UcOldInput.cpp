@@ -705,10 +705,10 @@ namespace {
     }};
 
     constinit const uc::OneByteInfo dosInfo[] {
-        { .name = "en", .map = rmDosEn },
-        { .name = "ru", .map = rmDosRu },
-        { .name = "el", .map = rmDosEl },
-        { .name = "tr", .map = rmDosTr },
+        { .lang = "en", .map = rmDosEn },
+        { .lang = "ru", .map = rmDosRu },
+        { .lang = "el", .map = rmDosEl },
+        { .lang = "tr", .map = rmDosTr },
     };
     static_assert(std::size(dosInfo) == ec::size<uc::DosLang>());
 
@@ -802,11 +802,11 @@ namespace {
     }};
 
     constinit const uc::OneByteInfo winInfo[] {
-        { .name = "en", .map = rmWinEn },
-        { .name = "ce", .map = rmWinCe },
-        { .name = "ru", .map = rmWinRu },
-        { .name = "el", .map = rmWinEl },
-        { .name = "tr", .map = rmWinTr },
+        { .lang = "en", .map = rmWinEn },
+        { .lang = "ce", .map = rmWinCe },
+        { .lang = "ru", .map = rmWinRu },
+        { .lang = "el", .map = rmWinEl },
+        { .lang = "tr", .map = rmWinTr },
     };
     static_assert(std::size(winInfo) == ec::size<uc::WinLang>());
 

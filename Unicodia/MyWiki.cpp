@@ -3288,7 +3288,7 @@ namespace {
                                 // commonCode is never CMAP_NO_COMMON, so OK
                                 if (code == 0 || code == commonCode) {
                                     sp3.sep();
-                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.name));
+                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.lang));
                                 }
                             };
                             im.alt.locDos.run(addLang);
@@ -3316,7 +3316,7 @@ namespace {
                                     (unsigned char code, const uc::OneByteInfo& page) {
                                         if (code != 0 && code != commonCode) {
                                             sp3.sep();
-                                            str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.name));
+                                            str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.lang));
                                         }
                                     };
                                 loc.run(addLang);
@@ -3328,7 +3328,7 @@ namespace {
                                         auto& text = sp2.target();
                                         str::append(text, static_cast<int>(code));
                                         text += " (";
-                                        str::append(text, loc::currLang->renameAltCodeSv(page.name));
+                                        str::append(text, loc::currLang->renameAltCodeSv(page.lang));
                                         text += ")";
                                     }
                                 };

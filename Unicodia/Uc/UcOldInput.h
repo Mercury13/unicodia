@@ -161,7 +161,7 @@ namespace uc {
     Flags<OldComp> cpOldComps(char32_t cp);
 
     struct OneByteInfo {
-        std::string_view name;
+        std::string_view lang;
         const ReverseMap& map;
     };
 
