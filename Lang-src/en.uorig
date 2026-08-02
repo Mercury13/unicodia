@@ -586,7 +586,7 @@
     </text>
     <text id="AltCode">
      <orig>Alt code</orig>
-     <au-cmt>Test: U+011B both Alt code and Birman</au-cmt>
+     <au-cmt>Unused since 3.2.4</au-cmt>
     </text>
     <text id="Sometimes">
      <orig>sometimes {1}</orig>
