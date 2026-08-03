@@ -13,7 +13,6 @@
 // Libs
 #include "u_Strings.h"
 #include "u_Qstrings.h"
-#include "u_Cmap.h"
 #include "u_EgypIndex.h"
 #include "function_ref.hpp"
 
@@ -3204,9 +3203,6 @@ namespace {
         str::append(text, KEY_END);
     }
 
-    constexpr char CODE_DOS = 0;
-    constexpr char CODE_WIN = '0';
-
     void writeAltCode(QString& text, WantLink wantLink, char prefix, unsigned value)
     {
         startAltCode(text, wantLink);
@@ -3232,47 +3228,13 @@ namespace {
         }
     }
 
-    enum class AltFilterMode : unsigned char {
-        COMMON,     ///< is a common
-        EXACT       ///< exactly equals to
-    };
-    struct AltFilter {
-        AltFilterMode mode;
-        unsigned value;
-        bool operator () (unsigned x) const noexcept;
-    };
-
-    bool AltFilter::operator () (unsigned x) const noexcept
-    {
-        switch (mode) {
-        case AltFilterMode::COMMON:
-            return (x == 0 || x == value);
-        case AltFilterMode::EXACT:
-            return (x == value);
-        }
-        __builtin_unreachable();
-    }
-
-    inline AltFilter filCom(unsigned x) noexcept
-    { return { .mode = AltFilterMode::COMMON, .value = x}; }
-
-    inline AltFilter filExact(unsigned x) noexcept
-    { return { .mode = AltFilterMode::EXACT, .value = x}; }
-
-    template <class Rng, class V>
-    bool hasValue(const Rng& rng, V val)
-    {
-        auto end = std::end(rng);
-        return (std::find(std::begin(rng), end, val) != end);
-    }
-
     class SmallPrinter final : public myalt::Printer
     {
     public:
         SmallPrinter(QString& aText) noexcept : sp(aText, EURO_COMMA) {}
         void startCombo(int value, char prefix, myalt::ComboMode mode) override;
-        virtual void continueList(bool isFirst, const uc::OneByteInfo& info) override;
-        virtual void endList() override;
+        void continueList(bool isFirst, const uc::OneByteInfo& info) override;
+        void endList() override;
         QString& text() { return sp.target(); }
     private:
         str::QSep sp;
@@ -4497,44 +4459,46 @@ void mywiki::appendHistoryLink(QString& html, const mywiki::HistoryPlace& place)
 
 namespace {
 
-    void appendAltHeader(QString& text, char prefix, unsigned value)
+    class BigPrinter final : public myalt::Printer
     {
+    public:
+        BigPrinter(QString& aText) noexcept : text(aText) {}
+        void startCombo(int value, char prefix, myalt::ComboMode mode) override;
+        void continueList(bool isFirst, const uc::OneByteInfo& info) override;
+        void endList() override {}
+    private:
+        QString& text;
+    };
+
+    void BigPrinter::startCombo(int value, char prefix, myalt::ComboMode mode)
+    {
+        // Line 1 (header)
         text += "<p><a href='pt:altcode' class='popup'>";
         str::append(text, loc::get("Input.Alt"));
         text += "</a>";
         str::append(text, loc::active::punctuation.keyValueColon);
         writeAltCode(text, WantLink::NO, prefix, value);
         text += "<br>";
-    }
-
-    // Common, not templated!
-    class WriteBigLang {
-    public:
-        WriteBigLang(QString& aText, AltFilter aFilter) noexcept
-            : text(aText), filter(aFilter) {}
-        void operator () (unsigned char code, const uc::OneByteInfo& page) const;
-    private:
-        QString& text;
-        AltFilter filter;
-    };
-
-    void WriteBigLang::operator () (unsigned char code, const uc::OneByteInfo& page) const
-    {
-        if (filter(code)) {
-            // commonCode is never CMAP_NO_COMMON, so OK
-            text += "<br>";
-            str::append(text, BULLET);
-            text += loc::get(page.locCode);
+        // Line 2 (where works)
+        switch (mode) {
+        case myalt::ComboMode::EVERYWHERE:
+            str::append(text, loc::get("Input.Most"));
+            break;
+        case myalt::ComboMode::LIST:
+            if (prefix == myalt::CODE_DOS) {
+                str::append(text, loc::get("Input.Loc"));
+            } else {
+                str::append(text, loc::get("Input.Lay"));
+            }
+            break;
         }
     }
 
-    template <class K>
-    void writeBigLangList(QString& text, AltFilter filter,
-                const uc::LocBase<K>& codes, std::string_view prefixLine)
+    void BigPrinter::continueList(bool, const uc::OneByteInfo& info)
     {
-        str::append(text, loc::get(prefixLine));
-        WriteBigLang wb(text, filter);
-        codes.run(wb);
+        text += "<br>";
+        str::append(text, BULLET);
+        text += loc::get(info.locCode);
     }
 
 }   // anon namespace
@@ -4560,40 +4524,10 @@ QString mywiki::buildInputHtml(const uc::Cp& cp)
                 .arg(im.sometimesKey),
             wiki::Mode::SPAN);
     }
-    if (im.hasAltCode()) {
-        bool needLocale = !im.alt.hasLocaleIndependent();
-        if (im.alt.dosCommon) {
-            appendAltHeader(text, CODE_DOS, im.alt.dosCommon);
-            if (im.alt.locDos.hasOtherThan(im.alt.dosCommon)) {
-                writeBigLangList(text, filCom(im.alt.dosCommon), im.alt.locDos, "Input.Loc");
-                // Need locale, but only when Windows' common locale is absent
-                if (im.alt.winCommon == 0)
-                    needLocale = true;
-            } else {
-                str::append(text, loc::get("Input.Most"));
-            }
-        }
-        if (im.alt.winCommon) {
-            appendAltHeader(text, CODE_WIN, im.alt.winCommon);
-            str::append(text, loc::get("Input.Most"));
-        }
-        if (needLocale) {
-            auto runEncoding = [&text]
-                (auto& loc, char prefix, unsigned char commonCode, std::string_view prefixLine) {
-                    std::vector<unsigned> alreadyUsed;
-                    if (commonCode != 0)
-                        alreadyUsed.push_back(commonCode);
-                    for (auto v : loc) {
-                        if (v > CMAP_LAST_TECH && !hasValue(alreadyUsed, v)) {
-                            appendAltHeader(text, prefix, v);
-                            writeBigLangList(text, filExact(v), loc, prefixLine);
-                            alreadyUsed.push_back(v);
-                        }
-                    }
-                };
-            runEncoding(im.alt.locDos, CODE_DOS, im.alt.dosCommon, "Input.Loc");
-            runEncoding(im.alt.locWin, CODE_WIN, 0,                "Input.Lay");
-        }
+
+    // Alt codes
+    { BigPrinter prn(text);
+        myalt::print(im.alt, prn);
     }
 
     // Birman
