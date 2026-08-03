@@ -388,9 +388,10 @@ namespace {
     public:
         const uc::Cp& cp;
         PopInputLink(const uc::Cp& x) : cp(x) {}
-        mywiki::HistoryObj obj() const noexcept override { return &cp; }
+        // iTech is reserved for input
+        mywiki::HistoryObj obj() const noexcept override { return &cp.name.iTech; }
         void go(QWidget* widget, TinyOpt<QRect> rect,
-            const mywiki::PLink& that, mywiki::Gui& gui) const override;
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
         std::u8string header() const override;
     };
 
@@ -403,7 +404,6 @@ namespace {
 
     std::u8string PopInputLink::header() const
     {
-        /// @todo [urgent] PopInputLink::input
         char buf[10];
         uc::sprint(buf, cp.subj);
         return loc::get("Input.Head").arg(str::toU8sv(buf));
@@ -3183,10 +3183,16 @@ namespace {
         mywiki::append(text, value, DEFAULT_CONTEXT, wiki::Mode::SPAN);
     }
 
-    void startAltCode(QString& text)
+    enum class WantLink : unsigned char { NO, YES };
+
+    void startAltCode(QString& text, WantLink wantLink)
     {
         str::append(text, KEY_START);
-        text += "<a href='pt:altcode' class='popkey'>Alt</a>";
+        if (wantLink != WantLink::NO) {
+            text += "<a href='pt:altcode' class='popkey'>Alt</a>";
+        } else {
+            text += "Alt";
+        }
         str::append(text, KEY_END);
         text += "+";
         str::append(text, KEY_START);
@@ -3195,6 +3201,159 @@ namespace {
     void endAltCode(QString& text)
     {
         str::append(text, KEY_END);
+    }
+
+    constexpr char CODE_DOS = 0;
+    constexpr char CODE_WIN = '0';
+
+    void writeAltCode(QString& text, WantLink wantLink, char prefix, unsigned value)
+    {
+        startAltCode(text, wantLink);
+        if (prefix != 0)
+            text += prefix;
+        str::append(text, value);
+        endAltCode(text);
+    }
+
+    void appendAltgrKey(QString& text, const uc::AltgrKey birman)
+    {
+        std::u8string sKey;
+        appendKey(sKey, u8"AltGr", birman.key);
+        if (birman.letter != 0) {
+            sKey += u8"&nbsp; ";
+            appendKey(sKey, {}, birman.letter);
+        }
+        if (birman.isTwice) {
+            str::append(text, loc::get("Prop.Input.Twice")
+                    .arg(sKey));
+        } else {
+            str::append(text, sKey);
+        }
+    }
+
+    enum class AltFilterMode : unsigned char {
+        COMMON,     ///< is a common
+        EXACT       ///< exactly equals to
+    };
+    struct AltFilter {
+        AltFilterMode mode;
+        unsigned value;
+        bool operator () (unsigned x) const noexcept;
+    };
+
+    bool AltFilter::operator () (unsigned x) const noexcept
+    {
+        switch (mode) {
+        case AltFilterMode::COMMON:
+            return (x == 0 || x == value);
+        case AltFilterMode::EXACT:
+            return (x == value);
+        }
+        __builtin_unreachable();
+    }
+
+    inline AltFilter filCom(unsigned x) noexcept
+    { return { .mode = AltFilterMode::COMMON, .value = x}; }
+
+    inline AltFilter filExact(unsigned x) noexcept
+    { return { .mode = AltFilterMode::EXACT, .value = x}; }
+
+    // Common, not templated!
+    class WriteSmallLang {
+    public:
+        WriteSmallLang(QString& aText, AltFilter aFilter) noexcept
+            : sp(aText, "/"), filter(aFilter) {}
+        void operator () (unsigned char code, const uc::OneByteInfo& page) const;
+    private:
+        str::QSep sp;
+        AltFilter filter;
+    };
+
+    void WriteSmallLang::operator () (unsigned char code, const uc::OneByteInfo& page) const
+    {
+        if (filter(code)) {
+            sp.sep();
+            str::append(sp.target(), loc::currLang->renameAltCodeSv(page.lang));
+        }
+    }
+
+    template <class K>
+    void writeSmallLangList(QString& text, AltFilter filter,
+            const uc::LocBase<K>& codes)
+    {
+        text += " (";
+        WriteSmallLang wb(text, filter);
+        codes.run(wb);
+        text += ")";
+    }
+
+    template <class Rng, class V>
+    bool hasValue(const Rng& rng, V val)
+    {
+        auto end = std::end(rng);
+        return (std::find(std::begin(rng), end, val) != end);
+    }
+
+    void appendSmallInputLine(QString& text, unsigned charCode, const uc::InputMethods& im)
+    {
+        char bufLink[40];
+        snprintf(bufLink, std::size(bufLink),
+                "<a href='pin:%X' class='popup'>", charCode);
+        appendNonBullet(text, "Prop.Input.Bullet", bufLink, "</a>");
+        str::QSep sp1(text, ";&nbsp; ");
+        if (!im.sometimesKey.empty()) {
+            sp1.sep();
+            mywiki::appendNoFont(
+                text, loc::get("Prop.Input.Sometimes")
+                    .arg(im.sometimesKey),
+                wiki::Mode::SPAN);
+        }
+        if (im.hasAltCode()) {
+            sp1.sep();
+            str::QSep sp2(text, EURO_COMMA);    // alt codes
+            bool needLocale = !im.alt.hasLocaleIndependent();
+            if (im.alt.dosCommon) {
+                sp2.sep();
+                writeAltCode(text, WantLink::YES, CODE_DOS, im.alt.dosCommon);
+                if (im.alt.locDos.hasOtherThan(im.alt.dosCommon)) {
+                    writeSmallLangList(text, filCom(im.alt.dosCommon), im.alt.locDos);
+                    // Need locale, but only when Windows' common locale is absent
+                    if (im.alt.winCommon == 0)
+                        needLocale = true;
+                }
+            }
+            if (im.alt.winCommon) {
+                sp2.sep();
+                writeAltCode(text, WantLink::YES, CODE_WIN, im.alt.winCommon);
+            }
+            if (needLocale) {
+                auto runEncoding = [&sp2]
+                    (auto& loc, char prefix, unsigned char commonCode) {
+                        auto& text = sp2.target();
+                        std::vector<unsigned> alreadyUsed;
+                        if (commonCode != 0)
+                            alreadyUsed.push_back(commonCode);
+                        for (auto v : loc) {
+                            if (v > CMAP_LAST_TECH && !hasValue(alreadyUsed, v)) {
+                                sp2.sep();
+                                writeAltCode(text, WantLink::YES, prefix, v);
+                                writeSmallLangList(text, filExact(v), loc);
+                                alreadyUsed.push_back(v);
+                            }
+                        }
+                    };
+                runEncoding(im.alt.locDos, CODE_DOS, im.alt.dosCommon);
+                runEncoding(im.alt.locWin, CODE_WIN, 0);
+            }
+        }
+        // Birman test
+        if (im.hasBirman()) {
+            sp1.sep();
+            text += "<a href='pt:birman' class='popup'>";
+            str::append(text, loc::get("Prop.Input.Birman"));
+            text += "</a> ";
+            appendAltgrKey(text, im.birman);
+        }
     }
 
     /// @param [in] serializations  [+] write UTF-8, HTML etc
@@ -3317,119 +3476,12 @@ namespace {
             }
         }
 
-        // Input
         if (serializations != CpSerializations::NO) {
+            // Input
             auto im = uc::cpInputMethods(cp.subj);
             if (im.hasSmth()) {
                 sp.sep();
-                char bufLink[40];
-                snprintf(bufLink, std::size(bufLink),
-                        "<a href='pin:%X' class='popup'>",
-                        cp.subj.uval());
-                appendNonBullet(text, "Prop.Input.Bullet", bufLink, "</a>");
-                str::QSep sp1(text, ";&nbsp; ");
-                if (!im.sometimesKey.empty()) {
-                    sp1.sep();
-                    mywiki::appendNoFont(
-                                text, loc::get("Prop.Input.Sometimes")
-                                      .arg(im.sometimesKey),
-                                wiki::Mode::SPAN);
-                }
-                if (im.hasAltCode()) {
-                    sp1.sep();
-                    str::QSep sp2(text, EURO_COMMA);    // alt codes
-                    bool needLocale = !im.alt.hasLocaleIndependent();
-                    if (im.alt.dosCommon) {
-                        sp2.sep();
-                        startAltCode(text);
-                        str::append(text, static_cast<int>(im.alt.dosCommon));
-                        endAltCode(text);
-                        if (im.alt.locDos.hasOtherThan(im.alt.dosCommon)) {
-                            text += " (";
-                            str::QSep sp3(text, "/");
-                            auto addLang = [&sp3, commonCode = im.alt.dosCommon]
-                                        (unsigned char code, const uc::OneByteInfo& page) {
-                                // commonCode is never CMAP_NO_COMMON, so OK
-                                if (code == 0 || code == commonCode) {
-                                    sp3.sep();
-                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.lang));
-                                }
-                            };
-                            im.alt.locDos.run(addLang);
-                            text += ")";
-                            // Need locale, but only when Windows' common locale is absent
-                            if (im.alt.winCommon == 0)
-                                needLocale = true;
-                        }
-                    }
-                    if (im.alt.winCommon) {
-                        sp2.sep();
-                        str::append(text, "0");
-                        str::append(text, static_cast<int>(im.alt.winCommon));
-                    }
-                    if (needLocale) {
-                        auto runEncoding = [&sp2]
-                                    (auto& loc, char prefix, char commonCode) {
-                            auto& text = sp2.target();
-                            if (auto code = loc.weakSingleCode(); code > CMAP_LAST_TECH) {
-                                sp2.sep();
-                                startAltCode(text);
-                                if (prefix != 0)
-                                    text += prefix;
-                                str::append(text, static_cast<int>(code));
-                                endAltCode(text);
-                                text += " (";
-                                str::QSep sp3(text, "/");
-                                auto addLang = [&sp3, commonCode]
-                                    (unsigned char code, const uc::OneByteInfo& page) {
-                                        if (code != 0 && code != commonCode) {
-                                            sp3.sep();
-                                            str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.lang));
-                                        }
-                                    };
-                                loc.run(addLang);
-                                text += ")";
-                            } else {
-                                auto addCode = [&sp2, prefix](unsigned char code, const uc::OneByteInfo& page) {
-                                    if (code > CMAP_LAST_TECH) {
-                                        sp2.sep();
-                                        auto& text = sp2.target();
-                                        startAltCode(text);
-                                        if (prefix != 0)
-                                            text += prefix;
-                                        str::append(text, static_cast<int>(code));
-                                        endAltCode(text);
-                                        text += " (";
-                                        str::append(text, loc::currLang->renameAltCodeSv(page.lang));
-                                        text += ")";
-                                    }
-                                };
-                                loc.run(addCode);
-                            }
-                        };
-                        runEncoding(im.alt.locDos, 0, im.alt.dosCommon);
-                        runEncoding(im.alt.locWin, '0', 0);
-                    }
-                }
-                // Birman test
-                if (im.hasBirman()) {
-                    sp1.sep();
-                    text += "<a href='pt:birman' class='popup'>";
-                    str::append(text, loc::get("Prop.Input.Birman"));
-                    text += "</a> ";
-                    std::u8string sKey;
-                        appendKey(sKey, u8"AltGr", im.birman.key);
-                        if (im.birman.letter != 0) {
-                            sKey += u8"&nbsp; ";
-                            appendKey(sKey, {}, im.birman.letter);
-                        }
-                    if (im.birman.isTwice) {
-                        str::append(text, loc::get("Prop.Input.Twice")
-                                          .arg(sKey));
-                    } else {
-                        str::append(text, sKey);
-                    }
-                }
+                appendSmallInputLine(text, cp.subj.uval(), im);
             }
 
             // HTML
@@ -4471,6 +4523,51 @@ void mywiki::appendHistoryLink(QString& html, const mywiki::HistoryPlace& place)
 }
 
 
+namespace {
+
+    void appendAltHeader(QString& text, char prefix, unsigned value)
+    {
+        text += "<p><a href='pt:altcode' class='popup'>";
+        str::append(text, loc::get("Input.Alt"));
+        text += "</a>";
+        str::append(text, loc::active::punctuation.keyValueColon);
+        writeAltCode(text, WantLink::NO, prefix, value);
+        text += "<br>";
+    }
+
+    // Common, not templated!
+    class WriteBigLang {
+    public:
+        WriteBigLang(QString& aText, AltFilter aFilter) noexcept
+            : text(aText), filter(aFilter) {}
+        void operator () (unsigned char code, const uc::OneByteInfo& page) const;
+    private:
+        QString& text;
+        AltFilter filter;
+    };
+
+    void WriteBigLang::operator () (unsigned char code, const uc::OneByteInfo& page) const
+    {
+        if (filter(code)) {
+            // commonCode is never CMAP_NO_COMMON, so OK
+            text += "<br>";
+            str::append(text, BULLET);
+            text += loc::get(page.locCode);
+        }
+    }
+
+    template <class K>
+    void writeBigLangList(QString& text, AltFilter filter,
+                const uc::LocBase<K>& codes, std::string_view prefixLine)
+    {
+        str::append(text, loc::get(prefixLine));
+        WriteBigLang wb(text, filter);
+        codes.run(wb);
+    }
+
+}   // anon namespace
+
+
 QString mywiki::buildInputHtml(const uc::Cp& cp)
 {
     QString text;
@@ -4491,101 +4588,58 @@ QString mywiki::buildInputHtml(const uc::Cp& cp)
                 .arg(im.sometimesKey),
             wiki::Mode::SPAN);
     }
-    /// @todo [urgent] Should write in broader manner
     if (im.hasAltCode()) {
-        text += "<p>";
-        str::QSep sp2(text, EURO_COMMA);    // alt codes
         bool needLocale = !im.alt.hasLocaleIndependent();
         if (im.alt.dosCommon) {
-            sp2.sep();
-            startAltCode(text);
-            str::append(text, static_cast<int>(im.alt.dosCommon));
-            endAltCode(text);
+            appendAltHeader(text, CODE_DOS, im.alt.dosCommon);
             if (im.alt.locDos.hasOtherThan(im.alt.dosCommon)) {
-                text += " (";
-                str::QSep sp3(text, "/");
-                auto addLang = [&sp3, commonCode = im.alt.dosCommon]
-                    (unsigned char code, const uc::OneByteInfo& page) {
-                        // commonCode is never CMAP_NO_COMMON, so OK
-                        if (code == 0 || code == commonCode) {
-                            sp3.sep();
-                            str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.lang));
-                        }
-                    };
-                im.alt.locDos.run(addLang);
-                text += ")";
+                writeBigLangList(text, filCom(im.alt.dosCommon), im.alt.locDos, "Input.Loc");
                 // Need locale, but only when Windows' common locale is absent
                 if (im.alt.winCommon == 0)
                     needLocale = true;
+            } else {
+                str::append(text, loc::get("Input.Most"));
             }
         }
         if (im.alt.winCommon) {
-            sp2.sep();
-            str::append(text, "0");
-            str::append(text, static_cast<int>(im.alt.winCommon));
+            appendAltHeader(text, CODE_WIN, im.alt.winCommon);
+            str::append(text, loc::get("Input.Most"));
         }
         if (needLocale) {
-            auto runEncoding = [&sp2]
-                (auto& loc, char prefix, char commonCode) {
-                    auto& text = sp2.target();
-                    if (auto code = loc.weakSingleCode(); code > CMAP_LAST_TECH) {
-                        sp2.sep();
-                        startAltCode(text);
-                        if (prefix != 0)
-                            text += prefix;
-                        str::append(text, static_cast<int>(code));
-                        endAltCode(text);
-                        text += " (";
-                        str::QSep sp3(text, "/");
-                        auto addLang = [&sp3, commonCode]
-                            (unsigned char code, const uc::OneByteInfo& page) {
-                                if (code != 0 && code != commonCode) {
-                                    sp3.sep();
-                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(page.lang));
-                                }
-                            };
-                        loc.run(addLang);
-                        text += ")";
-                    } else {
-                        auto addCode = [&sp2, prefix](unsigned char code, const uc::OneByteInfo& page) {
-                            if (code > CMAP_LAST_TECH) {
-                                sp2.sep();
-                                auto& text = sp2.target();
-                                startAltCode(text);
-                                if (prefix != 0)
-                                    text += prefix;
-                                str::append(text, static_cast<int>(code));
-                                endAltCode(text);
-                                text += " (";
-                                str::append(text, loc::currLang->renameAltCodeSv(page.lang));
-                                text += ")";
-                            }
-                        };
-                        loc.run(addCode);
+            auto runEncoding = [&text]
+                (auto& loc, char prefix, unsigned char commonCode, std::string_view prefixLine) {
+                    std::vector<unsigned> alreadyUsed;
+                    if (commonCode != 0)
+                        alreadyUsed.push_back(commonCode);
+                    for (auto v : loc) {
+                        if (v > CMAP_LAST_TECH && !hasValue(alreadyUsed, v)) {
+                            appendAltHeader(text, prefix, v);
+                            writeBigLangList(text, filExact(v), loc, prefixLine);
+                            alreadyUsed.push_back(v);
+                        }
                     }
                 };
-            runEncoding(im.alt.locDos, 0, im.alt.dosCommon);
-            runEncoding(im.alt.locWin, '0', 0);
+            runEncoding(im.alt.locDos, CODE_DOS, im.alt.dosCommon, "Input.Loc");
+            runEncoding(im.alt.locWin, CODE_WIN, 0,                "Input.Lay");
         }
     }
-    // Birman test
+
+    // Birman
     if (im.hasBirman()) {
-        text += "<p>";
-        text += "<a href='pt:birman' class='popup'>";
-        str::append(text, loc::get("Prop.Input.Birman"));
+        text += "<p><a href='pt:birman' class='popup'>";
+        str::append(text, loc::get("Input.Birman"));
         text += "</a> ";
-        std::u8string sKey;
-        appendKey(sKey, u8"AltGr", im.birman.key);
-        if (im.birman.letter != 0) {
-            sKey += u8"&nbsp; ";
-            appendKey(sKey, {}, im.birman.letter);
-        }
-        if (im.birman.isTwice) {
-            str::append(text, loc::get("Prop.Input.Twice")
-                    .arg(sKey));
-        } else {
-            str::append(text, sKey);
-        }
+        str::append(text, loc::active::punctuation.keyValueColon);
+        appendAltgrKey(text, im.birman);
+    }
+
+    // Word
+    if (cp.ecCategory != uc::EcCategory::CONTROL) {
+        text += "<p>";
+        char buf[10];
+        snprintf(buf, std::size(buf), "%X", cp.subj.uval());
+        auto wikiText = loc::get("Input.Word").arg(str::toU8sv(buf));
+        appendNoFont(text, wikiText, wiki::Mode::SPAN);
     }
 
     return text;

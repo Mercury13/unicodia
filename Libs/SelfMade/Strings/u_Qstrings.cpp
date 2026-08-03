@@ -30,7 +30,7 @@ void str::append(QString& x, std::u32string_view s)
 }
 
 
-void str::QSep::sep()
+void str::QSep::sep() const
 {
     if (s.length() != len)
         s.append(fSep);

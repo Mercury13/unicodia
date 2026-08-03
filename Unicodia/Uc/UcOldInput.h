@@ -163,7 +163,7 @@ namespace uc {
     struct OneByteInfo {
         std::string_view lang;
         const ReverseMap& map;
-        std::string_view trueName;
+        std::string_view locCode;
     };
 
     template <class K>

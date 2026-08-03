@@ -73,7 +73,8 @@ namespace str {
         QSep(QString& aS, const QString& aSep) : s(aS), len(aS.length()), fSep(aSep) {}
         QSep(QString& aS, std::u8string_view aSep) : s(aS), len(aS.length()), fSep(str::toQ(aSep)) {}
         QSep(const QSep&) = delete;
-        void sep();
+        QSep(QSep&&) = default;
+        void sep() const;
         QString& target() const noexcept { return s; }
         void reset() noexcept { len = s.length(); }
     private:

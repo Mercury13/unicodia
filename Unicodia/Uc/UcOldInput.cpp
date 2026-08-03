@@ -710,11 +710,13 @@ namespace {
             { u'³', 0xFC }, { u'²', 0xFD }
     }};
 
+#define IN_L "Input.L."
+
     constinit const uc::OneByteInfo dosInfo[] {
-        { .lang = "en", .map = rmDosEn },
-        { .lang = "ru", .map = rmDosRu },
-        { .lang = "el", .map = rmDosEl },
-        { .lang = "tr", .map = rmDosTr },
+        { .lang = "en", .map = rmDosEn, .locCode = IN_L "En"    },
+        { .lang = "ru", .map = rmDosRu, .locCode = IN_L "DosRu" },
+        { .lang = "el", .map = rmDosEl, .locCode = IN_L "El"    },
+        { .lang = "tr", .map = rmDosTr, .locCode = IN_L "Tr"    },
     };
     static_assert(std::size(dosInfo) == ec::size<uc::DosLang>());
 
@@ -822,12 +824,12 @@ namespace {
             { u'\u200F', 0xEE }, // RLM
     }};
     constinit const uc::OneByteInfo winInfo[] {
-        { .lang = "en", .map = rmWinEn },
-        { .lang = "ce", .map = rmWinCe },
-        { .lang = "ru", .map = rmWinRu },
-        { .lang = "el", .map = rmWinEl },
-        { .lang = "tr", .map = rmWinTr },
-        { .lang = "he", .map = rmWinHe },
+        { .lang = "en", .map = rmWinEn, .locCode = IN_L "En"    },
+        { .lang = "ce", .map = rmWinCe, .locCode = IN_L "WinCe" },
+        { .lang = "ru", .map = rmWinRu, .locCode = IN_L "WinRu" },
+        { .lang = "el", .map = rmWinEl, .locCode = IN_L "El"    },
+        { .lang = "tr", .map = rmWinTr, .locCode = IN_L "Tr"    },
+        { .lang = "he", .map = rmWinHe, .locCode = IN_L "He"    },
     };
     static_assert(std::size(winInfo) == ec::size<uc::WinLang>());
 

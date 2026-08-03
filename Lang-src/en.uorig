@@ -11197,8 +11197,8 @@
    <text id="Somet">
     <orig>Key: sometimes {1}</orig>
    </text>
-   <text id="Dos">
-    <orig>DOS [[pt:altcode|Alt code]]: {1}</orig>
+   <text id="Alt">
+    <orig>Alt code</orig>
    </text>
    <text id="Most">
     <orig>Works on most Windows computers</orig>
@@ -11206,17 +11206,15 @@
    <text id="Loc">
     <orig>Works on Windows computers with the following localizations:</orig>
    </text>
-   <text id="Win">
-    <orig>Windows [[pt:altcodeAlt code]]: {1]</orig>
-   </text>
    <text id="Lay">
     <orig>Works on Windows when the following keyboard layouts are active:</orig>
    </text>
    <text id="Word">
-    <orig>Word and LibreOffice: type {1}, then press {{k|Alt|X}}.</orig>
+    <orig>Word and LibreOffice: type '''{1}''', then press {{{{k|Alt|X}}.</orig>
+    <au-cmt>{{{{ = escaped {{</au-cmt>
    </text>
    <text id="Birman">
-    <orig>[[pt:birman|Birman’s layout]]: {1}</orig>
+    <orig>Birman’s layout</orig>
    </text>
   </group>
  </file>

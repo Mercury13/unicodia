@@ -15864,9 +15864,9 @@
     <orig>Key: sometimes {1}</orig>
     <transl>Клавіша: іноді {1}</transl>
    </text>
-   <text id="Dos">
-    <orig>DOS [[pt:altcode|Alt code]]: {1}</orig>
-    <transl>[[pt:altcode|Alt-код]] DOS: {1}</transl>
+   <text id="Alt">
+    <orig>Alt code</orig>
+    <transl>Alt-код</transl>
    </text>
    <text id="Most">
     <orig>Works on most Windows computers</orig>
@@ -15876,21 +15876,18 @@
     <orig>Works on Windows computers with the following localizations:</orig>
     <transl>Працює на Windows-комп’ютерах з локалізаціями:</transl>
    </text>
-   <text id="Win">
-    <orig>Windows [[pt:altcodeAlt code]]: {1]</orig>
-    <transl>[[pt:altcode|Alt-код]] Windows: {1}</transl>
-   </text>
    <text id="Lay">
     <orig>Works on Windows when the following keyboard layouts are active:</orig>
-    <transl>Працює на Windows, коли активні розкладки клавиатури:</transl>
+    <transl>Працює на Windows, коли активні розкладки клавіатури:</transl>
    </text>
    <text id="Word">
-    <orig>Word and LibreOffice: type {1}, then press {{k|Alt|X}}.</orig>
-    <transl>Word та LibreOffice: наберіть {1}, потім натисніть {{k|Alt|X}}.</transl>
+    <orig>Word and LibreOffice: type '''{1}''', then press {{{{k|Alt|X}}.</orig>
+    <au-cmt>{{{{ = escaped {{</au-cmt>
+    <transl>Word та LibreOffice: наберіть '''{1}''', потім натисніть {{{{k|Alt|X}}.</transl>
    </text>
    <text id="Birman">
-    <orig>[[pt:birman|Birman’s layout]]: {1}</orig>
-    <transl>[[pt:birman|Розкладка Бірмана]]: {1}</transl>
+    <orig>Birman’s layout</orig>
+    <transl>Розкладка Бірмана</transl>
    </text>
   </group>
  </file>
