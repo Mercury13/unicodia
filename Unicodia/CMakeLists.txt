@@ -86,15 +86,17 @@ qt_add_executable(Unicodia
         Uc/UcCommon.h Uc/UcContinents.h Uc/UcCountries.cpp Uc/UcCp.h Uc/UcData.cpp
         Uc/UcData.h Uc/UcDating.cpp Uc/UcDating.h Uc/UcFlags.h Uc/UcFonts.cpp
         Uc/UcOldInput.cpp Uc/UcOldInput.h Uc/UcRecent.h Uc/UcScripts.cpp Uc/UcSkin.h
+    Wiki/MyWiki.cpp Wiki/MyWiki.h
+        Wiki/Wiki.cpp Wiki/Wiki.h
+        Wiki/WikiLink.cpp Wiki/WikiLink.h
     # Main
     main.cpp
     c_SearchEdit.cpp c_SearchEdit.h cmdline.cpp cmdline.h d_Config.cpp d_Config.h
     FmDebugPlural.cpp FmDebugPlural.h FmDebugPlural.ui FmFontSupport.cpp FmFontSupport.h
     FmFontSupport.ui FmMessage.cpp FmMessage.h FmPopup.cpp FmPopup.h FmPopupChar.cpp
     FmPopupChar.h FmPopupChar.ui FmTofuStats.cpp FmTofuStats.h FmTofuStats.ui
-    FontBase.cpp FontBase.h LocDefs.h LocList.cpp LocList.h main.cpp MyWiki.cpp
-    MyWiki.h qa.cpp qa.h Skin.cpp Skin.h u_Popup.cpp u_Popup.h UpdateUrl.h
-    Wiki.cpp Wiki.h WikiLink.cpp WikiLink.h
+    FontBase.cpp FontBase.h LocDefs.h LocList.cpp LocList.h main.cpp
+    qa.cpp qa.h Skin.cpp Skin.h u_Popup.cpp u_Popup.h UpdateUrl.h
     # Resources
     Resources/res.qrc
     Resources/Scripts/scripts.qrc
@@ -117,6 +119,7 @@ include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/CharPaint)
 include_directories(${CMAKE_SOURCE_DIR}/Main)
 include_directories(${CMAKE_SOURCE_DIR}/Uc)
+include_directories(${CMAKE_SOURCE_DIR}/Wiki)
 include_directories(${CMAKE_SOURCE_DIR}/../Libs)
 include_directories(${CMAKE_SOURCE_DIR}/../Libs/L10n)
 include_directories(${CMAKE_SOURCE_DIR}/../Libs/PugiXml)
