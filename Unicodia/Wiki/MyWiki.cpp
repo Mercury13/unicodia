@@ -33,6 +33,7 @@
 // Wiki
 #include "Wiki.h"
 #include "Skin.h"
+#include "WikiAltCode.h"
 
 // Mojibake
 #include "mojibake.h"
@@ -3258,40 +3259,44 @@ namespace {
     inline AltFilter filExact(unsigned x) noexcept
     { return { .mode = AltFilterMode::EXACT, .value = x}; }
 
-    // Common, not templated!
-    class WriteSmallLang {
-    public:
-        WriteSmallLang(QString& aText, AltFilter aFilter) noexcept
-            : sp(aText, "/"), filter(aFilter) {}
-        void operator () (unsigned char code, const uc::OneByteInfo& page) const;
-    private:
-        str::QSep sp;
-        AltFilter filter;
-    };
-
-    void WriteSmallLang::operator () (unsigned char code, const uc::OneByteInfo& page) const
-    {
-        if (filter(code)) {
-            sp.sep();
-            str::append(sp.target(), loc::currLang->renameAltCodeSv(page.lang));
-        }
-    }
-
-    template <class K>
-    void writeSmallLangList(QString& text, AltFilter filter,
-            const uc::LocBase<K>& codes)
-    {
-        text += " (";
-        WriteSmallLang wb(text, filter);
-        codes.run(wb);
-        text += ")";
-    }
-
     template <class Rng, class V>
     bool hasValue(const Rng& rng, V val)
     {
         auto end = std::end(rng);
         return (std::find(std::begin(rng), end, val) != end);
+    }
+
+    class SmallPrinter final : public myalt::Printer
+    {
+    public:
+        SmallPrinter(QString& aText) noexcept : sp(aText, EURO_COMMA) {}
+        void startCombo(int value, char prefix, myalt::ComboMode mode) override;
+        virtual void continueList(bool isFirst, const uc::OneByteInfo& info) override;
+        virtual void endList() override;
+        QString& text() { return sp.target(); }
+    private:
+        str::QSep sp;
+    };
+
+    void SmallPrinter::startCombo(int value, char prefix, myalt::ComboMode mode)
+    {
+        sp.sep();
+        writeAltCode(text(), WantLink::YES, prefix, value);
+        if (mode == myalt::ComboMode::LIST) {
+            text() += " (";
+        }
+    }
+
+    void SmallPrinter::continueList(bool isFirst, const uc::OneByteInfo& info)
+    {
+        if (!isFirst)
+            text() += '/';
+        str::append(text(), loc::currLang->renameAltCodeSv(info.lang));
+    }
+
+    void SmallPrinter::endList()
+    {
+        text() += ')';
     }
 
     void appendSmallInputLine(QString& text, unsigned charCode, const uc::InputMethods& im)
@@ -3310,41 +3315,8 @@ namespace {
         }
         if (im.hasAltCode()) {
             sp1.sep();
-            str::QSep sp2(text, EURO_COMMA);    // alt codes
-            bool needLocale = !im.alt.hasLocaleIndependent();
-            if (im.alt.dosCommon) {
-                sp2.sep();
-                writeAltCode(text, WantLink::YES, CODE_DOS, im.alt.dosCommon);
-                if (im.alt.locDos.hasOtherThan(im.alt.dosCommon)) {
-                    writeSmallLangList(text, filCom(im.alt.dosCommon), im.alt.locDos);
-                    // Need locale, but only when Windows' common locale is absent
-                    if (im.alt.winCommon == 0)
-                        needLocale = true;
-                }
-            }
-            if (im.alt.winCommon) {
-                sp2.sep();
-                writeAltCode(text, WantLink::YES, CODE_WIN, im.alt.winCommon);
-            }
-            if (needLocale) {
-                auto runEncoding = [&sp2]
-                    (auto& loc, char prefix, unsigned char commonCode) {
-                        auto& text = sp2.target();
-                        std::vector<unsigned> alreadyUsed;
-                        if (commonCode != 0)
-                            alreadyUsed.push_back(commonCode);
-                        for (auto v : loc) {
-                            if (v > CMAP_LAST_TECH && !hasValue(alreadyUsed, v)) {
-                                sp2.sep();
-                                writeAltCode(text, WantLink::YES, prefix, v);
-                                writeSmallLangList(text, filExact(v), loc);
-                                alreadyUsed.push_back(v);
-                            }
-                        }
-                    };
-                runEncoding(im.alt.locDos, CODE_DOS, im.alt.dosCommon);
-                runEncoding(im.alt.locWin, CODE_WIN, 0);
-            }
+            SmallPrinter printer(text);
+            myalt::print(im.alt, printer);
         }
         // Birman test
         if (im.hasBirman()) {

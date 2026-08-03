@@ -100,6 +100,7 @@ qt_add_executable(Unicodia
     # Resources
     Resources/res.qrc
     Resources/Scripts/scripts.qrc
+    Wiki/WikiAltCode.h Wiki/WikiAltCode.cpp
 )
 
 if (WIN32)
