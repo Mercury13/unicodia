@@ -15860,9 +15860,8 @@
      <transl>Іврит</transl>
     </text>
     <text id="WinRu">
-     <orig>Most Cyrillic languages: Russian, Bulgarian, Serbian…</orig>
-     <au-cmt>You can add your own language if it's served with Win-1251</au-cmt>
-     <transl>Більшість кирилічних мов: українська, болгарська, сербська…</transl>
+     <orig>All Cyrillic (Russian, Serbian…), even Kazakh</orig>
+     <transl>Уся кирилиця (українська, сербська…), навіть казахська</transl>
     </text>
     <text id="WinLt">
      <orig>Estonian, Latvian, Lithuanian</orig>
