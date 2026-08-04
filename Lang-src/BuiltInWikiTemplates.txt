@@ -131,6 +131,9 @@ Used when text + sample + text glitches and physical barrier is needed.
 Parameter prepended with * = sample.
 Parameter prepended with ** = glitchy sample.
 
+{{smtaml}} :: Sample in Tamil font :: Samples :: 1 parameter
+Same as {{sm}} but displayed in Tamil font.
+
 T
 
 {{t}} :: Transcription :: Typographic :: 1 parameter

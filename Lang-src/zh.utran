@@ -751,7 +751,7 @@
     </text>
     <text id="AltCode">
      <orig>Alt code</orig>
-     <au-cmt>Test: U+011B both Alt code and Birman</au-cmt>
+     <au-cmt>Unused since 3.2.4</au-cmt>
      <transl>Alt 码</transl>
     </text>
     <text id="Sometimes">
@@ -2240,7 +2240,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Currency characters fall into two clear categories. One group emerged in the 17–19th centuries with the evolution of business language: dollar {{sm|$}}, pound {{sm|£}}, [[ps:Taml|Tamil]] rupee sign {{sm|௹}}. Others are introduced by the state since the late 20th century: euro {{sm|€}}, hryvnia {{sm|₴}}, ruble {{sm|₽}}, rupee {{sm|₹}}.</p>
+      <p>Currency characters fall into two clear categories. One group emerged in the 17–19th centuries with the evolution of business language: dollar {{sm|$}}, pound {{sm|£}}, [[ps:Taml|Tamil]] rupee sign {{smtaml|௹}}. Others are introduced by the state since the late 20th century: euro {{sm|€}}, hryvnia {{sm|₴}}, ruble {{sm|₽}}, rupee {{sm|₹}}.</p>
       <p />
       <p>Expecting that the Russian ruble symbol would be accepted someday, the Paratype company filled the remaining space in the block with it in 2009. The PT family of fonts proved good and spread across the Internet. So don’t be surprised if the new symbol of 2021 is “supported” with the ₽ sign.</p>
      </orig>
@@ -2250,7 +2250,7 @@
       <p>Expecting that the Russian ruble symbol would be accepted someday, Paratype company in 2009 filled the remainder of the block with it. The fonts of PT family proved good and spread across the Internet. So don’t be surprised if the new symbol of 2021 is “supported” with ₽ sign.</p>
      </known-orig>
      <transl>
-      <p>货币字符大致可以分为两类。一类是在 17 至 19 世纪随着商业语言的演变而自然诞生的，比如美元符号 {{sm| $ }}、英镑符号 {{sm|£}} 以及 [[ps:Taml|泰米尔文字]] 的卢比符号 {{sm|௹}}。另一类则是自 20 世纪末以来由国家官方正式推出的，例如欧元 {{sm|€}}、格里夫纳（乌克兰货币）{{sm|₴}}、卢布 {{sm|₽}} 以及印度卢比 {{sm|₹}}。</p>
+      <p>货币字符大致可以分为两类。一类是在 17 至 19 世纪随着商业语言的演变而自然诞生的，比如美元符号 {{sm| $ }}、英镑符号 {{sm|£}} 以及 [[ps:Taml|泰米尔文字]] 的卢比符号 {{smtaml|௹}}。另一类则是自 20 世纪末以来由国家官方正式推出的，例如欧元 {{sm|€}}、格里夫纳（乌克兰货币）{{sm|₴}}、卢布 {{sm|₽}} 以及印度卢比 {{sm|₹}}。</p>
       <p />
       <p>Paratype 字体公司早在 2009 年就预料到俄罗斯卢布符号总有一天会被正式接纳，于是提前在 Unicode 区块的剩余空位中填入了卢布符号。而 PT 系列字体后来表现出色，并在互联网上广泛传播。所以，如果看到 2021 年的新符号居然被这个 ₽ 符号提前 “支持” 了，请不要感到惊讶。</p>
      </transl>
@@ -18459,6 +18459,64 @@
     <orig>Scripts</orig>
     <au-cmt>Scripts: Alpha, Bravo…</au-cmt>
     <transl>文字</transl>
+   </text>
+  </group>
+  <group id="Input">
+   <group id="L">
+    <au-cmt>Treat them as languages: English (language)</au-cmt>
+    <text id="En">
+     <orig>Western European: English, French…</orig>
+     <au-cmt>
+      <p>Both L10n and layout.</p>
+      <p>You can add your own language if it's served with BOTH Win-1252 and IBM-437</p>
+     </au-cmt>
+    </text>
+    <text id="DosRu">
+     <orig>Russian, Ukrainian, Belorussian, Bulgarian</orig>
+     <au-cmt>The exhaustive list served with AltGOST-866, Microsoft's dialect.</au-cmt>
+    </text>
+    <text id="El">
+     <orig>Greek</orig>
+    </text>
+    <text id="Tr">
+     <orig>Turkish</orig>
+    </text>
+    <text id="WinCe">
+     <orig>Central European: Czech, Polish, Hungarian…</orig>
+     <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>
+    </text>
+    <text id="He">
+     <orig>Hebrew</orig>
+    </text>
+    <text id="WinRu">
+     <orig>Most Cyrillic languages: Russian, Bulgarian, Serbian…</orig>
+     <au-cmt>You can add your own language if it's served with Win-1251</au-cmt>
+    </text>
+   </group>
+   <text id="Head">
+    <orig>input: U+{1}</orig>
+   </text>
+   <text id="Somet">
+    <orig>Key: sometimes {1}</orig>
+   </text>
+   <text id="Alt">
+    <orig>Alt code</orig>
+   </text>
+   <text id="Most">
+    <orig>Works on most Windows computers</orig>
+   </text>
+   <text id="Loc">
+    <orig>Works on Windows computers with the following localizations:</orig>
+   </text>
+   <text id="Lay">
+    <orig>Works on Windows when the following keyboard layouts are active:</orig>
+   </text>
+   <text id="Word">
+    <orig>Word and LibreOffice: type '''{1}''', then press {{{{k|Alt|X}}.</orig>
+    <au-cmt>{{{{ = escaped {{</au-cmt>
+   </text>
+   <text id="Birman">
+    <orig>Birman’s layout</orig>
    </text>
   </group>
  </file>

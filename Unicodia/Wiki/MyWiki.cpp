@@ -1898,6 +1898,8 @@ namespace {
                 appendFont(s, uc::EcFont::CJK, x, 3, NO_FLAGS);
             } else if (name == "smfunky"sv) {
                 appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE, NO_FLAGS);
+            } else if (name == "smtaml"sv) {
+                appendFont(s, uc::EcFont::TAMIL, x, SIZE_SAMPLE, NO_FLAGS);
             } else if (name == "smtable"sv) {
                 appendSmTable(s, x, context);
             }
