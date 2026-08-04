@@ -206,7 +206,7 @@ namespace uc {
         EN, RU, EL, TR );
 
     DEFINE_ENUM_TYPE_IN_NS(uc, WinLang, unsigned char,
-        EN, CE, RU, EL, TR, HE );
+        EN, CE, RU, EL, TR, LT, HE );
 
     const OneByteInfo& oneByteInfo(DosLang lang);
     const OneByteInfo& oneByteInfo(WinLang lang);

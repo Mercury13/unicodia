@@ -11190,6 +11190,10 @@
      <orig>Most Cyrillic languages: Russian, Bulgarian, Serbian…</orig>
      <au-cmt>You can add your own language if it's served with Win-1251</au-cmt>
     </text>
+    <text id="WinLt">
+     <orig>Estonian, Latvian, Lithuanian</orig>
+     <au-cmt>Why I chose Lithuanian (lt) as the main? Because it contains BIG LOTS of special letters.</au-cmt>
+    </text>
    </group>
    <text id="Head">
     <orig>input: U+{1}</orig>

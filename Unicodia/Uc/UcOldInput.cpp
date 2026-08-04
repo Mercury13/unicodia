@@ -809,6 +809,30 @@ namespace {
         { u'ğ', 0xF0 }, REV_12(u'ñ', 0xF1),
                         { u'ı', 0xFD }, { u'ş', 0xFE }, { u'ÿ', 0xFF },
     }};
+    constexpr char16_t SHY = u'\u00AD';
+    constinit const ReverseMap rmWinLt {{ // Win-1257
+        { u'€', 0x80 },                 { u'‚', 0x82 },
+        FOUR_C(0x84, u'„', u'…', u'†', u'‡'),
+                        { u'‰', 0x89 },                 { u'‹', 0x8B },
+                        { u'¨', 0x8D }, { u'ˇ', 0x8E }, { u'¸', 0x8F },
+                        { u'‘', 0x91 }, { u'’', 0x92 }, { u'“', 0x93 },
+        FOUR_C(0x94, u'”', u'•', u'–', u'—' ),
+                        { u'™', 0x99 },                 { u'›', 0x9B },
+                        { u'¯', 0x9D }, { u'˛', 0x9E },
+        unc(0xA0),                      { u'¢', 0xA2 }, { u'£', 0xA3 },
+                        { u'¤', 0xA4 }, { u'¦', 0xA6 }, { u'§', 0xA7 },
+        EIGHT_C(0xA8, u'Ø', u'©', u'Ŗ', u'«', u'¬', SHY , u'®', u'Æ'),
+        EIGHT_C(0xB0, u'°', u'±', u'²', u'³', u'´', u'µ', u'¶', u'·'),
+        EIGHT_C(0xB8, u'ø', u'¹', u'ŗ', u'»', u'¼', u'½', u'¾', u'æ'),
+        EIGHT_C(0xC0, u'Ą', u'Į', u'Ā', u'Ć', u'Ä', u'Å', u'Ę', u'Ē'),
+        EIGHT_C(0xC8, u'Č', u'É', u'Ź', u'Ė', u'Ģ', u'Ķ', u'Ī', u'Ļ'),
+        EIGHT_C(0xD0, u'Š', u'Ń', u'Ņ', u'Ó', u'Ō', u'Õ', u'Ö', u'×'),
+        EIGHT_C(0xD8, u'Ų', u'Ł', u'Ś', u'Ū', u'Ü', u'Ż', u'Ž', u'ß'),
+        EIGHT_C(0xE0, u'ą', u'į', u'ā', u'ć', u'ä', u'å', u'ę', u'ē'),
+        EIGHT_C(0xE8, u'č', u'é', u'ź', u'ė', u'ģ', u'ķ', u'ī', u'ļ'),
+        EIGHT_C(0xF0, u'š', u'ń', u'ņ', u'ó', u'ō', u'õ', u'ö', u'÷'),
+        EIGHT_C(0xF8, u'ų', u'ł', u'ś', u'ū', u'ü', u'ż', u'ž', u'˙'),
+    }};
     constinit const ReverseMap rmWinHe {{ // Win-1255
         { u'€', 0x80 },                 { u'‚', 0x82 }, { u'ƒ', 0x83 },
         { u'„', 0x84 }, { u'…', 0x85 }, { u'†', 0x86 }, { u'‡', 0x87 },
@@ -830,6 +854,7 @@ namespace {
         { .lang = "ru", .map = rmWinRu, .locCode = IN_L "WinRu" },
         { .lang = "el", .map = rmWinEl, .locCode = IN_L "El"    },
         { .lang = "tr", .map = rmWinTr, .locCode = IN_L "Tr"    },
+        { .lang = "lt", .map = rmWinLt, .locCode = IN_L "WinLt" },
         { .lang = "he", .map = rmWinHe, .locCode = IN_L "He"    },
     };
     static_assert(std::size(winInfo) == ec::size<uc::WinLang>());
