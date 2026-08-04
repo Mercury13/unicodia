@@ -665,7 +665,6 @@ namespace {
         { u'°', 0xF8 }, { u'∙', 0xF9 }, { u'·', 0xFA }, { u'√', 0xFB },
         { u'ⁿ', 0xFC }, { u'²', 0xFD }
     }};
-    constexpr char16_t SHY = u'\u00AD';
     constinit const ReverseMap rmDosWe {{  // 850 modified = 858
         EIGHT_C(0x80, u'Ç', u'ü', u'é', u'â', u'ä', u'à', u'å', u'ç' ),
         EIGHT_C(0x88, u'ê', u'ë', u'è', u'ï', u'î', u'ì', u'Ä', u'Å' ),
@@ -681,7 +680,7 @@ namespace {
         { u'Ó', 0xE0 },
         FOUR_C (0xE2, u'Ô', u'Ò', u'õ', u'Õ' ), { u'þ', 0xE7 },
         EIGHT_C(0xE8, u'Þ', u'Ú', u'Û', u'Ù', u'ý', u'Ý', u'¯', u'´' ),
-        FOUR_C (0xF0, SHY,  u'±', u'‗', u'¾' ),
+        FOUR_C (0xF0, cp::SHY, u'±', u'‗', u'¾' ),
         // { '¶', 0xF4 }, { '§',  0xF5 },  use common control
         EIGHT_C(0xF6, u'÷', u'¸', u'°', u'¨', u'·', u'¹', u'³', u'²' )
         // FE and FF are ordinary
@@ -841,7 +840,7 @@ namespace {
                         { u'¯', 0x9D }, { u'˛', 0x9E },
         unc(0xA0),                      { u'¢', 0xA2 }, { u'£', 0xA3 },
                         { u'¤', 0xA4 }, { u'¦', 0xA6 }, { u'§', 0xA7 },
-        EIGHT_C(0xA8, u'Ø', u'©', u'Ŗ', u'«', u'¬', SHY , u'®', u'Æ'),
+        EIGHT_C(0xA8, u'Ø', u'©', u'Ŗ', u'«', u'¬', cp::SHY, u'®', u'Æ'),
         EIGHT_C(0xB0, u'°', u'±', u'²', u'³', u'´', u'µ', u'¶', u'·'),
         EIGHT_C(0xB8, u'ø', u'¹', u'ŗ', u'»', u'¼', u'½', u'¾', u'æ'),
         EIGHT_C(0xC0, u'Ą', u'Į', u'Ā', u'Ć', u'Ä', u'Å', u'Ę', u'Ē'),
