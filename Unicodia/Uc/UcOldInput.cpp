@@ -714,7 +714,7 @@ namespace {
 #define IN_L "Input.L."
 
     constinit const uc::OneByteInfo dosInfo[] {
-        { .lang = "en", .map = rmDosEn, .locCode = IN_L "En"    },
+        { .lang = "en", .map = rmDosEn, .locCode = IN_L "DosEn" },
         { .lang = "ru", .map = rmDosRu, .locCode = IN_L "DosRu" },
         { .lang = "el", .map = rmDosEl, .locCode = IN_L "El"    },
         { .lang = "tr", .map = rmDosTr, .locCode = IN_L "Tr"    },
@@ -849,7 +849,7 @@ namespace {
             { u'\u200F', 0xEE }, // RLM
     }};
     constinit const uc::OneByteInfo winInfo[] {
-        { .lang = "en", .map = rmWinEn, .locCode = IN_L "En"    },
+        { .lang = "en", .map = rmWinEn, .locCode = IN_L "WinEn"    },
         { .lang = "ce", .map = rmWinCe, .locCode = IN_L "WinCe" },
         { .lang = "ru", .map = rmWinRu, .locCode = IN_L "WinRu" },
         { .lang = "el", .map = rmWinEl, .locCode = IN_L "El"    },

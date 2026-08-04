@@ -11162,8 +11162,12 @@
   <group id="Input">
    <group id="L">
     <au-cmt>Treat them as languages: English (language)</au-cmt>
-    <text id="En">
-     <orig>Western European: English, French…</orig>
+    <text id="DosEn">
+     <orig>English (United States)</orig>
+     <au-cmt>AFAIK, CP437 is for USA and a few other countries</au-cmt>
+    </text>
+    <text id="WinEn">
+     <orig>Western European: English, French, Spanish…</orig>
      <au-cmt>
       <p>Both L10n and layout.</p>
       <p>You can add your own language if it's served with BOTH Win-1252 and IBM-437</p>
