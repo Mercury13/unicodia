@@ -665,7 +665,27 @@ namespace {
         { u'°', 0xF8 }, { u'∙', 0xF9 }, { u'·', 0xFA }, { u'√', 0xFB },
         { u'ⁿ', 0xFC }, { u'²', 0xFD }
     }};
-
+    constexpr char16_t SHY = u'\u00AD';
+    constinit const ReverseMap rmDosWe {{  // 850 modified = 858
+        EIGHT_C(0x80, u'Ç', u'ü', u'é', u'â', u'ä', u'à', u'å', u'ç' ),
+        EIGHT_C(0x88, u'ê', u'ë', u'è', u'ï', u'î', u'ì', u'Ä', u'Å' ),
+        EIGHT_C(0x90, u'É', u'æ', u'Æ', u'ô', u'ö', u'ò', u'û', u'ù' ),
+        EIGHT_C(0x98, u'ÿ', u'Ö', u'Ü', u'ø', u'£', u'Ø', u'×', u'ƒ' ),
+        EIGHT_C(0xA0, u'á', u'í', u'ó', u'ú', u'ñ', u'Ñ', u'ª', u'º' ),
+        EIGHT_C(0xA8, u'¿', u'®', u'¬', u'½', u'¼', u'¡', u'«', u'»' ),
+        FOUR_C (0xB5, u'Á', u'Â', u'À', u'©' ),
+                        { u'¢', 0xBD }, { u'¥', 0xBE },
+        { u'ã', 0xC6 }, { u'Ã', 0xC7 }, { u'¤', 0xCF },
+        EIGHT_C(0xD0, u'ð', u'Ð', u'Ê', u'Ë', u'È', u'€', u'Í', u'Î' ),
+        { u'Ï', 0xD8 }, { u'¦', 0xBD }, { u'Ì', 0xBE },
+        { u'Ó', 0xE0 },
+        FOUR_C (0xE2, u'Ô', u'Ò', u'õ', u'Õ' ), { u'þ', 0xE7 },
+        EIGHT_C(0xE8, u'Þ', u'Ú', u'Û', u'Ù', u'ý', u'Ý', u'¯', u'´' ),
+        FOUR_C (0xF0, SHY,  u'±', u'‗', u'¾' ),
+        // { '¶', 0xF4 }, { '§',  0xF5 },  use common control
+        EIGHT_C(0xF6, u'÷', u'¸', u'°', u'¨', u'·', u'¹', u'³', u'²' )
+        // FE and FF are ordinary
+    }};
     constinit const ReverseMap rmDosEl {{
         REV_16(u'Α', 0x80),        // Greek Α
         { u'Ρ', 0x90 }, { u'Σ', 0x91 }, { u'Τ', 0x92 }, { u'Υ', 0x93 },
@@ -714,7 +734,8 @@ namespace {
 #define IN_L "Input.L."
 
     constinit const uc::OneByteInfo dosInfo[] {
-        { .lang = "en", .map = rmDosEn, .locCode = IN_L "DosEn" },
+        { .lang = "us", .map = rmDosEn, .locCode = IN_L "DosEn" },
+        { .lang = "we", .map = rmDosWe, .locCode = IN_L "DosWe" },
         { .lang = "ru", .map = rmDosRu, .locCode = IN_L "DosRu" },
         { .lang = "el", .map = rmDosEl, .locCode = IN_L "El"    },
         { .lang = "tr", .map = rmDosTr, .locCode = IN_L "Tr"    },
@@ -809,7 +830,6 @@ namespace {
         { u'ğ', 0xF0 }, REV_12(u'ñ', 0xF1),
                         { u'ı', 0xFD }, { u'ş', 0xFE }, { u'ÿ', 0xFF },
     }};
-    constexpr char16_t SHY = u'\u00AD';
     constinit const ReverseMap rmWinLt {{ // Win-1257
         { u'€', 0x80 },                 { u'‚', 0x82 },
         FOUR_C(0x84, u'„', u'…', u'†', u'‡'),

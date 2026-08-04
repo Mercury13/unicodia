@@ -203,7 +203,7 @@ namespace uc {
     };
 
     DEFINE_ENUM_TYPE_IN_NS(uc, DosLang, unsigned char,
-        EN, RU, EL, TR );
+        EN, WE, RU, EL, TR );
 
     DEFINE_ENUM_TYPE_IN_NS(uc, WinLang, unsigned char,
         EN, CE, RU, EL, TR, LT, HE );

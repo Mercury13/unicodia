@@ -11166,6 +11166,9 @@
      <orig>English (United States)</orig>
      <au-cmt>AFAIK, CP437 is for USA and a few other countries</au-cmt>
     </text>
+    <text id="DosWe">
+     <orig>Western Europe, incl. English (Britain)</orig>
+    </text>
     <text id="WinEn">
      <orig>Western European: English, French, Spanish…</orig>
      <au-cmt>

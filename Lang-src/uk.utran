@@ -15825,6 +15825,10 @@
      <au-cmt>AFAIK, CP437 is for USA and a few other countries</au-cmt>
      <transl>Англійська (США)</transl>
     </text>
+    <text id="DosWe">
+     <orig>Western Europe, incl. English (Britain)</orig>
+     <transl>Західна Європа, включаючи англійську (Британія)</transl>
+    </text>
     <text id="WinEn">
      <orig>Western European: English, French, Spanish…</orig>
      <au-cmt>
