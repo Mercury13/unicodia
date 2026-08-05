@@ -767,6 +767,7 @@ namespace {
         { .lang = "ru", .map = rmDosRu, .locCode = IN_L "DosRu" },
         { .lang = "el", .map = rmDosEl, .locCode = IN_L "El"    },
         { .lang = "tr", .map = rmDosTr, .locCode = IN_L "WinTr" },
+        { .lang = "sr", .map = rmDosSr, .locCode = IN_L "DosSr" },
     };
     static_assert(std::size(dosInfo) == ec::size<uc::DosLang>());
 

@@ -15829,6 +15829,23 @@
      <orig>Western Europe, incl. English (Britain)</orig>
      <transl>Західна Європа, включаючи англійську (Британія)</transl>
     </text>
+    <text id="DosRu">
+     <orig>Russian, Ukrainian, Belorussian, Bulgarian</orig>
+     <au-cmt>The exhaustive list served with AltGOST-866, Microsoft's dialect.</au-cmt>
+     <transl>Російська, українська, білоруська, болгарська</transl>
+    </text>
+    <text id="DosSr">
+     <orig>Serbo-Croatian (Cyrillic)</orig>
+     <transl>Сербохорватська (кирилиця)</transl>
+    </text>
+    <text id="El">
+     <orig>Greek</orig>
+     <transl>Грецька</transl>
+    </text>
+    <text id="He">
+     <orig>Hebrew</orig>
+     <transl>Іврит</transl>
+    </text>
     <text id="WinEn">
      <orig>Western European: English, French, Spanish…</orig>
      <au-cmt>
@@ -15837,23 +15854,10 @@
      </au-cmt>
      <transl>Західноєвропейські: англійська, французька, іспанська…</transl>
     </text>
-    <text id="DosRu">
-     <orig>Russian, Ukrainian, Belorussian, Bulgarian</orig>
-     <au-cmt>The exhaustive list served with AltGOST-866, Microsoft's dialect.</au-cmt>
-     <transl>Російська, українська, білоруська, болгарська</transl>
-    </text>
-    <text id="El">
-     <orig>Greek</orig>
-     <transl>Грецька</transl>
-    </text>
     <text id="WinCe">
      <orig>Central European: Czech, Polish, Hungarian…</orig>
      <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>
      <transl>Центральноєвропейські: чеська, польська, угорська…</transl>
-    </text>
-    <text id="He">
-     <orig>Hebrew</orig>
-     <transl>Іврит</transl>
     </text>
     <text id="WinRu">
      <orig>All Cyrillic (Russian, Serbian…), even Kazakh</orig>

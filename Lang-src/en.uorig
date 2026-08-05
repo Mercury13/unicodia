@@ -11169,6 +11169,19 @@
     <text id="DosWe">
      <orig>Western Europe, incl. English (Britain)</orig>
     </text>
+    <text id="DosRu">
+     <orig>Russian, Ukrainian, Belorussian, Bulgarian</orig>
+     <au-cmt>The exhaustive list served with AltGOST-866, Microsoft's dialect.</au-cmt>
+    </text>
+    <text id="DosSr">
+     <orig>Serbo-Croatian (Cyrillic)</orig>
+    </text>
+    <text id="El">
+     <orig>Greek</orig>
+    </text>
+    <text id="He">
+     <orig>Hebrew</orig>
+    </text>
     <text id="WinEn">
      <orig>Western European: English, French, Spanish…</orig>
      <au-cmt>
@@ -11176,19 +11189,9 @@
       <p>You can add your own language if it's served with BOTH Win-1252 and IBM-437</p>
      </au-cmt>
     </text>
-    <text id="DosRu">
-     <orig>Russian, Ukrainian, Belorussian, Bulgarian</orig>
-     <au-cmt>The exhaustive list served with AltGOST-866, Microsoft's dialect.</au-cmt>
-    </text>
-    <text id="El">
-     <orig>Greek</orig>
-    </text>
     <text id="WinCe">
      <orig>Central European: Czech, Polish, Hungarian…</orig>
      <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>
-    </text>
-    <text id="He">
-     <orig>Hebrew</orig>
     </text>
     <text id="WinRu">
      <orig>All Cyrillic (Russian, Serbian…), even Kazakh</orig>
