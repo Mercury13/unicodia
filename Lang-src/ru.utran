@@ -15844,10 +15844,6 @@
      <orig>Greek</orig>
      <transl>Греческий</transl>
     </text>
-    <text id="DosTr">
-     <orig>Turkish</orig>
-     <transl>Турецкий</transl>
-    </text>
     <text id="WinCe">
      <orig>Central European: Czech, Polish, Hungarian…</orig>
      <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>

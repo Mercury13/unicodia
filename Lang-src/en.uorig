@@ -11183,9 +11183,6 @@
     <text id="El">
      <orig>Greek</orig>
     </text>
-    <text id="DosTr">
-     <orig>Turkish</orig>
-    </text>
     <text id="WinCe">
      <orig>Central European: Czech, Polish, Hungarian…</orig>
      <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>
