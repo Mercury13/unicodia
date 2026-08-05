@@ -15844,7 +15844,7 @@
      <orig>Greek</orig>
      <transl>Греческий</transl>
     </text>
-    <text id="Tr">
+    <text id="DosTr">
      <orig>Turkish</orig>
      <transl>Турецкий</transl>
     </text>
@@ -15865,6 +15865,10 @@
      <orig>Estonian, Latvian, Lithuanian</orig>
      <au-cmt>Why I chose Lithuanian (lt) as the main? Because it contains BIG LOTS of special letters.</au-cmt>
      <transl>Эстонский, латышский, литовский</transl>
+    </text>
+    <text id="WinTr">
+     <orig>Turkish, Azeri (Latin)</orig>
+     <transl>Турецкий, азербайджанский (латиница)</transl>
     </text>
    </group>
    <text id="Head">

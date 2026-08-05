@@ -11183,7 +11183,7 @@
     <text id="El">
      <orig>Greek</orig>
     </text>
-    <text id="Tr">
+    <text id="DosTr">
      <orig>Turkish</orig>
     </text>
     <text id="WinCe">
@@ -11199,6 +11199,9 @@
     <text id="WinLt">
      <orig>Estonian, Latvian, Lithuanian</orig>
      <au-cmt>Why I chose Lithuanian (lt) as the main? Because it contains BIG LOTS of special letters.</au-cmt>
+    </text>
+    <text id="WinTr">
+     <orig>Turkish, Azeri (Latin)</orig>
     </text>
    </group>
    <text id="Head">
