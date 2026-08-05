@@ -11194,7 +11194,7 @@
      <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>
     </text>
     <text id="WinRu">
-     <orig>All Cyrillic (Russian, Serbian…), even Kazakh</orig>
+     <orig>All Cyrillic (Russian, Serbian…); Georgian, Armenian</orig>
     </text>
     <text id="WinLt">
      <orig>Estonian, Latvian, Lithuanian</orig>
