@@ -2279,6 +2279,8 @@ void FmMain::gotoCp(QWidget* initiator, char32_t cp)
         ui->tableFavs->setFocus();
     // Same for Popup
     mainGui.closePopup();
+
+    // Go!!
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     selectChar<SelectMode::INSTANT>(cp);
 }
