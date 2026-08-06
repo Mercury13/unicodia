@@ -308,6 +308,20 @@ namespace {
         return std::u8string(str::toU8sv(buf));
     }
 
+    class GotoBlockLink : public mywiki::Link
+    {
+    public:
+        char32_t cp;
+        GotoBlockLink(char32_t x) : cp(x) {}
+        mywiki::LinkClass clazz() const noexcept override { return mywiki::LinkClass::INTERNAL; }
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+            const mywiki::PLink& that, mywiki::Gui& gui) const override;
+    };
+
+    void GotoBlockLink::go(QWidget* wi, TinyOpt<QRect>,
+        const mywiki::PLink&, mywiki::Gui& gui) const
+    { gui.linkWalker().gotoBlockCp(wi, cp); }
+
     class GoHistoryLink : public mywiki::Link
     {
     public:
@@ -501,6 +515,15 @@ std::unique_ptr<mywiki::Link> mywiki::parseGotoCpLink(std::string_view target)
     if (code >= uc::CAPACITY || !uc::cpsByCode[code])
         return {};
     return std::make_unique<GotoCpLink>(code);
+}
+
+std::unique_ptr<mywiki::Link> mywiki::parseGotoBlockLink(std::string_view target)
+{
+    unsigned code = 0;
+    str::fromChars(target, code, 16);
+    if (code >= uc::CAPACITY || !uc::cpsByCode[code])
+        return {};
+    return std::make_unique<GotoBlockLink>(code);
 }
 
 std::unique_ptr<mywiki::Link> mywiki::parseGotoLibCpLink(std::string_view target)
@@ -735,6 +758,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseHistoryLink(std::string_view target)
 
 constexpr std::string_view SCH_QRY_CHARS = "srq";
 constexpr std::string_view SCH_QRY_EMOJI = "sre";
+constexpr std::string_view SCH_GOTO_BLOCK = "gcb";
 
 
 std::unique_ptr<mywiki::Link> mywiki::parseLink(
@@ -777,6 +801,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parseCharRequestLink(target);
     } else if (scheme == SCH_QRY_EMOJI) {
         return parseEmojiRequestLink(target);
+    } else if (scheme == SCH_GOTO_BLOCK) {
+        return parseGotoBlockLink(target);
     } else if (scheme == "c"sv) {
         return std::make_unique<CopyLink>(target);
     } else if (scheme == "http"sv || scheme == "https"sv) {
@@ -1567,14 +1593,16 @@ namespace {
         appendNSpeakers(textLang, fgs);
     }
 
-    void appendQuery(QString& text, std::string_view schema, std::string_view params)
+    void appendQuery(QString& text, std::string_view schema, std::string_view params,
+                     uc::EcFont ecFont = uc::EcFont::FUNKY,
+                     QChar icon = uc::STUB_PUA_ZOOM)
     {
-        auto& font = uc::fontInfo[(int)uc::EcFont::FUNKY];
+        auto& font = uc::fontInfo[(int)ecFont];
         auto names = font.familiesComma().toStdString();
         text += loc::Fmt(
                 "&nbsp;&nbsp;<a href='{1}:{2}' class='query' style='font-family: {3};'>&#{4};</a>")
                        (schema)(params)(names)
-                       ((int)uc::STUB_PUA_ZOOM.unicode()).q();
+                       ((int)icon.unicode()).q();
     }
 
     void Eng::appendEgypInfo(uc::EgypReliability rel)
@@ -1980,9 +2008,15 @@ namespace {
             { return id.empty() ? x : id; }
     };
 
-    template <class T, class... U>
+    struct QrySearch { std::string_view v; };
+    struct QryBlock { const uc::Cp& v; };
+
+    using Query = std::variant<std::monostate, QrySearch, QryBlock>;
+    template <class T> constexpr bool FALSE_T = false;
+
+    template <class T, class Q = std::monostate, class... U>
     inline void appendHeader(QString& text, const T& x,
-                             std::string_view qry = {},
+                             Q qry = {},
                              const SpecText<U...>& specText = {})
     {
         str::append(text, "<p><nobr>"sv);
@@ -1991,8 +2025,17 @@ namespace {
         loc::PreformN pref{ std::u8string_view{fmt}, x.nChars };
         text += loc::get(specText.idOr("Prop.Head.NChars2")).argQ(
                     boldHead, pref, specText.params);
-        if (!qry.empty()) {
-            appendQuery(text, SCH_QRY_CHARS, qry);
+        using QD = std::decay_t<Q>;
+        if constexpr (std::is_same_v<QD, std::monostate>) {
+            // do nothing
+        } else if constexpr (std::is_same_v<QD, QrySearch>) {
+            appendQuery(text, SCH_QRY_CHARS, qry.v);
+        } else if constexpr (std::is_same_v<QD, QryBlock>) {
+            char buf[10];
+            uc::sprint(buf, qry.v.subj.ch32());
+            appendQuery(text, SCH_GOTO_BLOCK, buf, uc::EcFont::DEJAVU, u'↪');
+        } else {
+            static_assert(FALSE_T<QD>, "Not all types are enumerated");
         }
         str::append(text, "</nobr></p>"sv);
     }
@@ -2150,7 +2193,7 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 {
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x, str::cat("b=", x.id));
+    appendHeader(text, x, QrySearch{ str::cat("b=", x.id) });
 
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");
@@ -2172,7 +2215,7 @@ QString mywiki::buildHtml(const uc::BreakInfo& x)
 
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x, str::cat("l=", x.id));
+    appendHeader(text, x, QrySearch{str::cat("l=", x.id)});
 
     //str::append(text, "<p>");
     //str::QSep sp(text, "<br>");
@@ -2302,7 +2345,7 @@ QString mywiki::buildHtml(const uc::Category& x)
 {
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x, catQuery(x));
+    appendHeader(text, x, QrySearch(catQuery(x)));
     appendNoFont(text, x.loc.description, wiki::Mode::ARTICLE);
     return text;
 }
@@ -2446,7 +2489,7 @@ QString mywiki::buildHtml(const uc::Script& x)
         spec.params = std::make_tuple(u8"href='ps:Hent' class='popup'"sv);
     }
     appendStylesheet(r);
-    appendHeader(r, x, str::cat("s="sv, x.id), spec);
+    appendHeader(r, x, QrySearch{ str::cat("s="sv, x.id) }, spec);
     appendHtml(r, x, true);
     return r;
 }
@@ -3664,7 +3707,7 @@ QString mywiki::buildHtml(const uc::Block& x)
 {
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x);
+    appendHeader(text, x, QryBlock{ *x.firstAllocated });
 
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");

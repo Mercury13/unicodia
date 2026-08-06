@@ -2274,6 +2274,7 @@ void FmMain::glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting
 
 void FmMain::gotoCp(QWidget* initiator, char32_t cp)
 {
+    // If we go from some link in Favs → don′t leave it active
     if (ui->wiFavsShowcase->isAncestorOf(initiator))
         ui->tableFavs->setFocus();
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
@@ -2283,10 +2284,21 @@ void FmMain::gotoCp(QWidget* initiator, char32_t cp)
 
 void FmMain::gotoBlockCp(QWidget* initiator, char32_t cp)
 {
-    if (ui->wiFavsShowcase->isAncestorOf(initiator))
-        ui->tableFavs->setFocus();
-    ui->tabsMain->setCurrentWidget(ui->tabBlocks);
-    selectChar<SelectMode::INSTANT>(cp);
+    // Sanity-check: we should only go to assigned CPs
+    if (cp >= uc::CAPACITY)
+        return;
+    auto newCp = uc::cpsByCode[cp];
+    if (!newCp)
+        return;
+    // Check what CP to take: old or new
+    auto index = ui->tableChars->currentIndex();
+    auto maybeOldCp = model.charAt(index);
+    if (maybeOldCp.cp) {
+        if (&maybeOldCp.cp->block() == &newCp->block()) {
+            cp = maybeOldCp.cp->subj.ch32();
+        }
+    }
+    gotoCp(initiator, cp);
 }
 
 

@@ -233,6 +233,7 @@ namespace mywiki {
     std::unique_ptr<Link> parsePopGlyphStyleLink(std::string_view target);
     std::unique_ptr<Link> parsePopInputLink(std::string_view target);
     std::unique_ptr<Link> parseGotoCpLink(std::string_view target);
+    std::unique_ptr<Link> parseGotoBlockLink(std::string_view target);
     std::unique_ptr<Link> parseGotoLibCpLink(std::string_view target);
     std::unique_ptr<Link> parseGotoInterfaceLink(std::string_view target);
     std::unique_ptr<Link> parseCharRequestLink(std::string_view target);
@@ -282,6 +283,7 @@ namespace mywiki {
                          std::u8string_view toView,
                          std::string_view clazz="copy");
     void appendHtml(QString& text, const uc::Script& x, bool isScript);
+    void appendHtml(QString& text, const uc::Block& x, bool isBlock);
     void appendNoFont(QString& x, std::u8string_view wiki, wiki::Mode mode);
     mywiki::AppendWiki append(QString& x, std::u8string_view wiki, const Context& context,
                         wiki::Mode mode);
