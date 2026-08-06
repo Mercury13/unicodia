@@ -6,6 +6,8 @@ It is a simple Unicode encyclopedia and the most comprehensive character map eve
 
 **I’m a Ukrainian officer now.** Everything may happen: maybe I’ll start the work again. Maybe I’ll just get killed.
 
+**No vibecoding**, at least while I’m alive.
+
 # Note about the Egyptian font
 
 It has been moved to a separate repo. Visit https://github.com/Mercury13/unicodia-sesh
