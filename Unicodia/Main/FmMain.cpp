@@ -2277,6 +2277,8 @@ void FmMain::gotoCp(QWidget* initiator, char32_t cp)
     // If we go from some link in Favs → don′t leave it active
     if (ui->wiFavsShowcase->isAncestorOf(initiator))
         ui->tableFavs->setFocus();
+    // Same for Popup
+    mainGui.closePopup();
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     selectChar<SelectMode::INSTANT>(cp);
 }
