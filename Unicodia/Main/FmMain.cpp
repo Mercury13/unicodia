@@ -2281,6 +2281,15 @@ void FmMain::gotoCp(QWidget* initiator, char32_t cp)
 }
 
 
+void FmMain::gotoBlockCp(QWidget* initiator, char32_t cp)
+{
+    if (ui->wiFavsShowcase->isAncestorOf(initiator))
+        ui->tableFavs->setFocus();
+    ui->tabsMain->setCurrentWidget(ui->tabBlocks);
+    selectChar<SelectMode::INSTANT>(cp);
+}
+
+
 void FmMain::popupCp(QWidget* initiator, char32_t cp)
 {
     if (cp >= cp::MAX_NONPRIVATE)

@@ -315,6 +315,7 @@ private:
 
     // InternalWalker
     void blinkAddCpToFavs() override;
+    void gotoBlockCp(QWidget* initiator, char32_t cp) override;
     void gotoLibCp(QWidget* initiator, char32_t cp) override;
     void searchForRequest(const uc::Request& request) override;
     void blinkRespect(QWidget* initiator, TinyOpt<QRect> r) override;

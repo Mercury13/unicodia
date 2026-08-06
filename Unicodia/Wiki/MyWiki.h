@@ -80,6 +80,9 @@ namespace mywiki {
     public:
         /// Goes to codepoint of Blocks tab
         virtual void gotoCp(QWidget* initiator, char32_t cp) = 0;
+        /// Goes to the codepoint, unless we′ve got another active codepoint
+        ///   from the same block
+        virtual void gotoBlockCp(QWidget* initiator, char32_t cp) = 0;
         /// Goes to codepoint of Library tab
         /// May fail but we do not check for errors, as we can read
         ///   Unicode data and can ensure that the link will surely work
