@@ -9897,6 +9897,10 @@
     </text>
     <text id="Text">
      <orig>Characters of unicameral scripts{{-}}without capital and small letters. For example, [[ps:Hebr|Hebrew]], [[ps:Arab|Arabic]], and [[ps:Hani|CJK ideographs]]. Also special characters like masculine/feminine ordinal indicator in Romance languages (1º{{-}}first masculine, 1ª{{-}}first feminine).</orig>
+     <au-cmt>
+      <p>If your language actually has masculine and feminine, write smth like: 1º{{-}}he-first, 1ª{{-}}she-first</p>
+      <p>Primo/prima Italian, первый/первая Russian…</p>
+     </au-cmt>
      <transl>Символы различных письменностей, где нет деления на заглавные и строчные буквы. Например, [[ps:Hebr|иврит]], [[ps:Arab|арабская вязь]] и [[ps:Hani|китайские иероглифы]]. Также особые символы вроде мужского/женского порядкового знака романских языков (1º{{-}}первый, 1ª{{-}}первая).</transl>
     </text>
    </group>

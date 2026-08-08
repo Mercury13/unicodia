@@ -6973,6 +6973,10 @@
     </text>
     <text id="Text">
      <orig>Characters of unicameral scripts{{-}}without capital and small letters. For example, [[ps:Hebr|Hebrew]], [[ps:Arab|Arabic]], and [[ps:Hani|CJK ideographs]]. Also special characters like masculine/feminine ordinal indicator in Romance languages (1º{{-}}first masculine, 1ª{{-}}first feminine).</orig>
+     <au-cmt>
+      <p>If your language actually has masculine and feminine, write smth like: 1º{{-}}he-first, 1ª{{-}}she-first</p>
+      <p>Primo/prima Italian, первый/первая Russian…</p>
+     </au-cmt>
     </text>
    </group>
    <group id="Lt">
