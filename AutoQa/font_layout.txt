@@ -569,9 +569,9 @@
 == CJK Unified Ideographs
 4E00..9FFF: BabelStoneHanBasic
 == Yi Syllables
-A000..A48C: Microsoft Yi Baiti
+A000..A48C: NuosuSIL-Regular
 == Yi Radicals
-A490..A4C6: Microsoft Yi Baiti
+A490..A4C6: NuosuSIL-Regular
 == Lisu
 A4D0..A4FF: UtoSansFranken
 == Vai

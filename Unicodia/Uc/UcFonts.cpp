@@ -353,7 +353,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Ebrima" },                                                               // Vai
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
         // Normal is too thin, but bold is too coarse → worse
-    { "Microsoft Yi Baiti", 120_pc },                                           // Yi
+    { "NuosuSIL-Regular.ttf", 120_pc },                                           // Yi
     { { "NotoSansZanabazarSquare-Regular.ttf", Fafg::DEHINT_DOTC } },           // Zanabazar square
     { "MezenetsUnicode.otf", Ffg::STUB_FINEGRAINED, 120_pc },                   // Znamenny
 };
