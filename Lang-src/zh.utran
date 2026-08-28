@@ -2707,7 +2707,7 @@
    <group id="2E80">
     <text id="Name">
      <orig>CJK radicals supplement</orig>
-     <transl>中日韩符号与标点（CJK Symbols and Punctuation）</transl>
+     <transl>中日韩部首补充（CJK Radicals Supplement）</transl>
     </text>
     <text id="Text">
      <orig>Alternate forms of Kangxi radicals that are used as headers in dictionary indices.</orig>
@@ -6617,7 +6617,7 @@
       <p>Partly deciphered in 1871 through newly-found bilingual with [[ps:Phnx|Phoenician]], and completely before 1876.</p>
      </known-orig>
      <transl>
-      <p>它源自[[ps:Lina|线性文字 A]]（Linear A），经由[[ps:Cpmn|塞浦路斯-米诺斯文字]]（Cypro-Minoan）演变而来（请勿混淆！）。使用时间从公元前11世纪持续到公元前 3 世纪。目前尚未发现公元前 9 至 8 世纪的铭文，之后该文字分化为两个分支：帕福斯（Paphos）分支保留了从右向左（→）的书写方向，而塞浦路斯通用分支则翻转为从左向右（←）。</p>
+      <p>它源自[[ps:Lina|线性文字 A]]（Linear A），经由[[ps:Cpmn|塞浦路斯-米诺斯文字]]（Cypro-Minoan）演变而来（请勿混淆！）。使用时间从公元前 11 世纪持续到公元前 3 世纪。目前尚未发现公元前 9 至 8 世纪的铭文，之后该文字分化为两个分支：帕福斯（Paphos）分支保留了从左向右（→）的书写方向，而塞浦路斯通用分支则翻转为从右向左（←）。</p>
       <p />
       <p>该文字于 1871 年通过新发现的与[[ps:Phnx|腓尼基文字]]（Phoenician）的双语铭文被部分破译，并在 1876 年前被完全破译。</p>
      </transl>
