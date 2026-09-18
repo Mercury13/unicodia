@@ -167,6 +167,7 @@ namespace {
         { U"\U0001F4CE",           uc::MISRENDER_SIMPLE }, // paperclip
         { U"\U0001F52B",           uc::MISRENDER_SIMPLE }, // pistol
         { U"\U0001F68F",           uc::MISRENDER_SIMPLE }, // bus stop
+        { U"\U0001F6B0",           uc::MISRENDER_NOSYM  }, // potable water
         { U"\U0001F6DE",           uc::MISRENDER_SIMPLE }, // wheel
         { U"\U0001F9A0",           uc::MISRENDER_SIMPLE }, // microbe
         { U"\U0001FA85",           uc::MISRENDER_SIMPLE }, // piñata
