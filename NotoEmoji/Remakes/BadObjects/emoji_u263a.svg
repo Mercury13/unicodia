@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="emoji_u263a.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="5.7421875"
+     inkscape:cx="64"
+     inkscape:cy="64"
+     inkscape:window-width="1920"
+     inkscape:window-height="974"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Geo">
+    <sodipodi:guide
+       position="53.558001,78.848999"
+       orientation="0,-1"
+       id="guide11"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="74.442001,78.848999"
+       orientation="1,0"
+       id="guide12"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs8">
+    <radialGradient
+       id="radial-gradient"
+       cx="64"
+       cy="-568"
+       fx="64"
+       fy="-568"
+       r="56.96"
+       gradientTransform="matrix(1,0,0,-1,0,-504)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset=".5"
+         stop-color="#fde030"
+         id="stop1" />
+      <stop
+         offset=".919"
+         stop-color="#f7c02b"
+         id="stop2" />
+      <stop
+         offset="1"
+         stop-color="#f4a223"
+         id="stop3" />
+    </radialGradient>
+    <radialGradient
+       id="radial-gradient-2"
+       cx="18.061"
+       cy="267.446"
+       fx="18.061"
+       fy="267.446"
+       r="23.667"
+       gradientTransform="matrix(.97908 0 0 .93012 12.779 -176.51)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset=".047"
+         stop-color="#ff4747"
+         stop-opacity=".5"
+         id="stop4" />
+      <stop
+         offset=".197"
+         stop-color="#ff4747"
+         stop-opacity=".449"
+         id="stop5" />
+      <stop
+         offset=".474"
+         stop-color="#ff4747"
+         stop-opacity=".314"
+         id="stop6" />
+      <stop
+         offset=".845"
+         stop-color="#ff4747"
+         stop-opacity=".098"
+         id="stop7" />
+      <stop
+         offset="1"
+         stop-color="#ff4747"
+         stop-opacity="0"
+         id="stop8" />
+    </radialGradient>
+    <radialGradient
+       id="radial-gradient-3"
+       cx="86.57"
+       fx="86.57"
+       r="23.667"
+       xlink:href="#radial-gradient-2" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#radial-gradient-2"
+       id="radialGradient11"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.97908,0,0,0.93012,12.779,-176.51)"
+       cx="18.061"
+       cy="267.446"
+       fx="18.061"
+       fy="267.446"
+       r="23.667" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#radial-gradient-2"
+       id="radialGradient12"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.97908,0,0,0.93012,12.779,-176.51)"
+       cx="18.061"
+       cy="267.446"
+       fx="18.061"
+       fy="267.446"
+       r="23.667" />
+  </defs>
+  <g
+     id="Geo"
+     style="isolation:isolate">
+    <path
+       id="face"
+       style="fill:url(#radial-gradient)"
+       d="M 64,119.9 C 36.1,119.9 6,102.4 6,64 6,25.6 36.1,8.1 64,8.1 c 15.5,0 29.8,5.1 40.4,14.4 11.5,10.2 17.6,24.6 17.6,41.5 0,16.9 -6.1,31.2 -17.6,41.4 -10.6,9.3 -25,14.5 -40.4,14.5 z" />
+    <path
+       style="fill:#eb8f00"
+       d="M 111.893,30.769 C 117.22,39.366 120,49.612 120,61 c 0,16.9 -6.1,31.2 -17.6,41.4 -10.6,9.3 -25,14.5 -40.4,14.5 -18.063,0 -37.037,-7.347 -48.179,-22.94 10.762,17.663 30.99,25.94 50.179,25.94 15.4,0 29.8,-5.2 40.4,-14.5 C 115.9,95.2 122,80.9 122,64 122,51.258 118.529,39.94 111.893,30.769 Z"
+       id="path8" />
+    <g
+       style="mix-blend-mode:multiply"
+       id="g8">
+      <circle
+         style="fill:url(#radialGradient11)"
+         cx="30.462"
+         cy="72.247002"
+         r="23.096001"
+         id="circle8" />
+    </g>
+    <path
+       style="fill:#422b0d"
+       d="m 50.763,40.273 c 2.573,0.718 4.325,-2.437 1.871,-3.9 -1.803,-1.075 -3.696,-1.547 -5.678,-1.832 -5.898,-0.76 -11.313,0.5 -15.43,3.507 -2.019,1.475 -1.05,4.484 1.937,3.128 5.64,-2.56 9.774,-3.003 17.3,-0.903 z"
+       id="eyebrows" />
+    <path
+       style="fill:#422b0d"
+       d="m 77.237,40.273 c -2.573,0.718 -4.325,-2.437 -1.871,-3.9 1.803,-1.075 3.696,-1.547 5.678,-1.832 5.898,-0.76 11.313,0.5 15.43,3.507 2.019,1.475 1.05,4.484 -1.937,3.128 -5.64,-2.56 -9.774,-3.003 -17.3,-0.903 z"
+       id="eyebrows-2"
+       data-name="eyebrows" />
+    <path
+       id="mouth"
+       style="fill:#422b0d"
+       d="m 64,100.296 c 10.273,0 16.93,-7.9 18.738,-11.6 0.666,-1.4 0.666,-2.6 0.095,-3.1 -0.475,-0.4 -1.141,-0.4 -1.997,0 -0.286,0.1 -0.571,0.3 -0.856,0.5 -4.566,3.4 -10.178,5.5 -15.98,5.5 -5.802,0 -11.414,-2.1 -15.98,-5.4 -0.285,-0.2 -0.57,-0.4 -0.856,-0.5 -0.856,-0.4 -1.522,-0.4 -1.997,0 -0.57,0.6 -0.57,1.7 0.095,3.1 1.807,3.6 8.465,11.5 18.738,11.5 z" />
+    <g
+       id="g10">
+      <path
+         style="fill:#422b0d"
+         d="m 53.996,55.775 c -2.42,-2.652 -7.074,-4.286 -12.554,-3.649 -5.132,0.597 -9.323,3.086 -11.324,6.675 -0.987,1.77 -0.804,3.22 0.043,3.96 1.172,1.023 2.894,0.79 4.394,0.04 3.09,-1.543 4.97,-2.042 8.044,-2.239 3.074,-0.197 4.49,0.066 7.703,1.335 1.56,0.617 3.93,0.728 4.85,-0.805 0.88,-1.467 0.345,-3.673 -1.156,-5.317 z m 20.008,0 c 2.42,-2.652 7.074,-4.286 12.554,-3.649 5.132,0.597 9.323,3.086 11.324,6.675 0.987,1.77 0.804,3.22 -0.043,3.96 -1.172,1.023 -2.894,0.79 -4.394,0.04 -3.09,-1.543 -4.97,-2.042 -8.044,-2.239 -3.074,-0.197 -4.49,0.066 -7.703,1.335 -1.56,0.617 -3.93,0.728 -4.85,-0.805 -0.88,-1.467 -0.345,-3.673 1.156,-5.317 z"
+         id="path9" />
+    </g>
+    <g
+       style="mix-blend-mode:multiply"
+       id="g12"
+       transform="translate(67.076055)">
+      <circle
+         style="fill:url(#radialGradient12)"
+         cx="30.462"
+         cy="72.247002"
+         r="23.096001"
+         id="circle12" />
+    </g>
+  </g>
+</svg>
