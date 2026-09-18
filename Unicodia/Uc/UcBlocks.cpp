@@ -612,15 +612,16 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 0 }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Yi OK
-    { 0xA000, 0xA48F, { 0xA011, EcContinent::ASIA },
+    { 0xA000, 0xA48F, { 0xA011, EcContinent::CJK, Ifg::PAINT_SVG },
             "Yi Syllables",
             { EcScript::Yiii, 0 }, MapSubtype::ALIVE,
-            EcScript::Yiii, EcFont::NORMAL, Bfg::WORD_TO | Bfg::WORD_BY | Bfg::WORD_AT },
+            EcScript::Yiii, EcFont::NORMAL,
+                Bfg::COLLAPSIBLE | Bfg::WORD_TO | Bfg::WORD_BY | Bfg::WORD_AT },
     // Yi radicals OK
-    { 0xA490, 0xA4CF, { 0xA4BA, EcContinent::ASIA },
+    { 0xA490, 0xA4CF, { 0xA4BA, EcContinent::CJK, Ifg::PAINT_SVG },
             "Yi Radicals",
             { EcScript::Yiii, 1 }, MapSubtype::ALIVE,
-            EcScript::Yiii, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Yiii, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Lisu OK
     { 0xA4D0, 0xA4FF, { L'ꓤ', EcContinent::ASIA,
                         Ifg::ENG_TALL_PAINT, 10_hx + uc::ImbaX::RIGHT_4 },
