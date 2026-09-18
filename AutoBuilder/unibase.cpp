@@ -350,7 +350,7 @@ ucd::MainProc ucd::processMainBase(
             } else if (info.name == "<Seal Character, First>"sv) {
                 firstCp = info.cp;
                 needNumeric = false;
-                repeatedText = "seal character-#"sv;
+                repeatedText = "small seal character-#"sv;
             } else if (info.name == "<CJK Ideograph Extension A, Last>"sv
                     || info.name == "<CJK Ideograph, Last>"sv
                     || info.name == "<Tangut Ideograph, Last>"sv
