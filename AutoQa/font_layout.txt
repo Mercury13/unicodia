@@ -1540,8 +1540,6 @@ FFFD......: NotoSerif-Regular
 16B00..16B8F: NotoSansPahawhHmong-Regular
 == Kirat Rai
 16D40..16D79: Kanchenjunga-Regular
-== Chisoi
-16D80..16DA9: UnicodiaFunky
 == Medefaidrin
 16E40..16E9A: UtoSansFranken
 == Beria Erfe
