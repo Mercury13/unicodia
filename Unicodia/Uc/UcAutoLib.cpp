@@ -3630,7 +3630,7 @@ constinit const uc::LibNode uc::libNodes[10413] {
 { {}, u8"geometric", 21, 34, 3815, Lfg(8), EcVersion::NOT_EMOJI },   // 3624
 { U"\U0001F3E7", u8"ATM sign", 3611, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3625
 { U"\U0001F6AE", u8"litter in bin sign", 3611, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3626
-{ U"\U0001F6B0", u8"potable water", 3611, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3627
+{ U"\U0001F6B0", u8"potable water", 3611, 0, -1, Lfg(1025), EcVersion::E1_0 },   // 3627
 { U"\u267F", u8"wheelchair symbol", 3611, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3628
 { U"\U0001F6B9", u8"men’s room", 3611, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3629
 { U"\U0001F6BA", u8"women’s room", 3611, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3630

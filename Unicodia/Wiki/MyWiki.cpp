@@ -3172,6 +3172,9 @@ namespace {
         case uc::MISRENDER_IO.numeric():
             key = "Lib.Misr.IO";
             break;
+        case uc::MISRENDER_NOSYM.numeric():
+            key = "Lib.Misr.NoSym";
+            break;
         default: {
                 auto end = buf + std::size(buf);
                 static constinit const std::string_view HEAD = "Lib.Misr.U";

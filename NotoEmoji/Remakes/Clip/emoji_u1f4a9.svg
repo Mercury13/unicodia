@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Geo"
+   viewBox="0 0 128 128"
+   version="1.1"
+   sodipodi:docname="emoji_u1f4a9.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="5.7421875"
+     inkscape:cx="64.087075"
+     inkscape:cy="64"
+     inkscape:window-width="1920"
+     inkscape:window-height="974"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Geo" />
+  <defs
+     id="defs2">
+    <radialGradient
+       id="radial-gradient"
+       cx="63.96"
+       cy="88.71"
+       fx="63.96"
+       fy="88.71"
+       r="20.48"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset=".4"
+         stop-color="#e1e7ea"
+         id="stop1" />
+      <stop
+         offset=".99"
+         stop-color="#d6e1e6"
+         id="stop2" />
+    </radialGradient>
+  </defs>
+  <g
+     id="g8">
+    <path
+       d="M123.31,91.83c0-11.61-6.75-21.64-16.55-26.37-.18-.16-.32-.26-.41-.28,1.53-5.6-.64-10.06-3.69-13.39-4.53-4.88-9.27-5.59-9.27-5.59h-.01c1.56-3.03,2.15-6.54,1.36-9.99-1-4.26-3.29-6.94-6.31-8.73-3.09-1.83-6.91-2.73-10.83-3.43-1.88-.34-9.81-1.45-13.1-6-2.65-3.69-2.73-10.33-3.45-12.32-.77-2.05-3.38-1.15-6.23.76-3.33,2.22-10.23,9.35-12.89,16.49-2.03,5.47-2.08,10.21-1.28,13.89-3.29.55-5.76,1.66-6.23,1.88-.16.05-.32.1-.49.17-3.01,1.24-9.43,7.02-10.01,15.85-.2,3.1.2,6.24,1.17,9.16-11.83,3.76-20.41,14.83-20.41,27.91,0,.44,0,.88.03,1.32.65,14.59,13.07,25.89,27.67,25.89h63.24c14.6,0,27.02-11.3,27.67-25.89.02-.44.03-.87.03-1.32Z"
+       style="fill: #885742; stroke-width: 0;"
+       id="path2" />
+    <g
+       id="g7">
+      <g
+         id="g4">
+        <circle
+           cx="47.87"
+           cy="68.49"
+           r="12.4"
+           style="fill: #fff; stroke-width: 0;"
+           id="circle2" />
+        <path
+           d="M47.87,62.67c-3.16,0-5.73,1.88-5.73,5.82s2.56,5.82,5.73,5.82,5.73-1.88,5.73-5.82-2.56-5.82-5.73-5.82Z"
+           style="fill: #422b0d; stroke-width: 0;"
+           id="path3" />
+        <g
+           id="peepers">
+          <path
+             d="M48.04,64.85h0c-1.03-.72-2.58-.49-3.58.95-1,1.45-.67,2.97.36,3.69h0c1.03.72,2.58.49,3.58-.95s.67-2.97-.36-3.69Z"
+             style="fill: #896024; stroke-width: 0;"
+             id="path4" />
+        </g>
+      </g>
+      <g
+         id="g6">
+        <circle
+           cx="80.13"
+           cy="68.49"
+           r="12.4"
+           style="fill: #fff; stroke-width: 0;"
+           id="circle4" />
+        <path
+           d="M80.13,62.67c-3.16,0-5.73,1.88-5.73,5.82s2.56,5.82,5.73,5.82,5.73-1.88,5.73-5.82-2.56-5.82-5.73-5.82Z"
+           style="fill: #422b0d; stroke-width: 0;"
+           id="path5" />
+        <g
+           id="peepers-2"
+           data-name="peepers">
+          <path
+             d="M80.51,64.85h0c-1.03-.72-2.58-.49-3.58.95-1,1.45-.67,2.97.36,3.69h0c1.03.72,2.58.49,3.58-.95,1-1.45.67-2.97-.36-3.69Z"
+             style="fill: #896024; stroke-width: 0;"
+             id="path6" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g10">
+    <path
+       d="M63.81,104.49c17.7,0,23.73-12.54,23.88-12.99.52-1.54-1.05-2.79-2.54-2.51-6.08,1.13-13.36,1.78-21.2,1.78s-15.11-.66-21.19-1.78c-1.51-.28-2.73,1.02-2.53,2.55.16,1.21,6.86,12.96,23.58,12.96Z"
+       style="fill: #fff;"
+       id="path8" />
+    <path
+       id="path9"
+       style="fill:url(#radial-gradient);stroke-width:0"
+       d="M 85.478516 88.953125 C 85.369135 88.95768 85.259767 88.96968 85.150391 88.990234 C 79.070391 90.120234 71.789219 90.769531 63.949219 90.769531 C 56.109219 90.769531 48.839766 90.110234 42.759766 88.990234 C 41.925217 88.835484 41.179508 89.163509 40.712891 89.746094 C 48.010519 92.466924 55.633732 93.330078 63.699219 93.330078 C 65.537713 93.330078 76.905247 93.953812 87.417969 89.828125 C 86.988599 89.268357 86.244177 88.921237 85.478516 88.953125 z " />
+  </g>
+</svg>

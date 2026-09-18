@@ -82,9 +82,14 @@ namespace uc {
     using Lfgs = Flags<Lfg>;
     DEFINE_ENUM_OPS(Lfg)
     constexpr Lfgs MISRENDER_MASK = Lfg::MISRENDER_0 | Lfg::MISRENDER_1 | Lfg::MISRENDER_2;
-    constexpr Lfgs MISRENDER_SIMPLE { Lfg::MISRENDER_0 };       // 01
-    constexpr Lfgs MISRENDER_FAMILY { Lfg::MISRENDER_1 };       // 10
-    constexpr Lfgs MISRENDER_IO     { Lfg::MISRENDER_1 | Lfg::MISRENDER_0 }; // 11
+        // Simple (every emoji for itself)
+    constexpr Lfgs MISRENDER_SIMPLE { Lfg::MISRENDER_0 };       // 001
+        // Families (people → sym)
+    constexpr Lfgs MISRENDER_FAMILY { Lfg::MISRENDER_1 };       // 010
+        // Indian Ocean (status of DG and IO)
+    constexpr Lfgs MISRENDER_IO     { Lfg::MISRENDER_1 | Lfg::MISRENDER_0 }; // 011
+        // No symbol (potable water etc)
+    constexpr Lfgs MISRENDER_NOSYM  { Lfg::MISRENDER_2 }; // 100
     constexpr Lfgs SWAP_MASK        { Lfg::SWAP_BOY_GIRL | Lfg::SWAP_MAN_WOMAN };
 
     namespace detail {
