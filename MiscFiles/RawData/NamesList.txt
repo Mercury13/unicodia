@@ -1,19 +1,8 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 18.0.0
 @@@+	NamesList-18.0.0.txt
-@+	Generation Date: 2026-05-04, 11:55:12 GMT
-	Unicode 18.0.0 names list.
-	Adjusted for repertoire changes post UTC187.
-	Repertoire synched with UnicodeData-18.0.0d9.txt.
-	Alpha review fixes.
-	Add SVS for CJK strokes.
-	Corrected spelling of subhead at 13864.
-	Updated notice for Tai Le script to include Dehong Dai name.
-	Added xrefs between 06C4 and 1EE85.
-	Added notice at 1BAE.
-	Added alias and xref to A77A.
-	Added xref between A76D and 1DF92.
-	Added xref between A7D7 and 1DF95.
+@+	Generation Date: 2026-08-10, 15:32:05 GMT
+	Unicode 18.0.0 final names list.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
@@ -4050,10 +4039,11 @@
 	x (hebrew point qamats - 05B8)
 05C8	HEBREW POINT SHEVA NA MUDGASH
 	x (hebrew point sheva - 05B0)
+	* used in texts that distinguish sheva na from sheva naḥ
 05C9	HEBREW POINT DAGESH HAZAQ MUDGASH
 	x (hebrew point dagesh or mapiq - 05BC)
 	* used in texts that distinguish dagesh hazaq from dagesh qal
-@		Based on ISO 8859-8
+@		Based on ISO/IEC 8859-8
 05D0	HEBREW LETTER ALEF
 	= aleph
 	x (alef symbol - 2135)
@@ -4186,8 +4176,8 @@
 @		Addition for Kashmiri
 0620	ARABIC LETTER KASHMIRI YEH
 	* used in Kashmiri to represent half ye / taler ye
-@		Based on ISO 8859-6
-@+		Arabic letter names follow romanization conventions derived from ISO 8859-6. These differ from the Literary Arabic pronunciation of the letter names. For example, 0628 ARABIC LETTER BEH has a Literary Arabic pronunciation of ba'.
+@		Based on ISO/IEC 8859-6
+@+		Arabic letter names follow romanization conventions derived from ISO/IEC 8859-6. These differ from the Literary Arabic pronunciation of the letter names. For example, 0628 ARABIC LETTER BEH has a Literary Arabic pronunciation of ba'.
 0621	ARABIC LETTER HAMZA
 	x (modifier letter right half ring - 02BE)
 0622	ARABIC LETTER ALEF WITH MADDA ABOVE
@@ -4230,7 +4220,7 @@
 	* Azerbaijani
 063E	ARABIC LETTER FARSI YEH WITH TWO DOTS ABOVE
 063F	ARABIC LETTER FARSI YEH WITH THREE DOTS ABOVE
-@		Based on ISO 8859-6
+@		Based on ISO/IEC 8859-6
 0640	ARABIC TATWEEL
 	= kashida
 	* inserted to stretch characters or to carry tashkil with no base letter
@@ -4252,7 +4242,7 @@
 	* loses its dots when used in combination with 0654
 	* retains its dots when used in combination with other combining marks
 	x (arabic letter yeh with two dots below and hamza above - 08A8)
-@		Tashkil from ISO 8859-6
+@		Tashkil from ISO/IEC 8859-6
 064B	ARABIC FATHATAN
 064C	ARABIC DAMMATAN
 	* a common alternative form is written as two intertwined dammas, one of which is turned 180 degrees
@@ -14407,9 +14397,9 @@
 	x (north east white arrow - 2B00)
 21E7	UPWARDS WHITE ARROW
 	= shift
-	= level 2 select (ISO 9995-7)
+	= level 2 select (ISO/IEC 9995-7)
 21E8	RIGHTWARDS WHITE ARROW
-	= group select (ISO 9995-7)
+	= group select (ISO/IEC 9995-7)
 21E9	DOWNWARDS WHITE ARROW
 21EA	UPWARDS WHITE ARROW FROM BAR
 	= caps lock
@@ -14652,8 +14642,10 @@
 @		Miscellaneous mathematical symbol
 223F	SINE WAVE
 	= alternating current
+	x (ac current - 23E6)
 @		Operator
 2240	WREATH PRODUCT
+	x (vertical tilde - 2E2F)
 @		Relations
 2241	NOT TILDE
 	: 223C 0338
@@ -14711,8 +14703,10 @@
 2263	STRICTLY EQUIVALENT TO
 2264	LESS-THAN OR EQUAL TO
 	x (less-than sign - 003C)
+	x (angle with underbar - 29A4)
 2265	GREATER-THAN OR EQUAL TO
 	x (greater-than sign - 003E)
+	x (reversed angle with underbar - 29A5)
 2266	LESS-THAN OVER EQUAL TO
 2267	GREATER-THAN OVER EQUAL TO
 2268	LESS-THAN BUT NOT EQUAL TO
@@ -14758,9 +14752,15 @@
 	= higher rank than
 	x (succeeds under relation - 22B1)
 227C	PRECEDES OR EQUAL TO
+	x (precedes above single-line equals sign - 2AAF)
+	x (precedes above equals sign - 2AB3)
 227D	SUCCEEDS OR EQUAL TO
+	x (succeeds above single-line equals sign - 2AB0)
+	x (succeeds above equals sign - 2AB4)
 227E	PRECEDES OR EQUIVALENT TO
+	x (precedes above almost equal to - 2AB7)
 227F	SUCCEEDS OR EQUIVALENT TO
+	x (succeeds above almost equal to - 2AB8)
 2280	DOES NOT PRECEDE
 	: 227A 0338
 2281	DOES NOT SUCCEED
@@ -14975,8 +14975,10 @@
 22DB	GREATER-THAN EQUAL TO OR LESS-THAN
 	~ 22DB FE00 with slanted equal
 22DC	EQUAL TO OR LESS-THAN
+	x (slanted equal to or less-than - 2A95)
 	~ 22DC FE00 with horizontal equal
 22DD	EQUAL TO OR GREATER-THAN
+	x (slanted equal to or greater-than - 2A96)
 	~ 22DD FE00 with horizontal equal
 22DE	EQUAL TO OR PRECEDES
 22DF	EQUAL TO OR SUCCEEDS
@@ -15095,7 +15097,7 @@
 	x (equal and parallel to - 22D5)
 2318	PLACE OF INTEREST SIGN
 	= command key (1.0)
-	= operating system key (ISO 9995-7)
+	= operating system key (ISO/IEC 9995-7)
 2319	TURNED NOT SIGN
 	= line marker
 @		User interface symbols
@@ -15198,7 +15200,7 @@
 	x (reversed empty set - 29B0)
 234A	APL FUNCTIONAL SYMBOL DOWN TACK UNDERBAR
 	= up tack underbar
-	* preferred naming for APL tack symbols now follows the London Convention in ISO/IEC 13751:2000 (APL Extended)
+	* preferred naming for APL tack symbols now follows the London Convention in ISO/IEC 13751:2001 (APL Extended)
 	x (up tack - 22A5)
 234B	APL FUNCTIONAL SYMBOL DELTA STILE
 234C	APL FUNCTIONAL SYMBOL QUAD DOWN CARET
@@ -15273,7 +15275,7 @@
 	= azimuth
 @		Graphics for control codes
 237D	SHOULDERED OPEN BOX
-	* from ISO 9995-7
+	* from ISO/IEC 9995-7
 	* keyboard symbol for No Break Space
 	x (open box - 2423)
 237E	BELL SYMBOL
@@ -15282,7 +15284,7 @@
 237F	VERTICAL LINE WITH MIDDLE DOT
 	* from ISO 2047
 	* symbol for End of Medium
-@		Keyboard symbols from ISO 9995-7
+@		Keyboard symbols from ISO/IEC 9995-7
 2380	INSERTION SYMBOL
 2381	CONTINUOUS UNDERLINE SYMBOL
 2382	DISCONTINUOUS UNDERLINE SYMBOL
@@ -15310,13 +15312,14 @@
 2391	PASSIVE-PULL-DOWN-OUTPUT SYMBOL
 2392	PASSIVE-PULL-UP-OUTPUT SYMBOL
 2393	DIRECT CURRENT SYMBOL FORM TWO
+	x (straightness - 23E4)
 2394	SOFTWARE-FUNCTION SYMBOL
 	x (white hexagon - 2B21)
 @		APL
 2395	APL FUNCTIONAL SYMBOL QUAD
 	x (apl functional symbol squish quad - 2337)
 	x (white vertical rectangle - 25AF)
-@		Keyboard symbols from ISO 9995-7
+@		Keyboard symbols from ISO/IEC 9995-7
 2396	DECIMAL SEPARATOR KEY SYMBOL
 2397	PREVIOUS PAGE
 	x (back with leftwards arrow above - 1F519)
@@ -15452,8 +15455,11 @@
 23E3	BENZENE RING WITH CIRCLE
 @		Miscellaneous technical
 23E4	STRAIGHTNESS
+	= direct current symbol form one
+	x (direct current symbol form two - 2393)
 23E5	FLATNESS
 23E6	AC CURRENT
+	x (sine wave - 223F)
 23E7	ELECTRICAL INTERSECTION
 23E8	DECIMAL EXPONENT SYMBOL
 	* Algol-60 token for scientific notation literals
@@ -15570,7 +15576,7 @@
 2424	SYMBOL FOR NEWLINE
 @		Keyboard symbol
 2425	SYMBOL FOR DELETE FORM TWO
-	* from ISO 9995-7
+	* from ISO/IEC 9995-7
 	* keyboard symbol for undoable delete
 @		Specific symbol for control code
 2426	SYMBOL FOR SUBSTITUTE FORM TWO
@@ -17999,7 +18005,9 @@
 	x (angle - 2220)
 29A3	REVERSED ANGLE
 29A4	ANGLE WITH UNDERBAR
+	x (less-than or equal to - 2264)
 29A5	REVERSED ANGLE WITH UNDERBAR
+	x (greater-than or equal to - 2265)
 29A6	OBLIQUE ANGLE OPENING UP
 29A7	OBLIQUE ANGLE OPENING DOWN
 29A8	MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
@@ -18454,7 +18462,9 @@
 2AB5	PRECEDES ABOVE NOT EQUAL TO
 2AB6	SUCCEEDS ABOVE NOT EQUAL TO
 2AB7	PRECEDES ABOVE ALMOST EQUAL TO
+	x (precedes or equivalent to - 227E)
 2AB8	SUCCEEDS ABOVE ALMOST EQUAL TO
+	x (succeeds or equivalent to - 227F)
 2AB9	PRECEDES ABOVE NOT ALMOST EQUAL TO
 2ABA	SUCCEEDS ABOVE NOT ALMOST EQUAL TO
 2ABB	DOUBLE PRECEDES
@@ -19041,7 +19051,7 @@
 2BEA	STAR WITH LEFT HALF BLACK
 2BEB	STAR WITH RIGHT HALF BLACK
 @		Two-headed arrow symbols
-@+		The following four arrow symbols are the preferred representation for fast cursor direction for ISO 9995-7.
+@+		The following four arrow symbols are the preferred representation for fast cursor direction for ISO/IEC 9995-7.
 2BEC	LEFTWARDS TWO-HEADED ARROW WITH TRIANGLE ARROWHEADS
 	= fast cursor left
 	x (leftwards two headed arrow - 219E)
@@ -19767,6 +19777,7 @@
 2E2F	VERTICAL TILDE
 	* used for Cyrillic yerik
 	x (combining vertical tilde - 033E)
+	x (wreath product - 2240)
 	x (cyrillic payerok - A67F)
 2E30	RING POINT
 	* used in Avestan
@@ -21771,7 +21782,9 @@
 31BF	BOPOMOFO LETTER AH
 @@	31C0	CJK Strokes	31EF
 @		CJK strokes
+@+		These characters are intended for the representation of CJK strokes in isolation, as for discussions of the structure of CJK ideographs or in indexes. See Appendix F of the core specification for many more examples of the CJK strokes, with the strokes shown highlighted in context.
 31C0	CJK STROKE T
+	* 2nd stroke of 5201
 	* 2nd stroke of 51B0
 	~ 31C0 FE00 dotted T form
 31C1	CJK STROKE WG
@@ -21789,6 +21802,7 @@
 	* 1st stroke of 534D
 31C6	CJK STROKE HZG
 	* 1st stroke of 7FBD
+	* 1st stroke of 5201
 	* 1st stroke of 4E5F
 	~ 31C6 FE00 curved Z form
 	~ 31C6 FE01 rising H form
@@ -21815,6 +21829,8 @@
 	* 1st stroke of 51F8
 31CF	CJK STROKE N
 	* 3rd stroke of 5927
+	* 1st stroke of 5165 G source
+	* 2nd stroke of 5EF4
 	~ 31CF FE00 curved starting N form
 	~ 31CF FE01 flat N form
 31D0	CJK STROKE H
@@ -21823,17 +21839,21 @@
 	~ 31D0 FE00 rising H form
 31D1	CJK STROKE S
 	* 4th stroke of 4E2D
+	* 2nd stroke of 4E11
 	~ 31D1 FE00 slanted S form
 31D2	CJK STROKE P
+	* 1st stroke of 4E42
 	* 1st stroke of 4E4F
 	~ 31D2 FE00 flat P form
 31D3	CJK STROKE SP
 	* 1st stroke of 6708
 31D4	CJK STROKE D
 	* 3rd stroke of 4E38
+	* 2nd stroke of 5FC4
 	~ 31D4 FE00 to bottom left form
 31D5	CJK STROKE HZ
 	* 2nd stroke of 56DB
+	* 4th stroke of 4ECA
 	~ 31D5 FE00 slanted Z form
 31D6	CJK STROKE HG
 	* 1st stroke of 758B
@@ -21853,11 +21873,14 @@
 	* 1st stroke of 5973
 	~ 31DB FE00 slanted SD form
 31DC	CJK STROKE PZ
+	* 4th stroke of 248E5
 	* 3rd stroke of 516C
 	* 4th stroke of 5F18
 	~ 31DC FE00 upwards T form
 31DD	CJK STROKE TN
-	* 8th stroke of 5EFB
+	* stylistic alternative of N stroke in some fonts
+	* 1st stroke of 5165 non-G source
+	* last stroke of 8FB6
 	~ 31DD FE00 horizontal H curved N form
 	~ 31DD FE01 upwards T flat N form
 31DE	CJK STROKE SZZ
@@ -21878,6 +21901,7 @@
 	* 1st stroke of 98DE
 31E5	CJK STROKE SZP
 	* 8th stroke of 594A
+	* 3rd stroke of 4E13
 	~ 31E5 FE00 slanted S form
 @		Ideographic description character
 @+		This is a visibly displayed graphic character, not an invisible composition control. It is used with other characters from the Ideographic Description Characters block.
@@ -35018,10 +35042,10 @@ FFFF	<not a character>
 @+		The Grantha script uses digits from the Tamil block.
 @		Various signs
 11300	GRANTHA SIGN COMBINING ANUSVARA ABOVE
-	* used in Prakrit language Jain texts for the linguistic anusvara
+	* used in Prakrit language texts for the linguistic anusvara
 11301	GRANTHA SIGN CANDRABINDU
 11302	GRANTHA SIGN ANUSVARA
-	* used in Prakrit language Jain texts to indicate gemination of the following consonant
+	* used in Prakrit language texts to indicate gemination of the following consonant
 11303	GRANTHA SIGN VISARGA
 @		Independent vowels
 11305	GRANTHA LETTER A
@@ -51704,53 +51728,6 @@ FFFF	<not a character>
 16D77	KIRAT RAI DIGIT SEVEN
 16D78	KIRAT RAI DIGIT EIGHT
 16D79	KIRAT RAI DIGIT NINE
-@@	16D80	Chisoi	16DAF
-@		Letters
-16D80	CHISOI LETTER A
-16D81	CHISOI LETTER BA
-16D82	CHISOI LETTER AAI
-16D83	CHISOI LETTER AA
-16D84	CHISOI LETTER GA
-16D85	CHISOI LETTER TA
-16D86	CHISOI LETTER E
-16D87	CHISOI LETTER SA
-16D88	CHISOI LETTER NA
-16D89	CHISOI LETTER I
-16D8A	CHISOI LETTER KA
-16D8B	CHISOI LETTER RA
-16D8C	CHISOI LETTER MA
-16D8D	CHISOI LETTER HA
-16D8E	CHISOI LETTER RRA
-16D8F	CHISOI LETTER U
-16D90	CHISOI LETTER DA
-16D91	CHISOI LETTER LA
-16D92	CHISOI LETTER O
-16D93	CHISOI LETTER NYA
-16D94	CHISOI LETTER NGA
-16D95	CHISOI LETTER CA
-16D96	CHISOI LETTER JA
-16D97	CHISOI LETTER PA
-@		Sign
-16D98	CHISOI SIGN ANUSVARA
-@		Letters
-16D99	CHISOI LETTER YA
-16D9A	CHISOI LETTER DDA
-16D9B	CHISOI LETTER TTA
-16D9C	CHISOI LETTER JARAHA
-@		Sign
-16D9D	CHISOI SIGN SISO
-	* vowel killer
-@		Digits
-16DA0	CHISOI DIGIT ZERO
-16DA1	CHISOI DIGIT ONE
-16DA2	CHISOI DIGIT TWO
-16DA3	CHISOI DIGIT THREE
-16DA4	CHISOI DIGIT FOUR
-16DA5	CHISOI DIGIT FIVE
-16DA6	CHISOI DIGIT SIX
-16DA7	CHISOI DIGIT SEVEN
-16DA8	CHISOI DIGIT EIGHT
-16DA9	CHISOI DIGIT NINE
 @@	16E40	Medefaidrin	16E9F
 @		Uppercase letters
 16E40	MEDEFAIDRIN CAPITAL LETTER M
@@ -56848,6 +56825,11 @@ FFFF	<not a character>
 1D1D1	MUSICAL SYMBOL GREGORIAN F CLEF
 @		Accidental
 1D1D2	MUSICAL SYMBOL SQUARE B
+	= b quadratum (square b)
+	= b durum (hard b)
+	* use 266D for b rotundum (round b) or b molle (soft b)
+	x (music natural sign - 266E)
+	x (music sharp sign - 266F)
 @		Notes
 1D1D3	MUSICAL SYMBOL VIRGA
 1D1D4	MUSICAL SYMBOL PODATUS
@@ -60407,6 +60389,7 @@ FFFF	<not a character>
 1DF80	LATIN CAPITAL LETTER A WITH TOPBAR
 1DF81	LATIN CAPITAL LETTER E WITH BENT TOPBAR
 @		Cossic letters
+@+		These characters are used in historic mathematical works on algebra.
 1DF90	LATIN SMALL LETTER C WITH LOW SLASH
 	= cubus
 	* denotes cube of the unknown
@@ -60432,7 +60415,7 @@ FFFF	<not a character>
 	x (latin letter small capital rum - A776)
 1DF95	LATIN SMALL LIGATURE LONG S WITH DESCENDER S
 	= sursolidum
-	* denotes fifth power of the unknown in historical mathematics
+	* denotes fifth power of the unknown
 	x (latin small letter sharp s - 00DF)
 	x (latin small letter long s - 017F)
 	x (latin small letter middle scots s - A7D7)
@@ -63838,7 +63821,7 @@ FFFF	<not a character>
 1F4D5	CLOSED BOOK
 1F4D6	OPEN BOOK
 	= read operator's manual
-	* similar to ISO/IEC 7000-0790 "Read operator's manual"
+	* similar to ISO 7000-0790 "Read operator's manual"
 	x (book - 1F56E)
 1F4D7	GREEN BOOK
 1F4D8	BLUE BOOK

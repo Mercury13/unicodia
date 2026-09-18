@@ -1,5 +1,5 @@
 # Scripts-18.0.0.txt
-# Date: 2026-04-29, 19:44:40 GMT
+# Date: 2026-06-29, 15:25:26 GMT
 # © 2026 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -3173,16 +3173,6 @@ ABF0..ABF9    ; Meetei_Mayek # Nd  [10] MEETEI MAYEK DIGIT ZERO..MEETEI MAYEK DI
 
 # ================================================
 
-16D80..16D97  ; Chisoi # Lo  [24] CHISOI LETTER A..CHISOI LETTER PA
-16D98         ; Chisoi # Mn       CHISOI SIGN ANUSVARA
-16D99..16D9C  ; Chisoi # Lo   [4] CHISOI LETTER YA..CHISOI LETTER JARAHA
-16D9D         ; Chisoi # Mn       CHISOI SIGN SISO
-16DA0..16DA9  ; Chisoi # Nd  [10] CHISOI DIGIT ZERO..CHISOI DIGIT NINE
-
-# Total code points: 40
-
-# ================================================
-
 10940..10959  ; Sidetic # Lo  [26] SIDETIC LETTER N01..SIDETIC LETTER N26
 
 # Total code points: 26
@@ -3234,7 +3224,7 @@ ABF0..ABF9    ; Meetei_Mayek # Nd  [10] MEETEI MAYEK DIGIT ZERO..MEETEI MAYEK DI
 
 # ================================================
 
-3D000..3FC3F  ; Seal # Lo [11328] SEAL CHARACTER-3D000..SEAL CHARACTER-3FC3F
+3D000..3FC3F  ; Seal # Lo [11328] SMALL SEAL CHARACTER-3D000..SMALL SEAL CHARACTER-3FC3F
 
 # Total code points: 11328
 
