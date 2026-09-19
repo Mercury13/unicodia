@@ -260,10 +260,10 @@
 	<file name="1f683" prio="0" />
 	<file name="1f684" prio="0" />
 	<file name="1f685" prio="0" />
+	<file name="1f6d9" prio="0" />
 	<file name="2693" prio="0" />
 	<file name="1f6df" prio="0" />
 	<file name="26f5" prio="0" />
-	<file name="1f6f6" prio="0" />
 	<file name="2708" prio="0" />
 	<file name="1f6e9" prio="0" />
 	<file name="1f6eb" prio="0" />
@@ -350,10 +350,10 @@
 	<file name="1f513" prio="0" />
 	<file name="1f50f" prio="0" />
 	<file name="1f510" prio="0" />
+	<file name="1fa8d" prio="0" />
 	<file name="1f528" prio="0" />
 	<file name="1fa93" prio="0" />
 	<file name="26cf" prio="0" />
-	<file name="2692" prio="0" />
 	<file name="2697" prio="0" />
 	<file name="1f9ea" prio="0" />
 	<file name="1f9eb" prio="0" />
@@ -2771,7 +2771,7 @@
 	<file name="1f426-200d-1f525" prio="2696" />
 	<file name="1f34b-200d-1f7e9" prio="2864" />
 	<file name="1f344-200d-1f7eb" prio="2865" />
-	<file name="26d3-200d-1f4a5" prio="3339" />
+	<file name="26d3-200d-1f4a5" prio="3338" />
 	<file name="32-20e3" prio="3622" />
 	<file name="33-20e3" prio="3622" />
 	<file name="34-20e3" prio="3622" />
@@ -3038,13 +3038,13 @@
 	<file name="1f1ff-1f1e6" prio="3850" />
 	<file name="1f1ff-1f1f2" prio="3850" />
 	<file name="1f1ff-1f1fc" prio="3850" />
-	<file name="32-20e3" prio="4211" />
-	<file name="33-20e3" prio="4211" />
-	<file name="34-20e3" prio="4211" />
-	<file name="35-20e3" prio="4211" />
-	<file name="36-20e3" prio="4211" />
-	<file name="37-20e3" prio="4211" />
-	<file name="38-20e3" prio="4211" />
-	<file name="39-20e3" prio="4211" />
-	<file name="26aa-fe0e" prio="9130" />
+	<file name="32-20e3" prio="4216" />
+	<file name="33-20e3" prio="4216" />
+	<file name="34-20e3" prio="4216" />
+	<file name="35-20e3" prio="4216" />
+	<file name="36-20e3" prio="4216" />
+	<file name="37-20e3" prio="4216" />
+	<file name="38-20e3" prio="4216" />
+	<file name="39-20e3" prio="4216" />
+	<file name="26aa-fe0e" prio="9308" />
 </opt>
