@@ -42,7 +42,8 @@ All tests (``/qa*``) immediately exit, CAN be run together, and produce files wi
 * Simple emoji (no skintones)
   * Ensure that it has no &lt;clipPath&gt;, edit if needed.
     * ``Originals`` is directory for original SVGs, ``Remakes`` is for remade but unoptimized
-  * If emoji-related library data changed → copy opt.xml from AutoBuilder to NotoEmoji
+  * In 2026, I found three kinds of troubles in SVGs: &lt;clipPath&gt; (always), RGBA colour (always too), gradient links to gradient (often). For these troubles, I created FindBadSvg utility. Recreate all changed SVGs in a separate directory (Git Extensions has suboptimal but working), and run FindBadSvg.
+  * If emoji-related library data changed → copy opt.xml (hidden key Ct+F12 in Unicodia) to NotoEmoji
   * Make sure **Unicodia is closed**, run tape.bat. It’ll automatically run SVG cleaner from Program Files (x86).
 * Two or more skintones (e.g. interracial kiss/handshake): same. They are repainted sometimes, but not checked.
   * Algorithm 1 is for interracial handshakes (few colours, easy, tedious), algorithm 2 is for wrestlers/Playboy bunnies (harder but quicker to do), they won’t be described here.
