@@ -9,6 +9,7 @@ CONFIG += c++2a
 win32-g++ {
     # To simplify debugging, we statically link these libraries
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
+    LIBS += -static -lpthread
     # Qt — system headers
     QMAKE_CXXFLAGS += -isystem $$[QT_INSTALL_HEADERS]
 }
