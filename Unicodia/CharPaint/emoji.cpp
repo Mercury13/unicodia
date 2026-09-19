@@ -50,6 +50,9 @@ struct RecolorLib {
     std::string_view eyes1;     ///< used at least in firefighter emoji
     std::string_view handLight; ///< used in new U16 hand emoji
     std::string_view handDark;  ///< used in new U16 hand emoji
+    std::string_view merShadow; ///< used in new U18 merperson
+    std::string_view merFingers; ///< used in new U18 merperson
+    std::string_view merBrows;  ///< used in new U18 merperson
 
     void runOn(QByteArray& bytes) const;
     /// @param [in] race  '1' or '2'
@@ -78,6 +81,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
 {
     repl(bytes, "#FFB300", fill1);      // used: e.g. runner
     repl(bytes, "#FFCA28", fill2);      // same
+    repl(bytes, "#FEC926", fill2);      // used: merperson
     // U15 replaced lots of hands and other body parts → some colours now unused
     repl(bytes, "#EDA600", outline1);   // used: e.g. runner
     repl(bytes, "#543930", hair1);
@@ -89,6 +93,13 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#404040", eyes1);
     repl(bytes, "#FAA700", handLight);
     repl(bytes, "#B55E19", handDark);
+    repl(bytes, "#F8AB17", merShadow);   // Used: U18 merman
+    repl(bytes, "#E89E07", merFingers);  // Used: U18 merman
+    repl(bytes, "#E89D07", merFingers);  // Fingers, diff by 1! Used: U18 merman
+    repl(bytes, "#CE5010", merBrows);    // Used: U18 merman
+    repl(bytes, "#404141", eyes1);       // Used: U18 merman
+    repl(bytes, "#E89D07", nose1);       // Used: U18 merman
+    repl(bytes, "#76593F", mouth1);      // Used: U18 merman
 }
 
 void RecolorLib::runColorSeparatedBiracialOn(char race, QByteArray& bytes) const
@@ -314,6 +325,9 @@ namespace {
             .eyes1 = "#312D2D",
             .handLight = "#EFB682",
             .handDark = "#B26830",
+            .merShadow = "#EDBD82",
+            .merFingers = "#D89852",
+            .merBrows = "#CE5010",
         },
         { // Light
             .fill1 = "#CCA47A",
@@ -328,6 +342,9 @@ namespace {
             .eyes1 = "#5D4037",
             .handLight = "#D19661",
             .handDark = "#8D542E",
+            .merShadow = "#C48E6A",
+            .merFingers = "#A87254",
+            .merBrows = "#CE5010",
         },
         { // Medium
             .fill1 = "#A47B62",
@@ -342,6 +359,9 @@ namespace {
             .eyes1 = "#49362E",
             .handLight = "#9A6648",
             .handDark = "#62392B",
+            .merShadow = "#99674F",
+            .merFingers = "#824E3A",
+            .merBrows = "#B74615",
         },
         { // Dark
             .fill1 = "#8D5738",
@@ -356,6 +376,9 @@ namespace {
             .eyes1 = "#42312C",
             .handLight = "#824624",
             .handDark = "#422319",
+            .merShadow = "#875334",
+            .merFingers = "#63351E",
+            .merBrows = "#87340F",
         },
         { // Ebony
             .fill1 = "#5C4037",
@@ -370,6 +393,9 @@ namespace {
             .eyes1 = "#1A1717",
             .handLight = "#58382B",
             .handDark = "#000000",  // really black
+            .merShadow = "#573D36",
+            .merFingers = "#492C25",
+            .merBrows = "#60280F",
         },
     };
 
