@@ -84,7 +84,7 @@ namespace filedlg {
     std::wstring open(
             QWidget* aOwner,
             Zsv<wchar_t> aCaption,    ///< W32 requires null-termination
-            const Filters& aFilters,
+            Filters aFilters,
             Zsv<wchar_t> aExtension,  ///< W32 requires null-termination
             AddToRecent aAddToRecent,
             CheckForAccess aCheckForAccess = CheckForAccess::YES);
@@ -92,16 +92,19 @@ namespace filedlg {
     std::wstring save(
             QWidget* aOwner,
             Zsv<wchar_t> aCaption,    ///< W32 requires null-termination
-            const Filters& aFilters,
+            Filters aFilters,
             Zsv<wchar_t> aExtension,  ///< W32 requires null-termination
             std::wstring_view aDefaultFname,  ///< Some alchemy here, so OK
             AddToRecent aAddToRecent);
+
+    enum class BrowseMode : unsigned char { FILE, DIRECTORY };
 
     bool browseLineEdit(
             QWidget* owner,
             Zsv<wchar_t> caption,
             const Filter& filter,
             Zsv<wchar_t> extension,
+            BrowseMode mode,
             QLineEdit* editor);
 
 } //filedlg ns

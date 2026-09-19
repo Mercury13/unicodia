@@ -12,14 +12,27 @@ win32-g++ {
 }
 
 SOURCES += \
+    ../../Libs/SelfMade/Qt/i_OpenSave.cpp \
+    ../../Libs/SelfMade/Qt/u_OpenSaveStrings.cpp \
     main.cpp \
     FmMain.cpp
 
 HEADERS += \
+    ../../Libs/SelfMade/Qt/i_OpenSave.h \
+    ../../Libs/SelfMade/Qt/u_OpenSaveStrings.h \
     FmMain.h
+
+INCLUDEPATH += \
+    ../../Libs/SelfMade \
+    ../../Libs/SelfMade/Qt \
+    ../../Libs/SelfMade/Strings
 
 FORMS += \
     FmMain.ui
+
+win32 {
+    LIBS += -lcomdlg32
+}
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

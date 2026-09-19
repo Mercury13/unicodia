@@ -1,8 +1,11 @@
 #include "i_OpenSave.h"
 
-//qt
+// Qt
 #include <QString>
 #include <QLineEdit>
+#include <QFileInfo>
+
+#include "u_Array.h"
 
 // Uncomment to test Qt version under W32
 //#define TEST_QT
@@ -18,7 +21,7 @@
     std::wstring filedlg::open(
             QWidget* aOwner,
             Zsv<wchar_t> aCaption,
-            const Filters& aFilters,
+            Filters aFilters,
             Zsv<wchar_t> aExtension,
             AddToRecent aAddToRecent,
             CheckForAccess aCheckForAccess)
@@ -53,7 +56,7 @@
     std::wstring filedlg::save(
             QWidget* aOwner,
             Zsv<wchar_t> aCaption,
-            const Filters& aFilters,
+            Filters aFilters,
             Zsv<wchar_t> aExtension,
             std::wstring_view aDefaultFname,
             AddToRecent aAddToRecent)
@@ -112,7 +115,7 @@
     std::wstring filedlg::open(
         QWidget* aOwner,
         Zsv<wchar_t> aCaption,
-        const Filters& aFilters,
+        Filters aFilters,
         Zsv<wchar_t> aExtension,
         [[maybe_unused]] AddToRecent aAddToRecent, ///@todo [macos] add to recent files issue
         CheckForAccess aCheckForAccess)
@@ -140,7 +143,7 @@
     std::wstring filedlg::save(
         QWidget* aOwner,
         Zsv<wchar_t> aCaption,
-        const Filters& aFilters,
+        Filters aFilters,
         Zsv<wchar_t> aExtension,
         std::wstring_view aDefaultFname,
         [[maybe_unused]] AddToRecent aAddToRecent) ///@todo [macos] add to recent files issue
@@ -171,17 +174,23 @@ bool filedlg::browseLineEdit(
         Zsv<wchar_t> caption,
         const Filter& filter,
         Zsv<wchar_t> extension,
+        BrowseMode mode,
         QLineEdit* editor)
 {
     /// @todo [L10n] string hardcoded here
-    filedlg::Filters filters {
+    filedlg::Filter filters[] = {
         filter, filedlg::ALL_FILES,
     };
     auto fname = filedlg::open(
                 owner, caption, filters, extension,
                 filedlg::AddToRecent::NO);
     if (!fname.empty()) {
-        editor->setText(QString::fromStdWString(fname));
+        QString dest = QString::fromStdWString(fname);
+        if (mode == BrowseMode::DIRECTORY) {
+            QFileInfo info(dest);
+            dest = info.absoluteDir().path();
+        }
+        editor->setText(dest);
         return true;
     } else {
         return false;

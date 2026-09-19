@@ -2,7 +2,7 @@
 #define U_OPENSAVESTRINGS_H
 
 #include <string>
-#include "u_Vector.h"
+#include <span>
 
 namespace filedlg
 {
@@ -23,7 +23,7 @@ namespace filedlg
 
         const wchar_t* extension() const;
     };
-    using Filters = SafeVector<Filter>;
+    using Filters = std::span<Filter>;
 
     std::wstring filterToW32(const Filters& aFilter);
     std::wstring filterToQt(const Filters& aFilter);
