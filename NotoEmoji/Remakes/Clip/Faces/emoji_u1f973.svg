@@ -21,14 +21,14 @@
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
      inkscape:zoom="2.8710938"
-     inkscape:cx="63.216326"
-     inkscape:cy="34.655782"
+     inkscape:cx="110.58503"
+     inkscape:cy="34.307482"
      inkscape:window-width="1920"
      inkscape:window-height="974"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg31">
+     inkscape:current-layer="g26">
     <sodipodi:guide
        position="52.05464,77.857262"
        orientation="0,-1"
@@ -98,12 +98,6 @@
          stop-opacity="0"
          id="stop8" />
     </radialGradient>
-    <radialGradient
-       id="radial-gradient-3"
-       cx="81.3467805"
-       fx="81.3467805"
-       r="21.5245326"
-       xlink:href="#radial-gradient-2" />
     <linearGradient
        id="linear-gradient"
        x1="80.1937125"
@@ -121,13 +115,6 @@
          stop-color="#45a4ff"
          id="stop10" />
     </linearGradient>
-    <clipPath
-       id="clippath">
-      <path
-         style="fill: #ff4545;"
-         d="M118.9000015,5.4000001l-44.5999985,25.0999999s1.5417093,8.6132722,13.2999954,16.5c11.7582861,7.8867278,18.7000046,8.2999992,18.7000046,8.2999992l12.5999985-49.8999991Z"
-         id="path10" />
-    </clipPath>
     <radialGradient
        inkscape:collect="always"
        xlink:href="#radial-gradient-2"
@@ -272,24 +259,12 @@
          d="M 118.9,5.4000001 74.300003,30.5 c 0,0 1.541709,8.613272 13.299995,16.5 C 99.358284,54.886728 106.3,55.299999 106.3,55.299999 Z"
          id="path23" />
       <g
-         clip-path="url(#clippath)"
+         clip-path="none"
          id="g26">
-        <polygon
-           style="fill:#ff9c9c"
-           points="115.85298,22.915673 89.957714,19.219858 83.322018,24.012306 114.45298,28.215674 "
-           id="polygon23" />
         <path
+           id="path26"
            style="fill:#ff9c9c"
-           d="m 117.5,14.299999 c 0,0 0.3,-1.4 0.5,-2.1 L 104.98019,10.372263 97.975848,15.072548 116.6,17.5 Z"
-           id="path24" />
-        <path
-           style="fill:#ff9c9c"
-           d="m 70.603599,29.726378 1.198112,3.041361 c 0,0.1 1.374601,0.998111 1.474599,1.198112 L 111.2,39 l 1.30001,-5.299999 -37.472613,-5.35606 z"
-           id="path25" />
-        <path
-           style="fill:#ff9c9c"
-           d="m 80.833631,45.94697 c 0.1,0.1 4.600287,0.637301 4.700286,0.737299 L 108.6,49.700001 l 1.3,-5.3 -33.674491,-4.720078 c 1.700004,1.699997 1.508124,3.867045 4.608122,6.267047 z"
-           id="path26" />
+           d="M 109.05078 10.943359 L 101.01172 15.46875 L 115.86914 17.404297 L 117.21094 12.087891 L 109.05078 10.943359 z M 93.455078 19.720703 L 85.34375 24.285156 L 113.18359 28.042969 L 114.52539 22.726562 L 93.455078 19.720703 z M 77.503906 28.697266 L 74.300781 30.5 C 74.300781 30.5 74.56643 31.987407 75.720703 34.291016 L 110.44141 38.900391 L 111.78125 33.595703 L 77.503906 28.697266 z M 79.724609 40.169922 C 81.613136 42.337034 84.141395 44.669711 87.515625 46.943359 L 107.74414 49.587891 L 109.08203 44.285156 L 79.724609 40.169922 z " />
       </g>
     </g>
     <g
