@@ -392,7 +392,7 @@
 	<file name="emoji_u1f33e.svg" size="3356" sha256="ad063dfd66a55552bb37ddd392a38232ce529fb65b3f410b977bd2743d3f96da" />
 	<file name="emoji_u1f33f.svg" size="2498" sha256="e3473538b754cc3a241487905f7d5a094c41758a8d5272915fadf20646c3fc66" />
 	<file name="emoji_u1f340.svg" size="3649" sha256="0a9530b4d0568cd344b6d71273ca3ab22783e1a019a7ddc36eb9386ffed270c6" />
-	<file name="emoji_u1f341.svg" size="2695" sha256="233a60e826a3c2806661fad81a6cc745131aa44938775cfaaab30816d4ed15b5" />
+	<file name="emoji_u1f341.svg" size="3456" sha256="dc7585742852617055456b189738b02c73089e82f19aac33214cde4eb6a2e8a8" />
 	<file name="emoji_u1f342.svg" size="3524" sha256="6f9ccba2876b8cdb7cd4514fef06333eebc92b51aa5990a0fd5e937e7d256be6" />
 	<file name="emoji_u1f343.svg" size="2412" sha256="9d8bcfe348249677f483f69c184873af750ec6c2e6a594efa9ac95ebf1558ce9" />
 	<file name="emoji_u1f344.svg" size="1599" sha256="ce2062722cbc9ff309bf473f3f23b377697b92f673e1cadae87b459ab144adff" />
@@ -426,15 +426,15 @@
 	<file name="emoji_u1f35e.svg" size="1286" sha256="3064b6d3b0995eab44a02e279f586f17415bd5803d89e50e9f90283b426511ef" />
 	<file name="emoji_u1f35f.svg" size="4382" sha256="d990097cf9c6954377f5e7da7c767ab1169aad22342fc21e007c25547a20a921" />
 	<file name="emoji_u1f360.svg" size="1692" sha256="d0f999ec10f33857b406130702220fddbdd4d6cbe63f5fb80927c94893bf9849" />
-	<file name="emoji_u1f361.svg" size="1239" sha256="84fd330e8c6f8578816c7b3b2e2bfce078d484b8dd3597c0c571c5b02b13732b" />
+	<file name="emoji_u1f361.svg" size="1109" sha256="6c36f78e97218ebfe88e052ebf4158ec9f4c1b33a6296fcb7097cb5c5e704673" />
 	<file name="emoji_u1f362.svg" size="4410" sha256="36db678ad8a6a464ea0351455a7126f63252bb85e17241067bf96b52b26e6a1a" />
 	<file name="emoji_u1f363.svg" size="3998" sha256="ea3f7461c68e2ab9199825af51fb95d7038a4974248d554eef8f433191a42542" />
 	<file name="emoji_u1f364.svg" size="3136" sha256="cdde7b568fc7004ccf3c9c1997f4498bc194d094e40d51ea0adccccdf05eade3" />
 	<file name="emoji_u1f365.svg" size="2397" sha256="8b2ee9156102957404d3ae557eed42c16c82d072a173c399203cf93e00523d65" />
 	<file name="emoji_u1f366.svg" size="2867" sha256="7cae68978874bf2981f9d3161416a17ce2aad9e833c7d54be8db0e9f2225b6bc" />
-	<file name="emoji_u1f367.svg" size="4685" sha256="fdfddc34e5767cee36a80aac73be2c241c77b948146bdcc81c5fa0c96fe47b7e" />
-	<file name="emoji_u1f368.svg" size="4439" sha256="f7f0f588adfb0f57ad75f12deafc9bfcb68ef1552157b418482d75349c652f38" />
-	<file name="emoji_u1f369.svg" size="3752" sha256="3475cfb6fd8a36f52ef1bc30eac1f682cad4e27dd1f2cf92aff91a05528ceeb6" />
+	<file name="emoji_u1f367.svg" size="4575" sha256="96806a4e0d11bf3c8a3478b5276f54ef39fd4e0bb284dc86c12d0e13ca563ccb" />
+	<file name="emoji_u1f368.svg" size="6351" sha256="6b136a5633a034592a5c2bd6652f6e61cd4f80b14bbe75ec4b5f705a15f8056e" />
+	<file name="emoji_u1f369.svg" size="4885" sha256="e57d6b7530297c329946753164a6623fed5e6fc499540b64606a6c1fcc42ddef" />
 	<file name="emoji_u1f36a.svg" size="5986" sha256="578a34b7b80a14ac3f832546ef2811c09b746865521311f498c9f1734bebf7c7" />
 	<file name="emoji_u1f36b.svg" size="2676" sha256="a77057f6d23fc68055f37868fc2fd06a8da82f14e5d8ed1b783b89d4e0bebc94" />
 	<file name="emoji_u1f36c.svg" size="3747" sha256="5606880d13fd8b34a2256c3c5efc1ad4eb91f3c2250189adefc692ed55039667" />
@@ -445,7 +445,7 @@
 	<file name="emoji_u1f371.svg" size="7753" sha256="0fc2db0a39209faed1d5db50a851c1fa09c5df7276028e08fa1263606ed51c31" />
 	<file name="emoji_u1f372.svg" size="5109" sha256="c68fdac01df5134b3cad2f3b36188d046f31f456ab3e2b29e5ae9a405891a478" />
 	<file name="emoji_u1f373.svg" size="2638" sha256="4c930a74fba54ba42237dd350964125557752ad8477e8b94ef2c3191d7dc95f7" />
-	<file name="emoji_u1f374.svg" size="2499" sha256="41200dbc80866b02c6ae0c7efb735c9145ca5d2e33fbb9e4aa9cc3184d1122f1" />
+	<file name="emoji_u1f374.svg" size="2928" sha256="5a2677d497ad9fd2e48e39cf3ae6d7053295a467c6f3a497bd35cb23399f0828" />
 	<file name="emoji_u1f375.svg" size="1576" sha256="ed2dff9e01b698441cb17fdcf405449dc907bd66e91af1e7307bc7f41a766bac" />
 	<file name="emoji_u1f376.svg" size="2538" sha256="bb1cb42ececeb75a059bab5ebb2703f8fcd4c42b3b6612a8404fc49766b5aabe" />
 	<file name="emoji_u1f377.svg" size="4658" sha256="a8fe5abe93a6165fe1b6fd7a4c508b0749207056a10dcc3b9149f3092d82e8c3" />
@@ -457,7 +457,7 @@
 	<file name="emoji_u1f37d.svg" size="3839" sha256="bd433bc530323806aeb1eb244fd25ab80792604ce36dd2691f6528a2a5c042d0" />
 	<file name="emoji_u1f37e.svg" size="3289" sha256="0a6666104aeb6500c4986691f73ac74fe28aac695a497aecb2118abfb8c7efab" />
 	<file name="emoji_u1f37f.svg" size="7388" sha256="8bda244c24a8f51d7559c77651f2f65a6917aee6b6fe4b610e34ddc38a77dc5f" />
-	<file name="emoji_u1f380.svg" size="3246" sha256="89894310be124ac1e6321b237aaa0d8e16f921509647465a6fa40bf2f6714acc" />
+	<file name="emoji_u1f380.svg" size="3246" sha256="618e46ca4376f4c6052eeb731a34d4565a6a8519fae188f70d424efa75906bd1" />
 	<file name="emoji_u1f381.svg" size="3239" sha256="71ce6bb32e300f6878c777c71ac413a0e46948269e1f216ddb302cd09c414b84" />
 	<file name="emoji_u1f382.svg" size="6589" sha256="6f84463ad91dfa034ac7d196a30fc599711d5ee9699c8e18f6ebaa4833a38528" />
 	<file name="emoji_u1f383.svg" size="6970" sha256="d282fdfb69ff50b294eb0e5bc6585c5aca49b80765e1cea12a7ae25c66ddd5ac" />
@@ -704,7 +704,7 @@
 	<file name="emoji_u1f426_200d_1f525.svg" size="8073" sha256="d7d240a5711fbf22e41a79d384e098e459e09c9d52bffeaa58b08302f83b6f14" />
 	<file name="emoji_u1f426_200d_2b1b.svg" size="1554" sha256="d8712cca9c418fee39a37ae6c551f33484ea672d996afc8e53cb005a1f778c9f" />
 	<file name="emoji_u1f427.svg" size="2430" sha256="9b668a3bf8deaf5926c2621971918c9a09a30d2333f7e83580e4ba1a5a69f61f" />
-	<file name="emoji_u1f428.svg" size="4450" sha256="d493faea291cd11dd9c62881fb10ac3ab062dc3e91f5c12a19df419a7b9bc054" />
+	<file name="emoji_u1f428.svg" size="4293" sha256="43dcda4edf4af5f486af5e09a7f0c96954387b47b442d861cd09f287e8f636d0" />
 	<file name="emoji_u1f429.svg" size="5428" sha256="0608ad16b7321786522abff8bcc45d07cce222567916918ce2cc1db0f2641b93" />
 	<file name="emoji_u1f42a.svg" size="3331" sha256="226f74f8fd3d498dbfe7b51229ab98ff1d372f10719bfaa396414b40df69bf29" />
 	<file name="emoji_u1f42b.svg" size="3873" sha256="408b7745bc9580dfd728d147ec2b8fa14a4842360124cc0572f0f1dc3ce7df1c" />
@@ -715,10 +715,10 @@
 	<file name="emoji_u1f430.svg" size="3756" sha256="e40e5b08c00151e343444e6616d18992810f28b80ae6fa4df0300f633ed29d02" />
 	<file name="emoji_u1f431.svg" size="2452" sha256="fb0d9cfd61939bcf4887ffc3b6f78a0ffe87f29b56d3d92ef57b046812ec3592" />
 	<file name="emoji_u1f432.svg" size="7581" sha256="801236b72895d856fe18396bf0f7fa2edd4920b6ade0b43444247f81b99edd8c" />
-	<file name="emoji_u1f433.svg" size="3371" sha256="f052a2d521a8778b8e1acf9c13f87475290b20be3c68b85aca4857fe24b243a3" />
+	<file name="emoji_u1f433.svg" size="4294" sha256="f20c55b73a8275b328e6a89f98a089703fefd81f80911679c18b5f1e98cb796f" />
 	<file name="emoji_u1f434.svg" size="2636" sha256="3abbfdea707efd8ba1ec5252cfa3b180772da780af6480a298eb9676e14a938b" />
 	<file name="emoji_u1f435.svg" size="3582" sha256="844eb61fa361bbab57a14699fa81c66bb8991739bfbfc1b78ec9a8da451be91c" />
-	<file name="emoji_u1f436.svg" size="2475" sha256="11d7ec01bedda70a9b8966dedcbacf2398064e448e7aad316ae68317e31a1e56" />
+	<file name="emoji_u1f436.svg" size="2465" sha256="9a24a894436ab85239f84ed2959dde1bd720c20957b117c63ae6ef1cdca2fbb3" />
 	<file name="emoji_u1f437.svg" size="2661" sha256="fb36e1af0e4843b6fb6dee7050dda3fb467144e63d2f27604c0c72ba4fddd4a1" />
 	<file name="emoji_u1f438.svg" size="1411" sha256="ae27c097b972815feee1677bac52558c40df255e0940316b8903735488e18861" />
 	<file name="emoji_u1f439.svg" size="3181" sha256="0beba2d079aa2dc1264e07bce948c2a83448273a5afb0778d0ee8a06946095ac" />
@@ -750,7 +750,7 @@
 	<file name="emoji_u1f451.svg" size="4991" sha256="500a752f352a5e92a0132d7e5d25fcf225a168350644522c2921a2071717e569" />
 	<file name="emoji_u1f452.svg" size="4990" sha256="ab4d20afda592e17548b892a55b01b29bee3e68e1254bf56996fd8d1dfcb9bec" />
 	<file name="emoji_u1f453.svg" size="1887" sha256="b9faeba79810fc0958c47f29a2f059a792257f3d74cc17bc5ede982bad5a22c0" />
-	<file name="emoji_u1f454.svg" size="3130" sha256="c6b9d1804163d6c3ffc26135394597eccfaf0c1878e3aaea3f618396ca54919d" />
+	<file name="emoji_u1f454.svg" size="3466" sha256="36176cb03ecca9cb709fd9b671ec7c76a91a052e6a4f264b56fe27bbf4b9841d" />
 	<file name="emoji_u1f455.svg" size="2069" sha256="84727a25f516ff1a3f98db476d97a3a2c2df0ceb8701d266949f3499fc8036d1" />
 	<file name="emoji_u1f456.svg" size="5816" sha256="f3defdafbd6d0d2d488c372638b6ff5b1a1c938c99a65b47b0ab5a40a8b83dcc" />
 	<file name="emoji_u1f457.svg" size="2841" sha256="f1ce3e1dbbe23b0407d6e23fd3007d909c6e5bbb91ddb65d19c72e215e48668c" />
@@ -765,7 +765,7 @@
 	<file name="emoji_u1f460.svg" size="2140" sha256="0bb13c235fbbc214fa0248087d4fdfed2e46a8daf159ac201d2cbf7c4324c648" />
 	<file name="emoji_u1f461.svg" size="2483" sha256="132f2d0df18307d585935428347683736f8b2093a3774253a26a64a909faaef3" />
 	<file name="emoji_u1f462.svg" size="2750" sha256="aeeec47381d75274d503785bc41cd5e743e8495f589b1f2fadc04699bd20c426" />
-	<file name="emoji_u1f463.svg" size="1113" sha256="f23b443a45d4d0eb07a14f5eee6eaebeade0708ab99fdce12d81df1c4e9ac49c" />
+	<file name="emoji_u1f463.svg" size="1077" sha256="a82e0990d507a6fcbf04109718d2503abbce8e14280a17d1f6bd11224c4bdc37" />
 	<file name="emoji_u1f464.svg" size="369" sha256="1268f11725390384513cc22b30d3d17916af62e89a456358e7ef94e80dc9ec10" />
 	<file name="emoji_u1f465.svg" size="1672" sha256="99487a2c12106ff45dd9ddca761ae0966a5b7f402543b51cccab98b486966c27" />
 	<file name="emoji_u1f466.svg" size="2691" sha256="398982245cafb801f505490e8bdc3b34da06ba5a263463dbb31fae8f0c50b801" />
@@ -1906,12 +1906,12 @@
 	<file name="emoji_u1f628.svg" size="2364" sha256="d64c900aa95ed6129e8eb2d85a8b662a260255260a2c99f134dbcba997b5e75a" />
 	<file name="emoji_u1f629.svg" size="4262" sha256="9d6b06f8ae28fe4ed86592802334211c86aa874a0ffe7b5f0baa358c8a76cc0e" />
 	<file name="emoji_u1f62a.svg" size="2196" sha256="b8db59957eea26ad4301065971195c97009af04b330afe9876f9ea7bba728a3e" />
-	<file name="emoji_u1f62b.svg" size="3388" sha256="e8866593774d4dd48277eb0ebaecabc7ca0198ca69556d6baa2caaa07b96606f" />
-	<file name="emoji_u1f62c.svg" size="2532" sha256="ce9dfd2201b82caa76d77067ff79c7cba2e9cec3147e48fbf7af104e5ea1ab2a" />
-	<file name="emoji_u1f62d.svg" size="3769" sha256="89936b3dc37bb19e1630fc3132d9f37d00f13913d62a61f7abfd599cfd2cbfe4" />
-	<file name="emoji_u1f62e.svg" size="1424" sha256="669c83c7fb3de583e8e0ddf4d3a86751312b73dd72623fa024072d51d345dcee" />
-	<file name="emoji_u1f62e_200d_1f4a8.svg" size="2559" sha256="974fe27295c5cc0fac8f40968f8f83d6d4a6b36035e3a51e32117901f61b73ff" />
-	<file name="emoji_u1f62f.svg" size="1845" sha256="443c0b55cfa14f746f952b066019b465b7d1daf2861d258e140079da03410cc7" />
+	<file name="emoji_u1f62b.svg" size="2560" sha256="3175e447b7c7892905d6fbe657fe037d7cac0bf8ea1dce56c366eab6cd2a836d" />
+	<file name="emoji_u1f62c.svg" size="1915" sha256="95897c4c1a17755b96c4b39b921fd42710229cf815763f8f7381fe0690ab5cf6" />
+	<file name="emoji_u1f62d.svg" size="3724" sha256="bdabbc9d83e83ef68d4a0337ef4f78839337e501042b257ddef1dd9af4b97a0c" />
+	<file name="emoji_u1f62e.svg" size="1434" sha256="539c537fad7673d475f4e21c7195867b34c8342b39466db97b9f253ab582899f" />
+	<file name="emoji_u1f62e_200d_1f4a8.svg" size="3067" sha256="a986b13298d07281542c80484fc1ecd0c02c6406c5573df1b9125dbd1ef76652" />
+	<file name="emoji_u1f62f.svg" size="1855" sha256="72b16b838e94382a9bc13def8554f948b04b1f5d64712b0879c7bb45048c84f5" />
 	<file name="emoji_u1f630.svg" size="3280" sha256="116c64a4dc5e018ebbc2198c5c7ea00634f7e158e5aa746c72f8973ea7c2b856" />
 	<file name="emoji_u1f631.svg" size="7710" sha256="52b42fcc77c226704e84a2326de5842b30790064187ad6c4736d5b300912ff29" />
 	<file name="emoji_u1f632.svg" size="2189" sha256="b3c52ea0de9fa2d5d904e819ed4cb539a8629ceb84b5c6a972e0b1301cef0be6" />
@@ -1925,7 +1925,7 @@
 	<file name="emoji_u1f638.svg" size="3432" sha256="d1ace9d77734422fbfd2171a9b5e804e34bfabff81886f864fd7b1901095ec56" />
 	<file name="emoji_u1f639.svg" size="4592" sha256="db804fcb76bb7e2e7b42fb536ea8d65d5a93e81004cb5fff397489cdbe48f312" />
 	<file name="emoji_u1f63a.svg" size="2729" sha256="e52b7c48b409b520fd8280e2caf4f1c4e498549613870bdfec36ce2e6680e270" />
-	<file name="emoji_u1f63b.svg" size="4252" sha256="181670eb59539e23d9f37fc0dd9f10c30be604cd14fbbc038a004b6122b4df1f" />
+	<file name="emoji_u1f63b.svg" size="4240" sha256="ca2bfb9ffc3435b553ed3e437dba34affe93689e1e1e5487ff643e9e2f49715b" />
 	<file name="emoji_u1f63c.svg" size="2580" sha256="f49da6547f1891b21bb10d1e2a813293aa7943d7219efb5185224673a64f7fe3" />
 	<file name="emoji_u1f63d.svg" size="3272" sha256="0d1092e69db96e232f9b00c90a442fb76b07d501aa4e203cbce4308b4d745701" />
 	<file name="emoji_u1f63e.svg" size="3060" sha256="396c907594560ffd53face019ac77e421cb3d252dcaebb907bda7361ef40654f" />
@@ -2064,7 +2064,7 @@
 	<file name="emoji_u1f68b.svg" size="4329" sha256="ffb96bbfc4dfc9e8e8be0df2b23c4c5281a50539eab0e638aa136d943fbbeb20" />
 	<file name="emoji_u1f68c.svg" size="3770" sha256="191f04737007ea270a6c69a25997f3f52a5f131fd0dce3a041a5e279eec19ca3" />
 	<file name="emoji_u1f68d.svg" size="4641" sha256="6d4d394098cc0d105bfbc57ff789f782104acd1b4a72d723baf2481e4bfe41e4" />
-	<file name="emoji_u1f68e.svg" size="4249" sha256="618d3d79d41ad730c5cb58179007488700a3dad02828ec0ff56b91207e16c3e4" />
+	<file name="emoji_u1f68e.svg" size="4229" sha256="631df5d60706e1a368b9aeb9aab0ea51d137b488104b3ef58e546eb30c6935b9" />
 	<file name="emoji_u1f68f.svg" size="3566" sha256="7d72afb4750f9893b1e82032491ba532d5977d3dc3277a7127b01e0339c8c841" />
 	<file name="emoji_u1f690.svg" size="3150" sha256="c37792b459ca0984dcf76f140ef037cb5afa578848034aa2e2644af576b7e3f2" />
 	<file name="emoji_u1f691.svg" size="3130" sha256="9b960f058e502ffc53f6f047f33fea698080c87f1cbac77a533642806c09bfec" />
@@ -2276,8 +2276,8 @@
 	<file name="emoji_u1f928.svg" size="2570" sha256="a98c3b49203f7f497f22f27e51c763f7b7e51710d970bea4dd60d284501f41f9" />
 	<file name="emoji_u1f929.svg" size="3462" sha256="858a73e6915a0c25d3492cc42397689369bc2ab2fcf220b6001c5a706129aa22" />
 	<file name="emoji_u1f92a.svg" size="2805" sha256="d332cddb4edadc3381179fcec607e437a07d337131d5ff74fbf6b4561979ef7f" />
-	<file name="emoji_u1f92b.svg" size="4370" sha256="32db2ac69b840762827dc4589354dda326c05804ead26bb132748850f50e117d" />
-	<file name="emoji_u1f92c.svg" size="4261" sha256="524344a20273919a1a4d061305f46dd239cce6d63c7fc5474d86f9707002dd0d" />
+	<file name="emoji_u1f92b.svg" size="5628" sha256="d3aabe98daec10041ac1694bfd6f093f5e21a65819ffc9fe9af8eb70bfb9a04f" />
+	<file name="emoji_u1f92c.svg" size="4313" sha256="5f83e87c9c310bf74da8d575efebdb2fe2d1501261d5cd0d008e277f8c954af6" />
 	<file name="emoji_u1f92d.svg" size="5136" sha256="6744ff4f0608d4f8f9fca431857fadb67fb344e8b967689fcfd4b396a14a6ed0" />
 	<file name="emoji_u1f92e.svg" size="5367" sha256="e3c07cba5655308ebd2573b8ee9e7f9cdef8c5a0664b08c9d093cc6fb6264851" />
 	<file name="emoji_u1f92f.svg" size="7840" sha256="29d10be78dacce6253477552aaeb9fa7725644510f1194801131faa073cbb9e6" />
@@ -2442,7 +2442,7 @@
 	<file name="emoji_u1f94a.svg" size="1159" sha256="2bec9058023e10ff372f8f5c8c2b14f766b9150838ea18bdfc0c7662fc532abd" />
 	<file name="emoji_u1f94b.svg" size="4899" sha256="06787833f92fbfb8dd04131aaa7e54d172bc5ab2f867ca1d8a84d0b3e75caff3" />
 	<file name="emoji_u1f94c.svg" size="3430" sha256="9b69b2d5069038bada15ca0f8da09aebfa6093a98a26ef05aa81f3a3a8cefc12" />
-	<file name="emoji_u1f94d.svg" size="10234" sha256="b37500be054018b578b4044c46af05e8e4ce1e3b9ab853133dd72f220ee6948b" />
+	<file name="emoji_u1f94d.svg" size="10222" sha256="1df8b006aeb8ee92adbde09049416acd1c8713651e2af6bdf064c703442e4bc8" />
 	<file name="emoji_u1f94e.svg" size="4539" sha256="d879afab89f6d9f88f90eeb9ce2e0a32f85e63bab85d855da4a22768c825b6cf" />
 	<file name="emoji_u1f94f.svg" size="2162" sha256="139c14b944104cc019288adb2366b276b82d46f0e4e978600e79bcf60efb3cb8" />
 	<file name="emoji_u1f950.svg" size="6723" sha256="6706849a92f31ef1640c9800b291635249bbe615aed8c98fcb228f833023458f" />
@@ -2492,7 +2492,7 @@
 	<file name="emoji_u1f977_1f3ff.svg" size="9675" sha256="5feb7aa3c1092b460734f2ddd9ca2d68393331cca41832b8a8cb0381b5b13b56" />
 	<file name="emoji_u1f978.svg" size="6220" sha256="6afce1d52712f1aac8c1fbcbc54508244fe7e8677a0e033a05da2fe37f31cc42" />
 	<file name="emoji_u1f979.svg" size="2996" sha256="1c891c6ff18d662d9658729f611342e0a7f2e8b6299b5bd19c7cef709571cc1e" />
-	<file name="emoji_u1f97a.svg" size="2250" sha256="64f0aa77e3c168d82e4a2965097e59da3f089c40d0478c7229dc0a9931489e44" />
+	<file name="emoji_u1f97a.svg" size="2154" sha256="187e04a673fef3e2944581c6cd6c19e7c0dac9aaf49f29523332b17ed6094fac" />
 	<file name="emoji_u1f97b.svg" size="6194" sha256="b7e57080a92238ccdad392506b9ecff0c0939c4f283ff4fa3e2f4fd36f6a7684" />
 	<file name="emoji_u1f97c.svg" size="5066" sha256="8a55b6846ffd1646cc2ddcd002dfbb9d47cd7140699b0a49b170b22196baa57c" />
 	<file name="emoji_u1f97d.svg" size="5981" sha256="0f82e95d2f5febc2e4b7e06108c6b80cd4068d6e4f3295d9ddd7805d34a022e5" />
