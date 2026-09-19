@@ -34,8 +34,13 @@ bool GetCp::mayBeText(uc::EmojiDraw emojiDraw) const noexcept
     //return (cp && ((emojiDraw == uc::EmojiDraw::FORCE_TEXT) || !forceGraphic));
 }
 
-
-
+///
+/// \brief The RecolorLib class
+///   What is recolouring inteneded for?
+///   First of all: we are forced to make some changes in SVG.
+///   We redo the main SVG, and get skintones programmatically by recolouring.
+///   Getting rid of skintones is a side-plus.
+///
 struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;
@@ -100,6 +105,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#E89D07", merFingers);  // Fingers, diff by 1! Used: U18 merman
     repl(bytes, "#CE5010", merBrowsNeu); // Used: U18 merperson (!)
     repl(bytes, "#7042A6", merBrowsLady); // Used: U18 mermaid (!)
+    repl(bytes, "#277D71", merBrowsMan); // Used: U18 merman (!)
     repl(bytes, "#404141", eyes1);       // Used: U18 merman
     repl(bytes, "#E89D07", nose1);       // Used: U18 merman
     repl(bytes, "#76593F", mouth1);      // Used: U18 merman
@@ -332,6 +338,7 @@ namespace {
             .merFingers = "#D89852",
             .merBrowsNeu = "#CE5010",
             .merBrowsLady = "#7042A6",
+            .merBrowsMan = "#277D71",
         },
         { // Light
             .fill1 = "#CCA47A",
@@ -350,6 +357,7 @@ namespace {
             .merFingers = "#A87254",
             .merBrowsNeu = "#CE5010",
             .merBrowsLady = "#7042A6",
+            .merBrowsMan = "#277D71",
         },
         { // Medium
             .fill1 = "#A47B62",
@@ -368,6 +376,7 @@ namespace {
             .merFingers = "#824E3A",
             .merBrowsNeu = "#B74615",
             .merBrowsLady = "#67469B",
+            .merBrowsMan = "#30665C",
         },
         { // Dark
             .fill1 = "#8D5738",
@@ -386,6 +395,7 @@ namespace {
             .merFingers = "#63351E",
             .merBrowsNeu = "#87340F",
             .merBrowsLady = "#613E93",
+            .merBrowsMan = "#325B54",
         },
         { // Ebony
             .fill1 = "#5C4037",
@@ -404,6 +414,7 @@ namespace {
             .merFingers = "#492C25",
             .merBrowsNeu = "#60280F",
             .merBrowsLady = "#3F2563",
+            .merBrowsMan = "#1D3A35",
         },
     };
 
