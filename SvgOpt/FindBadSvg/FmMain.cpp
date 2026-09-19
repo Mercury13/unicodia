@@ -3,6 +3,8 @@
 
 #include "i_OpenSave.h"
 
+#include "work.h"
+
 FmMain::FmMain(QWidget *parent)
     : Super(parent)
     , ui(new Ui::FmMain)
@@ -28,5 +30,6 @@ void FmMain::browseForDirectory()
 
 void FmMain::go()
 {
-
+    std::filesystem::path dir = ui->edDirectory->text().toStdWString();
+    auto r = processDir(dir);
 }

@@ -12,17 +12,24 @@ win32-g++ {
 }
 
 SOURCES += \
+    ../../Libs/PugiXml/pugixml.cpp \
     ../../Libs/SelfMade/Qt/i_OpenSave.cpp \
     ../../Libs/SelfMade/Qt/u_OpenSaveStrings.cpp \
+    ../../Libs/SelfMade/Strings/u_Strings.cpp \
     main.cpp \
-    FmMain.cpp
+    FmMain.cpp \
+    work.cpp
 
 HEADERS += \
+    ../../Libs/PugiXml/pugixml.hpp \
     ../../Libs/SelfMade/Qt/i_OpenSave.h \
     ../../Libs/SelfMade/Qt/u_OpenSaveStrings.h \
-    FmMain.h
+    ../../Libs/SelfMade/Strings/u_Strings.h \
+    FmMain.h \
+    work.h
 
 INCLUDEPATH += \
+    ../../Libs/PugiXml \
     ../../Libs/SelfMade \
     ../../Libs/SelfMade/Qt \
     ../../Libs/SelfMade/Strings
