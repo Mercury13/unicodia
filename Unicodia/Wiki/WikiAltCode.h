@@ -1,5 +1,10 @@
 #pragma once
 
+///
+/// My wiki — generic Alt code support
+/// Specific printers are in MyWiki
+///
+
 namespace uc {
     struct AltCode;
     struct OneByteInfo;
@@ -10,7 +15,10 @@ namespace myalt {
     constexpr char CODE_DOS = 0;
     constexpr char CODE_WIN = '0';
 
-    enum class ComboMode : unsigned char { EVERYWHERE, LIST };
+    enum class ComboMode : unsigned char {
+        EVERYWHERE, ///< A single key combination works on every observed machine
+        LIST        ///< There are special conditions, listed in continueList
+    };
 
     class Printer {
     public:
