@@ -5706,7 +5706,8 @@
    </group>
    <group id="3D000">
     <text id="Name">
-     <orig>Seal (Zhuànshū)</orig>
+     <orig>Small seal (Zhuànshū)</orig>
+     <known-orig>Seal (Zhuànshū)</known-orig>
      <transl>Seal (Zhuànshū)</transl>
     </text>
    </group>
@@ -11711,6 +11712,10 @@
     </text>
     <text id="Text">
      <orig>Characters of unicameral scripts{{-}}without capital and small letters. For example, [[ps:Hebr|Hebrew]], [[ps:Arab|Arabic]], and [[ps:Hani|CJK ideographs]]. Also special characters like masculine/feminine ordinal indicator in Romance languages (1º{{-}}first masculine, 1ª{{-}}first feminine).</orig>
+     <au-cmt>
+      <p>If your language actually has masculine and feminine, write smth like: 1º{{-}}he-first, 1ª{{-}}she-first</p>
+      <p>Primo/prima Italian, первый/первая Russian…</p>
+     </au-cmt>
      <transl>Büyük ve küçük harfleri olmayan tek kamaralı yazıların karakterleri. Örneğin, [[ps:Hebr|İbranice]], [[ps:Arab|Arapça]] ve [[ps:Hani|Çince JK ideogramları]]. Ayrıca, Roman dillerinde eril/dişil sıra göstergesi gibi özel karakterler (1º{{-}}ilk eril, 1ª{{-}}ilk dişil).</transl>
     </text>
    </group>
@@ -11756,9 +11761,9 @@
      <transl>İşaret/çevreleme</transl>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
      <known-orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</known-orig>
-     <transl>Eski Kiril harfli sayılarda (А҈) çevreleyen işaretler kullanılır. Ayrıca kare, daire ve diğer şekiller de mevcuttur. Windows{{_}}10 20H2’de (GDI, Cairo, Skia) test edilen tipografi motorlarının hiçbiri bu karakterleri mükemmel bir şekilde desteklemez, ancak DejaVu gibi iyi yazı tiplerinde sonuç o kadar kötü değildir.</transl>
+     <transl>Eski Kiril harfli sayılarda ({{aencl}}) çevreleyen işaretler kullanılır. Ayrıca kare, daire ve diğer şekiller de mevcuttur. Windows{{_}}10 20H2’de (GDI, Cairo, Skia) test edilen tipografi motorlarının hiçbiri bu karakterleri mükemmel bir şekilde desteklemez, ancak DejaVu gibi iyi yazı tiplerinde sonuç o kadar kötü değildir.</transl>
     </text>
    </group>
    <group id="Mn">
@@ -16508,6 +16513,9 @@
      <known-orig>In 2024, Britain withdrew claims to the uninhabited Chagos Archipelago, giving it to Mauritius but leasing the entire Diego Garcia island, a joint British-US military base. The flag of the British Indian Ocean Territory will likely stay for history, and the flag of Diego Garcia may change.</known-orig>
      <transl>2024’te İngiltere, ıssız Chagos Takımadaları üzerindeki hak iddialarını geri çekerek adayı Mauritius’a verdi, ancak Diego Garcia Adası’nın tamamını kiraya verdi; ada, İngiliz-ABD ortak askeri üssü olacak. Britanya Hint Okyanusu Toprakları bayrağı muhtemelen tarih boyunca kalacak ve Diego Garcia bayrağı değişebilir.</transl>
     </text>
+    <text id="NoSym">
+     <orig>Vendors increasingly treat this emoji as an object rather than a UI/navigational symbol.</orig>
+    </text>
    </group>
    <group id="Cinfo">
     <text id="Info">
@@ -18473,33 +18481,46 @@
   <group id="Input">
    <group id="L">
     <au-cmt>Treat them as languages: English (language)</au-cmt>
-    <text id="En">
-     <orig>Western European: English, French…</orig>
-     <au-cmt>
-      <p>Both L10n and layout.</p>
-      <p>You can add your own language if it's served with BOTH Win-1252 and IBM-437</p>
-     </au-cmt>
+    <text id="DosEn">
+     <orig>English (United States)</orig>
+     <au-cmt>AFAIK, CP437 is for USA and a few other countries</au-cmt>
+    </text>
+    <text id="DosWe">
+     <orig>Western Europe, incl. English (Britain)</orig>
     </text>
     <text id="DosRu">
      <orig>Russian, Ukrainian, Belorussian, Bulgarian</orig>
      <au-cmt>The exhaustive list served with AltGOST-866, Microsoft's dialect.</au-cmt>
     </text>
+    <text id="DosSr">
+     <orig>Cyrillic languages of Yugoslavia (Serbian…)</orig>
+    </text>
     <text id="El">
      <orig>Greek</orig>
     </text>
-    <text id="Tr">
-     <orig>Turkish</orig>
+    <text id="He">
+     <orig>Hebrew</orig>
+    </text>
+    <text id="WinEn">
+     <orig>Western European: English, French, Spanish…</orig>
+     <au-cmt>
+      <p>Both L10n and layout.</p>
+      <p>You can add your own language if it's served with BOTH Win-1252 and IBM-437</p>
+     </au-cmt>
     </text>
     <text id="WinCe">
      <orig>Central European: Czech, Polish, Hungarian…</orig>
      <au-cmt>You can add your own language if it's served with Windows-1250</au-cmt>
     </text>
-    <text id="He">
-     <orig>Hebrew</orig>
-    </text>
     <text id="WinRu">
-     <orig>Most Cyrillic languages: Russian, Bulgarian, Serbian…</orig>
-     <au-cmt>You can add your own language if it's served with Win-1251</au-cmt>
+     <orig>All Cyrillic (Russian, Serbian…); Georgian, Armenian</orig>
+    </text>
+    <text id="WinLt">
+     <orig>Estonian, Latvian, Lithuanian</orig>
+     <au-cmt>Why I chose Lithuanian (lt) as the main? Because it contains BIG LOTS of special letters.</au-cmt>
+    </text>
+    <text id="WinTr">
+     <orig>Turkish, Azeri (Latin)</orig>
     </text>
    </group>
    <text id="Head">

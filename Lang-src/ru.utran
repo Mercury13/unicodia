@@ -9944,8 +9944,8 @@
      <transl>Метка/охватывающая</transl>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
-     <transl>Охватывающие метки используются в древнерусских буквенных цифрах (А҈). Также существуют охватывающие квадрат, круг и другие фигуры. Ни один проверенный типографский движок на Windows{{_}}10 20H2 (GDI, Cairo, Skia) не{{_}}поддерживает подобные символы идеально, но на хороших шрифтах вроде DejaVu результат очень неплох.</transl>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also, enclosing square, circle, and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu, the result is not{{_}}so{{_}}bad.</orig>
+     <transl>Охватывающие метки используются в древнерусских буквенных цифрах ({{aencl}}). Также существуют охватывающие квадрат, круг и другие фигуры. Ни один проверенный типографский движок на Windows{{_}}10 20H2 (GDI, Cairo, Skia) не{{_}}поддерживает подобные символы идеально, но на хороших шрифтах вроде DejaVu результат очень неплох.</transl>
     </text>
    </group>
    <group id="Mn">

@@ -1786,7 +1786,12 @@ namespace {
             break;
 
         case 'a':
-            if (name == "approx14"sv) {
+            if (name == "aencl") {
+                appendFont(s, uc::EcFont::FUNKY,
+                           "\uE012",  // Stub for Cyrl A enclosed
+                           1,         // Yes, size is just 1
+                           NO_FLAGS);
+            } if (name == "approx14"sv) {
                 appendNum(s, uc::planeInfo[14].nRoundUp100(),
                           Subf::DENSE, mywiki::NumPlace::HTML);
             }

@@ -74,7 +74,7 @@ namespace uc {
     constexpr std::u8string_view STUB_RTL_CIRCLE  = u8"\u200F\u25CC";   // 200F RLM  25CC dotted circle
     constexpr std::u8string_view STUB_ALM_CIRCLE  = u8"\u061C\u25CC";   // 061C ALM  25CC dotted circle
         // PUA = Private user area of Unicode, they are non-standard chars mapped to these codepoints
-    constexpr QChar STUB_PUA_VIRAMA { 0xE001 };             // Virtual viraam (=subjoiner, conjoiner)
+    constexpr QChar STUB_PUA_VIRAMA { 0xE001 };             // Virtual virama (=subjoiner, conjoiner)
     constexpr QChar STUB_PUA_TONE_RIGHT { 0xE002 };         // Plrd tone right
     constexpr QChar STUB_PUA_TONE_TOPRIGHT { 0xE003 };      // Plrd tone top-right
     constexpr QChar STUB_PUA_TONE_ABOVE { 0xE004 };         // Plrd tone above
@@ -91,6 +91,7 @@ namespace uc {
     constexpr QChar STUB_PUA_DUPLOYAN { 0xE00F };           // Dupl K+A+TS
     constexpr QChar STUB_PUA_CJK_APPROX { 0xE010 };         // Image of CJK 303E
     constexpr QChar STUB_PUA_PLUS { 0xE011 };               // Plus for synthesized virtual virama
+    constexpr QChar STUB_PUA_AENCL { 0xE012 };              // Cyrillic A encosing
 
     DEFINE_ENUM_TYPE_IN_NS(uc, EcLangLife, unsigned char,
         NOMATTER,       ///< Symbols (language’s life does not matter)

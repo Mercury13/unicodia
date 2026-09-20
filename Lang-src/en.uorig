@@ -7012,7 +7012,7 @@
      <orig>Mark/enclosing</orig>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also, enclosing square, circle, and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu, the result is not{{_}}so{{_}}bad.</orig>
     </text>
    </group>
    <group id="Mn">

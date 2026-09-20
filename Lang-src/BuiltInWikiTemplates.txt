@@ -22,6 +22,10 @@ Just inserts a non-break space 00A0.
 
 A
 
+{{aencl}} :: Cyrillic A with enclosure :: Image :: No parameters
+Cyrillic A with enclosure, displayed from te Funky font as a PUA sign.
+Used in the “Mark/enclosing” article.
+
 {{approx14}} :: Approximate # of chars in plane 14 :: Data/Unicode :: No parameters
 Formatted as in dense text.
 Rounded upwards to hundred, to avoid triggering L10n troubles.
