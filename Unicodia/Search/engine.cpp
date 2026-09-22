@@ -78,7 +78,7 @@ namespace {
     /// If we find those words → treat as low-priority
     /// @warning Alphabetical order, upper case
     /// Dislike such constexpr, but it’s within one TU, and need for static_assert
-    inline constexpr const DicWord DIC_LOPRIO_WORDS[] {
+    inline constexpr const DicWord DIC_LOPRIO[] {
         { u8"AT", srh::HaystackClass::HI_COOL_1 },
         { u8"BY", srh::HaystackClass::HI_COOL_1 },
         { u8"IDEOGRAM", srh::HaystackClass::EVERYWHERE },
@@ -119,7 +119,7 @@ namespace {
         return true;
     }
 
-    static_assert(isAsc(DIC_LOPRIO_WORDS), "Words should be ascending");
+    static_assert(isAsc(DIC_LOPRIO), "Words should be ascending");
 
 }
 
@@ -161,8 +161,8 @@ srh::NeedleWord::NeedleWord(std::u8string x)
       ccLast(classify(v.back())),
       isShortIndex(lat::isShortIndex(v))
 {
-    auto beg = std::begin(DIC_LOPRIO_WORDS);
-    auto end = std::end(DIC_LOPRIO_WORDS);
+    auto beg = std::begin(DIC_LOPRIO);
+    auto end = std::end(DIC_LOPRIO);
     auto it = std::upper_bound(beg, end, v);
     if (it != beg) {
         --it;
@@ -196,8 +196,8 @@ srh::NeedleWord::NeedleWord(std::u8string x)
 srh::HayWord::HayWord(std::u8string_view x)
     : v(x)
 {
-    auto beg = std::begin(DIC_LOPRIO_WORDS);
-    auto end = std::end(DIC_LOPRIO_WORDS);
+    auto beg = std::begin(DIC_LOPRIO);
+    auto end = std::end(DIC_LOPRIO);
     auto it = std::upper_bound(beg, end, v);
     if (it != beg) {
         --it;
