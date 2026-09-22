@@ -19,9 +19,9 @@ namespace srh {
         IDEOGRAPH     = 1<<3, ///< Ideographic: pink (CJK) or other ideographic script
         EGYPTIAN      = 1<<4, ///< In Egyptian hieros
         CJK           = 1<<5, ///< In CJK (pink)
-        HI_COOL_1   = 1<<6, ///< COOL_WORDS_1 is where some words have major meaning
-        HI_COOL_2   = 1<<7, ///< COOL_WORDS_2 is where some words have major meaning
-        LO_COOL_3  = 1<<8,  ///< LOW_WORDS_3 is where some words have MINOR meaning
+        HI_COOL_1     = 1<<6, ///< COOL_WORDS_1 is where some words have major meaning
+        HI_COOL_2     = 1<<7, ///< COOL_WORDS_2 is where some words have major meaning
+        LO_COOL_3     = 1<<8, ///< LOW_WORDS_3 is where some words have MINOR meaning
         // Technical
         DUMMY1,
         LAST = DUMMY1 - 1,
