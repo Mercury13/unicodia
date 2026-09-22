@@ -1157,7 +1157,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA, Ifg::ENG_CUSTOM_PAINT },
             "Zanabazar Square",
             { EcScript::Zanb, 0 }, MapSubtype::DEAD,
-            EcScript::Zanb, EcFont::NORMAL, Bfg::BIG_CONTROLS },
+            EcScript::Zanb, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::LOW_WORDS_3 },
     // Soyombo OK
     { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA, {}, SvgHint{ 13, 1 } },
             "Soyombo",
@@ -1435,7 +1435,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D100, 0x1D1FF, { 0x1D161, EcContinent::NONE, Ifg::PAINT_SVG, 8_hx },
             "Musical Symbols",
             { EcScript::ZMUS, 0 }, MapSubtype::SYM_CODE,
-            EcScript::NONE, EcFont::MUSIC },
+            EcScript::NONE, EcFont::MUSIC, Bfg::BIG_CONTROLS },
     // Greek music OK
     { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE, Ifg::PAINT_SVG, 1_hx },
             "Ancient Greek Musical Notation",

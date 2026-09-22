@@ -11,15 +11,17 @@ namespace srh {
 
     Class classify(char8_t x);
 
-    enum class HaystackClass : unsigned char {
+    enum class HaystackClass : unsigned short {
         NOWHERE       = 0,    ///< Technical value
         SCRIPT        = 1<<0, ///< Codepoint in script
         NONSCRIPT     = 1<<1, ///< Codepoint outside script
         EMOJI         = 1<<2, ///< Emoji
         IDEOGRAPH     = 1<<3, ///< Ideographic: pink (CJK) or other ideographic script
         EGYPTIAN      = 1<<4, ///< In Egyptian hieros
-        EXCEPT_COOL_1 = 1<<5, ///< COOL_WORDS_1 is where some words have major meaning
-        EXCEPT_COOL_2 = 1<<6, ///< COOL_WORDS_2 is where some words have major meaning
+        CJK           = 1<<5, ///< In CJK (pink)
+        HI_COOL_1   = 1<<6, ///< COOL_WORDS_1 is where some words have major meaning
+        HI_COOL_2   = 1<<7, ///< COOL_WORDS_2 is where some words have major meaning
+        LO_COOL_3  = 1<<8,  ///< LOW_WORDS_3 is where some words have MINOR meaning
         // Technical
         DUMMY1,
         LAST = DUMMY1 - 1,
@@ -27,7 +29,7 @@ namespace srh {
         // We rely here on fact that SCRIPT or NONSCRIPT will be on in CPs,
         //    and EMOJI in the searchable part of Library
         EVERYWHERE = LAST - 1 + LAST,
-        MASK_EMOJI = EMOJI | EXCEPT_COOL_1 | EXCEPT_COOL_2,
+        MASK_EMOJI = EMOJI | HI_COOL_1 | HI_COOL_2,
     };
 
     DEFINE_ENUM_OPS(HaystackClass)
@@ -178,7 +180,7 @@ namespace srh {
         SafeVector<std::u8string_view> words1;
         SafeVector<HayWord> words2;
         RoleInfo roleInfo;
-        Flags<HaystackClass> classes;
+        Flags<HaystackClass> lowPrioClasses;
         const Comparator* comparator = nullptr;
 
         void load(

@@ -755,14 +755,21 @@ uc::MultiResult uc::doSearch(QString what)
                             || block.flags.have(Bfg::SCRIPTLIKE)            // …or char in script-like block
                             || !script.flags.have(Sfg::NONSCRIPT));    // …or char has script (nonscripts are NONE and pseudo-scripts)
                     Flags hclasses = isScript ? srh::HaystackClass::SCRIPT : srh::HaystackClass::NONSCRIPT;
-                    if (block.synthIcon.ecContinent == EcContinent::CJK
+                    if (block.synthIcon.ecContinent == EcContinent::CJK) {
+                        hclasses |= srh::HaystackClass::CJK;
+                    }
+                    if ((block.synthIcon.ecContinent == EcContinent::CJK)
                             || script.containsIdeograph()) {
                         hclasses |= srh::HaystackClass::IDEOGRAPH;
                     }
+                    // Our classes are LOW-priority.
+                    // Word is in any of these classes → low priority
                     if (!block.flags.have(Bfg::COOL_WORDS_1))
-                        hclasses |= srh::HaystackClass::EXCEPT_COOL_1;
+                        hclasses |= srh::HaystackClass::HI_COOL_1;
                     if (!(block.flags.have(Bfg::COOL_WORDS_2) || cp.flags.have(Cfg::S_COOL_2)))
-                        hclasses |= srh::HaystackClass::EXCEPT_COOL_2;
+                        hclasses |= srh::HaystackClass::HI_COOL_2;
+                    if (block.flags.have(Bfg::LOW_WORDS_3))
+                        hclasses |= srh::HaystackClass::LO_COOL_3;
                     bool isIndexAnywhere = block.flags.have(Bfg::INDEX_ANYWHERE);
                     for (auto& nm : names) {
                         auto hclasses1 = hclasses;

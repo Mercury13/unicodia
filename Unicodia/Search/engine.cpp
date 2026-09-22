@@ -79,29 +79,30 @@ namespace {
     /// @warning Alphabetical order, upper case
     /// Dislike such constexpr, but it’s within one TU, and need for static_assert
     inline constexpr const DicWord DIC_WORDS[] {
-        { u8"AT", srh::HaystackClass::EXCEPT_COOL_1 },
-        { u8"BY", srh::HaystackClass::EXCEPT_COOL_1 },
+        { u8"AT", srh::HaystackClass::HI_COOL_1 },
+        { u8"BY", srh::HaystackClass::HI_COOL_1 },
         { u8"IDEOGRAM", srh::HaystackClass::EVERYWHERE },
         { u8"IDEOGRAPH", srh::HaystackClass::EVERYWHERE },
-        { u8"IN", srh::HaystackClass::EXCEPT_COOL_1 },
+        { u8"IN", srh::HaystackClass::HI_COOL_1 },
         { u8"LETTER", srh::HaystackClass::SCRIPT },
         { u8"LETTERFORM", srh::HaystackClass::EVERYWHERE },
         { u8"MAN", srh::HaystackClass::EMOJI | srh::HaystackClass::EGYPTIAN },
         { u8"OF", srh::HaystackClass::EVERYWHERE },  // No letter Of at all
-        { u8"ON", srh::HaystackClass::EXCEPT_COOL_2 },
+        { u8"ON", srh::HaystackClass::HI_COOL_2 },
         { u8"OPPOSING", srh::HaystackClass::IDEOGRAPH },
         { u8"OVER", srh::HaystackClass::IDEOGRAPH },
         { u8"PATTERN", srh::HaystackClass::SCRIPT },
         { u8"PERSON", srh::HaystackClass::EMOJI },
         { u8"PLUS", srh::HaystackClass::IDEOGRAPH },
         { u8"SIGN", srh::HaystackClass::EVERYWHERE },
+        { u8"SQUARE", srh::HaystackClass::CJK | srh::HaystackClass::LO_COOL_3 },
         { u8"SQUARED", srh::HaystackClass::IDEOGRAPH },
         { u8"SYLLABIC", srh::HaystackClass::EVERYWHERE },
         { u8"SYLLABICS", srh::HaystackClass::EVERYWHERE },
         { u8"SYLLABLE", srh::HaystackClass::EVERYWHERE },
         { u8"SYMBOL", srh::HaystackClass::EVERYWHERE },
         { u8"TIMES", srh::HaystackClass::IDEOGRAPH },
-        { u8"TO", srh::HaystackClass::EXCEPT_COOL_1 },
+        { u8"TO", srh::HaystackClass::HI_COOL_1 },
         { u8"WITH", srh::HaystackClass::EVERYWHERE }, // Let it be this way
         { u8"WOMAN", srh::HaystackClass::EMOJI | srh::HaystackClass::EGYPTIAN },
     };
@@ -228,7 +229,7 @@ void srh::HaystackCache::load(
         const Comparator& aComparator)
 {
     comparator = &aComparator;
-    classes = aClasses;
+    lowPrioClasses = aClasses;
     roleInfo = aRoleInfo;
     // Uppercase haystack
     aComparator.prepareHaystack(x, text);
@@ -297,7 +298,7 @@ bool srh::HaystackCache::checkIndex(size_t iWord) const
 
 srh::Place srh::HaystackCache::findNormalWord(const NeedleWord& needle) const
 {
-    bool isNeedleLowPrio = needle.lowPrioClass.haveAny(classes);
+    bool isNeedleLowPrio = needle.lowPrioClass.haveAny(lowPrioClasses);
     Place r = Place::NONE;
     size_t pos = 0;
     while (true) {
@@ -314,7 +315,7 @@ srh::Place srh::HaystackCache::findNormalWord(const NeedleWord& needle) const
             }
             [[fallthrough]];  // otherwise fall through
         case FindStatus::INITIAL:
-            r1 = where.word->lowPrioClass.haveAny(classes)
+            r1 = where.word->lowPrioClass.haveAny(lowPrioClasses)
                  ?  Place::INITIAL_LOPRIO : Place::INITIAL;
             break;
         case FindStatus::SUBSTR:

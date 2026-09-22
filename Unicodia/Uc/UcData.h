@@ -845,8 +845,11 @@ namespace uc {
                                     ///<      be lowered: BY IN TO
         COOL_WORDS_2    = 1<<20,    ///< [+] Some words have special meaning and should not
                                     ///<      be lowered: ON
-        INDEX_ANYWHERE  = 1<<21,    ///< [+] index may be everywhere, not just in the end
-        DESCRIBE_SCRIPT = 1<<21,    ///< [+] For Pcun, where (probably erroneously)
+        LOW_WORDS_3     = 1<<21,    ///< [+] Some words have spacial meaning and SHOULD be lowered:
+                                    ///<      SQUARE
+        INDEX_ANYWHERE  = 1<<22,    ///< [+] index (e.g. A1a of ancient scripts) may be everywhere,
+                                    ///<      not just in the end
+        DESCRIBE_SCRIPT = 1<<23,    ///< [+] For Pcun, where (probably erroneously)
                                     ///<      chars are divided between Xsux and Pcun
         EXPERIMENT      = 1<<30,    ///< Left for experiments
         STOCK_BLOCK_DESC = STOCK_BLOCK | HAS_DESCRIPTION,
