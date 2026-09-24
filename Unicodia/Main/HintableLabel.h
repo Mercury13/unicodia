@@ -1,13 +1,13 @@
 #ifndef HINTABLELABEL_H
 #define HINTABLELABEL_H
 
-#include <QLabel>
+#include "CachedLabel.h"
 
-class HintableLabel : public QLabel
+class HintableLabel : public CachedLabel
 {
-    using Super = QLabel;
+    using Super = CachedLabel;
 public:
-    using QLabel::QLabel;
+    using Super::Super;
     bool isSmall() const { return fIsSmall; }
     /// @return [+] was changed
     bool setSmall(bool x);
