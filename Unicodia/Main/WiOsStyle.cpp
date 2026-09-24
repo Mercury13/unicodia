@@ -102,9 +102,9 @@ void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fon
                 auto info = fb::getOrEmpty(key);
                 setSmall(info->flags.have(fb::Fg::SMALL_CELL));
                 ui->lbOs->setCached(info->flags.have(fb::Fg::CACHE_PIX));
-                char buf[300];
                 ui->lbOs->setFont(*font);
                 ui->lbOs->setText(display);
+                char buf[300];
                 snprintf(buf, std::size(buf),
                         "<a href='pf:%d/%d' style='%s'>",
                         ch.subj.val(), static_cast<int>(ws),
