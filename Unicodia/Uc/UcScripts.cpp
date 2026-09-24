@@ -995,7 +995,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::crange(13, 17), EcFont::YEZIDI },
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii", QFontDatabase::Any,
-        EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::CJK,
         Dating::year(1974, StdNote::CUSTOM), EcFont::YI, NO_FLAGS,
         ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 2, .numOrder = NumOrder::MILLION, .year = 2000,
