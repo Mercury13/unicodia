@@ -98,12 +98,13 @@ void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fon
             QFontDatabase::WritingSystem ws = ch.scriptSubstituted().qtCounterpart;
             auto font = fontMatch.sysFontFor(ch, ws, static_cast<int>(Fsz::BIG));
             if (font) {
-                char buf[300];
-                ui->lbOs->setFont(*font);
-                ui->lbOs->setText(display);
                 std::string key = font->family().toStdString();
                 auto info = fb::getOrEmpty(key);
                 setSmall(info->flags.have(fb::Fg::SMALL_CELL));
+                ui->lbOs->setCached(info->flags.have(fb::Fg::CACHE_PIX));
+                char buf[300];
+                ui->lbOs->setFont(*font);
+                ui->lbOs->setText(display);
                 snprintf(buf, std::size(buf),
                         "<a href='pf:%d/%d' style='%s'>",
                         ch.subj.val(), static_cast<int>(ws),

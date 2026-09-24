@@ -16,6 +16,7 @@ namespace fb {
     enum class Fg : unsigned char {
         SMALL_CELL = 1,   ///< keep character cell small, for W11 font
                           ///< "Sans Serif Collection"
+        CACHE_PIX = 2,    ///< [+] Cache rendered image
     };
 
     struct Info {

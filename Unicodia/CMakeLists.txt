@@ -101,6 +101,7 @@ qt_add_executable(Unicodia
     Resources/res.qrc
     Resources/Scripts/scripts.qrc
     Wiki/WikiAltCode.h Wiki/WikiAltCode.cpp
+    Main/CachedLabel.h Main/CachedLabel.cpp
 )
 
 if (WIN32)

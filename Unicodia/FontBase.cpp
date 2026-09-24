@@ -12,8 +12,9 @@ namespace {
 
     const MyPair data_S[] {
         {   .k = "Sans Serif Collection",
-            .v { .flags = fb::Fg::SMALL_CELL }
-        }
+            .v { .flags = fb::Fg::SMALL_CELL } },
+        {   .k = "Segoe UI Emoji",
+            .v { .flags = fb::Fg::CACHE_PIX } }
     };
 
     const fb::Info* getLetter1(
