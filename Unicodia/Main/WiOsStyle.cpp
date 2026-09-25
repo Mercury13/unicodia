@@ -157,7 +157,7 @@ void WiOsStyle::setEmojiText(std::u32string_view text, FontMatch& fontMatch)
     // 0x1F300 = very old emoji from Webdings
     constexpr char32_t SOME_EMOJI = 0x1F300;
     auto char0 = text[0];
-    std::optional<QFont> font;
+    dumb::Sp<QFontTarget> font;
     if (char0 <= 0xFFFF) {
         // BMP emoji, really old
         font = fontMatch.sysFontFor(SOME_EMOJI, static_cast<int>(Fsz::BIG));

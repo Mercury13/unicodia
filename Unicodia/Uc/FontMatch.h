@@ -1,8 +1,5 @@
 #pragma once
 
-// STL
-#include <optional>
-
 // Qt
 #include <QFont>
 #include <QFontDatabase>
@@ -33,16 +30,21 @@ namespace mask {
     static_assert(QFontDatabase::WritingSystemsCount <= std::numeric_limits<T>::digits);
 }   // namespace mask
 
+class QFontTarget : public QFont, public dumb::SpTarget
+{
+    using QFont::QFont;
+};
+
 class FontMatch : public FontSource
 {
 public:
     FontMatch(const QString& myName);
 
     /// @return [+] have font [-] draw tofu instead
-    std::optional<QFont> sysFontFor(
+    dumb::Sp<QFontTarget> sysFontFor(
             const uc::Cp& cp, QFontDatabase::WritingSystem writingSystem, int size);
-    std::optional<QFont> sysFontFor(char32_t cp, int size);
-    std::optional<QFont> sysFontForTwo(char32_t cp1, char32_t cp2, int size);
+    dumb::Sp<QFontTarget> sysFontFor(char32_t cp, int size);
+    dumb::Sp<QFontTarget> sysFontForTwo(char32_t cp1, char32_t cp2, int size);
     [[nodiscard]] FontList allSysFonts(
             char32_t cp, QFontDatabase::WritingSystem writingSystem,
             size_t maxCount = std::numeric_limits<size_t>::max()) override;
@@ -66,14 +68,19 @@ private:
                         ///<   (of course, when locale is CJK)
     };
 
-    static QFont getFont(const QString& family, int size);
+    /// @return  never null
+    dumb::Sp<QFontTarget> getFont(const QString& family, int size);
 
     class Fn : public dumb::SpTarget
     {
     public:     // Internal class, do not encapsulate
+        struct Sys {
+            QFont font;
+            QFontMetrics metrics;
+            Sys(const QFont& x) : font(x), metrics(font) {}
+        };
         QString family;
-        QFont testFont;
-        QFontMetrics metrics;
+        std::unique_ptr<Sys> sys;
         mask::T wsMask = mask::of(QFontDatabase::Any);    // Any=0 is always supported
         int priority = 0;
         Cjkp cjkPriority = Cjkp::ZERO;
@@ -81,11 +88,11 @@ private:
             FontPrio prio = FontPrio::NORMAL;
         } verbal;
 
-        Fn(QString aFamily, int aPriority);
+        Fn(FontMatch& aOwner, QString aFamily, int aPriority);
         constexpr bool doesSupport(QFontDatabase::WritingSystem x)
             { return wsMask & mask::of(x); }
         constexpr bool doesSupport(int x) = delete;
-        bool doesSupport(char32_t x) { return metrics.inFontUcs4(x); }
+        bool doesSupport(char32_t x) { return sys->metrics.inFontUcs4(x); }
         constexpr bool doesIntersect(mask::T x) { return wsMask & x; }
         constexpr bool doesIntersect(mask::Short x) = delete;
         constexpr bool doesIntersect(QFontDatabase::WritingSystem x) = delete;
@@ -97,6 +104,7 @@ private:
         bool isSupported = false;
         VFn fonts;
     };
+    dumb::Sp<QFontTarget> tempFont;
 
     VFn allFonts;
     Fix1d<Ws, QFontDatabase::WritingSystemsCount> allWss;

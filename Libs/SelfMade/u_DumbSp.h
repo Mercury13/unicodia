@@ -24,6 +24,13 @@ namespace dumb {
     inline ptrdiff_t subRef(const SpTarget& x) noexcept { return --x.fRefCount; }
     inline ptrdiff_t refCount(const SpTarget& x) noexcept { return x.fRefCount; }
 
+    template <class T>
+    concept RefCountable = requires (T x, ptrdiff_t y) {
+        dumb::addRef(x);
+        dumb::subRef(x);
+        y = dumb::refCount(x);
+    };
+
     ///
     /// @brief The Sp class
     ///   Dumb shared pointer
@@ -60,7 +67,7 @@ namespace dumb {
     };  // Sp
 
 
-    template <class Target, class... Args>
+    template <RefCountable Target, class... Args>
     inline Sp<Target> makeSp(Args&&... args)
     {
         return Sp<Target>(new Target(std::forward<Args>(args)...));

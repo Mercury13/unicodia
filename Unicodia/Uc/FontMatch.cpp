@@ -107,10 +107,9 @@ namespace {
 ///// Fn ///////////////////////////////////////////////////////////////////////
 
 
-FontMatch::Fn::Fn(QString aFamily, int aPriority)
+FontMatch::Fn::Fn(FontMatch& owner, QString aFamily, int aPriority)
     : family(std::move(aFamily)),
-      testFont(getFont(family, TEST_POINT_SIZE)),
-      metrics(testFont),
+      sys(std::make_unique<Sys>(*owner.getFont(family, TEST_POINT_SIZE))),
       priority(aPriority)
 {
     auto verbalPrio = matchPrio(family.toStdString());
@@ -118,7 +117,7 @@ FontMatch::Fn::Fn(QString aFamily, int aPriority)
     priority += PRIO_VERBAL * static_cast<int>(verbalPrio);
 
     // Modify font, create metrics
-    testFont.setStyleStrategy(static_cast<QFont::StyleStrategy>(
+    sys->font.setStyleStrategy(static_cast<QFont::StyleStrategy>(
                 QFont::PreferOutline | QFont::NoFontMerging | QFont::PreferQuality | QFont::PreferAntialias));
 
     // Set supported writing systems
@@ -152,12 +151,14 @@ FontMatch::FontMatch(const QString& myName)
 }
 
 
-QFont FontMatch::getFont(const QString& family, int size)
+dumb::Sp<QFontTarget> FontMatch::getFont(const QString& family, int size)
 {
-    QFont r { family, size };
-    r.setStyleStrategy(static_cast<QFont::StyleStrategy>(
-                QFont::PreferOutline | QFont::NoFontMerging | QFont::PreferQuality));
-    return r;
+    if (!tempFont || tempFont->family() != family || tempFont->pointSize() != size) {
+        tempFont = dumb::makeSp<QFontTarget>(family, size);
+        tempFont->setStyleStrategy(static_cast<QFont::StyleStrategy>(
+            QFont::PreferOutline | QFont::NoFontMerging | QFont::PreferQuality));
+    }
+    return tempFont;
 }
 
 
@@ -170,7 +171,7 @@ void FontMatch::retrieveFonts(const QString& myName)
                 if (v == myName) {
                     prio = PRIO_MINE;
                 }
-                allFonts.emplace_back(new Fn(std::move(v), prio));
+                allFonts.emplace_back(new Fn(*this, std::move(v), prio));
             }
         }
     }   // families now entirely bad
@@ -220,47 +221,47 @@ FontMatch::Ws& FontMatch::loadWs(QFontDatabase::WritingSystem x)
 }
 
 
-std::optional<QFont> FontMatch::sysFontFor(char32_t cp, int size)
+dumb::Sp<QFontTarget> FontMatch::sysFontFor(char32_t cp, int size)
 {
     auto& ws = loadWs(QFontDatabase::Any);
     if (!ws.isSupported)
-        return std::nullopt;
+        return nullptr;
 
     for (auto& fn : ws.fonts) {
         if (fn->doesSupport(cp)) {
             return getFont(fn->family, size);
         }
     }
-    return std::nullopt;
+    return nullptr;
 }
 
 
-std::optional<QFont> FontMatch::sysFontForTwo(
+dumb::Sp<QFontTarget> FontMatch::sysFontForTwo(
         char32_t cp1, char32_t cp2, int size)
 {
     auto& ws = loadWs(QFontDatabase::Any);
     if (!ws.isSupported)
-        return std::nullopt;
+        return nullptr;
 
     for (auto& fn : ws.fonts) {
         if (fn->doesSupport(cp1) && fn->doesSupport(cp2)) {
             return getFont(fn->family, size);
         }
     }
-    return std::nullopt;
+    return nullptr;
 }
 
 
-std::optional<QFont> FontMatch::sysFontFor(
+dumb::Sp<QFontTarget> FontMatch::sysFontFor(
         const uc::Cp& cp, QFontDatabase::WritingSystem writingSystem, int size)
 {
     // Check tofu cache
     if (cp.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
-        return std::nullopt;
+        return nullptr;
 
     auto& ws = loadWs(writingSystem);
     if (!ws.isSupported)
-        return std::nullopt;
+        return nullptr;
 
     for (auto& fn : ws.fonts) {
         if (fn->doesSupport(cp.subj.ch32())) {
@@ -269,7 +270,7 @@ std::optional<QFont> FontMatch::sysFontFor(
     }
     // Cache: got tofu
     cp.flags |= uc::Cfg::DYN_SYSTEM_TOFU;
-    return std::nullopt;
+    return nullptr;
 }
 
 
