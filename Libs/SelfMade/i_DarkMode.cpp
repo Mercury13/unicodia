@@ -239,6 +239,7 @@ bool dark::isPaletteDark(const QPalette& palette) noexcept
 {
     switch (progSetting) {
     case Setting::DARK:
+    case Setting::BLACK:
         return true;
     case Setting::LIGHT:
         return false;
