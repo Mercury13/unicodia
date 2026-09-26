@@ -630,7 +630,7 @@ constinit const uc::Block uc::blocks[] {
             "Lisu",
             { EcScript::Lisu, 0 }, MapSubtype::ALIVE, EcScript::Lisu },
     // Vai OK
-    { 0xA500, 0xA63F, { L'ꕙ', EcContinent::AFRICA, Ifg::PAINT_SVG, 3_hx },
+    { 0xA500, 0xA63F, { L'ꕙ', EcContinent::AFRICA, Ifg::PAINT_SVG, 3_hx + uc::ImbaX::RIGHT_4 },
             "Vai",
             { EcScript::Vaii, 0 }, MapSubtype::ALIVE,
             EcScript::Vaii, EcFont::NORMAL,

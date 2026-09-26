@@ -105,6 +105,7 @@ files = [
     [ "NotoSansRunic-Regular.ttf",              "runr" ],
     [ "NotoSansTifinagh-Regular.ttf",           "tfng" ],
     [ "NotoSansUgaritic-Regular.ttf",           "ugar" ],
+    [ "NotoSansVai-Regular.ttf",                "vaii" ],
     [ "NotoSansWancho-Regular.ttf",             "wcho" ],
     [ "NotoSansWarangCiti-Regular.ttf",         "wara" ],
     [ "NotoSansYi-Regular.ttf",                 "yiii" ],

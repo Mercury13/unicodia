@@ -127,6 +127,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_SANS_FRANKEN },                                                       // Sans franken
     { FAM_SANS_FRANKEN, Ffg::DESC_BIGGER },                                     // Sans franken bigger (Prti)
     { FAM_SANS_FRANKEN, 110_pc },                                               // Sans franken 110% (Ogam)
+    { FAM_SANS_FRANKEN, 115_pc },                                               // Sans franken 115% (Vaii)
     { FAM_SANS_FRANKEN, Ffg::GRAPHIC_SAMPLE, 120_pc },                          // Sans franken 120% (Yiii)
     { FAM_SANS_FRANKEN, Ffg::STUB_FINEGRAINED },                                // Sans franken finegrained (Dupl)
         //-----

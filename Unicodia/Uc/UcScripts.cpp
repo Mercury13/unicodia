@@ -963,7 +963,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Vai OK, have good M$ font Ebrima
     { "Vaii", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::decade(1830), EcFont::VAI },
+        Dating::decade(1830), EcFont::FRANKEN_SANS_120 },
     // Vithkuqi OK, installed Google Noto
     { "Vith", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
