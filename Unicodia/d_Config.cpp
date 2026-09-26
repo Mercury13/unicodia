@@ -107,7 +107,7 @@ TinySizet config::Favs::erase(char32_t code)
 namespace {
 
     constinit const ec::Array<std::string_view, dark::Setting> darkNames {
-        "auto", "light", "dark" };
+        "auto", "light", "dark", "black" };
 
     void loadProgSets()
     {

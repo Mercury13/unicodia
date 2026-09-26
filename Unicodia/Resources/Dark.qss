@@ -29,7 +29,7 @@ QGroupBox {
 }
 
 QPushButton {
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(50, 50, 50, 255));
 	color: #ffffff;
 	min-width: 80px;
 	border-style: solid;

@@ -10,7 +10,7 @@ struct QColor;
 namespace dark {
 
     DEFINE_ENUM_TYPE_IN_NS(dark, Setting, unsigned char,
-            AUTO, LIGHT, DARK,
+            AUTO, LIGHT, DARK, BLACK,
             DEFAULT = AUTO)
 
     /// @return [+] whether OS supports dark mode

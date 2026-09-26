@@ -3,11 +3,12 @@
 <!--
 + `portable`: Where to store config
     + `0` — AppData
-    + `1` — program's directory
+    + `1` — program’s directory
 + `palette`: Color theme
-    + `auto`
+    + `auto` (selects from `light` and `dark`)
     + `light`
     + `dark`
+	* `black`
 -->
 <debug-update version="" platforms="" />
 <!--
