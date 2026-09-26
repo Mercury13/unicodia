@@ -127,6 +127,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_SANS_FRANKEN },                                                       // Sans franken
     { FAM_SANS_FRANKEN, Ffg::DESC_BIGGER },                                     // Sans franken bigger (Prti)
     { FAM_SANS_FRANKEN, 110_pc },                                               // Sans franken 110% (Ogam)
+    { FAM_SANS_FRANKEN, Ffg::GRAPHIC_SAMPLE, 120_pc },                          // Sans franken 120% (Yiii)
     { FAM_SANS_FRANKEN, Ffg::STUB_FINEGRAINED },                                // Sans franken finegrained (Dupl)
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
@@ -353,7 +354,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Ebrima" },                                                               // Vai
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
         // Normal is too thin, but bold is too coarse → worse
-    { "Microsoft Yi Baiti", 120_pc },                                           // Yi
     { { "NotoSansZanabazarSquare-Regular.ttf", Fafg::DEHINT_DOTC } },           // Zanabazar square
     { "MezenetsUnicode.otf", Ffg::STUB_FINEGRAINED, 120_pc },                   // Znamenny
 };

@@ -1,2 +1,2 @@
-c:\Anaconda3\python merge.py
+python merge.py
 pause

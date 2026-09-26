@@ -107,6 +107,7 @@ files = [
     [ "NotoSansUgaritic-Regular.ttf",           "ugar" ],
     [ "NotoSansWancho-Regular.ttf",             "wcho" ],
     [ "NotoSansWarangCiti-Regular.ttf",         "wara" ],
+    [ "NotoSansYi-Regular.ttf",                 "yiii" ],
     [ "NotoSerifArmenian-Regular.ttf",          "armn" ],
     [ "NotoSerifOttomanSiyaq-Regular.ttf",      "arab" ],  # ← no marks, let it be ARAB
     [ "NotoSerifVithkuqi-Regular.ttf",          "vith" ],

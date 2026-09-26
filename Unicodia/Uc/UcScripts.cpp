@@ -996,7 +996,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::CJK,
-        Dating::year(1974, StdNote::CUSTOM), EcFont::YI, NO_FLAGS,
+        Dating::year(1974, StdNote::CUSTOM), EcFont::FRANKEN_SANS_120, NO_FLAGS,
         ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 2, .numOrder = NumOrder::MILLION, .year = 2000,
           .locations = { LOC_CHINA } } }, // Census

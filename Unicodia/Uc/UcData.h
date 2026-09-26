@@ -224,6 +224,7 @@ namespace uc {
          FRANKEN_SANS,
          FRANKEN_SANS_BIGGER,  // Parthian, Wancho, Warang
          FRANKEN_SANS_110,     // Ogham
+         FRANKEN_SANS_120,     // Yiii
          FRANKEN_SANS_FINEGRAINED, // Duployan
         ADLAM,
         AHOM,
@@ -429,7 +430,6 @@ namespace uc {
           Z_USY_3,
         VAI,
         YEZIDI,
-        YI,
         ZANABAZAR,
         ZNAMENNY,
         NN,
