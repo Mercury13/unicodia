@@ -33,7 +33,7 @@ FmMain::~FmMain()
 
 void FmMain::browseFor(QLineEdit* ed)
 {
-    filedlg::Filters filters {
+    filedlg::Filter filters[] {
         { L"TTF fonts", L"*.ttf" },
         filedlg::ALL_FILES,
     };
