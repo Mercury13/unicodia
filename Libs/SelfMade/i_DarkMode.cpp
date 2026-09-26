@@ -151,7 +151,8 @@ void dark::forceOn()
             forceOff();
             return;
         }
-        f.open( QFile::ReadOnly | QFile::Text );
+        if (!f.open( QFile::ReadOnly | QFile::Text ))
+            return;
         QTextStream ts( &f );
         getApp()->setStyleSheet( ts.readAll() );
         isDarkOn = true;

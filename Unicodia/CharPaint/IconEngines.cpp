@@ -392,7 +392,8 @@ void IconPalette::replaceColor(
 QByteArray IconPalette::repaintFile(const QString& fname)
 {
     QFile file(fname);
-    file.open(QIODeviceBase::ReadOnly);
+    if (!file.open(QIODeviceBase::ReadOnly))
+        throw std::logic_error("[IconPalette.repaintFile] Cannot open icon");
     QByteArray content = file.readAll();
     replaceColor(content, "#c01c28", fg);   // GNOME HIG red 4
     replaceColor(content, "#f9f06b", bg);   // GNOME HIG yellow 1
@@ -970,7 +971,8 @@ void ie::PaintEmoji::paint1(QPainter *painter, const QRect &rect, qreal)
 
     if (!texture) {
         QFile file(fname);
-        file.open(QIODeviceBase::ReadOnly);
+        if (!file.open(QIODeviceBase::ReadOnly))
+            throw std::logic_error("[PaintEmoji] Cannot open icon");
         QByteArray content = file.readAll();
         if (pair.isInverse()) {
             content.replace(needle, target);

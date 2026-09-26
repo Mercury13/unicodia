@@ -1599,20 +1599,23 @@ void FmMain::translateAbout()
 
     // vwVersion
     QFile f(":/Texts/about.htm");
-    f.open(QIODevice::ReadOnly);
-    s = f.readAll();
-    while (true) {
-        auto pos = s.indexOf("{#");
-        if (pos < 0)
-            break;
-        auto posKey = pos + 2;
-        auto pos1 = s.indexOf('}', posKey);
-        if (pos1 < 0)
-            break;
-        auto lenKey = pos1 - posKey;
-        auto key = "About." + s.mid(posKey, lenKey).toStdString();
-        s.remove(pos, pos1 + 1 - pos);
-        s.insert(pos, loc::get(key));
+    if (f.open(QIODevice::ReadOnly)) {
+        s = f.readAll();
+        while (true) {
+            auto pos = s.indexOf("{#");
+            if (pos < 0)
+                break;
+            auto posKey = pos + 2;
+            auto pos1 = s.indexOf('}', posKey);
+            if (pos1 < 0)
+                break;
+            auto lenKey = pos1 - posKey;
+            auto key = "About." + s.mid(posKey, lenKey).toStdString();
+            s.remove(pos, pos1 + 1 - pos);
+            s.insert(pos, loc::get(key));
+        }
+    } else {
+        s = "[Cannot open About resource]";
     }
 
     s = QString("<style>a { text-decoration: none; color: ") + cnameInet() + "; }</style>" + s;
