@@ -219,8 +219,14 @@ void dark::init2(const QString& aFname)
         // Dark Windows: set legacy, palette-controlled style
         // (Light Windows: totally get rid of dark mode
         //  Dynamic Windows: do it automatically)
-        if (progSetting == Setting::DARK) {
+        switch (progSetting) {
+        case Setting::DARK:
+        case Setting::BLACK:
             getApp()->setStyle(QStyleFactory::create("Windows"));
+            break;
+        case Setting::AUTO:
+        case Setting::LIGHT:
+            break;
         }
     }
     if (doesSystemSupport()) {
