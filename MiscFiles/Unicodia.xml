@@ -8,7 +8,7 @@
     + `auto` (selects from `light` and `dark`)
     + `light`
     + `dark`
-	* `black`
+    + `black`
 -->
 <debug-update version="" platforms="" />
 <!--
