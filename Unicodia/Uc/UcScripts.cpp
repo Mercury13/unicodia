@@ -692,7 +692,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Osmanya OK, W10 Ebrima
     { "Osma", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::yapprox(1920), EcFont::VAI },
+        Dating::yapprox(1920), EcFont::FRANKEN_SANS },
     // Old Uyghur OK, installed Noto font
     { "Ougr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR_COL, EcContinent::ASIA_RTL,

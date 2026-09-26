@@ -429,7 +429,6 @@ namespace uc {
           Z_USY_1,
           Z_USY_2,
           Z_USY_3,
-        VAI,
         YEZIDI,
         ZANABAZAR,
         ZNAMENNY,

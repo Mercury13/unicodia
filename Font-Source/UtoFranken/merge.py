@@ -98,6 +98,7 @@ files = [
     [ "NotoSansOldPersian-Regular.ttf",         "xpeo" ],
     [ "NotoSansOldTurkic-Regular.ttf",          "orkh" ],  # ← no marks
     [ "NotoSansOsage-Regular.ttf",              "osge" ],
+    [ "NotoSansOsmanya-Regular.ttf",            "osma" ],
     [ "NotoSansPalmyrene-Regular.ttf",          "palm" ],  # ← no marks
     [ "NotoSansPauCinHau-Regular.ttf",          "pauc" ],        
     [ "NotoSansPhoenician-Regular.ttf",         "phnx" ],  # ← no marks

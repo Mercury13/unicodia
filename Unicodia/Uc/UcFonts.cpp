@@ -352,7 +352,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
       { FAM_FUNKY },                                                            // …3 — use it as default
-    { "Ebrima" },                                                               // Vai
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
         // Normal is too thin, but bold is too coarse → worse
     { { "NotoSansZanabazarSquare-Regular.ttf", Fafg::DEHINT_DOTC } },           // Zanabazar square
