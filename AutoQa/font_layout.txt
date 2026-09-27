@@ -566,13 +566,13 @@
 == CJK Unified Ideographs
 4E00..9FFF: BabelStoneHanBasic
 == Yi Syllables
-A000..A48C: Microsoft Yi Baiti
+A000..A48C: UtoSansFranken
 == Yi Radicals
-A490..A4C6: Microsoft Yi Baiti
+A490..A4C6: UtoSansFranken
 == Lisu
 A4D0..A4FF: UtoSansFranken
 == Vai
-A500..A62B: Ebrima
+A500..A62B: UtoSansFranken
 == Cyrillic Extended-B
 A640..A66D: NotoSerif-Regular
 A66E......: UnicodiaFunky
@@ -731,7 +731,7 @@ FFFD......: NotoSerif-Regular
 == Shavian
 10450..1047F: Segoe UI Historic
 == Osmanya
-10480..104A9: Ebrima
+10480..104A9: UtoSansFranken
 == Osage
 104B0..104FB: UtoSansFranken
 == Elbasan
@@ -1078,29 +1078,13 @@ FFFD......: NotoSerif-Regular
 13B0E.......: NewGardiner
 13B0F..13B11: UnicodiaSesh
 13B12.......: NewGardiner
-13B13..13B1D: UnicodiaSesh
-13B1E.......: NewGardiner
-13B1F.......: UnicodiaSesh
-13B20, 13B21: NewGardiner
-13B22..13B25: UnicodiaSesh
-13B26.......: NewGardiner
-13B27..13B30: UnicodiaSesh
-13B31.......: NewGardiner
-13B32, 13B33: UnicodiaSesh
-13B34, 13B35: NewGardiner
-13B36..13B3A: UnicodiaSesh
+13B13..13B3A: UnicodiaSesh
 13B3B.......: NewGardiner
-13B3C..13B49: UnicodiaSesh
-13B4A.......: NewGardiner
-13B4B, 13B4C: UnicodiaSesh
+13B3C..13B4C: UnicodiaSesh
 13B4D.......: NewGardiner
-13B4E.......: UnicodiaSesh
-13B4F.......: NewGardiner
-13B50..13B60: UnicodiaSesh
+13B4E..13B60: UnicodiaSesh
 13B61.......: NewGardiner
-13B62..13B6D: UnicodiaSesh
-13B6E.......: NewGardiner
-13B6F, 13B70: UnicodiaSesh
+13B62..13B70: UnicodiaSesh
 13B71.......: NewGardiner
 13B72..13B76: UnicodiaSesh
 13B77.......: NewGardiner
@@ -1110,9 +1094,7 @@ FFFD......: NotoSerif-Regular
 13BAE.......: NewGardiner
 13BAF..13BB8: UnicodiaSesh
 13BB9.......: NewGardiner
-13BBA..13BBC: UnicodiaSesh
-13BBD.......: NewGardiner
-13BBE.......: UnicodiaSesh
+13BBA..13BBE: UnicodiaSesh
 13BBF, 13BC0: NewGardiner
 13BC1..13BC8: UnicodiaSesh
 13BC9.......: NewGardiner
@@ -1652,8 +1634,7 @@ FFFD......: NotoSerif-Regular
 1DB00..1DB1C: UFSTangutFixup
 == Latin Extended-G
 1DF00..1DF1E: NotoSerif-Regular
-1DF1F..1DF24: UFSTangutFixup
-1DF25..1DFFF: UnicodiaFunky
+1DF1F..1DFFF: UnicodiaFunky
 == Glagolitic Supplement
 1E000..1E02A: Shafarik-Regular
 == Cyrillic Extended-D
