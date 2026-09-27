@@ -710,10 +710,10 @@ uc::MultiResult uc::doSearch(QString what)
                     // Need two digits after point; three and more → stop
                     int denom = 100;
                     auto val1 = (*val) * denom;
-                    auto val2 = std::round(val1);
+                    auto val2 = std::llround(val1);
                     if (std::abs(val1 - val2) < 1e-5) {
-                        int num = val2;
-                        if (num != 0) {
+                        long long num = val2;
+                        if (num >= 0 && denom > 0) {
                             auto reduceValue = std::gcd(num, denom);
                             num /= reduceValue;
                             denom /= reduceValue;
