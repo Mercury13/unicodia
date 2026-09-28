@@ -37,7 +37,7 @@ constinit const match::NullForTofu match::NullForTofu::INST;
 constinit const match::Qa match::Qa::INST;
 
 constinit uc::PlaneInfo uc::planeInfo[N_PLANES];
-constinit ec::Array<unsigned, uc::EgypReliability> uc::egypByReliability { 0u, 0u, 0u, 0u, 0u };
+constinit ec::Array<unsigned, uc::EgypReliability> uc::egypByReliability { 0u, 0u, 0u, 0u };
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
 constexpr bool FORCE_TOFU = false;

@@ -586,6 +586,9 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
     auto parts = str::splitSv(target, '|');
     if (parts.empty())  // Won’t search for empty thing
         return {};
+    if (parts.size() > 1) {
+        throw std::logic_error("More than 1 part is unsupported");
+    }
     unsigned uTmp;
     for (auto part : parts) {
         auto [code, value] = splitIntoKv(part);
@@ -594,19 +597,19 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
         switch (code[0]) {
         case 'v':   // version
             if (auto version = uc::findVersion(value)) {
-                fields.ecVersion = version->stats.thisEcVersion;
+                fields = version->stats.thisEcVersion;
                 break;
             }
             return nullptr;
         case 's':   // script
             if (auto script = uc::findScript(value)) {
-                fields.ecScript = static_cast<uc::EcScript>(script - uc::scriptInfo);
+                fields = static_cast<uc::EcScript>(script - uc::scriptInfo);
                 break;
             }
             return nullptr;
         case 'c':   // category
             if (auto cat = uc::findCategory(value)) {
-                fields.ecCategory = static_cast<uc::EcCategory>(cat - uc::categoryInfo);
+                fields = static_cast<uc::EcCategory>(cat - uc::categoryInfo);
                 break;
             }
             return nullptr;
@@ -614,44 +617,46 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
             if (value.length() == 1) {
                 if (auto v = upCatNames.findDef(value[0], uc::EcUpCategory::NO_VALUE);
                         v != uc::EcUpCategory::NO_VALUE) {
-                    fields.ecUpCat = v;
+                    fields = v;
                     break;
                 }
             }
             return nullptr;
         case 'b':   // bidi property
             if (auto bdc = uc::findBidiClass(value)) {
-                fields.ecBidiClass = static_cast<uc::EcBidiClass>(bdc - uc::bidiClassInfo);
+                fields = static_cast<uc::EcBidiClass>(bdc - uc::bidiClassInfo);
                 break;
             }
             return nullptr;
         case 'f':   // flags
             if (auto v = str::fromChars(value, uTmp); v.ec == std::errc{}) {
-                fields.fgs.setNumeric(uTmp);
+                Flags<uc::Cfg> tmp;
+                tmp.setNumeric(uTmp);
+                fields = tmp;
                 break;
             }
             return nullptr;
         case 'l':   // line breaks
             if (auto lbi = uc::findBreakInfo(value)) {
-                fields.breakClass = uc::breakInfo.toIndex(*lbi);
+                fields = uc::breakInfo.toIndex(*lbi);
                 break;
             }
             return nullptr;
         case 'N':   // number
             if (value == "1"sv) {
-                fields.isNumber = true;
+                fields = uc::NumbersOnly{};
             }
             break;
         case 'C':   // old computers
             if (auto comp = uc::old::findComp(value)) {
                 auto index = comp - uc::old::info;
-                fields.oldComp = static_cast<uc::OldComp>(1 << index);
+                fields = static_cast<uc::OldComp>(1 << index);
                 break;
             }
             break;
         case 'E':   // Egyptian
             if (auto v = str::fromChars(value, uTmp); v.ec == std::errc{}) {
-                fields.egypReliability = static_cast<uc::EgypReliability>(uTmp);
+                fields = static_cast<uc::EgypReliability>(uTmp);
             }
             break;
         default:
@@ -3222,8 +3227,7 @@ namespace {
     }
 
     constinit ec::Array<const char*, uc::EgypReliability> egypRelInfo {
-        "Prop.Egyp.Ext", "Prop.Egyp.Leg", "Prop.Egyp.Core",
-        "Prop.Egyp.Spec", "[Dummy]"
+        "Prop.Egyp.Ext", "Prop.Egyp.Leg", "Prop.Egyp.Core", "Prop.Egyp.Spec"
     };
 
     void appendEgypReliability(QString& text, const uc::Cp::ScriptSpecific& sspec)

@@ -170,8 +170,7 @@ namespace uc {
 
     DEFINE_ENUM_TYPE_IN_NS(uc, EgypReliability, unsigned char,
         EXTENDED,   // =0!!!!!!
-        LEGACY, CORE, SPECIAL,
-        DUMMY   // never used
+        LEGACY, CORE, SPECIAL
     )
 
 }   // namespace uc

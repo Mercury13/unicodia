@@ -1,5 +1,8 @@
 #pragma once
 
+// STL
+#include <variant>
+
 // Unicode
 #include "Search/uc.h"
 #include "UcData.h"
@@ -31,26 +34,21 @@ namespace uc {
 
     MultiResult doRequest(const Request& rq);
 
-    struct CharFields {
-        uc::EcScript ecScript = uc::EcScript::NO_VALUE;
-        uc::EcVersion ecVersion = uc::EcVersion::NO_VALUE;        
-        uc::EcCategory ecCategory = uc::EcCategory::NO_VALUE;
-        uc::EcUpCategory ecUpCat = uc::EcUpCategory::NO_VALUE;
-        uc::EcBidiClass ecBidiClass = uc::EcBidiClass::NO_VALUE;
-        uc::Cfgs fgs {};
-        uc::OldComp oldComp = uc::OldComp::NONE;
-        uc::EgypReliability egypReliability = uc::EgypReliability::DUMMY;
-        uc::BreakClass breakClass = uc::BreakClass::UNK;
-        bool isNumber = false;
-    };
+    struct Everything {};
+    struct NumbersOnly {};
+    using CharFields = std::variant<
+            Everything, uc::EcScript, uc::EcVersion, uc::EcCategory, uc::EcUpCategory,
+            uc::EcBidiClass, uc::Cfgs, uc::OldComp, uc::EgypReliability,
+            uc::BreakClass, NumbersOnly>;
 
     class CharFieldRequest : public Request
     {
     public:
         static_assert(std::is_trivially_copy_constructible_v<CharFields>, "Something went wrong");
-        CharFieldRequest(const CharFields& x) : fields(x) {}
+        template <class T>
+            CharFieldRequest(const T& x) : fields(x) {}
         bool hasChars() const noexcept override { return true; }
-        EcVersion ecVersion() const noexcept override { return fields.ecVersion; }
+        EcVersion ecVersion() const noexcept override;
         bool isOk(const Cp& cp) const override;
         PrimaryObj primaryObj() const override;
     private:
@@ -75,6 +73,14 @@ namespace uc {
         bool isOk(const uc::LibNode&) const override;
     private:
         EmojiFields fields;
+    };
+
+    class RqAllChars : public Request
+    {
+    public:
+        bool hasChars() const noexcept override { return true; }
+        bool isOk(const Cp& cp) const override { return true; }
+        static const RqAllChars INST;
     };
 
 }   // namespace uc

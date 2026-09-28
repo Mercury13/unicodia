@@ -3,6 +3,9 @@
 
 #include "UcOldInput.h"
 
+
+const uc::RqAllChars uc::RqAllChars::INST;
+
 namespace {
 
     struct EmojiState {
@@ -82,45 +85,60 @@ namespace {
 }   // anon namespace
 
 
+uc::EcVersion uc::CharFieldRequest::ecVersion() const noexcept
+{
+    auto ptr = std::get_if<uc::EcVersion>(&fields);
+    return ptr ? *ptr : uc::EcVersion::NO_VALUE;
+}
+
+
+namespace {
+
+    class CharFieldsVisitor
+    {
+    public:
+        explicit CharFieldsVisitor(const uc::Cp& aCp) noexcept : fCp(aCp) {}
+        bool operator () (uc::Everything) const noexcept { return true; }
+        bool operator () (uc::EcScript x) const noexcept { return (fCp.ecScript == x); }
+        bool operator () (uc::EcVersion x) const noexcept { return (fCp.ecVersion == x); }
+        bool operator () (uc::EcCategory x) const noexcept { return (fCp.ecCategory == x); }
+        bool operator () (uc::EcUpCategory x) const noexcept { return (fCp.category().upCat == x); }
+        bool operator () (uc::EcBidiClass x) const noexcept { return (fCp.ecBidiClass == x); }
+        bool operator () (uc::Cfgs x) const noexcept { return fCp.flags.haveAny(x); }
+        bool operator () (uc::OldComp x) const noexcept { return uc::cpOldComps(fCp.subj).have(x); }
+        bool operator () (uc::EgypReliability x) const noexcept
+        {
+            return (fCp.script().scriptSpec == uc::ScriptSpec::RELIABILITY_EGYP
+                   && fCp.scriptSpecific.egypReliability() == x);
+        }
+        bool operator () (uc::BreakClass x) const noexcept { return (fCp.breakClass == x); }
+        bool operator () (uc::NumbersOnly) const noexcept { return fCp.numeric().isPresent(); }
+    private:
+        const uc::Cp& fCp;
+    };
+
+}   // anon namespace
+
+
 bool uc::CharFieldRequest::isOk(const Cp& cp) const
 {
-    // Version
-    if (isIneq(fields.ecVersion, cp.ecVersion))
-        return false;
-    // Script
-    if (isIneq(fields.ecScript, cp.ecScript))
-        return false;
-    // Category / up-category
-    if (fields.ecCategory != EcCategory::NO_VALUE) {
-        if (fields.ecCategory != cp.ecCategory)
-            return false;
-    } else if (fields.ecUpCat != EcUpCategory::NO_VALUE) {
-        if (fields.ecUpCat != cp.category().upCat)
-            return false;
-    }
-    // Bidirectional class
-    if (isIneq(fields.ecBidiClass, cp.ecBidiClass))
-        return false;
-    // Flags
-    if (fields.fgs && !cp.flags.haveAny(fields.fgs))
-        return false;
-    // Number
-    if (fields.isNumber && !cp.numeric().isPresent())
-        return false;
-    // Old computers
-    if (fields.oldComp != uc::OldComp::NONE && !uc::cpOldComps(cp.subj).have(fields.oldComp))
-        return false;
-    // Egyptian reliability
-    if (fields.egypReliability != uc::EgypReliability::DUMMY
-            && (cp.script().scriptSpec != ScriptSpec::RELIABILITY_EGYP
-                || cp.scriptSpecific.egypReliability() != fields.egypReliability))
-        return false;
-    // Break class
-    if (fields.breakClass != uc::BreakClass::UNK
-            && cp.breakClass != fields.breakClass)
-        return false;
-    return true;
+    return std::visit<bool>(CharFieldsVisitor(cp), fields);
 }
+
+
+namespace {
+
+    struct NumberChecker
+    {
+        bool operator () (uc::NumbersOnly) const noexcept { return true; }
+        bool operator () (uc::EcCategory x) const noexcept
+            { return (x >= uc::EcCategory::NUMBER_FIRST && x <= uc::EcCategory::NUMBER_LAST); }
+        bool operator () (uc::EcUpCategory x) const noexcept
+            { return x == uc::EcUpCategory::NUMBER; }
+        template <class T> bool operator () (const T&) const noexcept { return false; }
+    };
+
+}   // anon namespace
 
 
 uc::PrimaryObj uc::CharFieldRequest::primaryObj() const
@@ -130,10 +148,7 @@ uc::PrimaryObj uc::CharFieldRequest::primaryObj() const
     static_assert((int)uc::PrimaryObj::NUMERIC == (int)true);
     // The most optimized version for this checks
     return static_cast<uc::PrimaryObj>(
-                fields.isNumber
-            || (fields.ecCategory >= uc::EcCategory::NUMBER_FIRST
-                && fields.ecCategory <= uc::EcCategory::NUMBER_LAST)
-            || fields.ecUpCat == uc::EcUpCategory::NUMBER);
+        std::visit(NumberChecker{}, fields));
 }
 
 

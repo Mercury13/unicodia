@@ -2566,9 +2566,7 @@ void FmMain::searchForRequest(const uc::Request& request)
 
 void FmMain::searchForVs16()
 {
-    uc::CharFields fields;
-    fields.fgs |= uc::Cfg::U_VS16_EMOJI;
-    uc::CharFieldRequest rq(fields);
+    uc::CharFieldRequest rq(uc::Cfg::U_VS16_EMOJI);
     searchForRequest(rq);
 }
 
@@ -2981,8 +2979,7 @@ void FmMain::showBlockFontStats()
 
 void FmMain::findAll()
 {
-    uc::CharFieldRequest rq({});
-    searchForRequest(rq);
+    searchForRequest(uc::RqAllChars::INST);
 }
 
 
