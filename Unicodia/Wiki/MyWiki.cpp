@@ -4247,7 +4247,7 @@ QString mywiki::buildHtml(const uc::Version& version)
         switch (version.font) {
         case uc::VerFont::NONE:  break;
         case uc::VerFont::COPTIC:
-            myFont = &uc::fontInfo[static_cast<int>(uc::EcFont::COPTIC)];
+            myFont = &uc::fontInfo[static_cast<int>(uc::EcFont::GREEK_COPTIC)];
             break;
         };
         mywiki::Context context {
