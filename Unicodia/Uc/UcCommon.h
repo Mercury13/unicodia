@@ -42,6 +42,9 @@ namespace uc {
         }
     };
 
+    enum class VerFont : unsigned char {
+        NONE, COPTIC };
+
     struct Version
     {
         std::u8string_view unicodeName;
@@ -53,6 +56,7 @@ namespace uc {
             EcScript from = EcScript::NONE,
                      to   = EcScript::NONE;
         } disun {};  ///< script disunification
+        VerFont font = VerFont::NONE;
 
         mutable struct Stats {
             struct Chars {

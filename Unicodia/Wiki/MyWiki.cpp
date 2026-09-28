@@ -4047,7 +4047,7 @@ namespace {
 
     void appendValue(str::QSep& sp, unsigned depth, const char* locKey,
                      const uc::EmojiCounter& value,
-                     std::string_view schema, std::u8string_view unicodeLink)
+                     std::string_view schema, TinyOpt<const uc::Version> version)
     {
         sp.sep();
         appendIndent(sp.target(), depth);
@@ -4067,8 +4067,8 @@ namespace {
             sp.target() += "</nobr>";
         }
         // Query
-        if (value.nTotal() != 0 && !schema.empty() && !unicodeLink.empty()) {
-            auto params = str::cat("v=", str::toSv(unicodeLink));
+        if (value.nTotal() != 0 && !schema.empty() && version) {
+            auto params = str::cat("v=", str::toSv(version->link()));
             appendQuery(sp.target(), schema, params);
         }
     }
@@ -4172,12 +4172,10 @@ QString mywiki::buildHtml(const uc::Version& version)
         // Transient
         str::QSep sp(text, "<br>");
         appendValueIf(sp, 0, "Version.Bullet.Transient", version.stats.chars.nTransient);
-        auto link = version.link();
         static constexpr std::string_view NO_SCHEMA {};
-        static constexpr std::u8string_view NO_LINK {};
         // New
         if (!version.isFirst()) {
-            appendValue(sp, 0, "Version.Bullet.NewChar", version.stats.chars.nw.nTotal(), SCH_QRY_CHARS, link);
+            appendValue(sp, 0, "Version.Bullet.NewChar", version.stats.chars.nw.nTotal(), SCH_QRY_CHARS, version);
             appendValueIf(sp, 1, "Version.Bullet.NewCjk", version.stats.chars.nw.nHani);
             appendValueIf(sp, 1, "Version.Bullet.NewNew", version.stats.chars.nw.nNewScripts);
             appendValueIf(sp, 1, "Version.Bullet.NewEx", version.stats.chars.nw.nExistingScripts);
@@ -4187,12 +4185,12 @@ QString mywiki::buildHtml(const uc::Version& version)
         // Total
         appendValue(sp, 0, "Version.Bullet.TotalChar", version.stats.chars.nTotal,
                     SCH_QRY_CHARS,
-                    version.isFirst() ? static_cast<std::u8string_view>(link) : NO_LINK);
+                    version.isFirst() ? &version : nullptr);
 
         if (version.stats.emoji.total.n != 0) {
             // New emoji
             auto tot = version.stats.emoji.nw.nTotal();
-            appendValue(sp, 0, "Version.Bullet.NewEm", tot, SCH_QRY_EMOJI, link);
+            appendValue(sp, 0, "Version.Bullet.NewEm", tot, SCH_QRY_EMOJI, &version);
             if (tot != 0) {
                 // Single-char
                 auto singleKey = version.stats.emoji.nw.singleChar.areVs16Present
@@ -4223,10 +4221,10 @@ QString mywiki::buildHtml(const uc::Version& version)
                 }
             }
             // Total emoji
-            appendValue(sp, 0, "Version.Bullet.TotalEm", version.stats.emoji.total.n, NO_SCHEMA, NO_LINK);
+            appendValue(sp, 0, "Version.Bullet.TotalEm", version.stats.emoji.total.n, NO_SCHEMA, TINY_NULL);
         }
         if (!version.isFirst()) {
-            appendValue(sp, 0, "Version.Bullet.NewSc", version.stats.scripts.nNew, NO_SCHEMA, NO_LINK);
+            appendValue(sp, 0, "Version.Bullet.NewSc", version.stats.scripts.nNew, NO_SCHEMA, TINY_NULL);
             if (version.disun.from != uc::EcScript::NONE) {
                 sp.sep();
                 appendIndent(text, 1);
@@ -4239,13 +4237,23 @@ QString mywiki::buildHtml(const uc::Version& version)
                 appendValOnlyPopup(text, scTo, "ps");
             }
         }
-        appendValue(sp, 0, "Version.Bullet.TotalSc", version.stats.scripts.nTotal, NO_SCHEMA, NO_LINK);
+        appendValue(sp, 0, "Version.Bullet.TotalSc", version.stats.scripts.nTotal, NO_SCHEMA, TINY_NULL);
     }
 
     // Text
     if (version.flags.have(uc::Vfg::TEXT)) {
         auto key = str::cat("Version.", str::toSv(version.link({})) , ".Text");
-        mywiki::appendNoFont(text, loc::get(key), wiki::Mode::ARTICLE);
+        const uc::Font* myFont = &uc::fontInfo[0];
+        switch (version.font) {
+        case uc::VerFont::NONE:  break;
+        case uc::VerFont::COPTIC:
+            myFont = &uc::fontInfo[static_cast<int>(uc::EcFont::COPTIC)];
+            break;
+        };
+        mywiki::Context context {
+            .font = DescFont{ *myFont }, .lang = nullptr, .locPrefixDot {},
+            .articleLinks {} };
+        mywiki::append(text, loc::get(key), context, wiki::Mode::ARTICLE);
     }
 
     if (!version.isFirst() && version.stats.blocks.nNew != 0) {        

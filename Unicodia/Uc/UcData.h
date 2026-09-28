@@ -433,8 +433,10 @@ namespace uc {
         ZANABAZAR,
         ZNAMENNY,
         NN,
+        // Aliases
         ARABIC_NOTO = ARABIC,  ///< Both Scheh and Noto chains have Scheh → Noto → Funky,
                                ///< but do not lose difference
+        COPTIC = FUNKY,
     };
 
     enum class Ffg : unsigned {
