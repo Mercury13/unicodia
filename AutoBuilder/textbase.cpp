@@ -60,6 +60,31 @@ bool tx::Cp::contains(std::string_view x) const
 
 namespace {
 
+    inline bool isCharNumeric(char c)
+    {
+        switch (c) {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case ',':
+            return true;
+        default:
+            return false;
+        }
+    }
+
+    bool isNumeric(std::string_view s)
+    {
+        return std::ranges::all_of(s, isCharNumeric);
+    }
+
 #ifdef DUMP_EQUALS
     std::ofstream osEqual("!equal.log");
 #endif
@@ -116,7 +141,10 @@ namespace {
         };
 
         auto& cp = base[currChar];
-        if (line.ends_with(';')   // “ISOtech entity &iinfin;”
+
+        if (isNumeric(line)) {
+            cp.names.insert(std::string{line});
+        } else if (line.ends_with(';')   // “ISOtech entity &iinfin;”
                 || str::containsWord(mainName, "ANATOLIAN")) {
             // The entire line
             cp.names.insert(std::string{line});
