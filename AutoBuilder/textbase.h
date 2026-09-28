@@ -1,10 +1,12 @@
 #pragma once
 
+// STL
 #include <unordered_map>
 #include <unordered_set>
 #include <set>
 #include <string>
 #include <vector>
+#include <optional>
 
 // UCD
 #include "ucdcom.h"
@@ -37,5 +39,8 @@ namespace tx {
     Scripts loadScripts(const ucd::PropBase& propBase);
     Ages loadAges();
     Props loadProps();
+
+    bool isNumeric(std::string_view s);
+    std::optional<unsigned long long> numericValue(std::string_view s);
 
 }   // ns tx

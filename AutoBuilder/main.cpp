@@ -43,6 +43,8 @@ struct Numeric {
     std::string_view type;
     std::string textValue;
     size_t index;
+
+    constexpr bool isWhole() const noexcept { return (denom == 1); }
 };
 
 long long fromChars(std::string_view x, std::string_view numType)
@@ -355,6 +357,9 @@ int main()
 
     auto itLineBreaks = lineBreaks.begin();
 
+    std::ofstream osNumLog("exclnums.log");
+    osNumLog << "exclnums.log: Excluded numeric strings (coincide with num.value)" "\n";
+
     auto proc = ucd::processMainBaseT(supportData, [&](const ucd::CpInfo& cpInfo) {
         auto cp = cpInfo.cp;
         if (rescindedChars.contains(cp))
@@ -362,6 +367,16 @@ int main()
         std::string_view sName = cpInfo.name;
 
         std::string_view defaultAbbrev {};      // empty
+
+        // Char’s numeric values
+        // nt = …
+        //    • None — no numeric value
+        //    • De — decimal digit
+        //    • Di — special digit
+        //    • Nu — number
+        // nv = Nan / whole number / vulgar fraction
+        // We’ll need it when stockpiling strings
+        auto& numPlace = nums.parse(cpInfo.numeric.type->id, cpInfo.numeric.value);
 
         AbbrevState abbrevState = AbbrevState::NORMAL;
         if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
@@ -458,6 +473,19 @@ int main()
         }
 
         for (auto& v : textCp->names) {
+            // #633 Exclude numeric values
+            if (numPlace.isWhole()) {
+                if (auto numVal = tx::numericValue(v)) {
+                    if (numPlace.num == *numVal) {
+                        osNumLog << std::hex << int(cp) << " <" << v << "> = main" "\n";
+                        continue;
+                    }
+                    if (numPlace.altInt != 0 && numPlace.altInt == *numVal) {
+                        osNumLog << std::hex << int(cp) << " <" << v << "> = alt" "\n";
+                        continue;
+                    }
+                }
+            }
             strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
         }
 
@@ -568,14 +596,6 @@ int main()
         }
         forget::processCp(manualLib.forgetMap, cp, sLowerName, sScript, cpInfo.upperCase);
 
-        // Char’s numeric values
-        // nt = …
-        //    • None — no numeric value
-        //    • De — decimal digit
-        //    • Di — special digit
-        //    • Nu — number
-        // nv = Nan / whole number / vulgar fraction
-        auto& numPlace = nums.parse(cpInfo.numeric.type->id, cpInfo.numeric.value);
         os << numPlace.index << ", ";
 
         // Line breaks

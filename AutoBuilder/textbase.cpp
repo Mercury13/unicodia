@@ -75,15 +75,42 @@ namespace {
         case '9':
         case ',':
             return true;
+            // Space is NOT numeric!
         default:
             return false;
         }
     }
 
-    bool isNumeric(std::string_view s)
-    {
-        return std::ranges::all_of(s, isCharNumeric);
+}   // anon namespace
+
+bool tx::isNumeric(std::string_view s)
+{
+    return std::ranges::all_of(s, isCharNumeric);
+}
+
+std::optional<unsigned long long> tx::numericValue(std::string_view s)
+{
+    if (!isNumeric(s))
+        return std::nullopt;
+    std::string numValue;  // optimized by short string opt for now
+    if (std::ranges::find(s, ',') != s.end()) {
+        // Long way
+        numValue = s;
+        str::replace(numValue, ',', "");
+        s = numValue;
     }
+    long long val;
+    auto res = std::from_chars(
+            std::to_address(s.begin()), std::to_address(s.end()), val);
+    if (res.ec != std::errc{}) {
+        // error
+        return std::nullopt;
+    } else {
+        return val;
+    }
+}
+
+namespace {
 
 #ifdef DUMP_EQUALS
     std::ofstream osEqual("!equal.log");
@@ -142,9 +169,8 @@ namespace {
 
         auto& cp = base[currChar];
 
-        if (isNumeric(line)) {
-            cp.names.insert(std::string{line});
-        } else if (line.ends_with(';')   // “ISOtech entity &iinfin;”
+        if (line.ends_with(';')   // “ISOtech entity &iinfin;”
+                || tx::isNumeric(line)   // 100,000
                 || str::containsWord(mainName, "ANATOLIAN")) {
             // The entire line
             cp.names.insert(std::string{line});
