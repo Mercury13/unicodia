@@ -41,9 +41,6 @@
 /range 2F00 2FD5
 
 
-# New char of U18
-/country
-2B81E
 
 
 /country ORERASE
@@ -66,6 +63,9 @@
 /prefix u
 /country DEFAULT UHAN
 2B73F
+
+# New char of U18
+2B81E
 
 
 # Normal template u*.svg
