@@ -7,7 +7,7 @@ import base64
 TEMPFILENAME = '~UnicodiaHan1.ttf'
 OUTFILENAME = 'UnicodiaHan.ttf'
 HINTER = 'd:/Soft/FontEditing/ttfautohint.exe'
-NODE = 'd:/Soft/NodeJs/node.exe'
+NODE = 'c:/Soft/NodeJs/node.exe'
 RUN = '../KageForNodeJs/run.js'
 
 # get transformation matrix
