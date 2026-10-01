@@ -296,7 +296,7 @@ export class Mincho {
             }
             case ENDTYPE.CONNECTING_V: {
               if (y1 == y2) {//horizontal (error)
-                console.log("error: connecting_v at the end of the horizontal line")
+                // console.log("error: connecting_v at the end of the horizontal line")
                 cv.drawLine(x1, y1, x2, y2, kMinWidthT_m);
               } else if (x1 == x2) {//vertical
                 poly_end.set(0, x2 + kMinWidthT_m, y2 + this.kMinWidthY - 0.001);
@@ -316,7 +316,7 @@ export class Mincho {
                 cv.drawLowerRightHT(x2, y2, kMinWidthT_m, this.kMinWidthY);
               }
               if (y1 == y2) {//horizontal (error)
-                console.log("error: connecting_v at the end of the horizontal line")
+                // console.log("error: connecting_v at the end of the horizontal line")
                 cv.drawLine(x1, y1, x2, y2, kMinWidthT_m);
               } else if (x1 == x2) {//vertical
                 poly_end.set(0, x2 + kMinWidthT_m, y2 + this.kMinWidthY);
@@ -849,7 +849,7 @@ export class Mincho {
       const v = 1 //previously (x1 > x2) ? -1 : 1;
       if (a1 == 22) {
         if (dir.sin==0) {//error
-          console.log("error: connecting_v at the end of the horizontal line")
+          // console.log("error: connecting_v at the end of the horizontal line")
           poly_start = this.getStartOfLine(x1, y1, dir, kMinWidthT);
         } else {
           //poly_start.set(1, x1 + (kMinWidthT * v + 1) / Math.sin(rad), y1 + 1);//" + 1" ??
@@ -858,7 +858,7 @@ export class Mincho {
         }
       } else if (a1 == 32) {
         if (dir.sin==0) {//error
-          console.log("error: connecting_v at the end of the horizontal line")
+          // console.log("error: connecting_v at the end of the horizontal line")
           poly_start = this.getStartOfLine(x1, y1, dir, kMinWidthT);
         } else {
           poly_start.set(1, x1 + (kMinWidthT * v) / Math.sin(rad), y1);
