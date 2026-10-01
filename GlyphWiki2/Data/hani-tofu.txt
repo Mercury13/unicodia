@@ -3982,11 +3982,21 @@
 3346C
 3346D
 
+# Seal
+/country
+/prefix u
+/range 3D000 3D002
+
+/country ORERASE
+/prefix unstable-u
+/range 3D003 3D030
+
 
 
 #  FIXUPS
 
 /country DEFAULT UHAN STRICT ORERASE
+/prefix u
 
 # Neither is good, let it be SimG
 /fixup 31BD3 ALERT
