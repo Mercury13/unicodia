@@ -209,6 +209,12 @@ void eraseTask(TaskList& r, char32_t code)
     return code;
 }
 
+template <class T, class U = T>
+T safeGet(std::span<T> arr, size_t i, U val)
+{
+    return (i < arr.size()) ? arr[i] : val;
+}
+
 [[nodiscard]] TaskList readTaskList()
 {
     std::ifstream is("hani-tofu.txt");
@@ -272,7 +278,7 @@ void eraseTask(TaskList& r, char32_t code)
                 p1 = p1.subspan(1);
                 setMan.parseDefaultCountry(p1);
             } else if (cmd == "prefix"sv) {
-                std::string_view prefix = params.safeGetV(1, {});
+                std::string_view prefix = safeGet<std::string_view>(params, 1, {});
                 setMan.setPrefix(std::string{prefix});
             } else {
                 throw BadTask(str::cat("Unknown command: ", cmd));
