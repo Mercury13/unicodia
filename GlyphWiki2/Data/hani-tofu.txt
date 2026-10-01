@@ -43,7 +43,6 @@
 
 # New char of U18
 /country
-/prefix unstable-u
 2B81E
 
 

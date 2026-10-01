@@ -12,7 +12,6 @@ SOURCES += \
 
 HEADERS += \
     ../../Libs/SelfMade/Strings/u_Strings.h \
-    ../../Libs/SelfMade/u_Vector.h \
     excep.h \
     kagelist.h \
     tasklist.h \
