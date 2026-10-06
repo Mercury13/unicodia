@@ -432,7 +432,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 8,
-      .supportedSince = uc::EcVersion::V_1_1,
+      .supportedSince = uc::EcVersion::V_3_2,
       .flags = Ocfg::NOTE_MEMORY | Ocfg::NOTE_SALES,
       .year = 1982,
       .charTypes = CharType::PSEUDO_BLOCKS | CharType::ARROWS,
