@@ -73,13 +73,14 @@ uc::MultiResult uc::doRequest(const Request& rq)
 uc::MultiResult uc::doDosAltRequest(uc::DosLang rq)
 {
     uc::MultiResult r(uc::ReplyStyle::FLAT, uc::EcVersion::NO_VALUE,
-                      uc::PrimaryObj::DFLT);
+                      uc::PrimaryObj::DOSALT);
     auto& lastGroup = r.groups.emplace_back();
     const auto& myInfo = uc::oneByteInfo(rq);
     for (unsigned c = 1; c <= 255; ++c) {
         if (char16_t ch = uc::dosAltDecode(myInfo, c)) {
             if (auto cp = uc::cpsByCode[ch]) {
-                lastGroup.lines.emplace_back(*cp);
+                auto& line = lastGroup.lines.emplace_back(*cp);
+                line.altCode = c;
             }
         }
     }
@@ -90,13 +91,14 @@ uc::MultiResult uc::doDosAltRequest(uc::DosLang rq)
 uc::MultiResult uc::doWinAltRequest(uc::WinLang rq)
 {
     uc::MultiResult r(uc::ReplyStyle::FLAT, uc::EcVersion::NO_VALUE,
-                      uc::PrimaryObj::DFLT);
+                      uc::PrimaryObj::WINALT);
     auto& lastGroup = r.groups.emplace_back();
     const auto& myInfo = uc::oneByteInfo(rq);
     for (unsigned c = 1; c <= 255; ++c) {
         if (char16_t ch = uc::winAltDecode(myInfo, c)) {
             if (auto cp = uc::cpsByCode[ch]) {
-                lastGroup.lines.emplace_back(*cp);
+                auto& line = lastGroup.lines.emplace_back(*cp);
+                line.altCode = c;
             }
         }
     }

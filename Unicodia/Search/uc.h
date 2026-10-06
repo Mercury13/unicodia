@@ -158,7 +158,9 @@ namespace uc {
     /// Primary object drawn in the 1st line of reply
     enum class PrimaryObj : unsigned char {
         DFLT,       ///< default (text and so on)
-        NUMERIC     ///< char’s numeric meaning
+        NUMERIC,    ///< char’s numeric meaning
+        DOSALT,     ///< DOS Alt code (if present)
+        WINALT,     ///< Win Alt code (if present)
     };
 
     struct MultiResult {

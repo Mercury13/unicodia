@@ -692,7 +692,19 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     // Triggered alt. name
                     s += ": ";
                     s += str::toQ(line.triggerName);
-                };
+                }
+                break;
+            case uc::PrimaryObj::DOSALT:
+                if (line.altCode != 0) {
+                    snprintf(buf, std::size(buf), ": Alt+%u", line.altCode);
+                    s += buf;
+                }
+                break;
+            case uc::PrimaryObj::WINALT:
+                if (line.altCode != 0) {
+                    snprintf(buf, std::size(buf), ": Alt+0%u", line.altCode);
+                    s += buf;
+                }
                 break;
             }
             s += '\n';
