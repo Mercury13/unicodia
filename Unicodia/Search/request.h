@@ -6,6 +6,7 @@
 // Unicode
 #include "Search/uc.h"
 #include "UcData.h"
+#include "UcOldInput.h"
 
 namespace uc {
 
@@ -33,6 +34,8 @@ namespace uc {
     };
 
     MultiResult doRequest(const Request& rq);
+    MultiResult doDosAltRequest(uc::DosLang rq);
+    MultiResult doWinAltRequest(uc::WinLang rq);
 
     struct Everything {};
     struct NumbersOnly {};

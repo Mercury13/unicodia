@@ -211,6 +211,9 @@ namespace uc {
     const OneByteInfo& oneByteInfo(DosLang lang);
     const OneByteInfo& oneByteInfo(WinLang lang);
 
+    char16_t dosAltDecode(const OneByteInfo& info, unsigned char c);
+    char16_t winAltDecode(const OneByteInfo& info, unsigned char c);
+
     struct AltCode {
         unsigned char dosCommon = 0, winCommon = 0;
         LocBase<DosLang> locDos;

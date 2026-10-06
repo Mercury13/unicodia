@@ -422,6 +422,37 @@ namespace {
         uc::sprint(buf, cp.subj);
         return loc::get("Input.Head").arg(str::toU8sv(buf));
     }
+
+    class SearchDosLink : public mywiki::Link
+    {
+    public:
+        const uc::DosLang lang;
+        SearchDosLink(uc::DosLang x) : lang(x) {}
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
+    };
+
+    void SearchDosLink::go(QWidget* widget, TinyOpt<QRect> rect,
+            const mywiki::PLink& that, mywiki::Gui& gui) const
+    {
+        gui.linkWalker().searchForDosAlt(lang);
+    }
+
+    class SearchWinLink : public mywiki::Link
+    {
+    public:
+        const uc::WinLang lang;
+        SearchWinLink(uc::WinLang x) : lang(x) {}
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
+    };
+
+    void SearchWinLink::go(QWidget* widget, TinyOpt<QRect> rect,
+            const mywiki::PLink& that, mywiki::Gui& gui) const
+    {
+        gui.linkWalker().searchForWinAlt(lang);
+    }
+
 }   // anon namespace
 
 
@@ -761,59 +792,109 @@ std::unique_ptr<mywiki::Link> mywiki::parseHistoryLink(std::string_view target)
 }
 
 
+std::unique_ptr<mywiki::Link> mywiki::parseAltDosRequestLink(std::string_view target)
+{
+    for (unsigned i = 0; i < ec::size<uc::DosLang>(); ++i) {
+        auto dl = static_cast<uc::DosLang>(i);
+        auto& info = uc::oneByteInfo(dl);
+        if (info.lang == target) {
+            return std::make_unique<SearchDosLink>(dl);
+        }
+    }
+    return {};
+}
+
+
+std::unique_ptr<mywiki::Link> mywiki::parseAltWinRequestLink(std::string_view target)
+{
+    for (unsigned i = 0; i < ec::size<uc::WinLang>(); ++i) {
+        auto dl = static_cast<uc::WinLang>(i);
+        auto& info = uc::oneByteInfo(dl);
+        if (info.lang == target) {
+            return std::make_unique<SearchWinLink>(dl);
+        }
+    }
+    return {};
+}
+
+
 constexpr std::string_view SCH_QRY_CHARS = "srq";
 constexpr std::string_view SCH_QRY_EMOJI = "sre";
+constexpr std::string_view SCH_QRY_ALT_DOS = "srd";
+constexpr std::string_view SCH_QRY_ALT_WIN = "srw";
 constexpr std::string_view SCH_GOTO_BLOCK = "gcb";
 
 
 std::unique_ptr<mywiki::Link> mywiki::parseLink(
         std::string_view scheme, std::string_view target)
 {
-    if (scheme == "pb"sv) {
-        return parsePopBidiLink(target);
-    } else if (scheme == "pc"sv || scheme == "pu"sv) {
-        // They differ in default text only
-        return parsePopCpLink(target);
-    } else if (scheme == "phi"sv) {
-        return parseHistoryLink(target);
-    } else if (scheme == "pca"sv) {
-        return parsePopCatLink(target);
-    } else if (scheme == "pin"sv) {
-        return parsePopInputLink(target);
-    } else if (scheme == "ps"sv) {
-        return parsePopScriptLink(target);
-    } else if (scheme == "pk"sv) {
-        return parsePopIBlockLink(target);
-    } else if (scheme == "pf"sv) {
-        return parsePopFontsLink(target);
-    } else if (scheme == "pt"sv) {
-        return parsePopTermLink(target);
-    } else if (scheme == "pv"sv) {
-        return parsePopVersionLink(target);
-    } else if (scheme == "po"sv) {
-        return parsePopOldCompLink(target);
-    } else if (scheme == "pl"sv) {
-        return parsePopBreakLink(target);
-    } else if (scheme == "pgs"sv) {
-        return parsePopGlyphStyleLink(target);
-    } else if (scheme == "gc"sv) {
-        return parseGotoCpLink(target);
-    } else if (scheme == "gi"sv) {
-        return parseGotoInterfaceLink(target);
-    } else if (scheme == "glc"sv) {
-        return parseGotoLibCpLink(target);
-    } else if (scheme == SCH_QRY_CHARS) {
-        return parseCharRequestLink(target);
-    } else if (scheme == SCH_QRY_EMOJI) {
-        return parseEmojiRequestLink(target);
-    } else if (scheme == SCH_GOTO_BLOCK) {
-        return parseGotoBlockLink(target);
-    } else if (scheme == "c"sv) {
-        return std::make_unique<CopyLink>(target);
-    } else if (scheme == "http"sv || scheme == "https"sv) {
-        return std::make_unique<InetLink>(scheme, target);
+    if (scheme.empty())
+        return nullptr;
+    switch (scheme[0]) {
+    case 'c':   // Copy
+        if (scheme == "c"sv) {
+            return std::make_unique<CopyLink>(target);
+        }
+        break;
+    case 'g':   // Go to
+        if (scheme == "gc"sv) {
+            return parseGotoCpLink(target);
+        } else if (scheme == "gi"sv) {
+            return parseGotoInterfaceLink(target);
+        } else if (scheme == "glc"sv) {
+            return parseGotoLibCpLink(target);
+        } else if (scheme == SCH_GOTO_BLOCK) {
+            return parseGotoBlockLink(target);
+        }
+        break;
+    case 'h':
+        if (scheme == "http"sv || scheme == "https"sv) {
+            return std::make_unique<InetLink>(scheme, target);
+        }
+        break;
+    case 'p':   // Pop up
+        if (scheme == "pb"sv) {
+            return parsePopBidiLink(target);
+        } else if (scheme == "pc"sv || scheme == "pu"sv) {
+            // They differ in default text only
+            return parsePopCpLink(target);
+        } else if (scheme == "phi"sv) {
+            return parseHistoryLink(target);
+        } else if (scheme == "pca"sv) {
+            return parsePopCatLink(target);
+        } else if (scheme == "pin"sv) {
+            return parsePopInputLink(target);
+        } else if (scheme == "ps"sv) {
+            return parsePopScriptLink(target);
+        } else if (scheme == "pk"sv) {
+            return parsePopIBlockLink(target);
+        } else if (scheme == "pf"sv) {
+            return parsePopFontsLink(target);
+        } else if (scheme == "pt"sv) {
+            return parsePopTermLink(target);
+        } else if (scheme == "pv"sv) {
+            return parsePopVersionLink(target);
+        } else if (scheme == "po"sv) {
+            return parsePopOldCompLink(target);
+        } else if (scheme == "pl"sv) {
+            return parsePopBreakLink(target);
+        } else if (scheme == "pgs"sv) {
+            return parsePopGlyphStyleLink(target);
+        }
+        break;
+    case 's':   // Search
+        if (scheme == SCH_QRY_CHARS) {
+            return parseCharRequestLink(target);
+        } else if (scheme == SCH_QRY_EMOJI) {
+            return parseEmojiRequestLink(target);
+        } else if (scheme == SCH_QRY_ALT_DOS) {
+            return parseAltDosRequestLink(target);
+        } else if (scheme == SCH_QRY_ALT_WIN) {
+            return parseAltWinRequestLink(target);
+        }
+        break;
     }
-    return {};
+    return nullptr;
 }
 
 
@@ -4533,6 +4614,7 @@ namespace {
         void endList() override {}
     private:
         QString& text;
+        std::string_view searchSchema;
     };
 
     void BigPrinter::startCombo(int value, char prefix, myalt::ComboMode mode)
@@ -4552,8 +4634,10 @@ namespace {
         case myalt::ComboMode::LIST:
             if (prefix == myalt::CODE_DOS) {
                 str::append(text, loc::get("Input.Loc"));
+                searchSchema = SCH_QRY_ALT_DOS;
             } else {
                 str::append(text, loc::get("Input.Lay"));
+                searchSchema = SCH_QRY_ALT_WIN;
             }
             break;
         }
@@ -4564,6 +4648,7 @@ namespace {
         text += "<br>";
         str::append(text, BULLET);
         text += loc::get(info.locCode);
+        appendQuery(text, searchSchema, info.lang);
     }
 
 }   // anon namespace

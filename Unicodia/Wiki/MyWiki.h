@@ -17,6 +17,9 @@
 // Links
 #include "WikiLink.h"
 
+// Unicode
+#include "UcOldInput.h"
+
 class QWidget;
 class QRect;
 
@@ -94,6 +97,10 @@ namespace mywiki {
         virtual void blinkRespect(QWidget* initiator, TinyOpt<QRect> rect) = 0;
         /// Searches for some request
         virtual void searchForRequest(const uc::Request& request) = 0;
+        /// Searches for DOS Alt codes
+        virtual void searchForDosAlt(uc::DosLang lang) = 0;
+        /// Searches for Windows Alt codes
+        virtual void searchForWinAlt(uc::WinLang lang) = 0;
         /// Just a simple dtor
         virtual ~InternalLinkWalker() = default;
     };
@@ -240,6 +247,8 @@ namespace mywiki {
     std::unique_ptr<Link> parseEmojiRequestLink(std::string_view target);
     std::unique_ptr<Link> parsePopCpLink(std::string_view target);
     std::unique_ptr<Link> parseHistoryLink(std::string_view target);
+    std::unique_ptr<Link> parseAltDosRequestLink(std::string_view target);
+    std::unique_ptr<Link> parseAltWinRequestLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::BreakInfo& x);
     QString buildHtml(const uc::Category& x);

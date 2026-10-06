@@ -173,11 +173,13 @@ constexpr unsigned char CMAP_NO_COMMON = 1;
 constexpr unsigned char CMAP_LAST_TECH = 1;
 
 
-template <std::unsigned_integral K, size_t N>
+template <std::unsigned_integral K, size_t N, size_t Base>
 class DoubleCmap : public Cmap<K, unsigned char, N>
 {
     using Super = Cmap<K, unsigned char, N>;
 public:
+    static constexpr size_t BASE = Base;
+
     using typename Super::value_type;
     consteval DoubleCmap() {}
 
@@ -186,8 +188,8 @@ public:
     {
         std::fill(std::begin(revMap), std::end(revMap), K{});
         for (auto& [k, v] : x) {
-            assert(v >= BASE);
-            revMap[v - BASE] = k;
+            assert(v >= Base);
+            revMap[v - Base] = k;
         }
     }
     ///  If k is found: changes v, returns true
@@ -200,22 +202,24 @@ public:
     ///  If k is not found: v intact, returns false
     template <std::integral K1>
     bool query(K1 k, unsigned char commonValue, unsigned char& v) const;
+
+    /// If v is not found: return 0
+    K revQuery(unsigned char v) const;
 private:
-    static_assert(N <= 256);
-    static constexpr unsigned BASE = 256 - N;
+    static_assert(Base + N <= 256);
     K revMap [N];
 };
 
 
-template <std::unsigned_integral K, size_t N>
+template <std::unsigned_integral K, size_t N, size_t Base>
     template <std::integral K1>
-bool DoubleCmap<K, N>::query(K1 k, unsigned char commonValue, unsigned char& v) const
+bool DoubleCmap<K, N, Base>::query(K1 k, unsigned char commonValue, unsigned char& v) const
 {
     bool r = Super::query(k, v);
     if (!r) {
         // Not found
-        if (commonValue >= BASE) {
-            K revKey = revMap[commonValue - BASE];
+        if (commonValue >= Base) {
+            K revKey = revMap[commonValue - Base];
             if (revKey != K{} && revKey != k) {
                 v = CMAP_NO_COMMON;
                 return true;
@@ -223,4 +227,15 @@ bool DoubleCmap<K, N>::query(K1 k, unsigned char commonValue, unsigned char& v) 
         }
     }
     return r;
+}
+
+template <std::unsigned_integral K, size_t N, size_t Base>
+K DoubleCmap<K, N, Base>::revQuery(unsigned char v) const
+{
+    if (v < Base)
+        return K{};
+    v -= Base;
+    if (v >= N)
+        return K{};
+    return revMap[v];
 }

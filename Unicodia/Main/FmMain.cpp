@@ -2564,6 +2564,22 @@ void FmMain::searchForRequest(const uc::Request& request)
 }
 
 
+void FmMain::searchForDosAlt(uc::DosLang lang)
+{
+    mainGui.closePopup();
+    auto result = uc::doDosAltRequest(lang);
+    showSearchResult(std::move(result));
+}
+
+
+void FmMain::searchForWinAlt(uc::WinLang lang)
+{
+    mainGui.closePopup();
+    auto result = uc::doWinAltRequest(lang);
+    showSearchResult(std::move(result));
+}
+
+
 void FmMain::searchForVs16()
 {
     uc::CharFieldRequest rq(uc::Cfg::U_VS16_EMOJI);

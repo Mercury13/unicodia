@@ -169,10 +169,11 @@ enum class SelectMode : unsigned char { NONE, INSTANT };
 constexpr bool DIR_ADD = true;
 constexpr bool DIR_REMOVE = false;
 
-class FmMain : public QMainWindow,
-               public loc::Form<FmMain>,
-               private PixSource,
-               private mywiki::InternalLinkWalker
+class FmMain final :
+                public QMainWindow,
+                public loc::Form<FmMain>,
+                private PixSource,
+                private mywiki::InternalLinkWalker
 {
     Q_OBJECT
     using Super = QMainWindow;
@@ -319,6 +320,8 @@ private:
     void gotoLibCp(QWidget* initiator, char32_t cp) override;
     void searchForRequest(const uc::Request& request) override;
     void blinkRespect(QWidget* initiator, TinyOpt<QRect> r) override;
+    void searchForDosAlt(uc::DosLang lang) override;
+    void searchForWinAlt(uc::WinLang lang) override;
 
     /// @warning  Forces, checks nothing.  Does not retranslate combobox.
     void doBlocksChanged();

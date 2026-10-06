@@ -87,6 +87,8 @@ namespace uc {
         srh::Prio prio;                     ///< its priority
         unsigned nestLevel = 0;             ///< US = U + S: US level 0, U/S level 1
         std::unique_ptr<std::u8string> ownedString {};
+        unsigned char altCode = 0;          ///< 0 = none
+
         /// @warning in reverse order!!
         std::partial_ordering operator <=>(const SearchLine& x) const noexcept
             { return x.prio <=> prio; }

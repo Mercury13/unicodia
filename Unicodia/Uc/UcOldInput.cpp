@@ -16,11 +16,11 @@
 
 constinit const uc::InputMethods uc::InputMethods::NONE {};
 
-using CommonMap = Cmap<char16_t, unsigned char, 128>;
-template class Cmap<char16_t, unsigned char, 128>;
+using CommonMap = DoubleCmap<char16_t, 256, 0>;
+template class DoubleCmap<char16_t, 256, 0>;
 
-template class DoubleCmap<char16_t, 128>;
-class ReverseMap : public DoubleCmap<char16_t, 128> {
+template class DoubleCmap<char16_t, 128, 128>;
+class ReverseMap : public DoubleCmap<char16_t, 128, 128> {
 public:
     using DoubleCmap::DoubleCmap;
 };
@@ -1193,7 +1193,7 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         }
     } else if (cp >= 0xA0 && cp < 0x10000) {  // Rest of BMP
         // DOS encoding
-        rmDosCommon.query(cp, r.alt.dosCommon);
+        rmDosCommon.oldQuery(cp, r.alt.dosCommon);
         r.alt.locDos.run([cp, &r](unsigned char& code, const uc::OneByteInfo& page) {
                 page.map.query(cp, r.alt.dosCommon, code);
             });
@@ -1231,3 +1231,15 @@ const uc::OneByteInfo& uc::oneByteInfo(DosLang lang)
 
 const uc::OneByteInfo& uc::oneByteInfo(WinLang lang)
     { return winInfo[static_cast<unsigned>(lang)]; }
+
+char16_t uc::dosAltDecode(const uc::OneByteInfo& info, unsigned char c)
+{
+    if (auto r = info.map.revQuery(c))
+        return r;
+    return rmDosCommon.revQuery(c);
+}
+
+char16_t uc::winAltDecode(const uc::OneByteInfo& info, unsigned char c)
+{
+    return info.map.revQuery(c);
+}
