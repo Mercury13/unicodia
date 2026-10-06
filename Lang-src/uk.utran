@@ -209,7 +209,7 @@
    <group id="StdComment">
     <au-cmt>
      <p>Standard comments for script dates</p>
-     <p></p>
+     <p />
     </au-cmt>
     <text id="FirstInsc">
      <orig>the first known inscription</orig>
@@ -5336,8 +5336,16 @@
      <transl>басса</transl>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</orig>
-     <transl>Басса на ім’я Томас Льюїс відкрив, що колишні раби з Америки користуються незвичайним письмом. За іншими даними, він створив письмо сам. Самі басса звуть письмо ''вах''{{-}}бставити знак». Самобутнє письмо будо поширене у XX{{_}}столітті, але у XXI все більше замінюється [[ps:Latn|латинкою]].</transl>
+     <orig>
+      <p>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</p>
+      <p />
+      <p>There is no default tone, so vowels in the text must always carry a tone sign.</p>
+     </orig>
+     <transl>
+      <p>Басса на ім’я Томас Льюїс відкрив, що колишні раби з Америки користуються незвичайним письмом. За іншими даними, він створив письмо сам. Самі басса звуть письмо ''вах''{{-}}бставити знак». Самобутнє письмо будо поширене у XX{{_}}столітті, але у XXI все більше замінюється [[ps:Latn|латинкою]].</p>
+      <p />
+      <p>Тону по замовчанню нема, і голосні у тексті завжди несуть знак тону.</p>
+     </transl>
     </text>
    </group>
    <group id="Batk">

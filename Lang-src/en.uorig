@@ -163,7 +163,7 @@
    <group id="StdComment">
     <au-cmt>
      <p>Standard comments for script dates</p>
-     <p></p>
+     <p />
     </au-cmt>
     <text id="FirstInsc">
      <orig>the first known inscription</orig>
@@ -3967,7 +3967,11 @@
      <orig>Bassa</orig>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</orig>
+     <orig>
+      <p>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</p>
+      <p />
+      <p>There is no default tone, so vowels in the text must always carry a tone sign.</p>
+     </orig>
     </text>
    </group>
    <group id="Batk">
