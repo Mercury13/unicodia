@@ -63,7 +63,7 @@ void CachedLabel::paintEvent(QPaintEvent* ev)
             QPainter pai(&whereIt.pix);
             auto srcr = whereIt.srcRect();
             QColor opaqueBg = total.bg;
-            opaqueBg.setAlphaF(255);
+            opaqueBg.setAlpha(255);
             pai.fillRect(srcr, opaqueBg);
             // We always draw in the centre, let it be this way
             QFont fnt = font();
