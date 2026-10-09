@@ -59,6 +59,7 @@
 #include "FmTofuStats.h"
 #include "FmMessage.h"
 #include "FmDebugPlural.h"
+#include "FmFontSupport.h"
 #include "WiOsStyle.h"
 #include "WiLibCp.h"
 
@@ -3045,4 +3046,11 @@ void FmMain::toggleBlockNumbers()
     const char* text = isOn ? "Block numbers ON." : "Block numbers OFF.";
     emit blocksModel.dataChanged({}, {}, { Qt::DisplayRole });
     QMessageBox::information(this, "Block numbers", text);
+}
+
+
+void FmMain::popupCpFonts(char32_t c)
+{
+    mainGui.closePopup();
+    fmFontSupport.ensure(this, mainGui.fontSource()).exec(c);
 }

@@ -225,8 +225,7 @@ namespace {
     void PopFontsLink::go(QWidget* widget, TinyOpt<QRect> rect,
                           const mywiki::PLink& that, mywiki::Gui& gui) const
     {
-        auto html = mywiki::buildFontsHtml(cp, ws, gui);
-        gui.popupAtRelMaybe(widget, rect, that, html);
+        gui.linkWalker().popupCpFonts(cp);
     }
 
     class CopyLink : public mywiki::Link
@@ -2441,38 +2440,9 @@ QString mywiki::buildHtml(const uc::Category& x)
     return text;
 }
 
-QString mywiki::buildFontsHtml(
-        char32_t cp, QFontDatabase::WritingSystem ws,
-        Gui& gui)
-{
-    if (cp >= uc::CAPACITY || ws >= QFontDatabase::WritingSystemsCount)
-        return {};
-    QString text;
-    char buf[50];
-    auto format = loc::get("Prop.Os.FontsFor").c_str();
-    snprintf(buf, std::size(buf), reinterpret_cast<const char*>(format), (int)cp);
-    appendStylesheet(text);
-    appendHeader(text, buf);
-
-    auto fonts = gui.fontSource().allSysFonts(cp, ws, 20);
-    str::append(text, "<p>");
-    str::QSep sp(text, "<br>");
-    for (auto& v : fonts.lines) {
-        sp.sep();
-        str::append(text, BULLET);
-        text += v.name;
-    }
-    if (fonts.hasMore) {
-        sp.sep();
-        str::append(text, u8"•\u00A0…");
-    }
-    return text;
-}
-
 namespace {
     uc::DatingLoc myDatingLoc;
 }   // anon namespace
-
 
 void mywiki::translateDatingLoc()
 {

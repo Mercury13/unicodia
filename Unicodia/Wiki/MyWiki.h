@@ -101,6 +101,8 @@ namespace mywiki {
         virtual void searchForDosAlt(uc::DosLang lang) = 0;
         /// Searches for Windows Alt codes
         virtual void searchForWinAlt(uc::WinLang lang) = 0;
+        /// Shows a dialog with CP’s fonts
+        virtual void popupCpFonts(char32_t cp) = 0;
         /// Just a simple dtor
         virtual ~InternalLinkWalker() = default;
     };
@@ -255,7 +257,6 @@ namespace mywiki {
     QString buildHtml(const uc::Script& x);
     QString buildHtml(const uc::Term& x);
     QString buildHtml(const uc::Block& x);
-    QString buildFontsHtml(char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
     QString buildHtml(
             const uc::Cp& cp,
             const EgypChecker& checker,

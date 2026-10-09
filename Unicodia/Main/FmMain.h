@@ -46,6 +46,7 @@ class QTextBrowser;
 class MyHttp;
 class FmTofuStats;
 class FmDebugPlural;
+class FmFontSupport;
 class WiLibCp;
 class WiShowcase;
 class BangButton;
@@ -206,6 +207,7 @@ private:
     Uptr<FmTofuStats> fmTofuStats;
     Uptr<FmRespect> fmRespect;
     Uptr<FmDebugPlural> fmDebugPlural;
+    Uptr<FmFontSupport> fmFontSupport;
     QFont fontTofu;
     QToolButton *btSort = nullptr,
                 *btAddCpToFavs = nullptr,
@@ -322,6 +324,7 @@ private:
     void blinkRespect(QWidget* initiator, TinyOpt<QRect> r) override;
     void searchForDosAlt(uc::DosLang lang) override;
     void searchForWinAlt(uc::WinLang lang) override;
+    void popupCpFonts(char32_t c) override;
 
     /// @warning  Forces, checks nothing.  Does not retranslate combobox.
     void doBlocksChanged();
