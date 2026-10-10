@@ -934,15 +934,7 @@ FFFD......: NotoSerif-Regular
 13440.......: [Abbreviation]
 13441..13455: UnicodiaSesh
 == Egyptian Hieroglyphs Extended-A
-13460..13751: UnicodiaSesh
-13752.......: NewGardiner
-13753.......: UnicodiaSesh
-13754.......: NewGardiner
-13755..1375C: UnicodiaSesh
-1375D.......: NewGardiner
-1375E, 1375F: UnicodiaSesh
-13760.......: NewGardiner
-13761..13783: UnicodiaSesh
+13460..13783: UnicodiaSesh
 13784.......: NewGardiner
 13785..1378A: UnicodiaSesh
 1378B.......: NewGardiner
@@ -956,17 +948,11 @@ FFFD......: NotoSerif-Regular
 13801..13803: NewGardiner
 13804..13806: UnicodiaSesh
 13807.......: NewGardiner
-13808.......: UnicodiaSesh
-13809.......: NewGardiner
-1380A..13819: UnicodiaSesh
+13808..13819: UnicodiaSesh
 1381A.......: NewGardiner
 1381B..13829: UnicodiaSesh
 1382A.......: NewGardiner
-1382B, 1382C: UnicodiaSesh
-1382D.......: NewGardiner
-1382E..13862: UnicodiaSesh
-13863.......: NewGardiner
-13864..1388D: UnicodiaSesh
+1382B..1388D: UnicodiaSesh
 1388E, 1388F: NewGardiner
 13890..138A8: UnicodiaSesh
 138A9.......: NewGardiner
@@ -1070,19 +1056,13 @@ FFFD......: NotoSerif-Regular
 13AE2, 13AE3: NewGardiner
 13AE4, 13AE5: UnicodiaSesh
 13AE6, 13AE7: NewGardiner
-13AE8..13AEE: UnicodiaSesh
-13AEF.......: NewGardiner
-13AF0..13AFE: UnicodiaSesh
-13AFF.......: NewGardiner
-13B00..13B0D: UnicodiaSesh
+13AE8..13B0D: UnicodiaSesh
 13B0E.......: NewGardiner
 13B0F..13B11: UnicodiaSesh
 13B12.......: NewGardiner
 13B13..13B3A: UnicodiaSesh
 13B3B.......: NewGardiner
-13B3C..13B4C: UnicodiaSesh
-13B4D.......: NewGardiner
-13B4E..13B60: UnicodiaSesh
+13B3C..13B60: UnicodiaSesh
 13B61.......: NewGardiner
 13B62..13B70: UnicodiaSesh
 13B71.......: NewGardiner
@@ -1562,8 +1542,8 @@ FFFD......: NotoSerif-Regular
 191A8..191AF: [Tofu]
 191B0.......: UnicodiaHan
 191B1..191B4: [Tofu]
-191B5..191B9: UnicodiaHan
-191BA..191BD: [Tofu]
+191B5..191BB: UnicodiaHan
+191BC, 191BD: [Tofu]
 191BE, 191BF: UnicodiaHan
 191C0..191CC: [Tofu]
 191CD..191D2: UnicodiaHan
@@ -1574,11 +1554,9 @@ FFFD......: NotoSerif-Regular
 1B001..1B0FF: BabelStoneHanBasic
 == Kana Extended-A
 1B100..1B11E: BabelStoneHanBasic
-1B11F..1B122: UnicodiaHan
-1B123..1B128: [Tofu]
+1B11F..1B128: UnicodiaHan
 == Small Kana Extension
-1B132..1B167: UnicodiaHan
-1B168.......: [Tofu]
+1B132..1B168: UnicodiaHan
 == Nushu
 1B170..1B2FB: NotoTraditionalNushu-Light
 == Duployan
@@ -26847,17 +26825,13 @@ FFFD......: NotoSerif-Regular
 == CJK Unified Ideographs Extension I
 2EBF0..2EE5D: BabelStoneHanExtra
 == CJK Compatibility Ideographs Supplement
-2F800..2F841: UnicodiaHan
-2F842, 2F843: BabelStoneHanBasic
-2F844..2F848: UnicodiaHan
-2F849.......: BabelStoneHanBasic
-2F84A.......: UnicodiaHan
-2F84B..2F84D: BabelStoneHanBasic
-2F84E..2F850: UnicodiaHan
-2F851..2F85A: BabelStoneHanBasic
-2F85B.......: UnicodiaHan
-2F85C.......: BabelStoneHanBasic
-2F85D..2F860: UnicodiaHan
+2F800..2F852: UnicodiaHan
+2F853..2F856: BabelStoneHanBasic
+2F857.......: UnicodiaHan
+2F858.......: BabelStoneHanBasic
+2F859.......: UnicodiaHan
+2F85A.......: BabelStoneHanBasic
+2F85B..2F860: UnicodiaHan
 2F861.......: BabelStoneHanBasic
 2F862, 2F863: UnicodiaHan
 2F864..2F867: BabelStoneHanBasic
@@ -26877,10 +26851,8 @@ FFFD......: NotoSerif-Regular
 2F883.......: BabelStoneHanBasic
 2F884.......: UnicodiaHan
 2F885, 2F886: BabelStoneHanBasic
-2F887.......: UnicodiaHan
-2F888.......: BabelStoneHanBasic
-2F889.......: UnicodiaHan
-2F88A..2F88C: BabelStoneHanBasic
+2F887..2F88A: UnicodiaHan
+2F88B, 2F88C: BabelStoneHanBasic
 2F88D.......: UnicodiaHan
 2F88E, 2F88F: BabelStoneHanBasic
 2F890..2F894: UnicodiaHan
@@ -26892,8 +26864,8 @@ FFFD......: NotoSerif-Regular
 2F89B, 2F89C: UnicodiaHan
 2F89D, 2F89E: BabelStoneHanBasic
 2F89F.......: UnicodiaHan
-2F8A0..2F8A3: BabelStoneHanBasic
-2F8A4.......: UnicodiaHan
+2F8A0..2F8A2: BabelStoneHanBasic
+2F8A3, 2F8A4: UnicodiaHan
 2F8A5.......: BabelStoneHanBasic
 2F8A6.......: UnicodiaHan
 2F8A7..2F8A9: BabelStoneHanBasic
@@ -26906,7 +26878,9 @@ FFFD......: NotoSerif-Regular
 2F8B4.......: UnicodiaHan
 2F8B5.......: BabelStoneHanBasic
 2F8B6, 2F8B7: UnicodiaHan
-2F8B8..2F8BC: BabelStoneHanBasic
+2F8B8..2F8BA: BabelStoneHanBasic
+2F8BB.......: UnicodiaHan
+2F8BC.......: BabelStoneHanBasic
 2F8BD.......: UnicodiaHan
 2F8BE..2F8C0: BabelStoneHanBasic
 2F8C1.......: UnicodiaHan
@@ -26940,7 +26914,9 @@ FFFD......: NotoSerif-Regular
 2F905, 2F906: UnicodiaHan
 2F907, 2F908: BabelStoneHanBasic
 2F909, 2F90A: UnicodiaHan
-2F90B..2F90D: BabelStoneHanBasic
+2F90B.......: BabelStoneHanBasic
+2F90C.......: UnicodiaHan
+2F90D.......: BabelStoneHanBasic
 2F90E.......: UnicodiaHan
 2F90F..2F913: BabelStoneHanBasic
 2F914.......: UnicodiaHan
@@ -26950,47 +26926,43 @@ FFFD......: NotoSerif-Regular
 2F91A, 2F91B: UnicodiaHan
 2F91C.......: BabelStoneHanBasic
 2F91D.......: UnicodiaHan
-2F91E..2F926: BabelStoneHanBasic
-2F927.......: UnicodiaHan
-2F928.......: BabelStoneHanBasic
-2F929..2F92B: UnicodiaHan
-2F92C..2F934: BabelStoneHanBasic
+2F91E..2F925: BabelStoneHanBasic
+2F926..2F92B: UnicodiaHan
+2F92C..2F92F: BabelStoneHanBasic
+2F930.......: UnicodiaHan
+2F931..2F934: BabelStoneHanBasic
 2F935, 2F936: UnicodiaHan
 2F937.......: BabelStoneHanBasic
-2F938.......: UnicodiaHan
-2F939.......: BabelStoneHanBasic
-2F93A.......: UnicodiaHan
+2F938..2F93A: UnicodiaHan
 2F93B..2F93D: BabelStoneHanBasic
 2F93E.......: UnicodiaHan
 2F93F.......: BabelStoneHanBasic
 2F940.......: UnicodiaHan
 2F941.......: BabelStoneHanBasic
-2F942, 2F943: UnicodiaHan
-2F944.......: BabelStoneHanBasic
-2F945..2F949: UnicodiaHan
+2F942..2F949: UnicodiaHan
 2F94A.......: BabelStoneHanBasic
 2F94B, 2F94C: UnicodiaHan
-2F94D..2F954: BabelStoneHanBasic
+2F94D..2F951: BabelStoneHanBasic
+2F952.......: UnicodiaHan
+2F953, 2F954: BabelStoneHanBasic
 2F955..2F957: UnicodiaHan
 2F958.......: BabelStoneHanBasic
 2F959..2F95B: UnicodiaHan
 2F95C..2F960: BabelStoneHanBasic
-2F961.......: UnicodiaHan
-2F962..2F96D: BabelStoneHanBasic
-2F96E.......: UnicodiaHan
-2F96F..2F974: BabelStoneHanBasic
+2F961..2F963: UnicodiaHan
+2F964..2F96D: BabelStoneHanBasic
+2F96E, 2F96F: UnicodiaHan
+2F970..2F974: BabelStoneHanBasic
 2F975.......: UnicodiaHan
 2F976..2F979: BabelStoneHanBasic
-2F97A.......: UnicodiaHan
-2F97B.......: BabelStoneHanBasic
-2F97C.......: UnicodiaHan
+2F97A..2F97C: UnicodiaHan
 2F97D.......: BabelStoneHanBasic
 2F97E.......: UnicodiaHan
 2F97F.......: BabelStoneHanBasic
 2F980.......: UnicodiaHan
 2F981.......: BabelStoneHanBasic
-2F982..2F985: UnicodiaHan
-2F986..2F989: BabelStoneHanBasic
+2F982..2F987: UnicodiaHan
+2F988, 2F989: BabelStoneHanBasic
 2F98A, 2F98B: UnicodiaHan
 2F98C..2F98E: BabelStoneHanBasic
 2F98F, 2F990: UnicodiaHan
@@ -27025,23 +26997,25 @@ FFFD......: NotoSerif-Regular
 2F9CD..2F9D3: BabelStoneHanBasic
 2F9D4..2F9D7: UnicodiaHan
 2F9D8..2F9DC: BabelStoneHanBasic
-2F9DD.......: UnicodiaHan
-2F9DE..2F9E3: BabelStoneHanBasic
+2F9DD..2F9DF: UnicodiaHan
+2F9E0.......: BabelStoneHanBasic
+2F9E1.......: UnicodiaHan
+2F9E2, 2F9E3: BabelStoneHanBasic
 2F9E4.......: UnicodiaHan
 2F9E5..2F9E7: BabelStoneHanBasic
 2F9E8..2F9EB: UnicodiaHan
 2F9EC, 2F9ED: BabelStoneHanBasic
-2F9EE.......: UnicodiaHan
-2F9EF..2F9F9: BabelStoneHanBasic
+2F9EE, 2F9EF: UnicodiaHan
+2F9F0.......: BabelStoneHanBasic
+2F9F1.......: UnicodiaHan
+2F9F2..2F9F9: BabelStoneHanBasic
 2F9FA, 2F9FB: UnicodiaHan
 2F9FC, 2F9FD: BabelStoneHanBasic
-2F9FE.......: UnicodiaHan
-2F9FF..2FA01: BabelStoneHanBasic
+2F9FE, 2F9FF: UnicodiaHan
+2FA00, 2FA01: BabelStoneHanBasic
 2FA02.......: UnicodiaHan
 2FA03.......: BabelStoneHanBasic
-2FA04.......: UnicodiaHan
-2FA05.......: BabelStoneHanBasic
-2FA06.......: UnicodiaHan
+2FA04..2FA06: UnicodiaHan
 2FA07.......: BabelStoneHanBasic
 2FA08.......: UnicodiaHan
 2FA09, 2FA0A: BabelStoneHanBasic
@@ -27051,8 +27025,8 @@ FFFD......: NotoSerif-Regular
 2FA13, 2FA14: BabelStoneHanBasic
 2FA15.......: UnicodiaHan
 2FA16, 2FA17: BabelStoneHanBasic
-2FA18..2FA1B: UnicodiaHan
-2FA1C, 2FA1D: BabelStoneHanBasic
+2FA18..2FA1C: UnicodiaHan
+2FA1D.......: BabelStoneHanBasic
 == CJK Unified Ideographs Extension G
 30000..30040: BabelStoneHanExtra
 30041..30046: SimSun-ExtG
@@ -31921,7 +31895,8 @@ FFFD......: NotoSerif-Regular
 33469..3346D: UnicodiaHan
 3346E..33479: BabelStoneHanExtra
 == Seal
-3D000..3FC3F: [Tofu]
+3D000..3D026: UnicodiaHan
+3D027..3FC3F: [Tofu]
 == Tags
 E0001..E007F: [Custom control]
 == Variation Selectors Supplement
