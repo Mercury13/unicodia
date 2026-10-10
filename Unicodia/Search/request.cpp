@@ -94,7 +94,10 @@ uc::MultiResult uc::doWinAltRequest(uc::WinLang rq)
                       uc::PrimaryObj::WINALT);
     auto& lastGroup = r.groups.emplace_back();
     const auto& myInfo = uc::oneByteInfo(rq);
-    for (unsigned c = 1; c <= 255; ++c) {
+    // 0…31 (control) — do not work
+    // 32…126 (printable ASCII) — accessible from normal keyboard
+    // 127 (control) — does not work
+    for (unsigned c = 128; c <= 255; ++c) {
         if (char16_t ch = uc::winAltDecode(myInfo, c)) {
             if (auto cp = uc::cpsByCode[ch]) {
                 auto& line = lastGroup.lines.emplace_back(*cp);
