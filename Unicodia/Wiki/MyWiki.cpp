@@ -2921,6 +2921,7 @@ namespace {
                 break;
             default:
                 if (main == 'l') {
+                    // To aid legibility
                     text += u8"ℓ";
                 } else {
                     text += main;
