@@ -2920,7 +2920,11 @@ namespace {
                 text += loc::get("Prop.Input.Space");
                 break;
             default:
-                text += main;
+                if (main == 'l') {
+                    text += u8"ℓ";
+                } else {
+                    text += main;
+                }
             }
         }
         text += KEY_END;
