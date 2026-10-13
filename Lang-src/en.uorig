@@ -10255,7 +10255,7 @@
    </group>
    <group id="3.1">
     <text id="Text">
-     <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
+     <orig>The first use of [[pt:plane|planes]] 1, 2, and 0E. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years earlier.</orig>
     </text>
    </group>
    <group id="4.1">
