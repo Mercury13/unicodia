@@ -3449,7 +3449,7 @@ namespace {
                     case uc::TextRole::EGYP_MEANING:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Mean");
-                        mywiki::appendEgypCopyable(text, s, checker);
+                        mywiki::appendEgypParsed(text, s, checker);
                         break;
                     case uc::TextRole::EGYP_PRONUN:
                         sp.sep();

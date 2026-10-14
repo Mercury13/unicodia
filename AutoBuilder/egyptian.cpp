@@ -295,6 +295,9 @@ namespace {
         fixupHg(s, "(HG ",  cp, hgMap, rLinks);
         fixupHg(s, "(HGx ",  cp, hgMap, rLinks);
 
+        // Fix up \C96
+        str::replace(s, " \\", " ");
+
         // Simplify indexes
         std::string r;
         r.reserve(s.length());
@@ -390,6 +393,7 @@ namespace {
         ManLinks manLinks;
         for (auto& [k, v] : r) {
             fixupUniDesc(v.descUnicode, k, hgMap, hgLinks, manLinks);
+            fixupUniDesc(v.meaning,     k, hgMap, hgLinks, manLinks);
         }
 
         static constexpr const char* FNAME_HG = "hieroglyphica.log";
