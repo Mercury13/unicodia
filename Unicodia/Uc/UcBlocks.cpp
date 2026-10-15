@@ -1366,7 +1366,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Tang, '2' }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
     // Jurchen partly OK (fixup)
-    { 0x18E00, 0x1919F, { 0x18E49, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x18E00, 0x1919F, { 0x18E49, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::HISTORICAL },
             "Jurchen",
             { EcScript::Jurc, 0 }, MapSubtype::DEAD,
             EcScript::Jurc, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE },
@@ -1381,7 +1381,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hira, 'B' }, MapSubtype::DEAD,
             EcScript::Kana, EcFont::CJK_UHAN, Bfg::CJK | Bfg::STOCK_BLOCK_DESC },
     // Kana supp OK
-    { 0x1B000, 0x1B0FF, { 0x1B046, EcContinent::CJK },
+    { 0x1B000, 0x1B0FF, { 0x1B046, EcContinent::CJK, Ifg::PAINT_SVG },
             "Kana Supplement",
             { EcScript::Hira, '@' }, MapSubtype::DEAD,
             EcScript::Hent, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },

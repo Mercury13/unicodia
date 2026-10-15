@@ -936,11 +936,7 @@ FFFD......: NotoSerif-Regular
 == Egyptian Hieroglyphs Extended-A
 13460..13783: UnicodiaSesh
 13784.......: NewGardiner
-13785..1378A: UnicodiaSesh
-1378B.......: NewGardiner
-1378C..137CA: UnicodiaSesh
-137CB.......: NewGardiner
-137CC..137F5: UnicodiaSesh
+13785..137F5: UnicodiaSesh
 137F6.......: NewGardiner
 137F7..137FB: UnicodiaSesh
 137FC..137FE: NewGardiner
@@ -954,13 +950,7 @@ FFFD......: NotoSerif-Regular
 1382A.......: NewGardiner
 1382B..138A8: UnicodiaSesh
 138A9.......: NewGardiner
-138AA..138C5: UnicodiaSesh
-138C6, 138C7: NewGardiner
-138C8..138CD: UnicodiaSesh
-138CE.......: NewGardiner
-138CF, 138D0: UnicodiaSesh
-138D1.......: NewGardiner
-138D2..138D8: UnicodiaSesh
+138AA..138D8: UnicodiaSesh
 138D9.......: NewGardiner
 138DA..138E0: UnicodiaSesh
 138E1.......: NewGardiner
@@ -968,12 +958,10 @@ FFFD......: NotoSerif-Regular
 138E3, 138E4: NewGardiner
 138E5..138E7: UnicodiaSesh
 138E8.......: NewGardiner
-138E9..138F8: UnicodiaSesh
-138F9.......: NewGardiner
-138FA..13907: UnicodiaSesh
+138E9..13907: UnicodiaSesh
 13908.......: NewGardiner
-13909..1390C: UnicodiaSesh
-1390D..1390F: NewGardiner
+13909..1390E: UnicodiaSesh
+1390F.......: NewGardiner
 13910..1392A: UnicodiaSesh
 1392B, 1392C: NewGardiner
 1392D..1394C: UnicodiaSesh
@@ -1008,9 +996,7 @@ FFFD......: NotoSerif-Regular
 139F9.......: NewGardiner
 139FA..139FC: UnicodiaSesh
 139FD.......: NewGardiner
-139FE.......: UnicodiaSesh
-139FF.......: NewGardiner
-13A00..13A05: UnicodiaSesh
+139FE..13A05: UnicodiaSesh
 13A06.......: NewGardiner
 13A07.......: UnicodiaSesh
 13A08, 13A09: NewGardiner
@@ -1172,9 +1158,7 @@ FFFD......: NotoSerif-Regular
 13DB1..13DB3: NewGardiner
 13DB4..13DCC: UnicodiaSesh
 13DCD..13DD0: NewGardiner
-13DD1.......: UnicodiaSesh
-13DD2.......: NewGardiner
-13DD3..13DDC: UnicodiaSesh
+13DD1..13DDC: UnicodiaSesh
 13DDD.......: NewGardiner
 13DDE.......: UnicodiaSesh
 13DDF.......: NewGardiner
@@ -1328,9 +1312,7 @@ FFFD......: NotoSerif-Regular
 140EE.......: NewGardiner
 140EF.......: UnicodiaSesh
 140F0.......: NewGardiner
-140F1, 140F2: UnicodiaSesh
-140F3.......: NewGardiner
-140F4..14103: UnicodiaSesh
+140F1..14103: UnicodiaSesh
 14104.......: NewGardiner
 14105..1410A: UnicodiaSesh
 1410B..1410E: NewGardiner
@@ -1530,16 +1512,16 @@ FFFD......: NotoSerif-Regular
 == Tangut Components Supplement
 18D80..18DF2: UFSTangutFixup
 == Jurchen
-18E00..19191: [Tofu]
+18E00..19191: UFSTangutFixup
 == Jurchen Radicals
 191A0..191A7: UnicodiaHan
-191A8..191AF: [Tofu]
+191A8..191AF: UFSTangutFixup
 191B0.......: UnicodiaHan
-191B1..191B4: [Tofu]
+191B1..191B4: UFSTangutFixup
 191B5..191BB: UnicodiaHan
-191BC, 191BD: [Tofu]
+191BC, 191BD: UFSTangutFixup
 191BE, 191BF: UnicodiaHan
-191C0..191CC: [Tofu]
+191C0..191CC: UFSTangutFixup
 191CD..191D2: UnicodiaHan
 == Kana Extended-B
 1AFF0..1AFFE: UnicodiaHan
