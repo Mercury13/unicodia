@@ -113,14 +113,16 @@ namespace {
         static constexpr QColor clReallyDark{ 12, 12, 12 };
         static constexpr QColor clDark { 30, 30, 30 };
         static constexpr QColor clButton { 45, 45, 45 };
+        static constexpr QColor clAlt { 60, 60, 60 };
         const bool isBlack = (progSetting == dark::Setting::BLACK);
-        QColor clDynDark = isBlack ? Qt::black : clDark;
+        QColor clDynDark   = isBlack ? Qt::black : clDark;
         QColor clDynButton = isBlack ? clReallyDark : clButton;
+        QColor clDynAlt    = isBlack ? clButton : clAlt;
         QPalette pal;
         pal.setColor(QPalette::Window, clDynDark);
         pal.setColor(QPalette::WindowText, Qt::white);
         pal.setColor(QPalette::Base, clDynDark);
-        pal.setColor(QPalette::AlternateBase, clDynButton);
+        pal.setColor(QPalette::AlternateBase, clDynAlt);
         pal.setColor(QPalette::ToolTipBase, clDynDark);
         pal.setColor(QPalette::ToolTipText, Qt::white);
         pal.setColor(QPalette::Text, Qt::white);

@@ -956,7 +956,7 @@ QVariant FavsModel::data(const QModelIndex& index, int role) const
                 }
                 return {};
             }
-            return owner->palette().button().color();
+            return owner->palette().alternateBase().color();
         }
     default:
         return Super::data(index, role);

@@ -276,7 +276,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
                 if (uc::isNonChar(cp.code)) {
                     return QBrush(owner->palette().windowText().color(), Qt::DiagCrossPattern);
                 }
-                return owner->palette().button().color();
+                return owner->palette().alternateBase().color();
             }
             return {};
         }
