@@ -432,10 +432,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Java", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(15), EcFont::JAVANESE },
-    /// @todo [U18] Jurchen
+    // Jurchen partly OK, fixup font
     { "Jurc", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::RTL_COL, EcContinent::CJK,
-        Dating::century(12), EcFont::NORMAL },
+        Dating::century(12), EcFont::JURCHEN },
     // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,

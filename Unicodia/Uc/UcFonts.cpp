@@ -235,6 +235,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                   // Hentaigana
       { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                                // …1
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
+    { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                                // Jurchen
+      { FAM_TANGUT_FIXUP, 120_pc },                                             // …1
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
     { "UtoSerifKannada-Regular.ttf", Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Kannada
       { FAM_FUNKY },                                                            // …1

@@ -322,6 +322,8 @@ namespace uc {
         HENTAIGANA,
           Z_HEN_1,
         JAVANESE,
+        JURCHEN,
+          Z_JUR_1,
         KAITHI,
         KANNADA,
           Z_KAN_1,

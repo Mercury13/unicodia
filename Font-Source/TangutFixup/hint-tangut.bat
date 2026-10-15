@@ -1,1 +1,1 @@
-d:\Soft\FontEditing\ttfautohint.exe --stem-width-mode=sss --symbol UFSTangutFixup.ttf ..\..\Fonts\UFSTangutFixup.ttf
+c:\Soft\ttfautohint.exe --stem-width-mode=sss --symbol UFSTangutFixup.ttf ..\..\Fonts\UFSTangutFixup.ttf

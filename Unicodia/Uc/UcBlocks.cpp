@@ -1365,16 +1365,16 @@ constinit const uc::Block uc::blocks[] {
             "Tangut Components Supplement",
             { EcScript::Tang, '2' }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
-    /// @todo [U18] Jurchen
+    // Jurchen partly OK (fixup)
     { 0x18E00, 0x1919F, { 0x18E49, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
             "Jurchen",
             { EcScript::Jurc, 0 }, MapSubtype::DEAD,
             EcScript::Jurc, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE },
-    /// @todo [U18] Jurchen radicals
+    // Jurchen radicals partly OK (fixup)
     { 0x191A0, 0x191DF, { 0x191B7, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::HISTORICAL },
             "Jurchen Radicals",
             { EcScript::Jurc, 1 }, MapSubtype::DEAD,
-            EcScript::Jurc, EcFont::CJK_UHAN, Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Jurc, EcFont::JURCHEN, Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kana ex B OK: Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK, Ifg::PAINT_SVG },
             "Kana Extended-B",
