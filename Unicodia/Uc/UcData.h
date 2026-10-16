@@ -355,7 +355,7 @@ namespace uc {
         LEPCHA,
         LIMBU,
         MAHAJANI,
-        MAHJONG_TILES,  // Fall down to Dominoes
+        MAHJONG_TILES,  ///< Fall down to Dominoes
           DOMINOES,
         MALAYALAM,
         MANDAIC,
@@ -428,7 +428,7 @@ namespace uc {
         TIBETAN,
         TIRHUTA,
         TULU,
-        UMLAUT_SYMBOL,
+        UMLAUT_SYMBOL,  ///< Diacriticals for symbols
           Z_USY_1,
           Z_USY_2,
           Z_USY_3,
