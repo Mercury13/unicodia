@@ -1504,7 +1504,7 @@ FFFD......: NotoSerif-Regular
 18800..18AFF: NotoSerifTangut-Regular
 == Khitan Small Script
 18B00..18CD5: NotoFangsongKSSVertical-Regular
-18CD6..18CDA: [Tofu]
+18CD6..18CDA: UnicodiaHan
 18CFF.......: UnicodiaFunky
 == Tangut Supplement
 18D00..18D08: NotoSerifTangut-Regular
