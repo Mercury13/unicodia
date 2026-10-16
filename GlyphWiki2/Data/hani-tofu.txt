@@ -3991,6 +3991,10 @@
 /prefix unstable-u
 /range 3D003 3D030
 
+# Khitan: 5 new chars
+/country
+/prefix unstable-u
+/range 18CD6 18CDA
 
 
 #  FIXUPS
