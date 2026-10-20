@@ -257,40 +257,45 @@ namespace {
                 .from = from, .to = to, .isOk = (nRepl != 0), });
     }
 
+    enum class Place : unsigned char { DESC, MEANING };
+
     void fixupUniDesc(
             std::string& s, char32_t cp, const HgMap& hgMap,
+            Place place,
             MLink& rLinks, ManLinks& rManLinks)
     {
         // Bugs
         rManLinks.nCanals += str::replace(s, "canal (M36)"sv, "canal (N36)"sv);  // multiple times
         rManLinks.nSeats  += str::replace(s, "seat (Q3)"sv, "seat (Q1)"sv);      // multiple times
-        switch (cp) {
-        case 0x13BCC:
-        case 0x13BCD:
-            myRepl(s, cp, "(T11A)", "(T11B)", rManLinks);
-            break;
-        case 0x13E27:
-            myRepl(s, cp, "(HGx Q3A)", "(Q3A)", rManLinks);
-            break;
-        case 0x1423E:
-        case 0x14240:
-            myRepl(s, cp, "(T19)", "(T19E)", rManLinks);
-            break;
-        case 0x1358A:
-        case 0x1358B:
-        case 0x1358C:
-            myRepl(s, cp, "(M12B)", "(M12K)", rManLinks);
-            break;
-        case 0x13598:
-            myRepl(s, cp, "(N5)", "(N14)", rManLinks);
-            break;
-        case 0x13AA4:
-            myRepl(s, cp, "(F1504)", "(E13C)", rManLinks);
-            break;
-        case 0x14142:
-            myRepl(s, cp, "(R109)", "(O49)", rManLinks);  // links to itself :)
-            break;
-        default: ;
+        if (place == Place::DESC) {
+            switch (cp) {
+            case 0x13BCC:
+            case 0x13BCD:
+                myRepl(s, cp, "(T11A)", "(T11B)", rManLinks);
+                break;
+            case 0x13E27:
+                myRepl(s, cp, "(HGx Q3A)", "(Q3A)", rManLinks);
+                break;
+            case 0x1423E:
+            case 0x14240:
+                myRepl(s, cp, "(T19)", "(T19E)", rManLinks);
+                break;
+            case 0x1358A:
+            case 0x1358B:
+            case 0x1358C:
+                myRepl(s, cp, "(M12B)", "(M12K)", rManLinks);
+                break;
+            case 0x13598:
+                myRepl(s, cp, "(N5)", "(N14)", rManLinks);
+                break;
+            case 0x13AA4:
+                myRepl(s, cp, "(F1504)", "(E13C)", rManLinks);
+                break;
+            case 0x14142:
+                myRepl(s, cp, "(R109)", "(O49)", rManLinks);  // links to itself :)
+                break;
+            default: ;
+            }
         }
 
         // Hieroglyphica’s indexes
@@ -394,8 +399,8 @@ namespace {
         MLink hgLinks;
         ManLinks manLinks;
         for (auto& [k, v] : r) {
-            fixupUniDesc(v.descUnicode, k, hgMap, hgLinks, manLinks);
-            fixupUniDesc(v.meaning,     k, hgMap, hgLinks, manLinks);
+            fixupUniDesc(v.descUnicode, k, hgMap, Place::DESC,    hgLinks, manLinks);
+            fixupUniDesc(v.meaning,     k, hgMap, Place::MEANING, hgLinks, manLinks);
         }
 
         static constexpr const char* FNAME_HG = "hieroglyphica.log";
