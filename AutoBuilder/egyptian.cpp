@@ -213,6 +213,7 @@ namespace {
     struct ManLinks {
         std::multimap<char32_t, ManLink> specials;
         unsigned nCanals = 0;
+        unsigned nSeats = 0;
     };
 
     ///
@@ -262,6 +263,7 @@ namespace {
     {
         // Bugs
         rManLinks.nCanals += str::replace(s, "canal (M36)"sv, "canal (N36)"sv);  // multiple times
+        rManLinks.nSeats  += str::replace(s, "seat (Q3)"sv, "seat (Q1)"sv);      // multiple times
         switch (cp) {
         case 0x13BCC:
         case 0x13BCD:
@@ -412,6 +414,7 @@ namespace {
         osLog.open(FNAME_MANL);
         osLog << FNAME_MANL << ": manual fixups of Egyptian links" "\n";
         osLog << "Canal: " << manLinks.nCanals << " times" "\n";
+        osLog << "Seat: " << manLinks.nSeats << " times" "\n";
         for (auto& [k, v] : manLinks.specials) {
             char buf[10];
             snprintf(buf, std::size(buf), "%X", unsigned(k));
