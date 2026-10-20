@@ -108,7 +108,7 @@ for line0 in file:
         glyph.foreground = fg
         glyph.width = 1000
         glyphToDataId[gname] = dataId
-        
+
         # Stop those base defs
         baseDefs = ''
     else:
