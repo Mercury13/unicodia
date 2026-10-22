@@ -26,7 +26,7 @@ SOURCES += \
     ../SvgOpt/Lib/Xtypes.cpp \
     ../SvgOpt/UnitTest/test_Xtypes.cpp \
     ../Unicodia/Search/engine.cpp \
-    ../Unicodia/Wiki.cpp \
+    ../Unicodia/Wiki/Wiki.cpp \
     test_Decapitalize.cpp \
     test_DumbSp.cpp \
     test_Fmt.cpp \
@@ -58,7 +58,7 @@ HEADERS += \
     ../SvgOpt/Lib/Xtypes.h \
     ../Unicodia/Search/engine.h \
     ../Unicodia/Search/trie.h \
-    ../Unicodia/Wiki.h
+    ../Unicodia/Wiki/Wiki.h
 
 INCLUDEPATH += \
     ../AutoBuilder \
