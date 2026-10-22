@@ -63,7 +63,7 @@
 058D..058F: UtoSansFranken
 == Hebrew
 0591..05C7: NotoSerifHebrew-Regular
-05C8, 05C9: [Tofu]
+05C8, 05C9: UnicodiaFunky
 05D0..05F4: NotoSerifHebrew-Regular
 == Arabic
 0600..061B: ScheherazadeNew-Regular
