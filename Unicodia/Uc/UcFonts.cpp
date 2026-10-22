@@ -14,6 +14,17 @@ consteval uc::StyleSheet operator + (
 
 constexpr uc::Family FAM_DEFAULT { FACE_DEFAULT, uc::Fafg::BUILTIN | uc::Fafg::FIND_LATMOD };
 
+constexpr char32_t recodeHebrew(char32_t x)
+{
+    // Reason: umlauts in RtL script, cannot do anything until
+    //   systems know that it’s an umlaut
+    switch (x) {
+    case 0x05C8: return uc::PUA_HEBR_5C8;
+    case 0x05C9: return uc::PUA_HEBR_5C9;
+    default: return x;
+    }
+}
+
 // File names
 constexpr uc::Family FNAME_NOTO { "NotoSerif-Regular.ttf", uc::Fafg::DEHINT_DOTC | uc::Fafg::FIND_LATMOD };
 constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf" };
@@ -23,7 +34,7 @@ constexpr uc::Family FNAME_NOTOMUSIC { "NotoMusic-Regular.ttf" };
 constexpr uc::Family FNAME_MUSIC_FIXUP { "UnicodiaMusicFixup.ttf" };
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr std::string_view FNAME_FUNKY = "UnicodiaFunky.ttf";
-constexpr uc::Family FAM_FUNKY { FNAME_FUNKY };
+constexpr uc::Family FAM_FUNKY { FNAME_FUNKY, recodeHebrew };
 constexpr std::string_view FNAME_BABEL_01 = "BabelStoneHanBasic.ttf";
 constexpr uc::Family FAM_BABEL_23 { "BabelStoneHanExtra.ttf" };
 constexpr uc::Family FNAME_KOREAN { "UtoSansKR-Regular.ttf" };
@@ -231,9 +242,10 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
     { { "NotoSerifGurmukhi-Regular.ttf", Fafg::DEHINT_DOTC } },                 // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Hanunoo
-    { { "NotoSerifHebrew-Regular.ttf", Fafg::DEHINT_DOTC } },                   // Hebrew
+    { { "NotoSerifHebrew-Regular.ttf", Fafg::DEHINT_DOTC }, Ffg::FALL_TO_NEXT }, // Hebrew
+      { FAM_FUNKY },                                                            // …1
     { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                   // Hentaigana
-      { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                                // …1
+      { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …1
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                                // Jurchen
       { FAM_TANGUT_FIXUP, 120_pc },                                             // …1

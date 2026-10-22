@@ -92,6 +92,8 @@ namespace uc {
     constexpr QChar STUB_PUA_CJK_APPROX { 0xE010 };         // Image of CJK 303E
     constexpr QChar STUB_PUA_PLUS { 0xE011 };               // Plus for synthesized virtual virama
     constexpr QChar STUB_PUA_AENCL { 0xE012 };              // Cyrillic A encosing
+    constexpr char16_t PUA_HEBR_5C8 { 0xE013 };             // Hebrew point 5C8
+    constexpr char16_t PUA_HEBR_5C9 { 0xE014 };             // Hebrew point 5C9
 
     DEFINE_ENUM_TYPE_IN_NS(uc, EcLangLife, unsigned char,
         NOMATTER,       ///< Symbols (language’s life does not matter)
@@ -319,6 +321,7 @@ namespace uc {
         GURMUKHI,
         HANUNOO,
         HEBREW,
+          Z_HEBR_1,
         HENTAIGANA,
           Z_HENT_1,
         JAVANESE,
