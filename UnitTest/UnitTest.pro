@@ -70,4 +70,5 @@ INCLUDEPATH += \
     ../Libs/SelfMade/Strings \
     ../SvgOpt/Lib \
     ../Unicodia \
-    ../Unicodia/Uc
+    ../Unicodia/Uc \
+    ../Unicodia/Wiki
