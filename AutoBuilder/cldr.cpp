@@ -91,7 +91,8 @@ cl::Base cl::load()
             if (v == "ideograph"
                     || v == "Japanese"
                     || v == "eye"
-                    || v == "face")
+                    || v == "face"
+                    || v == "pickle")  // old CLDR
                 continue;
             dest.names.emplace_back(v);
         }
