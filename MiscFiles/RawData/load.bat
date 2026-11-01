@@ -29,7 +29,8 @@ curl %VER%/emoji/emoji-test.txt -L --output emoji-test.txt
 curl https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signunicode.xml -L --output signunicode.xml
 curl https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signdescriptioneng.xml -L --output signdescriptioneng.xml
 curl https://html.spec.whatwg.org/entities.json -L --output entities.json
-curl https://raw.githubusercontent.com/unicode-org/cldr/refs/tags/latest/common/annotations/en.xml -L --output ../CldrAnnotations/en.xml
+rem No longer on GitHub, do not see a way to load automatically
+rem curl https://raw.githubusercontent.com/unicode-org/cldr/refs/tags/latest/common/annotations/en.xml -L --output ../CldrAnnotations/en.xml
 rem Moved and changed structure, also JSON appeared → use it!
 rem curl https://dev.w3.org/html5/html-author/charref --output entities.htm
 rem Press F to pay respect!
