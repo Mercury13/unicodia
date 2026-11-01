@@ -27,6 +27,7 @@
 #include "unibase.h"
 #include "stringlib.h"
 #include "linebreak.h"
+#include "cldr.h"
 
 using namespace std::string_view_literals;
 
@@ -308,7 +309,11 @@ int main()
     auto emoji = lib::loadEmoji(EMOJI_TEST);
     std::cout << "OK, " << emoji.count.withComponents << " emoji, " << emoji.vs16.size() << " are VS16." << '\n';
 
-    lib::StrangeCjk strangeCjk;
+    ///// CLDR /////////////////////////////////////////////////////////////////
+
+    std::cout << "Loading CLDR data..." << std::flush;
+    auto cldr = cl::load();
+    std::cout << "OK, " << cldr.emoji.size() << " emoji." "\n";
 
     ///// Egyptian /////////////////////////////////////////////////////////////
 
@@ -677,6 +682,7 @@ int main()
     ///// Han dictionary ///////////////////////////////////////////////////////
 
     std::cout << "Processing Han dictionary..." << std::flush;
+    lib::StrangeCjk strangeCjk;
     { std::ifstream is(HAN_DIC);
         std::string line;
         while (std::getline(is, line)) {

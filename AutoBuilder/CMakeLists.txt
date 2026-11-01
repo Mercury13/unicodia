@@ -14,7 +14,8 @@ add_executable(AutoBuilder main.cpp
     ../Libs/PugiXml/pugiconfig.hpp ../Libs/PugiXml/pugixml.cpp ../Libs/PugiXml/pugixml.hpp
     ../Unicodia/Uc/UcFlags.h
     ../Libs/SelfMade/Strings/u_EgypIndex.cpp ../Libs/SelfMade/Strings/u_EgypIndex.h
-    ../Libs/SelfMade/Strings/u_Strings.cpp ../Libs/SelfMade/Strings/u_Strings.h)
+    ../Libs/SelfMade/Strings/u_Strings.cpp ../Libs/SelfMade/Strings/u_Strings.h
+    cldr.h cldr.cpp)
 
 include_directories(${CMAKE_SOURCE_DIR}/../Libs)
 include_directories(${CMAKE_SOURCE_DIR}/../Libs/PugiXml)

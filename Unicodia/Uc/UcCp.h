@@ -154,6 +154,10 @@ namespace cp {
     constexpr char32_t FLAG_Y = 0x1F1FE;
     constexpr char32_t FLAG_Z = 0x1F1FF;
 
+    // Specials
+    constexpr char32_t REPLACEMENT = 0xFFFD;
+    constexpr char32_t MOJIBAKE = REPLACEMENT;
+
     // Tags
     constexpr char32_t TAG_MIN = 0xE0000;
     constexpr char32_t TAG_CANCEL = 0xE007F;

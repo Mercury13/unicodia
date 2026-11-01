@@ -166,7 +166,8 @@ namespace {
         { RAWDATA EGYP_UNICODE },
         { RAWDATA EGYP_DESCRIPTION },
         { MISCFILES LIBRARY_XML },
-        { MISCFILES SUTTON_TXT }
+        { MISCFILES SUTTON_TXT },
+        { CLDR_ANNO ANNO_EN },
     };
 
     constexpr std::string_view OLD_AMSTRAD_CPC_1 = "AMSCPC.TXT";
