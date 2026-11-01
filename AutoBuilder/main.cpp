@@ -460,7 +460,7 @@ int main()
         if (auto kv = egypBase.find(cp); kv != egypBase.end()) {
             auto& v = kv->second;
             egypReliability = v.reliability;
-            if (!v.ukIndex.empty()) {
+            if (!v.ukIndex.empty()) {  // UniKemet index
                 strings.forceRemember(pTech, cp, uc::TextRole::EGYP_INDEX, v.ukIndex);
             }
             if (!v.descEwp.empty()) {
@@ -496,11 +496,6 @@ int main()
                 }
             }
             cldrEntry.eraseName(v);
-            strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
-        }
-
-        // Remember CLDR entries too!
-        for (auto& v : cldrEntry.names) {
             strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
         }
 
@@ -561,10 +556,16 @@ int main()
             if (auto p = q->second) {    // May have NULL here
                 auto name1 = str::toSv(p->name);
                 if (!containsWordSeq(sLowerName, name1) && !textCp->contains(name1)) {
+                    cldrEntry.eraseName(name1);
                     strings.forceRemember(pTech, cp, uc::TextRole::EMOJI_NAME, name1);
                 }
             }
         }
+        // Remember CLDR entries too!
+        for (auto& v : cldrEntry.names) {
+            strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
+        }
+
         // Special drawing
         if (auto q = drawMethods.find(cp); q != drawMethods.end())
             flags |= q->second;
