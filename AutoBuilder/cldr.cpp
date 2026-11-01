@@ -1,11 +1,53 @@
 #include "cldr.h"
 
+#include <algorithm>
+
 #include "pugixml.hpp"
 #include "mojibake.h"
 #include "u_Strings.h"
 
 #include "loader.h"
 #include "UcCp.h"
+
+void cl::EmojiEntry::eraseName(std::string_view text)
+{
+    auto where = std::find(names.begin(), names.end(), text);
+    if (where != names.end()) {
+        names.erase(where);
+    }
+}
+
+cl::EmojiEntry* cl::Base::findEmoji(char32_t c)
+{
+    auto it = emoji.find(c);
+    return (it == emoji.end()) ? nullptr : &it->second;
+}
+
+cl::EmojiEntry& cl::Base::findEmojiOr(char32_t c, EmojiEntry& fallback)
+{
+    auto it = emoji.find(c);
+    return (it == emoji.end()) ? fallback : it->second;
+}
+
+namespace {
+
+    bool containsWord(std::string_view haystack, std::string_view needle)
+    {
+        auto pos = haystack.find(needle);
+        if (pos == std::string_view::npos)
+            return false;
+        if (pos == 0)
+            return true;
+        switch (haystack[pos - 1]) {
+        case ' ':
+        case '-':
+            return true;
+        default:
+            return false;
+        }
+    }
+
+}   // anon namespace
 
 cl::Base cl::load()
 {
@@ -38,7 +80,7 @@ cl::Base cl::load()
             continue;
         }
 
-        auto dest = r.emoji[cp];
+        auto& dest = r.emoji[cp];
         auto text = hAnno.text().as_string();
         auto texts = str::splitSv(text, '|');
         for (auto& v : texts) {
@@ -47,7 +89,9 @@ cl::Base cl::load()
                 continue;
             // Too many of these, just contaminate search
             if (v == "ideograph"
-                    || v == "Japanese")
+                    || v == "Japanese"
+                    || v == "eye"
+                    || v == "face")
                 continue;
             dest.names.emplace_back(v);
         }
@@ -58,16 +102,15 @@ cl::Base cl::load()
         // Go back, it’s simpler
         for (size_t iSmall = v.names.size(); iSmall > 0; ) { --iSmall;
             auto small = v.names[iSmall];
-            for (size_t iBig = 0; iSmall < v.names.size(); ++iBig) {
+            for (size_t iBig = 0; iBig < v.names.size(); ++iBig) {
                 if (iBig == iSmall)
                     continue;
                 auto big = v.names[iBig];
-                if (big.find(small) != std::string_view::npos) {
+                if (containsWord(big, small)) {
                     v.names.erase(v.names.begin() + iSmall);
-                    goto brk1;
+                    break;
                 }
             }
-        brk1:;
         }
     }
 

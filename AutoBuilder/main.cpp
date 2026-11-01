@@ -355,6 +355,7 @@ int main()
     NumCache nums;
     int nDeprecated = 0, nUpCase = 0, nChars = 0;
     NewLine nl;
+    cl::EmojiEntry emptyEntry;
     std::cout << "Processing main base..." << std::flush;
 
     os << '\n';
@@ -413,6 +414,8 @@ int main()
             sLowerName = decapitalize(sName, cp);
         }
 
+        auto& cldrEntry = cldr.findEmojiOr(cp, emptyEntry);
+
         if (hasTextEntry) {
             if (sLowerName.empty() && !textCp->controls.empty()) {
                 sLowerName = std::move(textCp->controls[0]);
@@ -424,6 +427,7 @@ int main()
 
             // Name
             textCp->eraseName(sLowerName);
+            cldrEntry.eraseName(sLowerName);
 
             textCp->eraseName(defaultAbbrev);
             textCp->eraseName(decapitalize(defaultAbbrev, cp));
@@ -491,6 +495,12 @@ int main()
                     }
                 }
             }
+            cldrEntry.eraseName(v);
+            strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
+        }
+
+        // Remember CLDR entries too!
+        for (auto& v : cldrEntry.names) {
             strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
         }
 
