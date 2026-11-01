@@ -20,9 +20,6 @@ cl::Base cl::load()
     auto hRoot1 = hRoot.child("ldml");
     auto hAnnos = hRoot1.child("annotations");
     for (auto hAnno : hAnnos.children("annotation")) {
-        auto sType = hAnno.attribute("type").as_string();
-        if (*sType != 0)
-            continue;
         char32_t cp = 0;
         auto u8Cp = hAnno.attribute("cp").as_string();
         auto u32Cp = mojibake::toM<std::u32string>(u8Cp);
@@ -53,6 +50,24 @@ cl::Base cl::load()
                     || v == "Japanese")
                 continue;
             dest.names.emplace_back(v);
+        }
+    }
+
+    // Erase substrings (they do nothing to search)
+    for (auto& [_, v] : r.emoji) {
+        // Go back, it’s simpler
+        for (size_t iSmall = v.names.size(); iSmall > 0; ) { --iSmall;
+            auto small = v.names[iSmall];
+            for (size_t iBig = 0; iSmall < v.names.size(); ++iBig) {
+                if (iBig == iSmall)
+                    continue;
+                auto big = v.names[iBig];
+                if (big.find(small) != std::string_view::npos) {
+                    v.names.erase(v.names.begin() + iSmall);
+                    goto brk1;
+                }
+            }
+        brk1:;
         }
     }
 
