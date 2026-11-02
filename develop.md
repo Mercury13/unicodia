@@ -69,6 +69,10 @@ All tests (``/qa*``) immediately exit, CAN be run together, and produce files wi
 # How to update to next Unicode
 ## Adapting to new Unicode data
 * Go to ``MiscFiles/RawData``, modify ``load.bat`` and load bases of the next Unicode
+* Update ``MiscFiles/CldrAnnotations`` (IDK how to do it automatically)
+  * Open https://cldr.unicode.org/, go through links (News CLDR ## released → Data)
+  * Download ``core.zip``
+  * Extract ``common/annotations/en.xml``
 * Make ``AutoBuilder`` run (who knows what will be added to the next bases)
   * Warning, while Unicode is alpha/beta, AutoBuilder may contain manual patches: see bug #349
 * Run it
