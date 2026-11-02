@@ -171,8 +171,9 @@ enum class DecapDebug : unsigned char { NO, YES };
 
 enum class Dcfg : unsigned char {
     SHORTCUT = 1,   ///< Force shortcut decapitalization (by dictionary unless special keywords)
-    LOCASE = 2,     ///< Letter is lowercase
-    UPCASE = 0,     ///< Letter is uppercase, Right now does nothing
+    LOCASE = 2,     ///< Letter is lowercase (e.g. letter a)
+    UPCASE = 0,     ///< Letter is uppercase, Right now does nothing (e.g. letter A)
+    MIXED = 4,      ///< Special bhv for mixed case: really mixed → SHORTCUT
 };
 
 std::string decapitalize(

@@ -1046,6 +1046,26 @@ TEST (Decap, MusicalSeven)
 }
 
 
+///
+///  MIXED flag: prerequisites
+///
+TEST (Decap, MixedPrereq)
+{
+    auto r = decapitalize("Cyrillic letter a");
+    EXPECT_EQ("Cyrillic letter A", r);
+}
+
+
+///
+///  MIXED flag: prerequisites
+///
+TEST (Decap, Mixed)
+{
+    auto r = decapitalize("Cyrillic letter a", 0, Dcfg::MIXED);
+    EXPECT_EQ("Cyrillic letter a", r);
+}
+
+
 ///// Short decapitalization ///////////////////////////////////////////////////
 
 

@@ -160,11 +160,7 @@ namespace {
             name = str::trimSv(name);
             if (name == "etc."sv || name == "..."sv)
                 return {};
-            if (lat::isSingleCase(name)) {
-                return decapitalize(name, currChar, flags);
-            } else {
-                return decapitalize(name, currChar, flags | Dcfg::SHORTCUT);
-            }
+            return decapitalize(name, currChar, flags | Dcfg::MIXED);
         };
 
         auto& cp = base[currChar];

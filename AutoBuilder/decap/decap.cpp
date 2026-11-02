@@ -821,6 +821,12 @@ std::string decapitalize(
         std::string_view x, char32_t cp,
         Flags<Dcfg> flags, DecapDebug debug)
 {
+    if (flags.have(Dcfg::MIXED)) {
+        if (!lat::isSingleCase(x)) {
+            flags |= Dcfg::SHORTCUT;
+        }
+    }
+
     // Detect exceptions
     std::string upper = str::toUpper(x);
     auto itEx = exceptions.find(upper);

@@ -8,6 +8,7 @@
 
 #include "loader.h"
 #include "UcCp.h"
+#include "decap/decap.h"
 
 void cl::EmojiEntry::eraseName(std::string_view text)
 {
@@ -92,9 +93,9 @@ cl::Base cl::load()
                     || v == "Japanese"
                     || v == "eye"
                     || v == "face"
-                    || v == "pickle")  // old CLDR
+                    || v == "computer")
                 continue;
-            dest.names.emplace_back(v);
+            dest.names.emplace_back(decapitalize(v, cp, Dcfg::MIXED));
         }
     }
 
