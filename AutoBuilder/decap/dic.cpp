@@ -412,6 +412,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "BRDA",           Dicf::PART_NOUN },
     { "CANDRABINDU",    Dicf::PART_NOUN },
     { "CARET",          Dicf::PART_NOUN },  // For APL not really, but OK
+    { "CD",             Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "CIRCLE",         Dicf::PART_NOUN },
     { "CLICK",          Dicf::PART_NOUN },
     { "COLON",          Dicf::PART_NOUN },
