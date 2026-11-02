@@ -331,6 +331,9 @@
            <enum>Qt::Horizontal</enum>
           </property>
           <widget class="QTreeView" name="treeLibrary">
+           <property name="cursor" stdset="0">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
            <property name="contextMenuPolicy">
             <enum>Qt::CustomContextMenu</enum>
            </property>
