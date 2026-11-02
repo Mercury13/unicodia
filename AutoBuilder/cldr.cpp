@@ -34,7 +34,11 @@ namespace {
 
     bool containsWord(std::string_view haystack, std::string_view needle)
     {
-        auto pos = haystack.find(needle);
+        if (haystack.length() < needle.length())
+            return false;
+        auto hh = lat::toUpper(haystack);
+        auto nn = lat::toUpper(needle);
+        auto pos = hh.find(nn);
         if (pos == std::string_view::npos)
             return false;
         if (pos == 0)
@@ -93,7 +97,9 @@ cl::Base cl::load()
                     || v == "Japanese"
                     || v == "eye"
                     || v == "face"
-                    || v == "computer")
+                    || v == "computer"
+                    || v == "katakana"
+                    || v == "hiragana")
                 continue;
             dest.names.emplace_back(decapitalize(v, cp, Dcfg::MIXED));
         }
