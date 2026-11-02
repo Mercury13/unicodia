@@ -43,10 +43,13 @@ namespace {
             return false;
         if (pos == 0)
             return true;
-        switch (haystack[pos - 1]) {
+        switch (hh[pos - 1]) {
         case ' ':
         case '-':
             return true;
+        case (char)0x9C: // left quote “
+            return (pos >= 3) && (hh[pos - 3] == (char)0xE2)
+                    && (hh[pos - 2] == (char)0x80);
         default:
             return false;
         }
