@@ -47,7 +47,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 'B' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // IPA extensions OK
-    { 0x0250, 0x02AF, { 0x259, EcContinent::NONE, Ifg::PAINT_SVG },
+    { 0x0250, 0x02AF, { 0x259, EcContinent::NONE, Ifg::PAINT_SVG, 10_hy },
             "IPA Extensions", MyName::INST, MapSubtype::LATIN, },
     // Spacing letter modifiers OK
     { 0x02B0, 0x02FF, { 0x2D0, EcContinent::NONE, Ifg::ENG_TALL_PAINT | Ifg::HINT_PX_CENTER, 2_hx },
