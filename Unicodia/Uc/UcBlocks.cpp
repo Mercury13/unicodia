@@ -60,7 +60,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZDIA, 0 }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::FUNKY },
     // Greek and Coptic OK
-    { 0x0370, 0x03FF, { L'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
+    { 0x0370, 0x03FF, { U'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
             "Greek and Coptic",
             { EcScript::Grek, 0 }, MapSubtype::ALIVE,
             EcScript::Grek },
@@ -76,8 +76,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cyrl, 1 }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::FORCE_BUILTIN },
     // Armenian OK
-    { 0x0530, 0x058F, { 0x536, EcContinent::ASIA, Ifg::PAINT_SVG,
-                            SvgHint{ 3, 13, ImbaX::LEFT_3, ImbaY::ABOVE_4 } },
+    { 0x0530, 0x058F, { U'հ', EcContinent::ASIA, Ifg::PAINT_SVG,
+                            SvgHint{ 10, 15, ImbaX::RIGHT_2 } },
             "Armenian",
             { EcScript::Armn, 0 }, MapSubtype::ALIVE,
             EcScript::Armn, EcFont::NORMAL, Bfg::WORD_TO },
