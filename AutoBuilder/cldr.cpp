@@ -12,7 +12,10 @@
 
 void cl::EmojiEntry::eraseName(std::string_view text)
 {
-    auto where = std::find(names.begin(), names.end(), text);
+    auto where = std::find_if(names.begin(), names.end(),
+            [text](std::string_view s) {
+                return lat::areCaseEqual(text, s);
+            });
     if (where != names.end()) {
         names.erase(where);
     }

@@ -427,13 +427,13 @@ int main()
 
             // Name
             textCp->eraseName(sLowerName);
-            cldrEntry.eraseName(sLowerName);
 
             textCp->eraseName(defaultAbbrev);
             textCp->eraseName(decapitalize(defaultAbbrev, cp));
         }
 
         bool hasAbbrev = !defaultAbbrev.empty() || !textCp->abbrs.empty();
+        cldrEntry.eraseName(sLowerName);
         auto [pTech, wasIns] = strings.remember(cp, uc::TextRole::MAIN_NAME, sLowerName);
         if (hasAbbrev && !wasIns) {
             nl.trigger();
