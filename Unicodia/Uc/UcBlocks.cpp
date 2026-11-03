@@ -174,7 +174,9 @@ constinit const uc::Block uc::blocks[] {
             "Sinhala",
             { EcScript::Sinh, 0 }, MapSubtype::ALIVE, EcScript::Sinh },
     // Thai OK
-    { 0x0E00, 0x0E7F, { 0xE0A, EcContinent::ASIA },
+    { 0x0E00, 0x0E7F, { U'ท', EcContinent::ASIA,
+                            Ifg::PAINT_SVG | Ifg::BIGGER | Ifg::SHIFT_UP,
+                            SvgHint{ 14, 14 } },
             "Thai",
             { EcScript::Thai, 0 }, MapSubtype::ALIVE,
             EcScript::Thai, EcFont::NORMAL, Bfg::WORD_TO },
