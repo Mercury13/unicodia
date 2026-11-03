@@ -181,7 +181,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Thai, 0 }, MapSubtype::ALIVE,
             EcScript::Thai, EcFont::NORMAL, Bfg::WORD_TO },
     // Lao OK
-    { 0x0E80, 0x0EFF, { 0xE9D, EcContinent::ASIA },
+    { 0x0E80, 0x0EFF, { U'ລ', EcContinent::ASIA, Ifg::PAINT_SVG },
             "Lao",
             { EcScript::Laoo, 0 }, MapSubtype::ALIVE,
             EcScript::Laoo, EcFont::NORMAL, Bfg::WORD_TO },
