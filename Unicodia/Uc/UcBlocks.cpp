@@ -201,7 +201,7 @@ constinit const uc::Block uc::blocks[] {
             "Georgian",
             { EcScript::Geor, 0 }, MapSubtype::ALIVE,
             EcScript::Geor, EcFont::NORMAL, Bfg::WORD_IN | Bfg::WORD_ON },
-    { 0x1100, 0x11FF, { 0x113F, EcContinent::CJK },
+    { 0x1100, 0x11FF, { 0x113F, EcContinent::CJK, Ifg::PAINT_SVG },
             "Hangul Jamo",
             { EcScript::Hang, 0 }, MapSubtype::ALIVE,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -1334,7 +1334,7 @@ constinit const uc::Block uc::blocks[] {
             "Miao",
             { EcScript::Plrd, 0 }, MapSubtype::ALIVE, EcScript::Plrd },
     // Ideographic sym/punct OK
-    { 0x16FE0, 0x16FFF, { 0x16FF0, EcContinent::CJK, Ifg::SHIFT_LEFT },
+    { 0x16FE0, 0x16FFF, { 0x16FF0, EcContinent::CJK, Ifg::SHIFT_LEFT | Ifg::PAINT_SVG },
             "Ideographic Symbols and Punctuation",
             // Hard block, though small, but all chars have scripts.
             // Hani is just over-insurance.
@@ -1342,12 +1342,14 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Tangut OK
-    { 0x17000, 0x187FF, { 0x17032, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
+    { 0x17000, 0x187FF, { 0x17032, EcContinent::CJK,
+                            Ifg::HISTORICAL | Ifg::BIGGER | Ifg::PAINT_SVG },
             "Tangut",
             { EcScript::Tang, 0 }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE },
     // Tangut components OK
-    { 0x18800, 0x18AFF, { 0x18844, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
+    { 0x18800, 0x18AFF, { 0x18844, EcContinent::CJK,
+                            Ifg::HISTORICAL | Ifg::BIGGER | Ifg::PAINT_SVG },
             "Tangut Components",
             { EcScript::Tang, '1' }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -1357,7 +1359,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Kits, 0 }, MapSubtype::DEAD,
             EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut components OK, Noto-compatible fixup font by Losketch
-    { 0x18D00, 0x18D7F, { 0x18D00, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
+    { 0x18D00, 0x18D7F, { 0x18D00, EcContinent::CJK,
+                            Ifg::HISTORICAL | Ifg::BIGGER | Ifg::PAINT_SVG },
             "Tangut Supplement",
             { EcScript::Tang, 1 }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE,
@@ -1388,17 +1391,17 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hira, '@' }, MapSubtype::DEAD,
             EcScript::Hent, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kana ex A OK
-    { 0x1B100, 0x1B12F, { 0x1B10E, EcContinent::CJK },
+    { 0x1B100, 0x1B12F, { 0x1B10E, EcContinent::CJK, Ifg::PAINT_SVG },
             "Kana Extended-A",
             { EcScript::Hira, 'A' }, MapSubtype::DEAD,
             EcScript::Hent, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // Small kana ex OK
-    { 0x1B130, 0x1B16F, { 0x1B150, EcContinent::CJK },
+    { 0x1B130, 0x1B16F, { 0x1B150, EcContinent::CJK, Ifg::PAINT_SVG },
             "Small Kana Extension",
             { EcScript::Hira, 'Z' }, MapSubtype::ALIVE,
             EcScript::Kana, EcFont::CJK_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Nushu OK
-    { 0x1B170, 0x1B2FF, { 0x1B1E0, EcContinent::CJK },
+    { 0x1B170, 0x1B2FF, { 0x1B1E0, EcContinent::CJK, Ifg::PAINT_SVG },
             "Nushu",
             { EcScript::Nshu, 0}, MapSubtype::DEAD,
             EcScript::Nshu, EcFont::NORMAL, Bfg::COLLAPSIBLE },
