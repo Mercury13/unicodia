@@ -400,28 +400,28 @@ constexpr const uc::Continent::Collapse NO_COLLAPSE
 
 constinit const uc::Continent uc::continentInfo[] {
     // None
-    { { BG_INTER,             FG_INTER, ContDark::INVERT }, NO_COLLAPSE, true },
+    { { BG_INTER,   FG_INTER, ContDark::INVERT }, NO_COLLAPSE, true },
     // Tech
     { { { 0x22, 0x55, 0x00 }, { 0x7F, 0xFF, 0x2A },
             // Special Technical’s frame colour
             { 0x66, 0xff, 0x00 } },
             NO_COLLAPSE, false },
     // Europe
-    { { BG_EUROPE,            FG_EUROPE,           }, NO_COLLAPSE, false  },
-    // Asia RtL
-    { { BG_ASIA_R,            FG_ASIA_R            }, NO_COLLAPSE, false  },
-    // Asia
-    { { BG_ASIA_L,            FG_ASIA_L            }, NO_COLLAPSE, false  },
+    { { BG_EUROPE,  FG_EUROPE }, NO_COLLAPSE, false  },
+    // Asia ←
+    { { BG_ASIA_R,  FG_ASIA_R }, NO_COLLAPSE, false  },
+    // Asia →
+    { { BG_ASIA_L,  FG_ASIA_L }, NO_COLLAPSE, false  },
     // CJK
-    { { BG_CJK,               FG_CJK               },
+    { { BG_CJK,     FG_CJK    },
       { BG_CJK, TX_CJK, FG_CJK, DT_CJK }, false  },
     // Ocean
-    { { BG_OCEAN,             { 0x00, 0x64, 0x00 } }, NO_COLLAPSE, false  },
+    { { BG_OCEAN,   FG_OCEAN  }, NO_COLLAPSE, false  },
     // Africa
-    { { BG_AFRICA,            FG_AFRICA            },
+    { { BG_AFRICA,  FG_AFRICA },
       { CO_AFRICA, TX_AFRICA, DK_AFRICA, DT_AFRICA }, false},
     // America
-    { { { 0xff, 0xc8, 0xc8 }, { 0xcc, 0x00, 0x00 } }, NO_COLLAPSE, false  },
+    { { BG_AMER,    FG_AMER   }, NO_COLLAPSE, false  },
 };
 
 // Missing
