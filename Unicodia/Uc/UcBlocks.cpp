@@ -142,7 +142,7 @@ constinit const uc::Block uc::blocks[] {
             "Bengali",
             { EcScript::Beng, 0 }, MapSubtype::ALIVE, EcScript::Beng },
     // Gurmukhi OK
-    { 0x0A00, 0x0A7F, { 0xA15, EcContinent::ASIA },
+    { 0x0A00, 0x0A7F, { 0xA15, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Gurmukhi",
             { EcScript::Guru, 0 }, MapSubtype::ALIVE, EcScript::Guru },
     // Gujarati OK, Google Noto + FORCE_TOFU show nothing
@@ -154,19 +154,20 @@ constinit const uc::Block uc::blocks[] {
             "Oriya",
             { EcScript::Orya, 0 }, MapSubtype::ALIVE, EcScript::Orya },
     // Tamil OK, font pair is good
-    { 0x0B80, 0x0BFF, { 0xB95, EcContinent::ASIA, {}, SvgHint{ 8, 3, ImbaY::BELOW_4 } },
+    { 0x0B80, 0x0BFF, { 0xB95, EcContinent::ASIA, Ifg::PAINT_SVG,
+                        SvgHint{ 8, 3, ImbaY::BELOW_4 } },
             "Tamil",
             { EcScript::Taml, 0 }, MapSubtype::ALIVE, EcScript::Taml },
     // Telugu OK
-    { 0x0C00, 0x0C7F, { 0xC35, EcContinent::ASIA },
+    { 0x0C00, 0x0C7F, { 0xC35, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Telugu",
             { EcScript::Telu, 0 }, MapSubtype::ALIVE, EcScript::Telu },
     // Kannada OK
-    { 0x0C80, 0x0CFF, { 0xCA0, EcContinent::ASIA, Ifg::SHIFT_DOWN },
+    { 0x0C80, 0x0CFF, { 0xCA0, EcContinent::ASIA, Ifg::SHIFT_DOWN | Ifg::PAINT_SVG },
             "Kannada",
             { EcScript::Knda, 0 }, MapSubtype::ALIVE, EcScript::Knda },
     // Malayalam OK
-    { 0x0D00, 0x0D7F, { 0xD16, EcContinent::ASIA, {}, SvgHint{ 15, 13 } },
+    { 0x0D00, 0x0D7F, { 0xD16, EcContinent::ASIA, Ifg::PAINT_SVG, SvgHint{ 15, 13 } },
             "Malayalam",
             { EcScript::Mlym, 0 }, MapSubtype::ALIVE, EcScript::Mlym },
     // Sinhala OK

@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
    sodipodi:docname="0C00.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -30,11 +30,11 @@
      units="px"
      inkscape:zoom="45.254834"
      inkscape:cx="6.6401746"
-     inkscape:cy="6.872194"
-     inkscape:window-width="1680"
+     inkscape:cy="6.8611455"
+     inkscape:window-width="1920"
      inkscape:window-height="998"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -49,7 +49,10 @@
        type="xygrid"
        id="grid828"
        originx="0"
-       originy="0" />
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
     <sodipodi:guide
        position="0,1.75"
        orientation="0,1"
@@ -107,12 +110,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#f57900;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#c01c28;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 8,11.75 c -0.6214521,1.398268 -1.6078836,2.5 -3,2.5 -1.3921165,0 -2.5,-1.196272 -2.5,-2.5 0,-1.303729 1.1189321,-2.5 2.5,-2.5 1.3810679,0 2.2381959,1.064101 3,2.5 0.7618041,1.435899 1.606601,2.495687 2.821941,2.517786 C 12.037281,14.289885 13.5,13.383903 13.5,10.909029 13.5,8.451177 12.04956,5.75 5.8623754,5.75"
        id="path875"
        sodipodi:nodetypes="csszzzsc" />
     <path
-       style="fill:none;stroke:#f57900;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#c01c28;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 3.8701311,3.6985035 c 0.4994626,1.2144312 0.8163237,2.0519459 2.1298705,2.0519459 1.3135468,0 2.0377086,-1.3899418 2.7227182,-2.2517282 C 9.4077296,2.6369348 10.175322,1.6443396 11.837662,1.4777246"
        id="path889"
        sodipodi:nodetypes="czsc" />
