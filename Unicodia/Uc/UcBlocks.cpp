@@ -560,27 +560,27 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hira, 1 }, MapSubtype::ALIVE,
             EcScript::Kana, EcFont::NORMAL, Bfg::WORD_TO },
     // Bopomofo OK
-    { 0x3100, 0x312F, { L'ㄉ', EcContinent::CJK },
+    { 0x3100, 0x312F, { L'ㄉ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Bopomofo",
             { EcScript::Bopo, 0 }, MapSubtype::ALIVE,
             EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Hangul compat jamo OK
-    { 0x3130, 0x318F, { L'ㅭ', EcContinent::CJK },
+    { 0x3130, 0x318F, { L'ㅭ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Hangul Compatibility Jamo",
             { EcScript::Hang, 1 }, MapSubtype::ALIVE,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kanbun OK, not collapsible: small block
-    { 0x3190, 0x319F, { L'㆝', EcContinent::CJK, Ifg::CONTINENT_OK },
+    { 0x3190, 0x319F, { L'㆝', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
             "Kanbun",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_KANBUN, Bfg::CJK },
     // Bopomofo OK, at least in W10
-    { 0x31A0, 0x31BF, { L'ㆮ', EcContinent::CJK },
+    { 0x31A0, 0x31BF, { L'ㆮ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Bopomofo Extended",
             { EcScript::Bopo, 1 }, MapSubtype::ALIVE,
             EcScript::Bopo, EcFont::CJK_P01_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK strokes OK
-    { 0x31C0, 0x31EF, { L'㇉', EcContinent::CJK },
+    { 0x31C0, 0x31EF, { L'㇉', EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Strokes",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_STROKES, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -1684,7 +1684,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'G' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // CJK H OK, UnicodiaHan
-    { 0x31350, 0x323AF, { 0x31378, EcContinent::CJK },
+    { 0x31350, 0x323AF, { 0x31378, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension H",
             { EcScript::Hani, 'H' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
