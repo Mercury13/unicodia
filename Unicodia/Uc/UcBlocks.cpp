@@ -848,7 +848,8 @@ constinit const uc::Block uc::blocks[] {
             "Lycian",
             { EcScript::Lyci, 0 }, MapSubtype::DEAD, EcScript::Lyci },
     // Carian OK
-    { 0x102A0, 0x102DF, { 0x102C6, EcContinent::ASIA },
+    // Have a short horz stroke, but let it be random on HiDPI rather than hinted
+    { 0x102A0, 0x102DF, { 0x102C6, EcContinent::ASIA, Ifg::PAINT_SVG, NO_HINT },
             "Carian",
             { EcScript::Cari, 0 }, MapSubtype::DEAD, EcScript::Cari },
     // Coptic epact OK
