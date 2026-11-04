@@ -20,7 +20,14 @@ int main()
             }
             // Replace
             unsigned nRepl = 0;
-            nRepl += str::replace(buf, "#f57900", "#c01c28");
+            static constexpr const char* STUB = "#c01c28";
+            nRepl += str::replace(buf, "#f57900", STUB); // Asia →
+            // Europe lost (cancelled with bad SVGs) but almost done
+            // WARNING: America may do bad on Asia ← (Phlp), but it’s done
+            //   manually when looked for nice sandy colours
+            nRepl += str::replace(buf, "#cc0000", STUB); // America
+
+            // Save (or do not save)
             auto fname = v.path().filename();
             if (nRepl > 0) {
                 std::ofstream os(v.path(), std::ios::binary);

@@ -53,7 +53,7 @@ constexpr QColor BG_OCEAN  { 0xc8, 0xff, 0xc8 };  // Icon BG: some light green
 constexpr QColor FG_OCEAN  { 0x00, 0x64, 0x00 };  // Icon FG
 
 // America
-// Repainting partly works
+// Repainting fully works
 constexpr QColor BG_AMER { 0xff, 0xc8, 0xc8 };
 constexpr QColor FG_AMER { 0xcc, 0x00, 0x00 };
 
