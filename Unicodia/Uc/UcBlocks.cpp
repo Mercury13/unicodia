@@ -136,7 +136,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'A' }, MapSubtype::ALIVE,
             EcScript::Arab, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Devanagari OK
-    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA, Ifg::SHIFT_DOWN, SvgHint{ 9, 2 } },
+    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA,
+                        Ifg::SHIFT_DOWN | Ifg::PAINT_SVG, 9_hx + 2_hy },
             "Devanagari",
             { EcScript::Deva, 0 }, MapSubtype::ALIVE, EcScript::Deva },
     // Bengali OK
