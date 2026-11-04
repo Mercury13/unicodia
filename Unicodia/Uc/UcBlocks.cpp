@@ -1642,29 +1642,29 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZOLD, 0 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::PSEUDOGRAPHICS, Bfg::HIPRIO_NUMBERS },
     // CJK B OK
-    { 0x20000, 0x2A6DF, { 0x20024, EcContinent::CJK },
+    { 0x20000, 0x2A6DF, { 0x20024, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension B",
             { EcScript::Hani, 'B' }, MapSubtype::ALIVE,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // CJK C OK
-    { 0x2A700, 0x2B73F, { 0x2A704, EcContinent::CJK },
+    { 0x2A700, 0x2B73F, { 0x2A704, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension C",
             { EcScript::Hani, 'C' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // CJK D OK
-    { 0x2B740, 0x2B81F, { 0x2B742, EcContinent::CJK },
+    { 0x2B740, 0x2B81F, { 0x2B742, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension D",
             { EcScript::Hani, 'D' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // CJK E OK
     // Remove 2nd horizontal line from above from 2B283, and you’ll get
     //   common 4E1C “east”. But that’s probably feature, not bug
-    { 0x2B820, 0x2CEAF, { 0x2B823, EcContinent::CJK },
+    { 0x2B820, 0x2CEAF, { 0x2B823, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension E",
             { EcScript::Hani, 'E' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // CJK F OK
-    { 0x2CEB0, 0x2EBEF, { 0x2CEB5, EcContinent::CJK },
+    { 0x2CEB0, 0x2EBEF, { 0x2CEB5, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension F",
             { EcScript::Hani, 'F' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
