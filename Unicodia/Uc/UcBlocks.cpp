@@ -1078,7 +1078,7 @@ constinit const uc::Block uc::blocks[] {
             "Mahajani",
             { EcScript::Mahj, 0 }, MapSubtype::DEAD, EcScript::Mahj },
     // Sharada OK
-    { 0x11180, 0x111DF, { 0x11191, EcContinent::ASIA, {}, SvgHint{ 7, 2 } },
+    { 0x11180, 0x111DF, { 0x11191, EcContinent::ASIA, Ifg::PAINT_SVG, 7_hx + 2_hy },
             "Sharada",
             { EcScript::Shrd, 0 }, MapSubtype::DEAD, EcScript::Shrd },
     // Sinhala archaic OK
@@ -1087,7 +1087,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Sinh, 1 }, MapSubtype::DEAD,
             EcScript::Sinh, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Khojki OK
-    { 0x11200, 0x1124F, { 0x11208, EcContinent::ASIA, Ifg::SHIFT_UP },
+    { 0x11200, 0x1124F, { 0x11208, EcContinent::ASIA, Ifg::SHIFT_UP | Ifg::PAINT_SVG },
             "Khojki",
             { EcScript::Khoj, 0 }, MapSubtype::DEAD, EcScript::Khoj },
     // Multani OK
