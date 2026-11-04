@@ -3687,7 +3687,7 @@ constinit const uc::LibNode uc::libNodes[10413] {
 { U"\u262E\uFE0F", u8"peace symbol", 3614, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3681
 { U"\U0001F54E", u8"menorah", 3614, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3682
 { U"\U0001F52F", u8"dotted six-pointed star", 3614, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3683
-{ U"\U0001FAAF", u8"khanda", 3614, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3684
+{ U"\U0001FAAF", u8"Khanda", 3614, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3684
 { U"\u2648", u8"Aries", 3615, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3685
 { U"\u2649", u8"Taurus", 3615, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3686
 { U"\u264A", u8"Gemini", 3615, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3687
