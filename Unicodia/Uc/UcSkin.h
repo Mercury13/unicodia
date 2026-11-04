@@ -2,6 +2,10 @@
 
 #include <QColor>
 
+//
+// NOTE: replace FG with another color (e.g. FF00FF) to test repainting
+//
+
 // International
 // Repainting works, but:
 // 1. Some icons do not need repainting at all
