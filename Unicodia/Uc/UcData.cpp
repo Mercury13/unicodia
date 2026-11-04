@@ -411,7 +411,7 @@ constinit const uc::Continent uc::continentInfo[] {
     // Asia RtL
     { { BG_ASIA_R,            FG_ASIA_R            }, NO_COLLAPSE, false  },
     // Asia
-    { { BG_ASIA_L,            { 0xF5, 0x79, 0x00 } }, NO_COLLAPSE, false  },
+    { { BG_ASIA_L,            FG_ASIA_L            }, NO_COLLAPSE, false  },
     // CJK
     { { BG_CJK,               FG_CJK               },
       { BG_CJK, TX_CJK, FG_CJK, DT_CJK }, false  },

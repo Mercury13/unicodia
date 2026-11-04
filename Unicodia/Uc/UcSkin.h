@@ -13,11 +13,18 @@ constexpr QColor FG_CJK { 0x5c, 0x35, 0x66 };     // Icon FG: Tango dark violet
 constexpr QColor DT_CJK { 0xAD, 0x7F, 0xA8 };     // Dark FG: Tango light violet
 constexpr QColor FRAME_CJK = TX_CJK;              // Format frame — same medium violet
 
-// Africa
+// Asia ←
+// Repainting fully works
 //constexpr QColor BG_ASIA_R { 0xFF, 0xF7, 0x1B };  // Nice colour: lemon
 constexpr QColor BG_ASIA_R { 0xFC, 0xE9, 0x4F };  // Icon Asia ←: Tango yellow
 constexpr QColor FG_ASIA_R { 0x9E, 0x6F, 0x00 };  // Same, FG: some golden-brown
+
+// Asia →
+// Repainting fully works
 constexpr QColor BG_ASIA_L { 0xff, 0xff, 0x83 };  // Icon Asia →
+constexpr QColor FG_ASIA_L { 0xF5, 0x79, 0x00 };  // Tango orange?
+
+// Africa
 constexpr QColor BG_AFRICA { 0xf5, 0xde, 0xb3 };  // Icon BG: wheat
 constexpr QColor FG_AFRICA { 0x77, 0x44, 0x21 };  // Icon FG: IDK where took, very chocolate-y
 constexpr QColor CO_AFRICA { 0xFF, 0xEE, 0xD1 };  // Cell BG: wheat but lighter
@@ -26,6 +33,7 @@ constexpr QColor DK_AFRICA { 0x5E, 0x3A, 0x01 };  // Dark BG: same but * 2/3
 constexpr QColor DT_AFRICA { 0xAD, 0x89, 0x53 };  // Dark FG: Tango light brown * 3/4
 
 // Europe (no cells for now, but lots of synth icons)
+// Repainting works except three icons with lines
 constexpr QColor BG_EUROPE { 0x7F, 0xFF, 0xFF };  // Icon BG: some shade of aqua
 constexpr QColor FG_EUROPE { 0x2f, 0x5e, 0x9d };  // Icon FG: some intermediate between Tango blue 1 and 2
 

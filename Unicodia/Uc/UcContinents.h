@@ -77,8 +77,8 @@ namespace uc {
         BIGGER            = 1<<13,  ///< [+] draw synth. icon bigger
         BIG_SVG           = 1<<14,  ///< [+] Do not synthesize an icon, use special big SVG
         BOTH_DOTTED       = 1<<15,  ///< [+] For Combining Half Marks: both characters sit on dotted circles
-        PAINT_SVG         = 1<<16,  ///< [+] SVG is not in true colours and has placeholders instead
-        HINT_PX_CENTER    = 1<<17,  ///< For TALL: [+] hint pixel centre to pixel centre
+        PAINT_SVG         = 0,      ///< [+] SVG is not in true colours and has placeholders instead
+        HINT_PX_CENTER    = 1<<16,  ///< For TALL: [+] hint pixel centre to pixel centre
         ENG_MASK          = ENG_BIT_0 | ENG_BIT_1 | ENG_BIT_2,  ///< All engines
         ENG_HINT          = 0,                      ///< Engine 0: default (hinted SVG)
         ENG_CUSTOM        = ENG_BIT_0,              ///< Engine 1: custom

@@ -464,10 +464,8 @@ void ie::LazySvg::loadPalette(const uc::Continent& continent)
 
 void ie::LazySvg::loadPaletteIf(const uc::SynthIcon& icon)
 {
-    if (icon.flags.have(uc::Ifg::PAINT_SVG)) {
-        auto& continent = icon.maybeMissingContinent();
-        loadPalette(continent);
-    }
+    auto& continent = icon.maybeMissingContinent();
+    loadPalette(continent);
 }
 
 
