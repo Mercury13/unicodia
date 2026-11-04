@@ -565,7 +565,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Bopo, 0 }, MapSubtype::ALIVE,
             EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Hangul compat jamo OK
-    { 0x3130, 0x318F, { L'ㅭ', EcContinent::CJK, Ifg::PAINT_SVG },
+    { 0x3130, 0x318F, { L'ㅭ', EcContinent::CJK, Ifg::PAINT_SVG, 3_hy },
             "Hangul Compatibility Jamo",
             { EcScript::Hang, 1 }, MapSubtype::ALIVE,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -590,19 +590,19 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hira, 2 }, MapSubtype::ALIVE,
             EcScript::Kana, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::WORD_TO },
     // Enclosed CJK letters and months OK
-        { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK, Ifg::CONTINENT_OK },
+        { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
             "Enclosed CJK Letters and Months",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::KOREAN,
             Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS | Bfg::WORD_TO },
     // CJK compatibility OK
-    { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
+    { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Compatibility",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_COMPAT,
                     Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::WORD_IN },
     // CJK A OK
-    { 0x3400, 0x4DBF, { L'㐾', EcContinent::CJK },
+    { 0x3400, 0x4DBF, { L'㐾', EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension A",
             { EcScript::Hani, 'A' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
@@ -611,7 +611,7 @@ constinit const uc::Block uc::blocks[] {
             "Yijing Hexagram Symbols",
             MyName::INST, MapSubtype::CJ_SYMBOL },
     // CJK hieroglyphs OK
-    { 0x4E00, 0x9FFF, { L'丈', EcContinent::CJK },
+    { 0x4E00, 0x9FFF, { L'丈', EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs",
             { EcScript::Hani, 0 }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
@@ -691,7 +691,7 @@ constinit const uc::Block uc::blocks[] {
             "Rejang",
             { EcScript::Rjng, 0 }, MapSubtype::DEAD, EcScript::Rjng },
     // Hangul jamo A OK
-    { 0xA960, 0xA97F, { L'ꥵ', EcContinent::CJK },
+    { 0xA960, 0xA97F, { L'ꥵ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Hangul Jamo Extended-A",
             { EcScript::Hang, 'A' }, MapSubtype::DEAD,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -750,12 +750,12 @@ constinit const uc::Block uc::blocks[] {
             Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::WORD_IN | Bfg::WORD_ON
                 | Bfg::WORD_TO | Bfg::WORD_AT },
     // Hangul Jamo B OK
-    { 0xD7B0, 0xD7FF, { L'ힽ', EcContinent::CJK },
+    { 0xD7B0, 0xD7FF, { L'ힽ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Hangul Jamo Extended-B",
             { EcScript::Hang, 'B' }, MapSubtype::DEAD,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK compat hiero OK
-    { 0xF900, 0xFAFF, { L'車', EcContinent::CJK },
+    { 0xF900, 0xFAFF, { L'車', EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Compatibility Ideographs",
             { EcScript::Hani, 1 }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::CJK_P01_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -775,7 +775,7 @@ constinit const uc::Block uc::blocks[] {
             "Variation Selectors",
             { EcScript::ZVAR, 0 }, MapSubtype::TECHNICAL },
     // Vertical forms OK, not collapsible: small
-    { 0xFE10, 0xFE1F, { L'︗', EcContinent::CJK, Ifg::CONTINENT_OK },
+    { 0xFE10, 0xFE1F, { L'︗', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::PAINT_SVG, 8_hy },
             "Vertical Forms",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_VERTICAL },
@@ -786,7 +786,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::NOTO },
     // CJK compat forms OK
-    { 0xFE30, 0xFE4F, { 0xFE3D, EcContinent::CJK },
+    { 0xFE30, 0xFE4F, { 0xFE3D, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Compatibility Forms",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_SIMSUN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -802,7 +802,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'b' }, MapSubtype::ALIVE,
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_DESCRIPTION },
     // Half/full OK
-    { 0xFF00, 0xFFEF, { L'５', EcContinent::CJK, Ifg::CONTINENT_OK },
+    { 0xFF00, 0xFFEF, { L'５', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
             "Halfwidth and Fullwidth Forms",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_FULLHALF,
