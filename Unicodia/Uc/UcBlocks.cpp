@@ -875,7 +875,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Ugar, 0 }, MapSubtype::DEAD,
             EcScript::Ugar, EcFont::NORMAL, Bfg::WORD_TO },
     // Old Persian OK
-    { 0x103A0, 0x103DF, { 0x103A2, EcContinent::ASIA },
+    { 0x103A0, 0x103DF, { 0x103A2, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Old Persian",
             { EcScript::Xpeo, 0 }, MapSubtype::DEAD, EcScript::Xpeo },
     // Deseret OK
@@ -1053,11 +1053,11 @@ constinit const uc::Block uc::blocks[] {
             "Elymaic",
             { EcScript::Elym, 0 }, MapSubtype::DEAD, EcScript::Elym },
     // Brahmi OK
-    { 0x11000, 0x1107F, { 0x1101C, EcContinent::ASIA, {}, SvgHint{ 6, 1 } },
+    { 0x11000, 0x1107F, { 0x1101C, EcContinent::ASIA, Ifg::PAINT_SVG, SvgHint{ 6, 1 } },
             "Brahmi",
             { EcScript::Brah, 0 }, MapSubtype::DEAD, EcScript::Brah },
     // Kaithi OK
-    { 0x11080, 0x110CF, { 0x1108D, EcContinent::ASIA, {}, 7_hx },
+    { 0x11080, 0x110CF, { 0x1108D, EcContinent::ASIA, Ifg::PAINT_SVG, 7_hx },
             "Kaithi",
             { EcScript::Kthi, 0 }, MapSubtype::DEAD, EcScript::Kthi },
     // Sora OK
