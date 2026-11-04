@@ -1064,11 +1064,11 @@ constinit const uc::Block uc::blocks[] {
             "Kaithi",
             { EcScript::Kthi, 0 }, MapSubtype::DEAD, EcScript::Kthi },
     // Sora OK
-    { 0x110D0, 0x110FF, { 0x110D0, EcContinent::ASIA },
+    { 0x110D0, 0x110FF, { 0x110D0, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Sora Sompeng",
             { EcScript::Sora, 0 }, MapSubtype::ALIVE, EcScript::Sora },
     // Chakma OK
-    { 0x11100, 0x1114F, { 0x11110, EcContinent::ASIA },
+    { 0x11100, 0x1114F, { 0x11110, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Chakma",
             { EcScript::Cakm, 0 }, MapSubtype::ALIVE,
             EcScript::Cakm, EcFont::NORMAL, Bfg::BIG_CONTROLS },
