@@ -62,7 +62,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#f57900;stroke-width:1.5;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
+       style="fill:none;stroke:#c01c28;stroke-width:1.5;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
        id="path15729"
        sodipodi:type="arc"
        sodipodi:cx="4.9899187"
@@ -76,7 +76,7 @@
        sodipodi:open="true"
        transform="rotate(90)" />
     <path
-       style="fill:none;stroke:#f57900;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#c01c28;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 3.75,5 V 15"
        id="path1" />
   </g>

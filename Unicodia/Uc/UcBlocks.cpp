@@ -15,6 +15,9 @@ consteval uc::SvgHint operator + (uc::TmpHx x, uc::ImbaX ix)
 consteval uc::SvgHint operator + (uc::TmpHx x, uc::TmpHy y)
     { return uc::SvgHint{ x.v, y.v }; }
 
+/// y + x — forbidden
+consteval uc::SvgHint operator + (uc::TmpHy y, uc::TmpHx x) = delete;
+
 /// Hint X but balance Y — impossible
 constexpr uc::SvgHint operator + (uc::TmpHx, uc::ImbaY) = delete;
 
@@ -263,8 +266,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Khmr, 0 }, MapSubtype::ALIVE,
             EcScript::Khmr, EcFont::NORMAL, Bfg::VIRAMA_UP | Bfg::WORD_TO },
     // Mongol OK, implemented ligature
-    { 0x1800, 0x18AF,
-            { 0x183E, EcContinent::ASIA, Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT, 11_hx },
+    { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA,
+                        Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT | Ifg::PAINT_SVG, 11_hx },
             "Mongolian",
             { EcScript::Mong, 0 }, MapSubtype::ALIVE,
             EcScript::Mong, EcFont::NORMAL, Bfg::BIG_CONTROLS,
@@ -279,15 +282,15 @@ constinit const uc::Block uc::blocks[] {
             "Limbu",
             { EcScript::Limb, 0 }, MapSubtype::ALIVE, EcScript::Limb },
     // Tai Le OK
-    { 0x1950, 0x197F, { 0x195E, EcContinent::ASIA },
+    { 0x1950, 0x197F, { 0x195E, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Tai Le",
             { EcScript::Tale, 0 }, MapSubtype::ALIVE, EcScript::Tale },
     // New Tai Lue OK
-    { 0x1980, 0x19DF, { 0x19C5, EcContinent::ASIA },
+    { 0x1980, 0x19DF, { 0x19C5, EcContinent::ASIA, Ifg::PAINT_SVG },
             "New Tai Lue",
             { EcScript::Talu, 0 }, MapSubtype::ALIVE, EcScript::Talu },
     // Khmer syms OK
-    { 0x19E0, 0x19FF, { 0x19EF, EcContinent::ASIA },
+    { 0x19E0, 0x19FF, { 0x19EF, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Khmer Symbols",
             { EcScript::Khmr, 1 }, MapSubtype::ALIVE,
             EcScript::Khmr, EcFont::KHMER_SYMBOLS, Bfg::HAS_DESCRIPTION },
@@ -319,11 +322,11 @@ constinit const uc::Block uc::blocks[] {
             "Batak",
             { EcScript::Batk, 0 }, MapSubtype::ALIVE, EcScript::Batk },
     // Lepcha OK
-    { 0x1C00, 0x1C4F, { 0x1C00, EcContinent::ASIA },
+    { 0x1C00, 0x1C4F, { 0x1C00, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Lepcha",
             { EcScript::Lepc, 0 }, MapSubtype::ALIVE, EcScript::Lepc },
     // Ol Chiki OK
-    { 0x1C50, 0x1C7F, { 0x1C5A, EcContinent::ASIA },
+    { 0x1C50, 0x1C7F, { 0x1C5A, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Ol Chiki",
             { EcScript::Olck, 0 }, MapSubtype::ALIVE,
             EcScript::Olck, EcFont::NORMAL, Bfg::WORD_AT },
@@ -344,7 +347,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Sund, 1 }, MapSubtype::DEAD,
             EcScript::Sund, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Vedic ex OK
-    { 0x1CD0, 0x1CFF, { 0x1CEC, EcContinent::ASIA, Ifg::CONTINENT_OK | Ifg::SHIFT_DOWN },
+    { 0x1CD0, 0x1CFF, { 0x1CEC, EcContinent::ASIA,
+                    Ifg::CONTINENT_OK | Ifg::SHIFT_DOWN | Ifg::PAINT_SVG },
             "Vedic Extensions",
             MyName::INST, MapSubtype::DEAD, EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
@@ -663,18 +667,18 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Latn, EcFont::LATIN, Bfg::STOCK_BLOCK_DESC },
     // Syloti OK
     // Do not hint by X: we don’t want to grow a tree while the forest is dying
-    { 0xA800, 0xA82F, { 0xA808, EcContinent::ASIA, {}, 3_hy },
+    { 0xA800, 0xA82F, { 0xA808, EcContinent::ASIA, Ifg::PAINT_SVG, 3_hy },
             "Syloti Nagri",
             { EcScript::Sylo, 0 }, MapSubtype::ALIVE,
             EcScript::Sylo, EcFont::NORMAL, Bfg::WORD_TO },
     // Common Indic OK
-    { 0xA830, 0xA83F, { 0xA835, EcContinent::ASIA, Ifg::SHIFT_DOWN },
+    { 0xA830, 0xA83F, { 0xA835, EcContinent::ASIA, Ifg::SHIFT_DOWN | Ifg::PAINT_SVG },
             "Common Indic Number Forms",
             MyName::INST, MapSubtype::ALIVE,
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Phags-pa OK
-    { 0xA840, 0xA87F,
-            { 0xA850, EcContinent::ASIA, Ifg::ROTATE_LTR_CW, SvgHint{ 15, 3, ImbaY::BELOW_4 } },
+    { 0xA840, 0xA87F, { 0xA850, EcContinent::ASIA, Ifg::ROTATE_LTR_CW | Ifg::PAINT_SVG,
+                        SvgHint{ 15, 3, ImbaY::BELOW_4 } },
             "Phags-pa",
             { EcScript::Phag, 0 }, MapSubtype::DEAD,
             EcScript::Phag, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
@@ -683,12 +687,13 @@ constinit const uc::Block uc::blocks[] {
             "Saurashtra",
             { EcScript::Saur, 0 }, MapSubtype::ALIVE, EcScript::Saur },
     // Devanagari ex OK
-    { 0xA8E0, 0xA8FF, { 0xA8EC, EcContinent::ASIA, Ifg::SHIFT_DOWN, SvgHint{ 11, 1 } },
+    { 0xA8E0, 0xA8FF, { 0xA8EC, EcContinent::ASIA,
+                        Ifg::SHIFT_DOWN | Ifg::PAINT_SVG, 11_hx + 1_hy },
             "Devanagari Extended",
             { EcScript::Deva, 1 }, MapSubtype::DEAD,
             EcScript::Deva, EcFont::DEVANAGARI_BIGGER, Bfg::HAS_DESCRIPTION },
     // Kayah Li OK
-    { 0xA900, 0xA92F, { U"\uA922\uA928", EcContinent::ASIA },
+    { 0xA900, 0xA92F, { U"\uA922\uA928", EcContinent::ASIA, Ifg::PAINT_SVG },
             "Kayah Li",
             { EcScript::Kali, 0 }, MapSubtype::ALIVE, EcScript::Kali },
     // Rejang OK
@@ -705,7 +710,7 @@ constinit const uc::Block uc::blocks[] {
             "Javanese",
             { EcScript::Java, 0 }, MapSubtype::DEAD, EcScript::Java },
     // Myanmar ex B OK
-    { 0xA9E0, 0xA9FF, { L'ꧬ', EcContinent::ASIA },
+    { 0xA9E0, 0xA9FF, { L'ꧬ', EcContinent::ASIA, Ifg::PAINT_SVG },
             "Myanmar Extended-B",
             { EcScript::Mymr, 'B' }, MapSubtype::ALIVE,
             EcScript::Mymr, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
@@ -714,17 +719,17 @@ constinit const uc::Block uc::blocks[] {
             "Cham",
             { EcScript::Cham, 0 }, MapSubtype::ALIVE, EcScript::Cham },
     // Myanmar ex A OK
-    { 0xAA60, 0xAA7F, { L'ꩴ', EcContinent::ASIA, {}, 12_hx },
+    { 0xAA60, 0xAA7F, { L'ꩴ', EcContinent::ASIA, Ifg::PAINT_SVG, 12_hx },
             "Myanmar Extended-A",
             { EcScript::Mymr, 'A' }, MapSubtype::ALIVE,
             EcScript::Mymr, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Tai Viet OK
-    { 0xAA80, 0xAADF, { 0xAA8F, EcContinent::ASIA },
+    { 0xAA80, 0xAADF, { 0xAA8F, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Tai Viet",
             { EcScript::Tavt, 0 }, MapSubtype::ALIVE,
             EcScript::Tavt, EcFont::NORMAL, Bfg::WORD_TO },
     // Meetei ex OK
-    { 0xAAE0, 0xAAFF, { 0xAAE6, EcContinent::ASIA },
+    { 0xAAE0, 0xAAFF, { 0xAAE6, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Meetei Mayek Extensions",
             { EcScript::Mtei, 1 }, MapSubtype::ALIVE,
             EcScript::Mtei, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::VIRAMA_UP },
@@ -744,7 +749,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cher, 1 }, MapSubtype::ALIVE,
             EcScript::Cher, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Meetei OK
-    { 0xABC0, 0xABFF, { 0xABC4, EcContinent::ASIA, {}, 3_hy },
+    { 0xABC0, 0xABFF, { 0xABC4, EcContinent::ASIA, Ifg::PAINT_SVG, 3_hy },
             "Meetei Mayek",
             { EcScript::Mtei, 0 }, MapSubtype::ALIVE, EcScript::Mtei },
     // Hangul syllables OK
@@ -1091,64 +1096,67 @@ constinit const uc::Block uc::blocks[] {
             "Khojki",
             { EcScript::Khoj, 0 }, MapSubtype::DEAD, EcScript::Khoj },
     // Multani OK
-    { 0x11280, 0x112AF, { 0x11284, EcContinent::ASIA },
+    { 0x11280, 0x112AF, { 0x11284, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Multani",
             { EcScript::Mult, 0 }, MapSubtype::DEAD, EcScript::Mult },
     // Khudawadi OK
-    { 0x112B0, 0x112FF, { 0x112BA, EcContinent::ASIA },
+    { 0x112B0, 0x112FF, { 0x112BA, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Khudawadi",
             { EcScript::Sind, 0 }, MapSubtype::ALIVE, EcScript::Sind },
     // Grantha OK
-    { 0x11300, 0x1137F, { 0x11315, EcContinent::ASIA },
+    { 0x11300, 0x1137F, { 0x11315, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Grantha",
             { EcScript::Gran, 0 }, MapSubtype::DEAD, EcScript::Gran },
     // Tulu-Tigalari half-OK
-    { 0x11380, 0x113FF, { 0x11392, EcContinent::ASIA },
+    { 0x11380, 0x113FF, { 0x11392, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Tulu-Tigalari",
             { EcScript::Tutg, 0}, MapSubtype::DEAD,
             EcScript::Tutg, EcFont::NORMAL, Bfg::VIRAMA_INSIDE },
     // Newa OK
-    { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA, {}, 2_hy },
+    { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA, Ifg::PAINT_SVG, 2_hy },
             "Newa",
             { EcScript::Newa, 0 }, MapSubtype::ALIVE, EcScript::Newa },
     // Tirhuta OK
-    { 0x11480, 0x114DF, { 0x1148F, EcContinent::ASIA, {}, SvgHint{ 8, 3 } },
+    { 0x11480, 0x114DF, { 0x1148F, EcContinent::ASIA, Ifg::PAINT_SVG, 8_hx + 3_hy },
             "Tirhuta",
             { EcScript::Tirh, 0 }, MapSubtype::ALIVE, EcScript::Tirh },
     // Siddham OK
-    { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA, Ifg::SHIFT_DOWN, 9_hx },
+    { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA,
+                          Ifg::SHIFT_DOWN | Ifg::PAINT_SVG, 9_hx },
             "Siddham",
             { EcScript::Sidd, 0 }, MapSubtype::DEAD, EcScript::Sidd },
     // Modi OK
-    { 0x11600, 0x1165F, { 0x1160E, EcContinent::ASIA, {}, SvgHint{ 2, ImbaY::BELOW_3 } },
+    { 0x11600, 0x1165F, { 0x1160E, EcContinent::ASIA, Ifg::PAINT_SVG,
+                          SvgHint{ 2, ImbaY::BELOW_3 } },
             "Modi",
             { EcScript::Modi, 0 }, MapSubtype::DEAD, EcScript::Modi },
     // Mongolian supp OK
-    { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA, Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT },
+    { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA,
+                          Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT | Ifg::PAINT_SVG },
             "Mongolian Supplement",
             { EcScript::Mong, 1 }, MapSubtype::ALIVE,
             EcScript::Mong, EcFont::NORMAL, Bfg::HAS_DESCRIPTION, EcGlyphStyleChannel::VERTICAL },
     // Takri OK
-    { 0x11680, 0x116CF, { 0x1168A, EcContinent::ASIA },
+    { 0x11680, 0x116CF, { 0x1168A, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Takri",
             { EcScript::Takr, 0 }, MapSubtype::DEAD, EcScript::Takr },
     // Mymr ex C OK
-    { 0x116D0, 0x116FF, { 0x116D3, EcContinent::ASIA, {}, 3_hx  },
+    { 0x116D0, 0x116FF, { 0x116D3, EcContinent::ASIA, Ifg::PAINT_SVG, 3_hx  },
             "Myanmar Extended-C",
             { EcScript::Mymr, 'C' }, MapSubtype::ALIVE,
             EcScript::Mymr, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Ahom OK
-    { 0x11700, 0x1174F, { 0x11700, EcContinent::ASIA },
+    { 0x11700, 0x1174F, { 0x11700, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Ahom",
             { EcScript::Ahom, 0 }, MapSubtype::ALIVE,
             EcScript::Ahom, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::NONE,
             { 0x1173F, uc::EcVersion::V_14_0 } },
     // Dogra OK
-    { 0x11800, 0x1184F, { 0x1180A, EcContinent::ASIA, {}, 1_hy },
+    { 0x11800, 0x1184F, { 0x1180A, EcContinent::ASIA, Ifg::PAINT_SVG, 1_hy },
             "Dogra",
             { EcScript::Dogr, 0 }, MapSubtype::ALIVE, EcScript::Dogr },
     // Warang OK
-    { 0x118A0, 0x118FF, { 0x118FF, EcContinent::ASIA },
+    { 0x118A0, 0x118FF, { 0x118FF, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Warang Citi",
             { EcScript::Wara, 0 }, MapSubtype::ALIVE,
             EcScript::Wara, EcFont::NORMAL, Bfg::WORD_AT },
@@ -1167,7 +1175,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Zanb, 0 }, MapSubtype::DEAD,
             EcScript::Zanb, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::LOW_WORDS_3 },
     // Soyombo OK
-    { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA, {}, SvgHint{ 13, 1 } },
+    { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA, Ifg::PAINT_SVG, 13_hx + 1_hy },
             "Soyombo",
             { EcScript::Soyo, 0 }, MapSubtype::DEAD,
             EcScript::Soyo, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::VIRAMA_UP },
@@ -1177,11 +1185,11 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cans, 'A' }, MapSubtype::ALIVE,
             EcScript::Cans, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Pau Cin Hau OK
-    { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA, {}, 9_hx },
+    { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA, Ifg::PAINT_SVG, 9_hx },
             "Pau Cin Hau",
             { EcScript::Pauc, '0' }, MapSubtype::ALIVE, EcScript::Pauc },
     // Deva Ex A OK
-    { 0x11B00, 0x11B5F, { 0x11B07, EcContinent::ASIA, Ifg::SHIFT_DOWN },
+    { 0x11B00, 0x11B5F, { 0x11B07, EcContinent::ASIA, Ifg::SHIFT_DOWN | Ifg::PAINT_SVG },
             "Devanagari Extended-A",
             { EcScript::Deva, 'A' }, MapSubtype::DEAD,
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -1195,7 +1203,7 @@ constinit const uc::Block uc::blocks[] {
             "Sunuwar",
             { EcScript::Sunu, 0 }, MapSubtype::ALIVE, EcScript::Sunu },
     // Bhaiksuki OK
-    { 0x11C00, 0x11C6F, { 0x11C0E, EcContinent::ASIA },
+    { 0x11C00, 0x11C6F, { 0x11C0E, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Bhaiksuki",
             { EcScript::Bhks, 0 }, MapSubtype::DEAD, EcScript::Bhks },
     // Marchen OK
@@ -1205,7 +1213,7 @@ constinit const uc::Block uc::blocks[] {
             "Marchen",
             { EcScript::Marc, 0 }, MapSubtype::DEAD, EcScript::Marc },
     // Masaram Gondi OK
-    { 0x11D00, 0x11D5F, { 0x11D0C, EcContinent::ASIA, {}, 7_hy },
+    { 0x11D00, 0x11D5F, { 0x11D0C, EcContinent::ASIA, Ifg::PAINT_SVG, 7_hy },
             "Masaram Gondi",
             MyName::INST, MapSubtype::DEAD,
             EcScript::Gonm, EcFont::NORMAL, Bfg::VIRAMA_UP },
@@ -1215,12 +1223,12 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Tols, 0 }, MapSubtype::ALIVE,
             EcScript::Tols, EcFont::NORMAL },
     /// @todo [u18, tofu] Bengali supplement
-    { 0x11DF0, 0x11DFF, { 0x11DF1, EcContinent::ASIA, Ifg::PAINT_SVG, SvgHint { 12, 1 } },
+    { 0x11DF0, 0x11DFF, { 0x11DF1, EcContinent::ASIA, Ifg::PAINT_SVG, 12_hx + 1_hy },
             "Bengali Supplement",
             { EcScript::Beng, 1 }, MapSubtype::DEAD,
             EcScript::Beng, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Gunjala Gondi OK
-    { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA, {}, SvgHint{ 2, ImbaY::BELOW_4 } },
+    { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA, Ifg::PAINT_SVG, 2_hy + ImbaY::BELOW_4 },
             "Gunjala Gondi",
             MyName::INST, MapSubtype::ALIVE,
             EcScript::Gong, EcFont::NORMAL, Bfg::VIRAMA_UP },
@@ -1240,28 +1248,30 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Lisu, 1 }, MapSubtype::ALIVE,
             EcScript::Lisu, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Tamil supp OK
-    { 0x11FC0, 0x11FFF, { 0x11FD8, EcContinent::ASIA, Ifg::SHIFT_UP },
+    { 0x11FC0, 0x11FFF, { 0x11FD8, EcContinent::ASIA, Ifg::SHIFT_UP | Ifg::PAINT_SVG },
             "Tamil Supplement",
             { EcScript::Taml, 1 }, MapSubtype::DEAD,
             EcScript::Taml, EcFont::TAMIL_SUPPLEMENT, Bfg::HAS_DESCRIPTION },
     // Cuneiform OK
-    { 0x12000, 0x123FF, { 0x1202D, EcContinent::ASIA },
+    { 0x12000, 0x123FF, { 0x1202D, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Cuneiform",
             { EcScript::Xsux, 0 }, MapSubtype::DEAD,
             EcScript::Xsux, EcFont::NORMAL, Bfg::WORD_IN },
     // Cuneiform numbers and punct OK
     // By some nice coincidence, better use default engine
     // ABOVE_2 = first who makes 2px above at 1.25×
-    { 0x12400, 0x1247F, { 0x1240A, EcContinent::ASIA, {}, SvgHint{ 0, 1, ImbaX::LEFT_4, ImbaY::ABOVE_2 } },
+    { 0x12400, 0x1247F, { 0x1240A, EcContinent::ASIA, Ifg::PAINT_SVG,
+                          SvgHint{ 0, 1, ImbaX::LEFT_4, ImbaY::ABOVE_2 } },
             "Cuneiform Numbers and Punctuation",
             { EcScript::Xsux, 1 }, MapSubtype::DEAD,
             EcScript::Xsux, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Early cuneiform OK
-    { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA, Ifg::SMALLER },
+    { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA, Ifg::SMALLER | Ifg::PAINT_SVG },
             "Early Dynastic Cuneiform",
             { EcScript::Xsux, 2 }, MapSubtype::DEAD, EcScript::Xsux },
     // Archaic cuneiform: by Robin Leroy
-    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::BIGGER, 1_hx + ImbaX::LEFT_2 },
+    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::BIGGER,
+                          1_hx + ImbaX::LEFT_2 },
             "Archaic Cuneiform Numerals",
             { EcScript::Xsux, 3 }, MapSubtype::DEAD,
             EcScript::Pcun, EcFont::CUNEIFORM_ARCHAIC, Bfg::DESCRIBE_SCRIPT },
@@ -1287,11 +1297,12 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Egyp, 'A' }, MapSubtype::DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
     // Anatolian hiero OK
-    { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
+    { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Anatolian Hieroglyphs",
             { EcScript::Hluw, 0 }, MapSubtype::DEAD, EcScript::Hluw },
     // Gurung Khema now in Funky
-    { 0x16100, 0x1613F, { 0x16101, EcContinent::ASIA, Ifg::BIGGER, SvgHint{ 9, 1 } },
+    { 0x16100, 0x1613F, { 0x16101, EcContinent::ASIA,
+                        Ifg::BIGGER | Ifg::PAINT_SVG, 9_hx + 1_hy },
             "Gurung Khema",
             { EcScript::Gukh, 0 }, MapSubtype::ALIVE, EcScript::Gukh },
     // Bamum supplement OK
@@ -1300,11 +1311,11 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Bamu, 1 }, MapSubtype::DEAD,
             EcScript::Bamu, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Mro OK
-    { 0x16A40, 0x16A6F, { 0x16A52, EcContinent::ASIA },
+    { 0x16A40, 0x16A6F, { 0x16A52, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Mro",
             { EcScript::Mroo, 0 }, MapSubtype::ALIVE, EcScript::Mroo },
     // Tangsa OK, found the author
-    { 0x16A70, 0x16ACF, { 0x16A86, EcContinent::ASIA, {}, 2_hx },
+    { 0x16A70, 0x16ACF, { 0x16A86, EcContinent::ASIA, Ifg::PAINT_SVG, 2_hx },
             "Tangsa",
             { EcScript::Tnsa, 0 }, MapSubtype::ALIVE, EcScript::Tnsa },
     // Bassa OK
@@ -1314,11 +1325,12 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Bass, 0 }, MapSubtype::ALIVE,
             EcScript::Bass, EcFont::NORMAL, Bfg::WORD_TO },
     // Pahawh OK
-    { 0x16B00, 0x16B8F, { 0x16B00, EcContinent::ASIA },
+    { 0x16B00, 0x16B8F, { 0x16B00, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Pahawh Hmong",
             { EcScript::Hmng, 0 }, MapSubtype::ALIVE, EcScript::Hmng },
     // Kirat OK
-    { 0x16D40, 0x16D7F, { 0x16D44, EcContinent::ASIA, {}, SvgHint{ 10, 2, ImbaY::BELOW_3 } },
+    { 0x16D40, 0x16D7F, { 0x16D44, EcContinent::ASIA, Ifg::PAINT_SVG,
+                        SvgHint{ 10, 2, ImbaY::BELOW_3 } },
             "Kirat Rai",
             { EcScript::Krai, 0 }, MapSubtype::ALIVE, EcScript::Krai },
     /// @todo [U19] Chisoi
@@ -1513,20 +1525,20 @@ constinit const uc::Block uc::blocks[] {
             "Nyiakeng Puachue Hmong",
             { EcScript::Hmnp, 0}, MapSubtype::ALIVE, EcScript::Hmnp },
     // Toto OK
-    { 0x1E290, 0x1E2BF, { 0x1E290, EcContinent::ASIA },
+    { 0x1E290, 0x1E2BF, { 0x1E290, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Toto",
             { EcScript::Toto, 0}, MapSubtype::ALIVE, EcScript::Toto },
     // Wancho OK
-    { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA },
+    { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Wancho",
             { EcScript::Wcho, 0}, MapSubtype::ALIVE,
             EcScript::Wcho, EcFont::NORMAL, Bfg::WORD_ON },
     // Nag OK, done in UnicodiaFunky
-    { 0x1E4D0, 0x1E4FF, { 0x1E4D7, EcContinent::ASIA },
+    { 0x1E4D0, 0x1E4FF, { 0x1E4D7, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Nag Mundari",
             { EcScript::Nagm, 0}, MapSubtype::ALIVE, EcScript::Nagm },
     // Ol Onal OK, done in UnicodiaFunky
-    { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, {}, 14_hx  },
+    { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, Ifg::PAINT_SVG, 14_hx  },
             "Ol Onal",
             { EcScript::Onao, 0 }, MapSubtype::ALIVE,
             EcScript::Onao, EcFont::NORMAL, Bfg::WORD_IN },
