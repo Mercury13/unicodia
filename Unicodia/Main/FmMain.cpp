@@ -228,6 +228,27 @@ int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
 
 namespace {
 
+// They appear broken and solid in the array
+#define BRO__KEN(y)  ie::CR::hl(0, y, 4), ie::CR::hl(7, y, 4)
+#define ooSOLIDo(y)  ie::CR::hl(0, y, 11)
+    constinit const ie::CR yijingRects[] = {
+        BRO__KEN(0),
+        BRO__KEN(2),
+        ooSOLIDo (4),
+        BRO__KEN(6),
+        ooSOLIDo (8),
+        BRO__KEN(10)
+    };
+#undef BRO__KEN
+#undef ooSOLIDo
+
+#define STICK(x, y)  ie::CR::vl(x, y, 3)
+    constinit const ie::CR aegeanRects[] = {
+        STICK(0, 0), STICK(2, 0), STICK(4, 0), STICK(6, 0),
+             STICK(1, 4), STICK(3, 4), STICK(5, 4),
+    };
+#undef STICK
+
     QIconEngine* getCustomEngine(const uc::Block& block)
     {
         switch (block.startingCp) {
@@ -244,13 +265,15 @@ namespace {
         case 0x2FF0:    // Ideographic description
             return new ie::CjkStructure;
         case 0x4DC0:    // Yijing
-            return new ie::CoarseImage(BG_CJK, { 1,0 }, ":ScCustom/yijing.png");
+            return new ie::CoarseRects(uc::EcContinent::CJK, { 1,0 },
+                                11, 11, yijingRects);
         case 0xA640:    // Cyrl ex B
             return new ie::Margin(block.synthIcon, ":ScCustom/cyrlB.svg", ie::MRG_DETAILED, NO_FLAGS);
         case 0xFB00:
             return new ie::Ffi;
         case 0x10100:   // Aegean numbers
-            return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
+            return new ie::CoarseRects(uc::EcContinent::EUROPE, { 1,1 },
+                                7, 7, aegeanRects);
         case 0x104B0:   // Osage
             return new ie::Margin(block.synthIcon, ":ScCustom/osge.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x11A00:   // Zanb square: margin=2px even on 1.25×

@@ -15,7 +15,6 @@
         <file>ScBig/1F0A0.svg</file>
         <file>ScCustom/1circ.svg</file>
         <file>ScCustom/3D.svg</file>
-        <file>ScCustom/aegean.png</file>
         <file>ScCustom/blockelem.png</file>
         <file>ScCustom/chute.svg</file>
         <file>ScCustom/cyrlB.svg</file>
@@ -28,30 +27,29 @@
         <file>ScCustom/osge.svg</file>
         <file>ScCustom/playcard.svg</file>
         <file>ScCustom/sqideo.svg</file>
-        <file>ScCustom/yijing.png</file>
         <file>ScCustom/zanb.svg</file>
-		<file>ScLong/1B80.svg</file>
-		<file>ScLong/1CC0.svg</file>
-		<file>ScLong/10C80.svg</file>
-		<file>ScTall/0000.svg</file>
-		<file>ScTall/0080.svg</file>
-		<file>ScTall/02B0.svg</file>
-		<file>ScTall/0400.svg</file>
-		<file>ScTall/16A0.svg</file>
+	<file>ScLong/1B80.svg</file>
+	<file>ScLong/1CC0.svg</file>
+	<file>ScLong/10C80.svg</file>
+	<file>ScTall/0000.svg</file>
+	<file>ScTall/0080.svg</file>
+	<file>ScTall/02B0.svg</file>
+	<file>ScTall/0400.svg</file>
+	<file>ScTall/16A0.svg</file>
         <file>ScTall/2440.svg</file>
-		<file>ScTall/2D30.svg</file>
-		<file>ScTall/A4D0.svg</file>
-		<file>ScTall/10140.svg</file>
-		<file>ScTall/10280.svg</file>
-		<file>ScTall/10400.svg</file>
-		<file>ScTall/10480.svg</file>
-		<file>ScTall/11DB0.svg</file>
-		<file>ScTall/11FB0.svg</file>
-		<file>ScTall/16AD0.svg</file>
-		<file>ScTall/16F00.svg</file>
-		<file>ScSmall/AB70.svg</file>
-		<file>ScSmall/FE50.svg</file>
-		<file>ScSmall/1DF00.svg</file>
+	<file>ScTall/2D30.svg</file>
+	<file>ScTall/A4D0.svg</file>
+	<file>ScTall/10140.svg</file>
+	<file>ScTall/10280.svg</file>
+	<file>ScTall/10400.svg</file>
+	<file>ScTall/10480.svg</file>
+	<file>ScTall/11DB0.svg</file>
+	<file>ScTall/11FB0.svg</file>
+	<file>ScTall/16AD0.svg</file>
+	<file>ScTall/16F00.svg</file>
+	<file>ScSmall/AB70.svg</file>
+	<file>ScSmall/FE50.svg</file>
+	<file>ScSmall/1DF00.svg</file>
         <file>Texts/about.htm</file>
     </qresource>
 </RCC>

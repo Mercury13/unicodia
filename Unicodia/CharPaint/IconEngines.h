@@ -9,6 +9,7 @@
 
 // Char paint
 #include "global.h"
+#include "UcContinents.h"
 
 namespace uc {
     struct SynthIcon;
@@ -167,18 +168,38 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
-    /// Programmatic drawing of pixel image, with pixel-perfect alignment
-    /// Type: lo-res, semi-custom (Yijing and Aegean)
-    class CoarseImage : public Veng
+    struct CR { // coarse rectangle
+        unsigned char x, y, w, h;
+
+        /// Horizontal line
+        static constexpr CR hl(unsigned char x, unsigned char y, unsigned char w)
+            { return { x, y, w, 1}; }
+        /// Vertical line
+        static constexpr CR vl(unsigned char x, unsigned char y, unsigned char h)
+            { return { x, y, 1, h}; }
+    };
+
+    /// Programmatic drawing of a pixel image, with pixel-perfect alignment
+    ///    and generation from an array of rectangles,
+    ///    with repainting
+    /// Type: lo-res, semi-custom (experimental for Yijing and Aegean)
+    class CoarseRects : public Veng
     {
     public:
-        CoarseImage(const QColor& aBg, const QSize& aMargins, const char* fname);
-        CoarseImage* clone() const override { return new CoarseImage(*this); }
+        /// @warning  Rects must be static, we do not store them
+        CoarseRects(
+                const uc::EcContinent& aCont, const QSize& aMargins,
+                unsigned aW, unsigned aH, std::span<const CR> rects);
+        CoarseRects* clone() const override { return new CoarseRects(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        QColor bg;
+        uc::EcContinent cont;
+        // fg=bg never occurs, thus OK
+        QColor currFg = Qt::black, currBg = Qt::black;
         QSize margins;
+        std::span<const CR> rects;
         QPixmap texture;
+        void cacheTexture(const QColor& fg, const QColor& bg);
     };
 
     /// Programmatic drawing of Tai Xuan Jing icons

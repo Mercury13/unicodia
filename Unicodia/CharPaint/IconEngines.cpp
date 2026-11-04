@@ -726,20 +726,43 @@ void ie::ControlPic::paint1(QPainter *painter, const QRect &rect, qreal)
     painter->fillRect(x + pxLoSide, yArm, pxThickness, pxArmHeight, cp.fg);
 }
 
-///// CoarseImage //////////////////////////////////////////////////////////////
+
+///// CoarseRects //////////////////////////////////////////////////////////////
 
 
-ie::CoarseImage::CoarseImage(const QColor& aBg, const QSize& aMargins, const char* fname)
-    : bg(aBg), margins(aMargins)
+ie::CoarseRects::CoarseRects(
+        const uc::EcContinent& aCont, const QSize& aMargins,
+        unsigned aW, unsigned aH, std::span<const CR> aRects)
+    : cont(aCont), margins(aMargins), rects(aRects),
+      texture(aW, aH) {}
+
+
+void ie::CoarseRects::cacheTexture(const QColor& fg, const QColor& bg)
 {
-    texture.load(fname);
+    if ((fg == currFg) && (bg == currBg))
+        return;
+
+    // Fill BG
+    QPainter painter(&texture);
+    painter.fillRect(
+            QRect{ 0, 0, texture.width(), texture.height() },
+            bg);
+
+    // Draw rects
+    for (auto& r : rects) {
+        painter.fillRect(r.x, r.y, r.w, r.h, fg);
+    }
 }
 
 
-void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal scale)
+void ie::CoarseRects::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
+    // Get FG and BG
+    ColorPair cp(cont);
+    cacheTexture(cp.fg, cp.bg);
+
     // Fill BG
-    painter->fillRect(rect, bg);
+    painter->fillRect(rect, cp.bg);
 
     // Get rect
     unsigned side = std::lround(16.0 * scale - 0.1);  // 0 / 0.5px — sometimes we request a bit smaller icon

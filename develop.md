@@ -123,7 +123,7 @@ All tests (``/qa*``) immediately exit, CAN be run together, and produce files wi
     * Do not forget Ifg::MISSING if the block is full of tofu.
 
 ## Icon policy
-* There are several approaches to icons: spirit, evolution, peculiar character, Easter egg
+* There are several approaches to icons: spirit, evolution, autonym, peculiar character, Easter egg
 * Greek-type scripts (Cari, Cher, Copt, Cyrl, Goth, Grek, Ital, Latn, Lyci, Lydi, Perm): the main approach is peculiar character
   * If it has some meaning → cool (Latin L for Latin, Cyrillic Я is the last letter)
   * Evolutionary approach is sometimes OK (Coptic A)
@@ -138,11 +138,15 @@ All tests (``/qa*``) immediately exit, CAN be run together, and produce files wi
 * Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed
 * Use lines thinner than 1dip (device-independent pixel) in exceptional circumstances
 
+### Icons that are NOT repainted (PAINT_SVG) for a reason:
+* Europe:
+  * Georgian Mtavruli, Latn F, Cyrl D — additional lines
+
 ## Adding really optional data Unicodia can live without
 * Placeholders for emoji: see above
 * Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
   * Add ``Vfg::TEXT`` flag to this version
-  * Write about this version in UTranslator. Again, original is English, the rest are translations
+  * Write about this version in UTranslator. Again, the original is English, the rest are translations
 * Egyptian links
   * Links to Hieroglyphica. Open ``hieroglyphica.log`` left from AutoBuilder, check all lines if everything’s right, fix ``egyptian.cpp``. **Check everywhere:** in Unicodia’s images, Unicodia’s descriptions, Unicode charts!
   * Manually fixed links. Open ``manlinks.log`` left from AutoBuilder, check all lines, fix ``egyptian.cpp``.
@@ -154,7 +158,7 @@ All tests (``/qa*``) immediately exit, CAN be run together, and produce files wi
   * When you remove this flag, synthesized icon will change, too. Do the following.
     * Find one of your new characters OR open Terms and scroll to Versions
     * Open your new Unicode version, click a tiny “Find” 🔍 icon next to # of new characters (now it’s the only, but things may change)
-    * Find your block in search results, you’ll see a SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
+    * Find your block in search results, you’ll see a SYNTHESIZED icon. Make sure that the icon is in harmony with the hand-drawn 16×16, change ``synthIcon`` field if needed
 * GlyphWiki’s placeholder of CJK fonts
   * (See GlyphWiki below)
 * Latin/Cyrillic in Library
@@ -176,7 +180,7 @@ There are several types of decapitalization rules, but the most frequent three a
 
 ## Exceptions
 
-* It means: human manually wrote how the text should decapitalize.
+Human manually wrote how the text should decapitalize.
 * If exception triggers, nothing else works.
 * If string’s case is mixed, the rest rules are just skipped, but exceptions still work (see ``extractSynonym`` function).
 * Otherwise first dictionary works, then idioms.
