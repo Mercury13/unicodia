@@ -528,7 +528,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZPUN, 1 }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::PUNCTUATION },
     // CJK radicals supp OK
-    { 0x2E80, 0x2EFF, { L'⺓', EcContinent::CJK },
+    { 0x2E80, 0x2EFF, { L'⺓', EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Radicals Supplement",
             { EcScript::ZKXI, '1' }, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -544,7 +544,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::CJK_STROKES, Bfg::CJK },
     // CJK sym/punct OK
     // Cannot hint: if hint line y=3, then y=5 is too bad on 1.25×
-    { 0x3000, 0x303F, { L'〠', EcContinent::CJK },
+    { 0x3000, 0x303F, { L'〠', EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Symbols and Punctuation",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_SYMBOLS,
@@ -1669,17 +1669,17 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'F' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // CJK I OK, BabelStone
-    { 0x2EBF0, 0x2EE5F, { 0x2EBF5, EcContinent::CJK },
+    { 0x2EBF0, 0x2EE5F, { 0x2EBF5, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension I",
             { EcScript::Hani, 'I' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // CJK compat supp OK
-    { 0x2F800, 0x2FA1F, { 0x2F81F, EcContinent::CJK },
+    { 0x2F800, 0x2FA1F, { 0x2F81F, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Compatibility Ideographs Supplement",
             { EcScript::Hani, 'X' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::CJK_UHAN_P01, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK G OK
-    { 0x30000, 0x3134F, { 0x3000C, EcContinent::CJK },
+    { 0x30000, 0x3134F, { 0x3000C, EcContinent::CJK, Ifg::PAINT_SVG },
             "CJK Unified Ideographs Extension G",
             { EcScript::Hani, 'G' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
