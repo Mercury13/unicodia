@@ -12,6 +12,9 @@ consteval uc::TmpHy operator ""_hy (unsigned long long y)
 consteval uc::SvgHint operator + (uc::TmpHx x, uc::ImbaX ix)
     { return uc::SvgHint{ x.v, ix }; }
 
+consteval uc::SvgHint operator + (uc::TmpHx x, uc::TmpHy y)
+    { return uc::SvgHint{ x.v, y.v }; }
+
 /// Hint X but balance Y — impossible
 constexpr uc::SvgHint operator + (uc::TmpHx, uc::ImbaY) = delete;
 
@@ -1045,7 +1048,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Ougr, 0 }, MapSubtype::DEAD,
             EcScript::Ougr, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
     // Chorasmian OK
-    { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA_RTL, Ifg::PAINT_SVG, SvgHint{ 15, 11 } },
+    { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA_RTL, Ifg::PAINT_SVG, 15_hx + 11_hy },
             "Chorasmian",
             { EcScript::Chrs, 0 }, MapSubtype::DEAD, EcScript::Chrs },
     // Elymaic OK
@@ -1053,7 +1056,7 @@ constinit const uc::Block uc::blocks[] {
             "Elymaic",
             { EcScript::Elym, 0 }, MapSubtype::DEAD, EcScript::Elym },
     // Brahmi OK
-    { 0x11000, 0x1107F, { 0x1101C, EcContinent::ASIA, Ifg::PAINT_SVG, SvgHint{ 6, 1 } },
+    { 0x11000, 0x1107F, { 0x1101C, EcContinent::ASIA, Ifg::PAINT_SVG, 6_hx + 1_hy },
             "Brahmi",
             { EcScript::Brah, 0 }, MapSubtype::DEAD, EcScript::Brah },
     // Kaithi OK
