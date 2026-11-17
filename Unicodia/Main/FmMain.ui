@@ -32,6 +32,9 @@
     </property>
     <item>
      <widget class="QTabWidget" name="tabsMain">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
       <property name="currentIndex">
        <number>1</number>
       </property>
@@ -746,7 +749,7 @@
      <x>0</x>
      <y>0</y>
      <width>950</width>
-     <height>19</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
