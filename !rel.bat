@@ -90,6 +90,11 @@
 @if not exist %DEPLOY1% md %DEPLOY1%
 @if not exist %DEPLOY2% md %DEPLOY2%
 
+@if not exist %DEPLOY%\libstdc++-6.dll goto no_exe
+@echo Did not delete program!
+@goto end
+:no_exe
+
 @set EMOJIARC=Fonts\emoji.zip
 @if exist %EMOJIARC% goto emoji_ok
 @echo.
