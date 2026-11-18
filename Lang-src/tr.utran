@@ -208,7 +208,7 @@
    <group id="StdComment">
     <au-cmt>
      <p>Standard comments for script dates</p>
-     <p></p>
+     <p />
     </au-cmt>
     <text id="FirstInsc">
      <orig>the first known inscription</orig>
@@ -6006,7 +6006,11 @@
      <transl>Bassa</transl>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</orig>
+     <orig>
+      <p>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</p>
+      <p />
+      <p>There is no default tone, so vowels in the text must always carry a tone sign.</p>
+     </orig>
      <known-orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</known-orig>
      <transl>Thomas Lewis adlı Bassa, Amerika’dan gelen eski kölelerin alışılmadık bir yazı kullandığını keşfetti. Diğer verilere göre, bu yazıyı kendisi için yarattı. Bassa bu yazıya ''Vah''{{-}}“işaret atmak” adını verdi. Otantik yazı 20. yüzyılda yaygındı ve 21. yüzyılda [[ps:Latn|Latin]] ile sürekli olarak yer değiştirmektedir.</transl>
     </text>
@@ -9364,7 +9368,7 @@
       <p />
       <p>Noktalama işaretleri [[pt:ascii|ASCII]]’dir, ayrıca [[ps:Deva|Devanagari]]’den ''danda'' çubuğu vardır. Çift danda doğrulanmamıştır.</p>
       <p />
-      <p></p>
+      <p />
      </transl>
     </text>
    </group>
@@ -10615,7 +10619,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tglg|Tagalog]]. Fewer than {{n|25000}} people speak Tagbanwa; the younger generation prefers Tagalog. But the script is used by other Palawan languages ({{n|97000}} as of 2010), together with [[ps:Latn|Latin]].</p>
+      <p>Comes from [[ps:Tglg|Tagalog]]. Fewer than {{n|25000}} people speak Tagbanwa; the younger generation prefers Tagalog. But the script is used by other Palawan languages {{nspk|plw}}, together with [[ps:Latn|Latin]].</p>
       <p />
       <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
      </orig>
@@ -10625,7 +10629,7 @@
       <p>Inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
      </known-orig>
      <transl>
-      <p>[[ps:Tglg|Tagalog]]’dan gelir. Tagbanwa konuşan kişi sayısı {{n|25000}}’den azdır, yeni nesil Tagalog’u tercih etmektedir. Ancak bu alfabe, [[ps:Latn|Latin]] ile birlikte diğer Palawan dilleri (2010 itibarıyla {{n|97000}}) tarafından da kullanılmaktadır.</p>
+      <p>[[ps:Tglg|Tagalog]]’dan gelir. Tagbanwa konuşan kişi sayısı {{n|25000}}’den azdır, yeni nesil Tagalog’u tercih etmektedir. Ancak bu alfabe, [[ps:Latn|Latin]] ile birlikte diğer Palawan dilleri {{nspk|plw}} tarafından da kullanılmaktadır.</p>
       <p />
       <p>İçsel ünlü {{t|a}}’dır. [[pt:virama|Virama]] ve son ünsüzler için işaretler bulunmadığından, bu fonemler [[ps:Buhd|Buhid]]’de olduğu gibi bağlamdan tahmin edilmektedir.</p>
      </transl>
@@ -11761,7 +11765,7 @@
      <transl>İşaret/çevreleme</transl>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also, enclosing square, circle, and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu, the result is not{{_}}so{{_}}bad.</orig>
      <known-orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</known-orig>
      <transl>Eski Kiril harfli sayılarda ({{aencl}}) çevreleyen işaretler kullanılır. Ayrıca kare, daire ve diğer şekiller de mevcuttur. Windows{{_}}10 20H2’de (GDI, Cairo, Skia) test edilen tipografi motorlarının hiçbiri bu karakterleri mükemmel bir şekilde desteklemez, ancak DejaVu gibi iyi yazı tiplerinde sonuç o kadar kötü değildir.</transl>
     </text>
@@ -17151,7 +17155,8 @@
    </group>
    <group id="3.1">
     <text id="Text">
-     <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
+     <orig>The first use of [[pt:plane|planes]] 1, 2, and 0E. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years earlier.</orig>
+     <known-orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</known-orig>
      <transl>[[pt:plane|düzlemler]] 1 ve 2’nin ilk kullanımı. [[pt:utf16|UTF-16]] ve on altı ek düzlemin kullanımı beş yıl önce önerildi.</transl>
     </text>
    </group>

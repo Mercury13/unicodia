@@ -207,7 +207,7 @@
    <group id="StdComment">
     <au-cmt>
      <p>Standard comments for script dates</p>
-     <p></p>
+     <p />
     </au-cmt>
     <text id="FirstInsc">
      <orig>the first known inscription</orig>
@@ -5937,7 +5937,11 @@
      <transl>バサ</transl>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</orig>
+     <orig>
+      <p>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</p>
+      <p />
+      <p>There is no default tone, so vowels in the text must always carry a tone sign.</p>
+     </orig>
      <known-orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</known-orig>
      <transl>トーマス・ルイスという名のバッサは、アメリカの元奴隷が珍しい文字を使っていることを発見しました。他の資料によると、彼は自分でその文字を作りました。バッサはその文字を「サインを投げる」という意味の「Vah」と呼んでいます。このオリジナルの文字は20世紀に広く普及していましたが、21世紀には徐々にラテン文字に取って代わられつつあります。</transl>
     </text>
@@ -10476,7 +10480,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tglg|Tagalog]]. Fewer than {{n|25000}} people speak Tagbanwa; the younger generation prefers Tagalog. But the script is used by other Palawan languages ({{n|97000}} as of 2010), together with [[ps:Latn|Latin]].</p>
+      <p>Comes from [[ps:Tglg|Tagalog]]. Fewer than {{n|25000}} people speak Tagbanwa; the younger generation prefers Tagalog. But the script is used by other Palawan languages {{nspk|plw}}, together with [[ps:Latn|Latin]].</p>
       <p />
       <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
      </orig>
@@ -10486,7 +10490,7 @@
       <p>Inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
      </known-orig>
      <transl>
-      <p>[[ps:Tglg|タガログ語]] に由来します。タグバンワ語を話す人は {{n|25000}} 人未満で、新しい世代はタガログ語を好みます。しかし、この文字は [[ps:Latn|ラテン語]] とともに、他のパラワン語 (2010 年現在 {{n|97000}} 人) でも使用されています。</p>
+      <p>[[ps:Tglg|タガログ語]] に由来します。タグバンワ語を話す人は {{n|25000}} 人未満で、新しい世代はタガログ語を好みます。しかし、この文字は [[ps:Latn|ラテン語]] とともに、他のパラワン語 {{nspk|plw}} でも使用されています。</p>
       <p />
       <p>固有の母音は {{t|a}} です。[[pt:virama|ヴィラマ]] と末尾の子音の記号がないため、これらの音素は [[ps:Buhd|ブヒッド文字]] のように文脈から推測されます。</p>
      </transl>
@@ -11610,7 +11614,7 @@
      <transl>マーク/囲み</transl>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also, enclosing square, circle, and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu, the result is not{{_}}so{{_}}bad.</orig>
      <known-orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</known-orig>
      <transl>囲み記号は、古いキリル文字の数字 ({{aencl}}) で使用されます。囲み記号には、四角形、円、その他の図形も存在します。Windows10 20H2 でテストされたタイポグラフィ エンジン (GDI、Cairo、Skia) はいずれもこれらの文字を完全にはサポートしていませんが、DejaVu などの優れたフォントでは、結果はそれほど悪くありません。</transl>
     </text>
@@ -16876,7 +16880,8 @@
    </group>
    <group id="3.1">
     <text id="Text">
-     <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
+     <orig>The first use of [[pt:plane|planes]] 1, 2, and 0E. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years earlier.</orig>
+     <known-orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</known-orig>
      <transl>[[pt:plane|プレーン]] 1 と 2 の最初の使用。[[pt:utf16|UTF-16]] と 16 個の補助プレーンは 5 年前に提案されました。</transl>
     </text>
    </group>

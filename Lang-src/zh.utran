@@ -208,7 +208,7 @@
    <group id="StdComment">
     <au-cmt>
      <p>Standard comments for script dates</p>
-     <p></p>
+     <p />
     </au-cmt>
     <text id="FirstInsc">
      <orig>the first known inscription</orig>
@@ -4747,7 +4747,7 @@
       <p>圣歌有几种类型：康达克（一种教堂歌曲）、斯托尔普（柱子）、普特（道路）和杰梅斯特沃（起源不明，可能源自拉丁语 ''domesticus''）。最后一种具有多声部的元素。</p>
       <p />
       <p>现代有一些复兴兹纳梅尼圣歌的尝试。双旗帜记谱法（同时使用旗帜和音符书写的乐谱）为理解兹纳梅尼记谱法提供了关键线索。它是由 Ponomar 项目引入 Unicode 的，该项目致力于绘制字体、构建教会斯拉夫语拼写和识别词典，以及书籍数字化。</p>
-      <p></p>
+      <p />
      </transl>
     </text>
    </group>
@@ -5707,7 +5707,7 @@
       <p>这些表意文字来源广泛：包括中国人名、韩国历史地名、报纸档案以及台湾地区的编码标准等。</p>
       <p />
       <p>[[pk:2EBF0|2022 年中国大陆试图分叉 Unicode 的事件]] 导致其他所有工作都被推迟，而距离 Unicode 16 测试版发布的时间又所剩无几。因此，这一批新的约 4000 个表意文字直到 Unicode 17.0 才得以收录。</p>
-      <p></p>
+      <p />
      </transl>
     </text>
    </group>
@@ -6019,7 +6019,11 @@
      <transl>巴萨语（Bassa）</transl>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</orig>
+     <orig>
+      <p>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</p>
+      <p />
+      <p>There is no default tone, so vowels in the text must always carry a tone sign.</p>
+     </orig>
      <known-orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</known-orig>
      <transl>一位名叫托马斯·刘易斯（Thomas Lewis）的巴萨族人发现，来自美洲的前奴隶们使用一种奇特的文字。不过也有其他资料显示，这套文字其实是他自己创造的。巴萨人称这种文字为 Vah——意为“抛出一个符号”（throw a sign）。这种本土文字在 20 世纪曾广泛流传，但在 21 世纪，它正被 [[ps:Latn|拉丁文字]] 稳步取代。</transl>
     </text>
@@ -7583,7 +7587,7 @@
      <orig>Hebrew {{nspk}}, Ladino, Yiddish, Aramaic, formerly Karaim and Krymchak</orig>
      <transl>
       <p>希伯来语（Hebrew） {{nspk}}、拉迪诺语、意第绪语、阿拉米语，历史上还包括卡拉伊姆语和克里姆查克语</p>
-      <p></p>
+      <p />
      </transl>
     </text>
     <text id="Text">
@@ -7638,7 +7642,7 @@
       <p>平假名在 1900 年实现了标准化，每个音节只保留了一个字符。于是变体假名变得就像西方的哥特体或西里尔安色尔体——它被用于明信片、宗教文件、武术学校的证书，以及……餐馆的招牌。</p>
       <p />
       <p>“日本色情动画”（Japornimation）中的“Hentai”是一个同音异义词：它源自 {{sm|変態}}“Hentai”（变态/反常），而变体假名（Hentaigana）则源自 {{sm|変体}}“Hentai”（奇异/变体）。</p>
-      <p></p>
+      <p />
      </transl>
     </text>
    </group>
@@ -10621,7 +10625,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tglg|Tagalog]]. Fewer than {{n|25000}} people speak Tagbanwa; the younger generation prefers Tagalog. But the script is used by other Palawan languages ({{n|97000}} as of 2010), together with [[ps:Latn|Latin]].</p>
+      <p>Comes from [[ps:Tglg|Tagalog]]. Fewer than {{n|25000}} people speak Tagbanwa; the younger generation prefers Tagalog. But the script is used by other Palawan languages {{nspk|plw}}, together with [[ps:Latn|Latin]].</p>
       <p />
       <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
      </orig>
@@ -10631,7 +10635,7 @@
       <p>Inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
      </known-orig>
      <transl>
-      <p>它源自 [[ps:Tglg|他加禄文字]]。使用塔格班瓦语的人口不足 {{n|25000}} 人，年轻一代更倾向于使用塔加洛语。但这套文字也被巴拉望岛的其他语言（截至 2010 年约为 {{n|97000}} 人）所使用，通常与 [[ps:Latn|拉丁文字]] 混用。</p>
+      <p>它源自 [[ps:Tglg|他加禄文字]]。使用塔格班瓦语的人口不足 {{n|25000}} 人，年轻一代更倾向于使用塔加洛语。但这套文字也被巴拉望岛的其他语言{{nspk|plw}}所使用，通常与 [[ps:Latn|拉丁文字]] 混用。</p>
       <p />
       <p>其固有元音为 {{t|a}}。由于缺乏 [[pt:virama|止音符]] 和尾辅音符号，这些音素需要根据上下文来推测，就像在 [[ps:Buhd|布希德文字]] 中一样。</p>
      </transl>
@@ -11762,7 +11766,7 @@
      <transl>封闭标记（Mark/enclosing）</transl>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers ({{aencl}}). Also, enclosing square, circle, and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu, the result is not{{_}}so{{_}}bad.</orig>
      <known-orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</known-orig>
      <transl>封闭标记用于古西里尔字母数字（如 {{aencl}}）。此外，也存在封闭用的方框、圆圈和其他形状。在 Windows 10 20H2 版本中，经过测试的排版引擎（GDI, Cairo, Skia）都无法完美支持这些字符，但如果使用像 DejaVu 这样优秀的字体，显示效果也还不算太差。</transl>
     </text>
@@ -12108,7 +12112,7 @@
       <p>[[ps:Hang|谚文]] 和 [[ps:Yiii|彝文]] '''绝对不是''' 元音附标文字。</p>
       <p />
       <p>有趣的事实：“abugida”一词源于吉兹语（古埃塞俄比亚语）{{sm|አቡጊዳ}} (a-bu-gi-da){{-}}所以有些语言学家否认这个名称来源于其本身的文字拥有“abugida”这个名字的权利！</p>
-      <p></p>
+      <p />
      </transl>
     </text>
    </group>
@@ -17154,7 +17158,8 @@
    </group>
    <group id="3.1">
     <text id="Text">
-     <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
+     <orig>The first use of [[pt:plane|planes]] 1, 2, and 0E. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years earlier.</orig>
+     <known-orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</known-orig>
      <transl>这是 [[pt:plane|平面]] 1 和 2 的首次使用。而 [[pt:utf16|UTF-16]] 编码标准以及 16 个辅助平面的构想，其实在五年前就已经被提出了。</transl>
     </text>
    </group>

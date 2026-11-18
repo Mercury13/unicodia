@@ -1068,6 +1068,9 @@ extern const uc::SideLang uc::sideLangInfo[] {
     { .id = "nxq",  // Naxi ← Lisu
       .lang { .mantissa = 3,  .numOrder = NumOrder::HUN_THOU, .year = 2000,
               .locations { LOC_CHINA_SW } } },
+    { .id = "plw",  // Palawan ← Tagb
+      .lang { .mantissa = 97,  .numOrder = NumOrder::THOUSAND, .year = 2010 } },
+                    // 2010 census
     { .id= "sgw",   // Sebat Beit ← Ethi
       .lang { .mantissa = 15, .hiMantissa = 22, .numOrder = NumOrder::HUN_THOU, .year = 2022,
               .locations { LOC_ETHIOPIA } } },
