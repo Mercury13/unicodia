@@ -440,6 +440,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MUCAAD",         Dicf::PART_NOUN },
     { "NUKTA",          Dicf::PART_NOUN },
     { "OMET",           Dicf::PART_NOUN },  // Znamenny, for adj “Curved”
+    { "OMG",            Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "PLUS",           Dicf::PART_NOUN },
     { "PRIME",          Dicf::PART_NOUN },
     { "RANA",           Dicf::PART_NOUN },
