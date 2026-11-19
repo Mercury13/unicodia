@@ -1464,8 +1464,8 @@ constinit const uc::Block uc::blocks[] {
             "Ancient Greek Musical Notation",
             { EcScript::Grek, 3 }, MapSubtype::SYM_CODE,
             EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
-    /// @todo [U18] Music ex
-    { 0x1D250, 0x1D28F, { 0x1D257, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
+    /// @todo [U18, tofu] Music ex
+    { 0x1D250, 0x1D28F, { 0x1D257, EcContinent::NONE, Ifg::PAINT_SVG, 6_hx },
             "Musical Symbols Supplement",
             { EcScript::ZMUS, 1 }, MapSubtype::SYM_CODE,
             EcScript::NONE, EcFont::MUSIC },
