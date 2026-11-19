@@ -152,19 +152,20 @@ namespace uc {
     };
 
     DEFINE_ENUM_TYPE_IN_NS(uc, EcWritingDir, unsigned char,
-        NOMATTER,
+        /// Xxxx! = only, Xxxx… = and more
+        NOMATTER,       ///< Brai + lots of technical
         LTR,
         RTL,
-        LTR_CJK,
-        LTR_CUNEIFORM,
-        LTR_BU,
-        LTR_COL,
-        LTR_MOSTLY,
-        TD,
-        BOTH_LTR,   ///< Both, encoded as →
-        RTL_COL,
-        RTL_MOSTLY,
-        SOGDIAN
+        LTR_CJK,        ///< Hani, Hang, Bopo, kana
+        LTR_CUNEIFORM,  ///< Xsux!
+        LTR_BU,         ///< Ogam!
+        LTR_COL,        ///< Mong, Ougr, Phag!
+        LTR_MOSTLY,     ///< Cari, Runr!
+        TD,             ///< Sgnw!
+        BOTH_LTR,       ///< ← and →, encoded as →: Ital, Pcun!
+        RTL_COL,        ///< Jurc, Kits…
+        RTL_MOSTLY,     ///< Cprt, Egyp…
+        SOGDIAN         ///< Sogo, Sogd!
     )
 
     struct GlyphStyleChannel {
