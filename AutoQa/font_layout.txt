@@ -1540,7 +1540,8 @@ FFFD......: NotoSerif-Regular
 == Ancient Greek Musical Notation
 1D200..1D245: NotoMusic-Regular
 == Musical Symbols Supplement
-1D250..1D281: [Tofu]
+1D250..1D258: UnicodiaMusicFixup
+1D259..1D281: [Tofu]
 == Kaktovik Numerals
 1D2C0..1D2D3: NotoSansSymbols2-Regular
 == Mayan Numerals
