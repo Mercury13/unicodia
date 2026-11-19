@@ -1468,7 +1468,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D250, 0x1D28F, { 0x1D257, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
             "Musical Symbols Supplement",
             { EcScript::ZMUS, 1 }, MapSubtype::SYM_CODE,
-            EcScript::NONE },
+            EcScript::NONE, EcFont::MUSIC },
     // Kaktovik numerals OK
     { 0x1D2C0, 0x1D2DF, { 0x1D2CD, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Kaktovik Numerals",
