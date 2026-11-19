@@ -1711,9 +1711,9 @@ constinit const uc::Block uc::blocks[] {
             "CJK Unified Ideographs Extension J",
             { EcScript::Hani, 'J' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
-    /// @todo [U18] Seal
-    { 0x3D000, 0x3FC3F, { 0x3D002, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
-            "Seal",
+    // Seal OK, found a cool font
+    { 0x3D000, 0x3FC3F, { 0x3D002, EcContinent::CJK, Ifg::PAINT_SVG },
+            "Small Seal",
             MyName::INST, MapSubtype::DEAD,
             EcScript::Seal, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::CJK },
     // Tags OK

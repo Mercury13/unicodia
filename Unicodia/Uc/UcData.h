@@ -395,6 +395,7 @@ namespace uc {
         ROHINGYA,
         SAMARITAN,
         SAURASHTRA,
+        SEAL,
         SHARADA,
         SIDDHAM,
         SIGNWRITING,

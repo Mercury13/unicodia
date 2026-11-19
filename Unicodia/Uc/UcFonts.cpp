@@ -327,6 +327,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
     { "NotoSansSaurashtra-Regular.ttf" },                                       // Saurashtra
+    { "SealSans-Regular.ttf", 120_pc },                                         // Seal
     { "NotoSansSharada-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Sharada
     { "NotoSansSiddham-Regular.ttf", Ffg::DESC_BIGGER },                        // Siddham
     { "UnicodiaSutton-Regular.ttf", Ffg::DESC_BIGGER, 145_pc },                 // SignWriting

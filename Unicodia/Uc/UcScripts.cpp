@@ -772,10 +772,9 @@ constinit const uc::Script uc::scriptInfo[] {
         ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 25, .numOrder = NumOrder::DEC_THOU, .year = 2011,
           .locations { LOC_INDIA_S } } },
-    /// @todo [U18] Seal
     { "Seal", QFontDatabase::Any,
         EcScriptType::HIEROGLYPH, EcLangLife::CONSERVED, EcWritingDir::RTL_COL, EcContinent::CJK,
-        Dating::ybefore(-200), EcFont::CJK_UHAN },
+        Dating::ybefore(-200), EcFont::SEAL },
     // Sutton SignWriting OK, installed Google Noto font
     { "Sgnw", QFontDatabase::Any,
         EcScriptType::NONTEXT, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,
