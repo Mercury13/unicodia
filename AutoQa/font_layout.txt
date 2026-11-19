@@ -280,9 +280,7 @@
 20E4..20EF: UnicodiaFunky
 20F0......: NotoSerif-Regular
 == Letterlike Symbols
-2100..2125: Cambria
-2126......: NotoSerif-Regular
-2127..214F: Cambria
+2100..214F: Cambria
 == Number Forms
 2150..2152: NotoSerif-Regular
 2153..215E: Cambria
@@ -1398,11 +1396,7 @@ FFFD......: NotoSerif-Regular
 142F8.......: NewGardiner
 142F9..142FE: UnicodiaSesh
 142FF, 14300: NewGardiner
-14301..14307: UnicodiaSesh
-14308.......: NewGardiner
-14309..1430C: UnicodiaSesh
-1430D.......: NewGardiner
-1430E..14324: UnicodiaSesh
+14301..14324: UnicodiaSesh
 14325.......: NewGardiner
 14326..1433A: UnicodiaSesh
 1433B..1433E: NewGardiner

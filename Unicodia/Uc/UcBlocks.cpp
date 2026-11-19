@@ -401,7 +401,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2100, 0x214F, { 0x211D, EcContinent::NONE, Ifg::PAINT_SVG },
             "Letterlike Symbols",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
+            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE | Bfg::FORCE_FONT },
     // Number forms OK
     { 0x2150, 0x218F, { L'⅓', EcContinent::NONE, Ifg::PAINT_SVG },
             "Number Forms",
