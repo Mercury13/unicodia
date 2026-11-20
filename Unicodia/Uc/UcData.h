@@ -289,6 +289,7 @@ namespace uc {
         CUNEIFORM,
         CUNEIFORM_ARCHAIC,
         DEVANAGARI,
+          Z_DEVA_1,
           DEVANAGARI_SYSTEM,
         DEVANAGARI_BIGGER,  ///< Also use fixup font
           Z_DE1_1,
