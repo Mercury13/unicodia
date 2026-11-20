@@ -159,7 +159,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                // Vedic = Deva′ → Deva → Nand → Beng
       { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                 // …1
       { FAM_NAND, Ffg::FALL_TO_NEXT },                                          // …2, fall to Bengali    
-    { { "NotoSerifBengali-Regular.ttf", Fafg::DEHINT_DOTC, recodeBengali }, 120_pc }, // Bengali
+    { { "NotoSerifBengali-Regular.ttf", Fafg::DEHINT_DOTC, recodeBengali },
+            Ffg::FALL_TO_NEXT, 120_pc }, // Bengali
+      { FAM_FUNKY },                                                            // …1
     { "Kedebideri-Regular.ttf" },                                               // Beria
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER, EcVersion::V_13_0 },  // Brahmi
