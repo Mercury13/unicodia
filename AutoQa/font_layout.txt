@@ -879,7 +879,7 @@ FFFD......: NotoSerif-Regular
 11AC0..11AF8: UtoSansFranken
 == Devanagari Extended-A
 11B00..11B09: NotoSerifDevanagari-Regular
-11B0A.......: [Tofu]
+11B0A.......: UnicodiaDevaFixup-Regular
 == Sharada Supplement
 11B60..11B67: UnicodiaFunky
 == Sunuwar
@@ -899,7 +899,7 @@ FFFD......: NotoSerif-Regular
 == Tolong Siki
 11DB0..11DE9: UnicodiaFunky
 == Bengali Supplement
-11DF0.......: [Tofu]
+11DF0.......: UnicodiaFunky
 11DF1.......: NotoSerifBengali-Regular
 == Makasar
 11EE0..11EF8: UnicodiaFunky
@@ -1540,8 +1540,10 @@ FFFD......: NotoSerif-Regular
 == Ancient Greek Musical Notation
 1D200..1D245: NotoMusic-Regular
 == Musical Symbols Supplement
-1D250..1D258: UnicodiaMusicFixup
-1D259..1D281: [Tofu]
+1D250..1D276: UnicodiaMusicFixup
+1D277.......: [Tofu]
+1D278..1D27E: UnicodiaMusicFixup
+1D27F..1D281: [Tofu]
 == Kaktovik Numerals
 1D2C0..1D2D3: NotoSansSymbols2-Regular
 == Mayan Numerals
@@ -31845,9 +31847,8 @@ FFFD......: NotoSerif-Regular
 33455..33468: BabelStoneHanExtra
 33469..3346D: UnicodiaHan
 3346E..33479: BabelStoneHanExtra
-== Seal
-3D000..3D026: UnicodiaHan
-3D027..3FC3F: [Tofu]
+== Small Seal
+3D000..3FC3F: SealSans-Regular
 == Tags
 E0001..E007F: [Custom control]
 == Variation Selectors Supplement
