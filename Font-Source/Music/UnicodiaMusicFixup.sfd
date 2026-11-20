@@ -1262,6 +1262,7 @@ SplineSet
  495 55 l 1,87,88
 EndSplineSet
 Validated: 19457
+Colour: ff0000
 EndChar
 
 StartChar: u1D11F
@@ -1275,6 +1276,7 @@ Fore
 Refer: 3 -1 N 1 0 0 1 576 558 2
 Refer: 0 119070 N 1 0 0 1 0 0 2
 Validated: 32769
+Colour: ff0000
 EndChar
 
 StartChar: u1D120
@@ -1288,6 +1290,7 @@ Fore
 Refer: 3 -1 S 1 0 0 1 579 -882 2
 Refer: 0 119070 N 1 0 0 1 0 0 2
 Validated: 32769
+Colour: ff0000
 EndChar
 
 StartChar: Eight
@@ -1425,6 +1428,7 @@ SplineSet
  75 600 75 600 75 572 c 128,-1,30
 EndSplineSet
 Validated: 19457
+Colour: ff0000
 EndChar
 
 StartChar: Shape.Dotc
@@ -1520,6 +1524,7 @@ SplineSet
  271 95 271 95 297 95 c 128,-1,115
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: Uml.Stress
@@ -1555,6 +1560,7 @@ SplineSet
  -148 -164 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: Uml.Unstress
@@ -1580,6 +1586,7 @@ SplineSet
  -177 0 l 1,0,1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: Uml.Flag6
@@ -1662,6 +1669,7 @@ SplineSet
  241 1223 241 1223 248 1208 c 1,91,92
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: Uml.Flag7
@@ -1845,6 +1853,7 @@ SplineSet
  248 678 248 678 28 798 c 1,104,105
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: Uml.Flag8
@@ -2041,6 +2050,7 @@ SplineSet
  248 678 248 678 28 798 c 1,122,123
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: Rest6
@@ -2139,6 +2149,7 @@ SplineSet
  170 -45 170 -45 182 -74 c 1,0,1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: Rest7
@@ -2588,6 +2599,7 @@ SplineSet
  170 -245 170 -245 182 -274 c 1,0,1
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: Rest8
@@ -3197,6 +3209,7 @@ SplineSet
  672 1340 672 1340 682 1332 c 128,-1,1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: NameMe.13
@@ -3334,6 +3347,7 @@ SplineSet
  153 12 l 1,20,21
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: NameMe.14
@@ -3489,6 +3503,7 @@ SplineSet
  153 12 l 1,28,29
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: NameMe.15
@@ -3620,6 +3635,7 @@ SplineSet
  50 -55 l 1,20,-1
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: NameMe.16
@@ -3858,6 +3874,7 @@ SplineSet
  81 12 l 1,54,55
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: NameMe.17
@@ -4145,6 +4162,7 @@ SplineSet
  271 197 l 1,8,-1
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: NameMe.18
@@ -4357,6 +4375,7 @@ SplineSet
  162 509 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff
 EndChar
 
 StartChar: NameMe.19
@@ -4389,6 +4408,7 @@ SplineSet
  50 324 l 1,12,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: NameMe.20
@@ -4466,6 +4486,7 @@ SplineSet
  50 261 l 1,16,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: NameMe.21
@@ -4497,6 +4518,7 @@ SplineSet
  50 253 l 1,12,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: NameMe.22
@@ -4533,6 +4555,7 @@ SplineSet
  50 123 l 1,16,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: NameMe.23
@@ -4679,6 +4702,7 @@ SplineSet
  77 199 l 1,0,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D261
@@ -4799,6 +4823,7 @@ SplineSet
  296 550 296 550 311 565 c 0,26,27
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D262
@@ -4859,6 +4884,7 @@ SplineSet
  0 0 l 1,4,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D263
@@ -4885,6 +4911,7 @@ SplineSet
  0 86 0 86 7 89 c 2,11,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D264
@@ -5012,6 +5039,7 @@ SplineSet
  134 11 l 1,0,1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D265
@@ -5175,6 +5203,7 @@ SplineSet
  128 240 l 1,11,12
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D266
@@ -5338,6 +5367,7 @@ SplineSet
  809 248 809 248 809 260 c 0,17,18
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D267
@@ -5396,6 +5426,7 @@ SplineSet
  74 222 l 1,12,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D268
@@ -5492,6 +5523,7 @@ SplineSet
  115 99 115 99 147 122 c 0,15,16
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D269
@@ -5544,6 +5576,7 @@ SplineSet
  127 269 127 269 185 209 c 0,0,1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D26A
@@ -5627,6 +5660,7 @@ SplineSet
  211 152 211 152 185 176 c 0,30,31
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D26B
@@ -5727,6 +5761,7 @@ SplineSet
  120 205 120 205 147 205 c 128,-1,28
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D26C
@@ -5905,6 +5940,7 @@ SplineSet
  148 203 148 203 175 203 c 0,59,60
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D26D
@@ -6025,6 +6061,7 @@ SplineSet
  121 199 121 199 147 199 c 0,21,22
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D26E
@@ -6219,6 +6256,7 @@ SplineSet
  149 203 149 203 177 203 c 0,41,42
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D26F
@@ -6353,6 +6391,7 @@ SplineSet
  225 211 225 211 239 211 c 0,35,36
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D270
@@ -6451,6 +6490,7 @@ SplineSet
  193 211 193 211 202 202 c 0,19,20
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D271
@@ -6537,6 +6577,7 @@ SplineSet
  455 179 455 179 455 189 c 0,0,1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D272
@@ -6638,6 +6679,7 @@ SplineSet
  92 211 92 211 92 239 c 0,13,14
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D273
@@ -6713,6 +6755,7 @@ SplineSet
  326 213 326 213 283 168 c 0,0,1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 
 StartChar: u1D274
@@ -6774,6 +6817,7 @@ SplineSet
  141 515 141 515 172 530 c 1,0,-1
 EndSplineSet
 Validated: 3073
+Colour: ff
 EndChar
 EndChars
 EndSplineFont
