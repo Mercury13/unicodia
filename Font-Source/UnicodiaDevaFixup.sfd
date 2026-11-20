@@ -1277,7 +1277,7 @@ SplineSet
  -125 1239 -125 1239 -137 1226 c 128,-1,41
  -149 1213 -149 1213 -149 1194 c 0,31,32
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -1523,7 +1523,7 @@ SplineSet
  -66 933 l 1,50,-1
  -109 919 l 1,0,-1
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -1671,7 +1671,7 @@ SplineSet
  -135 1104 -135 1104 -146.5 1089 c 128,-1,55
  -158 1074 -158 1074 -158 1056 c 0,44,45
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -2252,7 +2252,7 @@ SplineSet
  -116 1245 -116 1245 -129 1224.5 c 128,-1,39
  -142 1204 -142 1204 -142 1183 c 0,29,30
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -2484,7 +2484,7 @@ SplineSet
  -6 974 l 1,55,-1
  -12 974 l 1,0,-1
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -2634,7 +2634,7 @@ SplineSet
  -23 1024 -23 1024 -42.5 1005.5 c 128,-1,37
  -62 987 -62 987 -91 987 c 0,0,1
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -2846,7 +2846,7 @@ SplineSet
  -209 1150 -209 1150 -228 1139.5 c 128,-1,53
  -247 1129 -247 1129 -247 1107 c 0,41,42
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -2977,7 +2977,7 @@ SplineSet
  -24 976 l 1,27,-1
  -30 976 l 1,0,-1
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -3408,7 +3408,7 @@ SplineSet
  -87 1154 -87 1154 -103 1141 c 128,-1,58
  -119 1128 -119 1128 -119 1108 c 0,47,48
 EndSplineSet
-Validated: 8388609
+Validated: 1
 Colour: ff0000
 EndChar
 
@@ -3544,7 +3544,7 @@ StartChar: uni25CC
 Encoding: 9676 9676 26
 Width: 596
 GlyphClass: 2
-Flags: MWO
+Flags: MW
 AnchorPoint: "Vedic letter" 596 427 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--18" 512 623 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--17" 298 -120 basechar 0
@@ -3884,7 +3884,7 @@ SplineSet
  267 130 267 130 289 144 c 1,0,1
 EndSplineSet
 Validated: 1
-Colour: ffff00
+Colour: ff
 EndChar
 EndChars
 EndSplineFont

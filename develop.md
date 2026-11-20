@@ -228,6 +228,7 @@ Right now only Cuneiform uses script-specific rules: e.g. “cuneiform sign LAM 
 # Font rebuilding
 1. UnicodiaSesh — see ``FontSource\Egyptian2``.
 1. UnicodiaHan — see ``GlyphWiki2\Data``.
+1. For fixup fonts: RED — glyph is permanent (relies on original’s metrics), DEEP BLUE — temporary (fixes tofu).
 
 # What do utilities do?
 * AutoBuilder — build UcAuto.cpp from Unicode base
