@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1687335849
-ModificationTime: 1795186478
+ModificationTime: 1795194121
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -747,7 +747,7 @@ BeginPrivate: 0
 EndPrivate
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Stem" "Music MARK-1" "Cen" "Music MARK-1" "Flag" "Music MARK-1" "Bottom" "Music blwm-1"
-BeginChars: 61 59
+BeginChars: 61 61
 
 StartChar: u1D11E
 Encoding: 0 119070 0
@@ -8496,7 +8496,7 @@ EndChar
 StartChar: NameMe.58
 Encoding: 58 119423 58
 Width: 245
-Flags: WO
+Flags: W
 VStem: 50 59<58.7922 115.981 294.164 351.034 526.359 585.203 758.771 820.092> 138 57<180.825 234.621 415.2 471.322 647.936 704.01 881.878 942.583>
 TtInstrs:
 SVTCA[y-axis]
@@ -8659,6 +8659,223 @@ SplineSet
  131 822 131 822 120 808 c 128,-1,1
 EndSplineSet
 Validated: 19457
+Colour: ff
+EndChar
+
+StartChar: NameMe.59
+Encoding: 59 119424 59
+Width: 0
+Flags: W
+HStem: 723 30<-8.63672 49 77 135.75>
+VStem: -140 30<550 622.469> 49 28<199 723 751.92 1009> 236 30<550 621.197>
+CounterMasks: 1 70
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 2
+MDAP[rnd]
+PUSHB_1
+ 23
+SHP[rp1]
+PUSHB_1
+ 11
+MDRP[min,rnd,black]
+PUSHB_1
+ 14
+SHP[rp2]
+PUSHB_3
+ 2
+ 11
+ 10
+CALL
+PUSHB_4
+ 64
+ 2
+ 1
+ 9
+CALL
+PUSHB_3
+ 11
+ 2
+ 10
+CALL
+PUSHB_4
+ 64
+ 11
+ 12
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 24
+MDAP[rnd]
+PUSHB_1
+ 7
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+PUSHB_1
+ 6
+SRP0
+PUSHB_2
+ 1
+ 1
+CALL
+PUSHB_1
+ 11
+SHP[rp2]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+PUSHB_1
+ 13
+SHP[rp2]
+PUSHB_1
+ 0
+SRP0
+PUSHB_2
+ 19
+ 1
+CALL
+PUSHB_1
+ 18
+MDRP[min,rnd,black]
+SVTCA[y-axis]
+PUSHB_2
+ 11
+ 2
+SRP1
+SRP2
+PUSHB_2
+ 10
+ 15
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Stem" 63 199 mark 0
+LayerCount: 2
+Fore
+SplineSet
+77 199 m 1,0,-1
+ 49 199 l 1,1,-1
+ 49 723 l 1,2,3
+ -14 718 -14 718 -60 673 c 0,4,5
+ -110 622 -110 622 -110 550 c 1,6,-1
+ -140 550 l 1,7,8
+ -140 634 -140 634 -81 694 c 0,9,10
+ -26 749 -26 749 49 753 c 1,11,-1
+ 49 1009 l 1,12,-1
+ 77 1009 l 1,13,-1
+ 77 753 l 1,14,15
+ 152 748 152 748 207 694 c 0,16,17
+ 266 634 266 634 266 550 c 1,18,-1
+ 236 550 l 1,19,20
+ 236 622 236 622 186 673 c 0,21,22
+ 140 719 140 719 77 723 c 1,23,-1
+ 77 199 l 1,0,-1
+EndSplineSet
+Validated: 19457
+Colour: ff
+EndChar
+
+StartChar: NameMe.60
+Encoding: 60 119425 60
+Width: 0
+Flags: WO
+HStem: 610 143<-48.4805 49 77 172.999>
+VStem: 49 28<199 610 753 1009>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 11
+SHP[rp1]
+PUSHB_1
+ 4
+MDRP[min,rnd,black]
+PUSHB_1
+ 7
+SHP[rp2]
+PUSHB_3
+ 0
+ 4
+ 10
+CALL
+PUSHB_4
+ 64
+ 0
+ 14
+ 9
+CALL
+PUSHB_3
+ 4
+ 0
+ 10
+CALL
+PUSHB_4
+ 64
+ 4
+ 5
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 16
+MDAP[rnd]
+PUSHB_1
+ 14
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 4
+SHP[rp2]
+PUSHB_1
+ 13
+MDRP[min,rnd,black]
+PUSHB_1
+ 6
+SHP[rp2]
+PUSHB_3
+ 13
+ 14
+ 10
+CALL
+PUSHB_4
+ 64
+ 13
+ 11
+ 9
+CALL
+PUSHB_2
+ 17
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Stem" 63 199 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-141 610 m 1,0,1
+ -141 669 -141 669 -81 712 c 0,2,3
+ -26 751 -26 751 49 753 c 1,4,-1
+ 49 1009 l 1,5,-1
+ 77 1009 l 1,6,-1
+ 77 753 l 1,7,8
+ 153 750 153 750 207 712 c 0,9,10
+ 267 670 267 670 267 610 c 1,11,-1
+ 77 610 l 1,12,-1
+ 77 199 l 1,13,-1
+ 49 199 l 1,14,-1
+ 49 610 l 1,15,-1
+ -141 610 l 1,0,1
+EndSplineSet
 Colour: ff
 EndChar
 EndChars

@@ -532,6 +532,8 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("musical symbol Combining augmentation dot")  // Augmentation is a future landmine
     EX("musical symbol Combining buzz roll stem")  // buzz and roll → adjectives?
     EX("musical symbol Double square fermata")  // Square is noun!!
+    EX("musical symbol Combining stem Bow behind bridge") // Let it be exception
+    EX("musical symbol Combining stem Bow on top of bridge") // The same
         // Music/Znamenny
     EX("Znamenny neume Dva v chelnu")  // Better not to make exception from V
         // Games
