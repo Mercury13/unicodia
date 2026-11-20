@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 265 1000"
+   id="svg1"
+   sodipodi:docname="Eight_UnicodiaMusicFixup.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="1.518"
+     inkscape:cx="67.523057"
+     inkscape:cy="222.99078"
+     inkscape:window-width="1920"
+     inkscape:window-height="998"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1">
+    <sodipodi:guide
+       position="151,975"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="159.5,696"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="46,765"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="255,780"
+       orientation="1,0"
+       id="guide4"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     fill="currentColor"
+     d="M86 296q-50 -17 -50 -61t50 -69q-44 -24 -44 -69q0 -21 12 -39q24 -33 87 -33q94 0 94 63q0 33 -42 60q52 25 52 72q0 35 -29.5 59.5t-66 24.5t-63.5 -8zM142 45q-47 0 -47 34q0 18 17.5 31.5t36.5 19.5l21 8q27 -20 27 -46.5t-18.5 -36.5t-36.5 -10zM75 228 q0 28 19.5 42t35 14t24 -1t22.5 -11.5t14 -28.5t-14.5 -30t-67.5 -35q-33 22 -33 50z"
+     id="path1"
+     style="opacity:1" />
+  <path
+     d="m 245,284.22769 c 15.18463,-9.97118 46.19602,-32.61832 46.19602,-120.1866 C 291.19602,80.112875 262.25322,55.795671 245,44.466126 V 25.199573 c 39.60369,15.683798 96.08772,47.334318 96.08772,138.841517 0,93.0989 -57.72956,124.56842 -96.08772,139.75897 z"
+     id="path4"
+     sodipodi:nodetypes="csccscc" />
+  <path
+     d="M 32.808316 303.80006 C -5.5420335 288.6126 -63.279408 257.14561 -63.279408 164.04109 c 0 -91.523979 56.5072734 -123.166921 96.087724 -138.841517 v 19.266553 c -15.092029 9.753062 -46.504 32.829791 -46.504 119.574964 0 89.83565 33.125008 111.54056 46.504 120.1866 z"
+     id="text4" />
+</svg>
