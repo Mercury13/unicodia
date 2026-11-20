@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 255 1000"
+   id="svg1"
+   sodipodi:docname="u1D183_NotoMusic-Regular.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="0.3795"
+     inkscape:cx="-146.24506"
+     inkscape:cy="201.58103"
+     inkscape:window-width="1920"
+     inkscape:window-height="998"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1">
+    <sodipodi:guide
+       position="136,213"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     fill="currentColor"
+     d="M136 582q0 -19 -21 -38q-22 -20 -43.5 -40t-21.5 -42q0 -21 21 -39q22 -19 43.5 -38t21.5 -39q0 -17 -23 -37q-24 -22 -43.5 -40.5t-19.5 -40.5q0 -28 43 -59t43 -57q0 -15 -12 -27q-7 -6 -13.5 -12.5l-13.5 -13.5l-31 -30q-16 -16 -16 -35q0 -21 21 -40q13 -12 28 -24 t26 -25t11 -27q0 -10 -1.5 -18.5t-9.5 -16.5q-13 -15 -16 -20l10 -10l16 10q20 13 40 36t20 45q0 30 -44 60t-44 46q0 19 19 38q13 12 29 27t28 31t12 32q0 22 -20 39q-12 11 -28 23t-28 23.5t-12 21.5q0 18 22 39q23 21 44.5 42.5t21.5 45.5q0 29 -44 59t-44 48q0 19 23 39 q23 21 44 41.5t21 46.5q0 31 -43 59t-43 48q0 22 14 45q3 5 6.5 10.5t6.5 9.5l-10 9q-7 -5 -25.5 -18.5t-34.5 -33t-16 -39.5q0 -17 15.5 -33t25.5 -24q20 -17 32.5 -29.5t12.5 -27.5z"
+     id="path1" />
+  <path
+     fill="currentColor"
+     d="m 473.95389,19 q 0,18 21,37 22,20 43.5,40 21.5,20 21.5,42 0,21 -21,39 -22,19 -43.5,38 -21.5,19 -21.5,39 0,17 23,37 23,20 43,39.5 20,19.5 20,41.5 0,28 -43,59 -43,31 -43,57 0,15 12,27 7,6 13.5,12.5 l 13.5,13.5 31,30 q 16,16 16,35 0,21 -21,40 -13,12 -28,24.5 -15,12.5 -26,25.5 -11,13 -11,25 0,11 2,20 2,9 9,16 13,15 16,20 l -10,10 q -3,0 -15,-8.5 -12,-8.5 -26,-22.5 -14,-14 -24.5,-29.5 -10.5,-15.5 -10.5,-30.5 0,-30 44,-60 44,-30 44,-46 0,-19 -19,-38 -13,-12 -29,-27 -16,-15 -28,-31 -12,-16 -12,-32 0,-22 20,-39 12,-11 28,-23 16,-12 28,-23.5 12,-11.5 12,-21.5 0,-18 -22,-39 -23,-21 -44.5,-42.5 -21.5,-21.5 -21.5,-45.5 0,-29 44,-59 44,-30 44,-48 0,-19 -23,-39 -23,-21 -44,-41.5 -21,-20.5 -21,-46.5 0,-32 43,-59.000005 43,-27 43,-48.000005 0,-18 -10,-38.49999 -10,-20.5 -16,-25.5 -20,1 -34,4.5 -14,3.5 -26,9.5 l 69,-183 76,183 q -15,-7 -30.5,-10 -15.5,-3 -30.5,-4 34,26 48,45 13,20 13,35.999995 0,21 -20,38.000005 -13,11 -28.5,23.5 -15.5,12.5 -26.5,26.5 -11,14 -11,27 z"
+     id="path1-8" />
+</svg>
