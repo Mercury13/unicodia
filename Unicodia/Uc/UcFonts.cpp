@@ -207,7 +207,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "UnicodiaCunei.ttf" },                                                    // Cuneiform
     { "ArchaicCuneiformNumerals.ttf", 80_pc },                                  // Cuneiform archaic
     { FNAME_DEVA, Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA }, // Devanagari
-            /// @todo [U18] one temp char, alternate DDDA
+            /// @todo [U18, gag] one temp char, alternate DDDA
       { FNAME_DEVAFIX, Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA }, // …1
       { "Arial Unicode MS,Nirmala UI,Mangal" },                                 // …2 for descriptions
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, 10_top, SIZE_DEVA },                    // Devanagari bigger
