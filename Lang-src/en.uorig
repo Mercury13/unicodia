@@ -11,6 +11,7 @@
   </format>
   <group id="Common">
    <group id="Mon">
+    <au-cmt>LOWER case</au-cmt>
     <text id="1">
      <orig>January {1}</orig>
     </text>
