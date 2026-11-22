@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ut type="full-transl">
  <info>
-  <orig lang="en" fname="en.uorig" />
+  <orig lang="en" fname="en.uorig" format="save" />
   <transl lang="ru" pseudoloc="false" />
  </info>
  <file name="lang.ini" idless="false" transl-path="qqq.ini">
